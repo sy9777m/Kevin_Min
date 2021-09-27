@@ -9,7 +9,7 @@ title: Test markdown post
 
 ## Images
 
-![image-20210928021625712](C:\Users\Siyun\OneDrive\project\Kevin_Min\_posts\2020-09-27-practice-markdown.assets\image-20210928021625712.png)
+![image-20210928021625712]({{site.baseurl}}/_posts/2020-09-27-practice-markdown.assets/image-20210928021625712.png)
 
 ## Code
 
