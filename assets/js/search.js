@@ -47,7 +47,7 @@ jtd.onReady = function(ready) {
 
 function initSearch() {
     var request = new XMLHttpRequest();
-    request.open('GET', '/Kevin_Min/assets/js/search-data.json', true);
+    request.open('GET', '/https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/assets/js/search-data.json', true);
   
     request.onload = function(){
       if (request.status >= 200 && request.status < 400) {
