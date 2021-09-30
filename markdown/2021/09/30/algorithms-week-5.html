@@ -10,13 +10,13 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Soongsil University 2-2 Algorithms 5th week." />
 <meta property="og:description" content="Soongsil University 2-2 Algorithms 5th week." />
-<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2020/09/30/algorithms-week-5.html" />
-<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2020/09/30/algorithms-week-5.html" />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/09/30/algorithms-week-5.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/09/30/algorithms-week-5.html" />
 <meta property="og:site_name" content="fastpages" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-09-30T00:00:00-05:00" />
+<meta property="article:published_time" content="2021-09-30T00:00:00-05:00" />
 <script type="application/ld+json">
-{"datePublished":"2020-09-30T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2020/09/30/algorithms-week-5.html","@type":"BlogPosting","headline":"Algorithms week 5","dateModified":"2020-09-30T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2020/09/30/algorithms-week-5.html"},"description":"Soongsil University 2-2 Algorithms 5th week.","@context":"https://schema.org"}</script>
+{"datePublished":"2021-09-30T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/09/30/algorithms-week-5.html","@type":"BlogPosting","headline":"Algorithms week 5","dateModified":"2021-09-30T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/09/30/algorithms-week-5.html"},"description":"Soongsil University 2-2 Algorithms 5th week.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -87,8 +87,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Algorithms week 5</h1><p class="page-description">Soongsil University 2-2 Algorithms 5th week.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-09-30T00:00:00-05:00" itemprop="datePublished">
-        Sep 30, 2020
+    <h1 class="post-title p-name" itemprop="name headline">Algorithms week 5</h1><p class="page-description">Soongsil University 2-2 Algorithms 5th week.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-30T00:00:00-05:00" itemprop="datePublished">
+        Sep 30, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -157,7 +157,7 @@ window.onload = wrap_img;
   <li>Recursively apply quicksort to the sublists to the left and right of the pivot.</li>
 </ul>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930183827208.png" alt="image-20210930183827208"></p>
+<p><img src="/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930183827208.png" alt="image-20210930183827208"></p>
 
 <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">qucikSort</span> <span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
 	<span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
@@ -195,11 +195,11 @@ window.onload = wrap_img;
 
 <p>There’s a really good case, in which partition always picks the median element as the pivot.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930184713329.png" alt="image-20210930184713329"></p>
+<p><img src="/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930184713329.png" alt="image-20210930184713329"></p>
 
 <p>There’s a really bad case, in which partition always picks the smallest or largest element as the pivot.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930184746442.png" alt="image-20210930184746442"></p>
+<p><img src="/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930184746442.png" alt="image-20210930184746442"></p>
 
 <h3 id="expected-runtime-of-randomized-quicksort">
 <a class="anchor" href="#expected-runtime-of-randomized-quicksort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expected runtime of randomized quicksort</h3>
@@ -248,19 +248,19 @@ window.onload = wrap_img;
 <h2 id="decision-tree">
 <a class="anchor" href="#decision-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Decision tree</h2>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930185525497.png" alt="image-20210930185525497"></p>
+<p><img src="/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930185525497.png" alt="image-20210930185525497"></p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930185537302.png" alt="image-20210930185537302"></p>
+<p><img src="/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930185537302.png" alt="image-20210930185537302"></p>
 
 <p>The leaves of this tree are all possible orderings of the items: when we reach a leaf we return it.</p>
 
 <p>Running the algorithm on a given input corresponds to taking a particular path through the tree.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930185728867.png" alt="image-20210930185728867"></p>
+<p><img src="/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930185728867.png" alt="image-20210930185728867"></p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930185812594.png" alt="image-20210930185812594"></p>
+<p><img src="/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930185812594.png" alt="image-20210930185812594"></p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930191734418.png" alt="image-20210930191734418"></p>
+<p><img src="/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930191734418.png" alt="image-20210930191734418"></p>
 
 <h2 id="linear-time-sorting-1">
 <a class="anchor" href="#linear-time-sorting-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linear-time sorting</h2>
@@ -297,9 +297,9 @@ window.onload = wrap_img;
 
 <p>Assumption: $\operatorname{input value rance} = [0, k - 1]$</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930192504411.png" alt="image-20210930192504411"></p>
+<p><img src="/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930192504411.png" alt="image-20210930192504411"></p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930192658163.png" alt="image-20210930192658163"></p>
+<p><img src="/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930192658163.png" alt="image-20210930192658163"></p>
 
 <h3 id="bucket-sort">
 <a class="anchor" href="#bucket-sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bucket sort</h3>
@@ -308,7 +308,7 @@ window.onload = wrap_img;
 
 <p>Might be multiple keys per bucket, so buckets need another stable_sort to be sorted.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930192817360.png" alt="image-20210930192817360"></p>
+<p><img src="/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930192817360.png" alt="image-20210930192817360"></p>
 
 <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">static</span> <span class="kt">void</span> <span class="nf">bucketsort</span><span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
 	<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">bucket</span><span class="p">[</span><span class="n">bucket_number</span><span class="p">];</span>
@@ -343,14 +343,14 @@ window.onload = wrap_img;
   <li>$k &gt; \operatorname{num_buckets}$: Might be multiple keys per buckets, so buckets need another stable_sort to be sorted.</li>
 </ul>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930193654631.png" alt="image-20210930193654631"></p>
+<p><img src="/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930193654631.png" alt="image-20210930193654631"></p>
 
 <h3 id="radix-sort">
 <a class="anchor" href="#radix-sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Radix sort</h3>
 
 <p>기수정렬</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930193810934.png" alt="image-20210930193810934"></p>
+<p><img src="/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930193810934.png" alt="image-20210930193810934"></p>
 
 <p>자릿수로 정렬</p>
 
@@ -394,7 +394,7 @@ window.onload = wrap_img;
 </code></pre></div></div>
 
 
-  </div><a class="u-url" href="/Kevin_Min/markdown/2020/09/30/algorithms-week-5.html" hidden></a>
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/09/30/algorithms-week-5.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
