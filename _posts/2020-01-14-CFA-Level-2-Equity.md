@@ -16,9 +16,9 @@ the valuation of an asset or security by someone who has complete understanding 
 
 Efficient market theory: Intrinsic value = Market value
 
-![image-20210928150009224](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928150009224.png)
+![image-20210928150009224]({{ site.baseurl }}/images/images/image-20210928150009224.png)
 
-![image-20210928150038904](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928150038904.png)
+![image-20210928150038904]({{ site.baseurl }}\images\images\image-20210928150038904.png)
 
 ## LOS 24.b: Explain the going concern assumption and contrast a going concern value to a liquidation value.
 
@@ -85,7 +85,7 @@ value to specific buyer: synergy 고려
 2.   product differentiation
 3.   focus - employing one of the previous strategies within a particular segment of the industry in order to gain a competitive advantage.
 
-![image-20210928151955656](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928151955656.png)
+![image-20210928151955656]({{ site.baseurl }}/images/images/image-20210928151955656.png)
 
 ### Quality of earnings examples
 
