@@ -34,7 +34,7 @@ url: "https://sy9777m.github.io" # the base hostname & protocol for your site, e
 #
 # 3. You must replace the parameter `baseurl` in _action_files/settings.ini with the same value as you set here but WITHOUT QUOTES.
 #
-baseurl: "/Kevin_Min" # the subpath of your site, e.g. "/blog".
+baseurl: "https://raw.githubusercontent.com/sy9777m/Kevin_Min/images" # the subpath of your site, e.g. "/blog".
 
 # Github and twitter are optional:
 minima:
@@ -43,7 +43,7 @@ minima:
     github: fastai
 
 # Set this to true to get LaTeX math equation support
-use_math: 
+use_math: true
 
 # Set this to true to display the summary of your blog post under your title on the Home page.
 show_description: true
