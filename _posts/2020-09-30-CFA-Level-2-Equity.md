@@ -1,8 +1,10 @@
+---
 toc: true
 layout: post
-description: CFA Level 2 Equity summary
+description: A minimal example of using markdown with fastpages.
 categories: [markdown]
-title: CFA Level 2 Equity summary
+title: An Example Markdown Post
+---
 
 # CFA Level 2 Equity
 
@@ -104,8 +106,6 @@ value to specific buyer: synergy 고려
 ## LOS 24.f: Contrast absolute and relative valuation models and describe examples of each type of model.
 
 ### Absolute valuation
-
-![image-20210930093912093](/Kevin_Min/images/image-20210930093912093.png)
 
 ![image-20210928152423281](/Kevin_Min/images/image-20210928152423281.png)
 
