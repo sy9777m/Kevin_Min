@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>System Programming week 5 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="System Programming week 5" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 System Programming 5th week." />
+<meta property="og:description" content="Soongsil University 2-2 System Programming 5th week." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2020/09/30/system-programming-week-5.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2020/09/30/system-programming-week-5.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-30T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-09-30T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2020/09/30/system-programming-week-5.html","@type":"BlogPosting","headline":"System Programming week 5","dateModified":"2020-09-30T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2020/09/30/system-programming-week-5.html"},"description":"Soongsil University 2-2 System Programming 5th week.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">System Programming week 5</h1><p class="page-description">Soongsil University 2-2 System Programming 5th week.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-09-30T00:00:00-05:00" itemprop="datePublished">
+        Sep 30, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#system-programming-week-5">System Programming Week 5</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#control-condition-codes">Control: Condition codes</a></li>
+<li class="toc-entry toc-h2"><a href="#processor-state">Processor State</a></li>
+<li class="toc-entry toc-h2"><a href="#condition-codes-implicit-setting">Condition Codes (Implicit Setting)</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#single-bit-register">Single bit register</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#condition-codes-explicit-setting-by-compare-instruction">Condition codes (Explicit Setting by Compare Instruction)</a></li>
+<li class="toc-entry toc-h2"><a href="#condition-codes-explicit-setting-test">Condition Codes (Explicit Setting: Test)</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#explicit-setting-by-test-instruction">Explicit Setting by Test instruction</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#reading-condition-codes">Reading condition codes</a></li>
+<li class="toc-entry toc-h2"><a href="#condition-branches">Condition branches</a></li>
+<li class="toc-entry toc-h2"><a href="#jumping">Jumping</a></li>
+<li class="toc-entry toc-h2"><a href="#expressing-with-goto-code">Expressing with Goto Code</a></li>
+<li class="toc-entry toc-h2"><a href="#using-conditional-moves">Using conditional moves</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#conditional-move-instructions">Conditional move instructions</a></li>
+<li class="toc-entry toc-h3"><a href="#why">Why?</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#bad-cases-for-conditional-move">Bad cases for conditional move</a></li>
+<li class="toc-entry toc-h2"><a href="#loops">Loops</a></li>
+<li class="toc-entry toc-h2"><a href="#do-while-loop-example">“Do-While” Loop example</a></li>
+<li class="toc-entry toc-h2"><a href="#do-while-translation">“Do-While” translation</a></li>
+<li class="toc-entry toc-h2"><a href="#while-translation">“While” translation</a></li>
+<li class="toc-entry toc-h2"><a href="#for-loop-form">“For” loop form</a></li>
+<li class="toc-entry toc-h2"><a href="#switch-statement">Switch statement</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#switch-statement-example">Switch statement example</a></li>
+<li class="toc-entry toc-h3"><a href="#jump-table-structure">Jump table structure</a></li>
+<li class="toc-entry toc-h3"><a href="#switch-statement-example-1">Switch statement example</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#assembly-setup-explanation">Assembly setup explanation</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#table-structure">Table structure</a></li>
+<li class="toc-entry toc-h3"><a href="#jumping-1">Jumping</a></li>
+<li class="toc-entry toc-h3"><a href="#code-blocks-x--1">Code blocks (x == 1)</a></li>
+<li class="toc-entry toc-h3"><a href="#handling-fall-through">Handling Fall-through</a></li>
+<li class="toc-entry toc-h3"><a href="#code-blocks-x--2-x--3">Code blocks (x == 2, x == 3)</a></li>
+<li class="toc-entry toc-h3"><a href="#code-blocks-x--5-x--6-default">Code blocks (x == 5, x == 6, default)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h1 id="system-programming-week-5">
+<a class="anchor" href="#system-programming-week-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Programming Week 5</h1>
+
+<h2 id="control-condition-codes">
+<a class="anchor" href="#control-condition-codes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Control: Condition codes</h2>
+
+<h2 id="processor-state">
+<a class="anchor" href="#processor-state" aria-hidden="true"><span class="octicon octicon-link"></span></a>Processor State</h2>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930170733781.png" alt="image-20210930170733781"></p>
+
+<h2 id="condition-codes-implicit-setting">
+<a class="anchor" href="#condition-codes-implicit-setting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Condition Codes (Implicit Setting)</h2>
+
+<h3 id="single-bit-register">
+<a class="anchor" href="#single-bit-register" aria-hidden="true"><span class="octicon octicon-link"></span></a>Single bit register</h3>
+
+<p><code class="language-plaintext highlighter-rouge">addq Src, Dest</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">t = a + b</code></p>
+
+<ul>
+  <li>CF (Carry Flag) for unsigned
+    <ul>
+      <li>CF set if carry out from most significant bit (unsigned overflow, 비트연산으로 인해 most significant bit의 overflow가 일어났을 때)</li>
+    </ul>
+  </li>
+  <li>ZF (Zero Flag)
+    <ul>
+      <li>ZF set if <code class="language-plaintext highlighter-rouge">t == 0</code>
+</li>
+    </ul>
+  </li>
+  <li>SF (Sign Flag) for signed
+    <ul>
+      <li>SF set if <code class="language-plaintext highlighter-rouge">t &lt; 0</code> (as signed)</li>
+    </ul>
+  </li>
+  <li>OF (Overflow Flag) for signed
+    <ul>
+      <li>set if two’s-complement (signed) overflow: <code class="language-plaintext highlighter-rouge">(a &gt; 0 &amp;&amp; b &gt; 0 &amp;&amp; t &lt; 0) || (a &lt; 0 &amp;&amp; b &lt; 0 &amp;&amp; t  &gt;= 0)</code>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Not set by <code class="language-plaintext highlighter-rouge">leaq</code> instruction</p>
+
+<h2 id="condition-codes-explicit-setting-by-compare-instruction">
+<a class="anchor" href="#condition-codes-explicit-setting-by-compare-instruction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Condition codes (Explicit Setting by Compare Instruction)</h2>
+
+<p><code class="language-plaintext highlighter-rouge">cmpq Src2, Src1</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">cmpq b, a</code> like computing a - b without setting destination. (빼기 연산으로 compare 연산을 함)</p>
+
+<ul>
+  <li>CF set if carry out from most significant bit (used for unsigned comparisions)</li>
+  <li>ZF set if <code class="language-plaintext highlighter-rouge">a == b</code>
+</li>
+  <li>SF set if <code class="language-plaintext highlighter-rouge">(a - b) &lt; 0</code> (as signed)</li>
+  <li>OF set if two’s-complement (signed) overflow <code class="language-plaintext highlighter-rouge">(a &gt; 0 &amp;&amp; b &lt; 0 &amp;&amp; (a - b) &lt; 0) || (a &lt; 0 &amp;&amp; b &lt; 0 &amp;&amp; (a - b) &gt;=0)</code>
+</li>
+</ul>
+
+<h2 id="condition-codes-explicit-setting-test">
+<a class="anchor" href="#condition-codes-explicit-setting-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>Condition Codes (Explicit Setting: Test)</h2>
+
+<h3 id="explicit-setting-by-test-instruction">
+<a class="anchor" href="#explicit-setting-by-test-instruction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explicit Setting by Test instruction</h3>
+
+<p><code class="language-plaintext highlighter-rouge">testq Src2, Src1</code></p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">testq b, a</code> like computing <code class="language-plaintext highlighter-rouge">a &amp; b</code> without setting destination.
+    <ul>
+      <li>bit by bit으로 comparison 연산</li>
+    </ul>
+  </li>
+  <li>Sets condition codes based on value of Src1 &amp; Src2</li>
+  <li>Useful to have one of the operands be a mask</li>
+  <li>ZF set when <code class="language-plaintext highlighter-rouge">a &amp; b == 0</code>
+</li>
+  <li>SF set when <code class="language-plaintext highlighter-rouge">a &amp; b &lt; 0</code>
+</li>
+</ul>
+
+<h2 id="reading-condition-codes">
+<a class="anchor" href="#reading-condition-codes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading condition codes</h2>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930172123796.png" alt="image-20210930172123796"></p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930172302038.png" alt="image-20210930172302038"></p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930172404709.png" alt="image-20210930172404709"></p>
+
+<h2 id="condition-branches">
+<a class="anchor" href="#condition-branches" aria-hidden="true"><span class="octicon octicon-link"></span></a>Condition branches</h2>
+
+<h2 id="jumping">
+<a class="anchor" href="#jumping" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jumping</h2>
+
+<p>jX Instructions - jump to different part of code depending on condition codes</p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930172738658.png" alt="image-20210930172738658"></p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930172901805.png" alt="image-20210930172901805"></p>
+
+<h2 id="expressing-with-goto-code">
+<a class="anchor" href="#expressing-with-goto-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expressing with Goto Code</h2>
+
+<p>C allows <code class="language-plaintext highlighter-rouge">goto</code> statement</p>
+
+<p>Jump to position designated by label.</p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930173048877.png" alt="image-20210930173048877"></p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930173152631.png" alt="image-20210930173152631"></p>
+
+<h2 id="using-conditional-moves">
+<a class="anchor" href="#using-conditional-moves" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using conditional moves</h2>
+
+<h3 id="conditional-move-instructions">
+<a class="anchor" href="#conditional-move-instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conditional move instructions</h3>
+
+<ul>
+  <li>instruction supports: if (Test) Dest &lt;- Src</li>
+  <li>GCC tries to use them
+    <ul>
+      <li>but, only when known to be safe.</li>
+    </ul>
+  </li>
+  <li>Branch의 모든 계산을 다 끝내놓고, 조건에 맞는 결과만 가져와서 씀</li>
+</ul>
+
+<h3 id="why">
+<a class="anchor" href="#why" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why?</h3>
+
+<ul>
+  <li>Branches are very disruptive to instruction flow through pipelines.</li>
+  <li>Conditional moves do not require control transfers.</li>
+</ul>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930173601313.png" alt="image-20210930173601313"></p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930173718105.png" alt="image-20210930173718105"></p>
+
+<h2 id="bad-cases-for-conditional-move">
+<a class="anchor" href="#bad-cases-for-conditional-move" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bad cases for conditional move</h2>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930173841921.png" alt="image-20210930173841921"></p>
+
+<h2 id="loops">
+<a class="anchor" href="#loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loops</h2>
+
+<h2 id="do-while-loop-example">
+<a class="anchor" href="#do-while-loop-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>“Do-While” Loop example</h2>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930174209931.png" alt="image-20210930174209931"></p>
+
+<p>Do-While statement가 assembly에서 가장 직관적으로 변환됨</p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930174459270.png" alt="image-20210930174459270"></p>
+
+<h2 id="do-while-translation">
+<a class="anchor" href="#do-while-translation" aria-hidden="true"><span class="octicon octicon-link"></span></a>“Do-While” translation</h2>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930174738332.png" alt="image-20210930174738332"></p>
+
+<h2 id="while-translation">
+<a class="anchor" href="#while-translation" aria-hidden="true"><span class="octicon octicon-link"></span></a>“While” translation</h2>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930174805078.png" alt="image-20210930174805078"></p>
+
+<p><code class="language-plaintext highlighter-rouge">-Og</code>는 optimization을 끄는 것</p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930174900564.png" alt="image-20210930174900564"></p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930174936578.png" alt="image-20210930174936578"></p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930174949988.png" alt="image-20210930174949988"></p>
+
+<h2 id="for-loop-form">
+<a class="anchor" href="#for-loop-form" aria-hidden="true"><span class="octicon octicon-link"></span></a>“For” loop form</h2>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930175111562.png" alt="image-20210930175111562"></p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930175427826.png" alt="image-20210930175427826"></p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930175439525.png" alt="image-20210930175439525"></p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930175457916.png" alt="image-20210930175457916"></p>
+
+<h2 id="switch-statement">
+<a class="anchor" href="#switch-statement" aria-hidden="true"><span class="octicon octicon-link"></span></a>Switch statement</h2>
+
+<p>왜 if statement보다 switch statement가 더 성능이 좋은지 이해하기</p>
+
+<h3 id="switch-statement-example">
+<a class="anchor" href="#switch-statement-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Switch statement example</h3>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930175632717.png" alt="image-20210930175632717"></p>
+
+<h3 id="jump-table-structure">
+<a class="anchor" href="#jump-table-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jump table structure</h3>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930175743399.png" alt="image-20210930175743399"></p>
+
+<p>Jump table을 작성해서 argument가 들어오자 마자 조건에 맞는 Code block으로 바로 jump 할 수 있는 code block의 address를 저장하고 있는 jump table을 활용함. -&gt; 계산을 하지 않아도 됨</p>
+
+<p>if statement로 many cases를 사용하면 하나하나 conditions들을 연산해야 하기 때문에 switch statement가 더 빠름</p>
+
+<h3 id="switch-statement-example-1">
+<a class="anchor" href="#switch-statement-example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Switch statement example</h3>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930175957830.png" alt="image-20210930175957830"></p>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930180142350.png" alt="image-20210930180142350"></p>
+
+<h2 id="assembly-setup-explanation">
+<a class="anchor" href="#assembly-setup-explanation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assembly setup explanation</h2>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930180235632.png" alt="image-20210930180235632"></p>
+
+<h3 id="table-structure">
+<a class="anchor" href="#table-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table structure</h3>
+
+<ul>
+  <li>Each targe requires 8 bytes</li>
+  <li>Base address <code class="language-plaintext highlighter-rouge">.L4</code>
+</li>
+</ul>
+
+<h3 id="jumping-1">
+<a class="anchor" href="#jumping-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jumping</h3>
+
+<ul>
+  <li>Direct: jmp <code class="language-plaintext highlighter-rouge">.L8</code>
+</li>
+  <li>Jump target is denoted by label <code class="language-plaintext highlighter-rouge">.L8</code>
+</li>
+  <li>Indirect: jmp <code class="language-plaintext highlighter-rouge">*.L4(, %rdi, 8)</code>
+</li>
+  <li>Must scale by factor of 8 (addresses are 8 bytes)</li>
+  <li>Fetch target from effective Address <code class="language-plaintext highlighter-rouge">.L4 + x * 8</code>
+    <ul>
+      <li>only for $0&lt;=x&lt;=6$</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930180427390.png" alt="image-20210930180427390"></p>
+
+<h3 id="code-blocks-x--1">
+<a class="anchor" href="#code-blocks-x--1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code blocks (<code class="language-plaintext highlighter-rouge">x == 1</code>)</h3>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930180437329.png" alt="image-20210930180437329"></p>
+
+<h3 id="handling-fall-through">
+<a class="anchor" href="#handling-fall-through" aria-hidden="true"><span class="octicon octicon-link"></span></a>Handling Fall-through</h3>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930180520109.png" alt="image-20210930180520109"></p>
+
+<h3 id="code-blocks-x--2-x--3">
+<a class="anchor" href="#code-blocks-x--2-x--3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code blocks (<code class="language-plaintext highlighter-rouge">x == 2, x == 3</code>)</h3>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930180714933.png" alt="image-20210930180714933"></p>
+
+<h3 id="code-blocks-x--5-x--6-default">
+<a class="anchor" href="#code-blocks-x--5-x--6-default" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code blocks (<code class="language-plaintext highlighter-rouge">x == 5, x == 6, default</code>)</h3>
+
+<p><img src="%5CKevin_Min%5Cimages%5C2020-09-30-probability-and-inferential-statistics-week-5%5Cimage-20210930180748232.png" alt="image-20210930180748232"></p>
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2020/09/30/system-programming-week-5.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

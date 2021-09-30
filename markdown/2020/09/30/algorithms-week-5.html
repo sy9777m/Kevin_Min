@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Algorithms week 5 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Algorithms week 5" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 Algorithms 5th week." />
+<meta property="og:description" content="Soongsil University 2-2 Algorithms 5th week." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2020/09/30/algorithms-week-5.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2020/09/30/algorithms-week-5.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-30T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2020-09-30T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2020/09/30/algorithms-week-5.html","@type":"BlogPosting","headline":"Algorithms week 5","dateModified":"2020-09-30T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2020/09/30/algorithms-week-5.html"},"description":"Soongsil University 2-2 Algorithms 5th week.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Algorithms week 5</h1><p class="page-description">Soongsil University 2-2 Algorithms 5th week.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-09-30T00:00:00-05:00" itemprop="datePublished">
+        Sep 30, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#algorithms-week-5">Algorithms Week 5</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#linear-time-sorting">Linear time sorting</a></li>
+<li class="toc-entry toc-h2"><a href="#randomized-quicksort">(Randomized) Quicksort</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#randomized-quicksort-1">Randomized Quicksort</a></li>
+<li class="toc-entry toc-h3"><a href="#initial-observations">Initial observations</a></li>
+<li class="toc-entry toc-h3"><a href="#expected-runtime-of-randomized-quicksort">Expected runtime of randomized quicksort</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#lower-bound-of-comparison-based-sorting">Lower-bound of comparison-based sorting</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#sorting">Sorting</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#decision-tree">Decision tree</a></li>
+<li class="toc-entry toc-h2"><a href="#linear-time-sorting-1">Linear-time sorting</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#counting-sort">Counting sort</a></li>
+<li class="toc-entry toc-h3"><a href="#bucket-sort">Bucket sort</a></li>
+<li class="toc-entry toc-h3"><a href="#radix-sort">Radix sort</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h1 id="algorithms-week-5">
+<a class="anchor" href="#algorithms-week-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithms Week 5</h1>
+
+<h2 id="linear-time-sorting">
+<a class="anchor" href="#linear-time-sorting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linear time sorting</h2>
+
+<ul>
+  <li>Comparison-based sorting에 성능적인 한계가 있음</li>
+  <li>이러한 단점을 해결하기 위한 linear-time sorting 기법들이 있음</li>
+</ul>
+
+<h2 id="randomized-quicksort">
+<a class="anchor" href="#randomized-quicksort" aria-hidden="true"><span class="octicon octicon-link"></span></a>(Randomized) Quicksort</h2>
+
+<p>It behaves as follows:</p>
+
+<ul>
+  <li>If the list has 0 or 1 elements it’s sorted.</li>
+  <li>Otherwise, choose a pivot and partition around it.</li>
+  <li>Recursively apply quicksort to the sublists to the left and right of the pivot.</li>
+</ul>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930183827208.png" alt="image-20210930183827208"></p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">qucikSort</span> <span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">pivot</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">r</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">pivot</span><span class="p">);</span>
+	
+	<span class="n">quickSort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">pos</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+	<span class="n">quickSort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">pos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Worst-case runtime - $O(n^{2})$: When <code class="language-plaintext highlighter-rouge">pivot = array[r]</code></p>
+
+<h3 id="randomized-quicksort-1">
+<a class="anchor" href="#randomized-quicksort-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Randomized Quicksort</h3>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">qucikSort</span> <span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">pivot</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">l</span> <span class="o">+</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="n">n</span><span class="p">];</span>
+	<span class="kt">int</span> <span class="n">pos</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">pivot</span><span class="p">);</span>
+	
+	<span class="n">quickSort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">pos</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+	<span class="n">quickSort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">pos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Worst-case - $O(n^{2})$: Think of this as the adversary chooses the randomness.</p>
+
+<p>Expected - $O(n\log{n})$</p>
+
+<h3 id="initial-observations">
+<a class="anchor" href="#initial-observations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initial observations</h3>
+
+<p>There’s a really good case, in which partition always picks the median element as the pivot.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930184713329.png" alt="image-20210930184713329"></p>
+
+<p>There’s a really bad case, in which partition always picks the smallest or largest element as the pivot.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930184746442.png" alt="image-20210930184746442"></p>
+
+<h3 id="expected-runtime-of-randomized-quicksort">
+<a class="anchor" href="#expected-runtime-of-randomized-quicksort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expected runtime of randomized quicksort</h3>
+
+<p>The expected runtime of auicksort is $O(n\log{n})$</p>
+
+<p>We can provie it through counting the number of times two elements get compared.</p>
+
+<h2 id="lower-bound-of-comparison-based-sorting">
+<a class="anchor" href="#lower-bound-of-comparison-based-sorting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lower-bound of comparison-based sorting</h2>
+
+<h3 id="sorting">
+<a class="anchor" href="#sorting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sorting</h3>
+
+<p>We’ve seen a few sorting algorithms</p>
+
+<ul>
+  <li>Insertion sort is worst-case $O(n^{2})$-time.</li>
+  <li>Mergesort is worst-case $O(n\log{n})$-time.</li>
+  <li>Quicksort is worst-case $O(n\log{n})$-time.</li>
+</ul>
+
+<p>Comparison-based algorithms use “comparisons” to achieve their output.</p>
+
+<ul>
+  <li>Linear-time select is a comparison-based algorithms.</li>
+  <li>quicksort, mergesort, insertionsort</li>
+</ul>
+
+<p>Theorem [Lower bound of $\ohm(n\log{n})$]: Any deterministic comparison-based sorting algorithm requires $\ohm(n\log{n})$-time?</p>
+
+<ul>
+  <li>Argue that all comparison-based sorting algorithms produce a decision tree. Then analyze decision trees.</li>
+</ul>
+
+<p>Proof:</p>
+
+<ul>
+  <li>Any deterministic comparison-based algorithm can be represented as a decision tree with $n!$ leaves.</li>
+  <li>The worst-case running time is the depth of the decision tree.</li>
+  <li>All decision trees with $n!$ leaves have depth at least $\ohm(n\log{n})$</li>
+</ul>
+
+<p>So any comparison-based sorting algorithm must have worst-case running time at least $\ohm({n\log{n}})$</p>
+
+<h2 id="decision-tree">
+<a class="anchor" href="#decision-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Decision tree</h2>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930185525497.png" alt="image-20210930185525497"></p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930185537302.png" alt="image-20210930185537302"></p>
+
+<p>The leaves of this tree are all possible orderings of the items: when we reach a leaf we return it.</p>
+
+<p>Running the algorithm on a given input corresponds to taking a particular path through the tree.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930185728867.png" alt="image-20210930185728867"></p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930185812594.png" alt="image-20210930185812594"></p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930191734418.png" alt="image-20210930191734418"></p>
+
+<h2 id="linear-time-sorting-1">
+<a class="anchor" href="#linear-time-sorting-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linear-time sorting</h2>
+
+<p>If any deterministic comparison-based sorting algorithm requires $\ohm(n\log{n})$-time, then what’s this nonsense about linear-time sorting algorithms?</p>
+
+<ul>
+  <li>
+    <p>We can achieve $O(n)$ worst-case runtime if we make assumptions about the input. (e.g. They are integers ranging from 0 to k - 1)</p>
+  </li>
+  <li>
+    <p>Counting sort, Bucket sort, Radix sort</p>
+  </li>
+</ul>
+
+<h3 id="counting-sort">
+<a class="anchor" href="#counting-sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Counting sort</h3>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">countingsort</span><span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">count</span> <span class="p">[</span><span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">];</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">count</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">k</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">while</span><span class="p">(</span><span class="n">count</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+			<span class="n">j</span><span class="o">++</span><span class="p">;</span>
+			<span class="n">count</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Assumption: $\operatorname{input value rance} = [0, k - 1]$</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930192504411.png" alt="image-20210930192504411"></p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930192658163.png" alt="image-20210930192658163"></p>
+
+<h3 id="bucket-sort">
+<a class="anchor" href="#bucket-sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bucket sort</h3>
+
+<p>similar to the counting sort, but</p>
+
+<p>Might be multiple keys per bucket, so buckets need another stable_sort to be sorted.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930192817360.png" alt="image-20210930192817360"></p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">static</span> <span class="kt">void</span> <span class="nf">bucketsort</span><span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">bucket</span><span class="p">[</span><span class="n">bucket_number</span><span class="p">];</span>
+	
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">ceil</span><span class="p">(</span><span class="n">k</span> <span class="o">/</span> <span class="n">bucket_number</span><span class="p">);</span>
+		<span class="n">bucket</span><span class="p">[</span><span class="n">b</span><span class="p">].</span><span class="n">push_back</span><span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+	<span class="p">}</span>
+	
+	<span class="k">if</span> <span class="p">(</span><span class="n">bucket_number</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">bucket_number</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">sort</span><span class="p">(</span><span class="n">bucket</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">begin</span><span class="p">(),</span> <span class="n">bucket</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">end</span><span class="p">());</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	
+	<span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">bucket_number</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">bucket</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">size</span><span class="p">();</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">array</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">=</span> <span class="n">bucket</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+			<span class="n">m</span><span class="o">++</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>worst-case runtime: $\O(max(n\log{n}, n + k))$</p>
+
+<p>Two cases for um_buckets and k:</p>
+
+<ul>
+  <li>$k &lt;= \operatorname{num_buckets}$: At most one key per bucket, so buckets don’t need another stable_sort to be sorted (similar to counting_sort).</li>
+  <li>$k &gt; \operatorname{num_buckets}$: Might be multiple keys per buckets, so buckets need another stable_sort to be sorted.</li>
+</ul>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930193654631.png" alt="image-20210930193654631"></p>
+
+<h3 id="radix-sort">
+<a class="anchor" href="#radix-sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Radix sort</h3>
+
+<p>기수정렬</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2020-09-30-algorithms-week-5%5Cimage-20210930193810934.png" alt="image-20210930193810934"></p>
+
+<p>자릿수로 정렬</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">radixsort</span><span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">size</span><span class="p">)</span> <span class="p">{</span>
+	<span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">getMax</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">size</span><span class="p">);</span>
+	
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">place</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">max</span> <span class="o">/</span> <span class="n">place</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="n">place</span> <span class="o">*=</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">countingSort</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">place</span><span class="p">);</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">countingSort</span><span class="p">(</span><span class="kt">int</span> <span class="n">array</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">size</span><span class="p">,</span> <span class="kt">int</span> <span class="n">place</span><span class="p">)</span> <span class="p">{</span>
+	<span class="n">count</span> <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">output</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">size</span><span class="p">];</span>
+	<span class="kt">int</span><span class="o">*</span> <span class="n">count</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">max</span><span class="p">];</span>
+	
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">max</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">count</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+	<span class="p">}</span>
+	
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">place</span><span class="p">)</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+		<span class="n">count</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">max</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">count</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">count</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+	<span class="p">}</span>
+	
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">key</span> <span class="o">=</span> <span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">/</span> <span class="n">place</span><span class="p">)</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+		<span class="n">output</span><span class="p">[</span><span class="n">count</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+		<span class="n">count</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">--</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">size</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2020/09/30/algorithms-week-5.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
