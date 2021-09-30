@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: CFA Level 2 Equity summary.
 categories: [markdown]
-title: CFA Level 2 Equity Summary
+title: CFA Level 2 Equity
 ---
 
 # CFA Level 2 Equity
