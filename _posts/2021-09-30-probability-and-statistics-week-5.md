@@ -11,14 +11,14 @@ title: Probability and statistics week 5
 
 특정 사건이 일어난 것을 알고 있을 때, 다른 사건이 동시에 발생하는 확률
 $$
-P(A | B) = \frac{P(A \cap B)}{P(B)}\\
+\\P(A | B) = \frac{P(A \cap B)}{P(B)}\\
 if\, A \cap B = \empty: P(A | B) = \frac{P(A \cap B)}{P(B)} = 0\\
 if\, A \cap B = B: P(A | B) = \frac{P(A \cap B)}{P(B)} = 1\\
 P(A | B) + P(A^{`} | B) = \frac{P(A \cap B)}{P(B)} + \frac{P(A^{`} \cap B)}{P(B)} = 1
 $$
 B로 sample space를 줄여서 B가 일어났을 때 A가 일어날 확률을 구하는 개념. 즉, $P(A | B) + P(A | B^{`}) = 1$
 $$
-A \cap (B \cup C) \ne A \cap B \cup C\\
+\\A \cap (B \cup C) \ne A \cap B \cup C\\
 P(A | B) = \frac{P(A \cap B)}{P(B)}, \, P(B | A) = \frac{P(A \cap B)}{P(A)}\\
 P(A \cap B) = P(B)P(A | B) = P(A)P(B | A)
 $$
@@ -26,8 +26,8 @@ $$
 ## Independent variable
 
 $$
-P(B | A) = P(B)\\
-P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)P(B)}{P(B)} = P(A)\\
+\\P(B | A) = P(B)
+\\P(A | B) = \frac{P(A \cap B)}{P(B)} = \frac{P(A)P(B)}{P(B)} = P(A)\\
 $$
 
 아래 것 중 하나라도 성립하면 나머지도 성립
@@ -46,7 +46,7 @@ $$
 
 ![image-20210930234946142](/Kevin_Min/images/2021-09-30-probability-and-statistics-week-5/image-20210930234946142.png)
 $$
-P(claim) = P(\operatorname{plant I}) * P(claim | \operatorname{plant I}) + P(\operatorname{plant II}) * P(claim | \operatorname{plant II}) + P(\operatorname{plant III}) * P(claim | \operatorname{plant III}) + P(\operatorname{plant IV}) * P(claim | \operatorname{plant IV})
+\\P(claim) = P(\operatorname{plant I}) * P(claim | \operatorname{plant I}) + P(\operatorname{plant II}) * P(claim | \operatorname{plant II}) + P(\operatorname{plant III}) * P(claim | \operatorname{plant III}) + P(\operatorname{plant IV}) * P(claim | \operatorname{plant IV})
 $$
 
 ## 확률을 세는 방법
@@ -71,9 +71,9 @@ $$
 ## Bayes' Theorem
 
 $$
-P(A_{i}): \text{prior probability}\\
-P(B | A_{i}): \text{likelihood probability}\\
-P(A_{i} | B) = \frac{P(A_{i})P(B | A_{i})}{\sum_{j = 1}^{n}{P(A_{j})P(B | A_{j})}}: \text{posterior probability}
+\\P(A_{i}): \text{prior probability}
+\\P(B | A_{i}): \text{likelihood probability}
+\\P(A_{i} | B) = \frac{P(A_{i})P(B | A_{i})}{\sum_{j = 1}^{n}{P(A_{j})P(B | A_{j})}}: \text{posterior probability}
 $$
 
 ## 베이지안 이론
@@ -107,14 +107,14 @@ $$
 
 이산형 확률변수 X가 어떤 값 $x_{i}$를 가질 확률 $p_{i}$
 $$
-P(X = x_{i}) = p_{i}
+\\P(X = x_{i}) = p_{i}
 $$
 Histogram을 총 sample의 수로 나눈 것과 사실 상 같음
 
 아래의 두 조건을 만족해야 함
 $$
-0 \le p_{i} \le 1\\
-\sum_{i}{p_{i}} = 1
+\\0 \le p_{i} \le 1
+\\\sum_{i}{p_{i}} = 1
 $$
 Hisgotram처럼 bar 형태로 그릴 수 있음
 
@@ -130,11 +130,11 @@ mapping된 특정 real number에만 값이 있는 것임
 
 ![image-20211001002008036](/Kevin_Min/images/2021-09-30-probability-and-statistics-week-5/image-20211001002008036.png)
 
-## Cumulative Distribution Fuction (누적분포함수)
+## Cumulative Distribution Function (누적분포함수)
 
 $$
-F(x) = P(X \le x)\\
-F(x) = \sum_{y:y<=x}{P(X = y)}
+\\F(x) = P(X \le x)
+\\F(x) = \sum_{y:y<=x}{P(X = y)}
 $$
 
 ### example
@@ -143,17 +143,17 @@ $$
 
 ![image-20211001002244669](/Kevin_Min/images/2021-09-30-probability-and-statistics-week-5/image-20211001002244669.png)
 $$
-0 \le F_{X}(x) \le 1\\
-F_{X}(\infty) = 1\\
-F_{X}(-\infty) = 0\\
-F_{X}(x_{1}) \le F_{X}(x_{2}) for x_{1} < x_{2}
+\\0 \le F_{X}(x) \le 1
+\\F_{X}(\infty) = 1
+\\F_{X}(-\infty) = 0
+\\F_{X}(x_{1}) \le F_{X}(x_{2}) for x_{1} < x_{2}
 $$
 
 
 ## CCDF (Complementary Cumulative Distribution Function)
 
 $$
-1 - F_{X}(x) = P(X >= x)
+\\1 - F_{X}(x) = P(X >= x)
 $$
 
 파레토 분포 등을 볼 때 유용하게 쓰임
@@ -163,7 +163,7 @@ $$
 ## relationship between PMF and CDF
 
 $$
-P(x_{1} < X <= x) = F(x_{2}) - F(x_{1})
+\\P(x_{1} < X <= x) = F(x_{2}) - F(x_{1})
 $$
 
 ![image-20211001002524888](/Kevin_Min/images/2021-09-30-probability-and-statistics-week-5/image-20211001002524888.png)

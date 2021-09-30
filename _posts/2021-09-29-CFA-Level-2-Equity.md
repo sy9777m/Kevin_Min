@@ -198,13 +198,13 @@ If the market is believed to be overvalued ($\hat{PEg} < 0$), P/E ratios would b
 ### Capital Asset Pricing Model
 
 $$
-\operatorname{required rate on stock} j = \operatorname{risk-free\, rate} + \operatorname{equity risk premium} * \operatorname{beta of} j
+\\\operatorname{required rate on stock} j = \operatorname{risk-free\, rate} + \operatorname{equity risk premium} * \operatorname{beta of} j
 $$
 
 ### Fama-French Model (3 factors)
 
 $$
-\operatorname{required return of stock}j = RF + \beta_{mkt, j} * (R_{mkt} - RF) + \beta_{SMB, j} * (R_{small} - R_{big}) + \beta_{HML, j} * (R_{HBM} - R_{LBM})
+\\\operatorname{required return of stock}j = RF + \beta_{mkt, j} * (R_{mkt} - RF) + \beta_{SMB, j} * (R_{small} - R_{big}) + \beta_{HML, j} * (R_{HBM} - R_{LBM})
 $$
 
 $R_{mkt} - RF$ = return on a value-weighted market index minus the risk-free rate
@@ -219,7 +219,7 @@ The baseline value (i.e., the expected value for the variable) for $\beta_{mkt, 
 
 The Pastor-Stambaugh model adds a liquidity factor to the Fama-French model. The baseline value for the liquidity factor beta is zero.
 $$
-\operatorname{required return of stock}j = RF + \beta_{mkt, j} * (R_{mkt} - RF) + \beta_{SMB, j} * (R_{small} - R_{big}) + \beta_{HML, j} * (R_{HBM} - R_{LBM}) + \beta_{liq, j} * (R_{illiq} - R_{liq})
+\\\operatorname{required return of stock}j = RF + \beta_{mkt, j} * (R_{mkt} - RF) + \beta_{SMB, j} * (R_{small} - R_{big}) + \beta_{HML, j} * (R_{HBM} - R_{LBM}) + \beta_{liq, j} * (R_{illiq} - R_{liq})
 $$
 
 ### Macroeconomic Multifactor Models (5 factors)
@@ -237,7 +237,7 @@ Macroeconomic multifactor models use factors associated with economic variables 
 ### Build-up Method
 
 $$
-\operatorname{required return} = RF + \operatorname{equity risk premium} + \operatorname{size premium} + \operatorname{specific-company\, premium}
+\\\operatorname{required return} = RF + \operatorname{equity risk premium} + \operatorname{size premium} + \operatorname{specific-company\, premium}
 $$
 
 The formula could have a factor for the level of controlling versus minority interests and a factor for marketability of the equity; however, these latter two factors are usually used to adjust the value of the company directly rather than through the required return.
@@ -260,7 +260,7 @@ Popular choices for the index include the S&P 500 and the NYSE Composite. The mo
 
 When making forecasts of the equity risk premium, some analysts recommend adjusting the beta for beta drift. Beta drift refers to the observed tendency of an estimated beta to revert to a value of 1.0 over time. To compensate, the Blume method can be used to adjust the beta estimate:
 $$
-\operatorname{adjusted beta} = (2 / 3 * \operatorname{regression beta}) + (1 / 3 * 1.0)
+\\\operatorname{adjusted beta} = (2 / 3 * \operatorname{regression beta}) + (1 / 3 * 1.0)
 $$
 
 ### Beta estimates for thinly traded stocks and nonpublic companies
@@ -271,12 +271,12 @@ $$
 
 3.   Unlever the beta estimate
      $$
-     \operatorname{unlevered beta of benchmark company} = \operatorname{beta of benchmark company} * \frac{1}{1 + \frac{\operatorname{debt of benchmark company}}{\operatorname{equity of benchmark company}}}
+     \\\operatorname{unlevered beta of benchmark company} = \operatorname{beta of benchmark company} * \frac{1}{1 + \frac{\operatorname{debt of benchmark company}}{\operatorname{equity of benchmark company}}}
      $$ {b}
 
 4.   Lever up the unlevered beta
      $$
-     \operatorname{estimate of beta for target company} = \operatorname{unlevered beta of benchmark company} * (1 + \frac{\operatorname{debt of target company}}{\operatorname{equity of target company}})
+     \\\operatorname{estimate of beta for target company} = \operatorname{unlevered beta of benchmark company} * (1 + \frac{\operatorname{debt of target company}}{\operatorname{equity of target company}})
      $$
      
 
@@ -292,8 +292,8 @@ International investment, if not hedged, exposes the investor to exchange rate r
 
 One method for adjusting data from emerging markets is to use a corresponding developed market as a benchmark and add a premium for the emerging market.
 $$
-\operatorname{Emerging ERP} = \operatorname{Developed equity risk premium} + \operatorname{Country premium}\\
-\operatorname{Country premium} = \operatorname{Emerging market bond yield} - \operatorname{developed market bond yield}
+\\\operatorname{Emerging ERP} = \operatorname{Developed equity risk premium} + \operatorname{Country premium}
+\\\operatorname{Country premium} = \operatorname{Emerging market bond yield} - \operatorname{developed market bond yield}
 $$
 
 ### country risk rating model
@@ -305,7 +305,7 @@ Developed market의 risk rating (independent variable)과 ERP (dependent variabl
 ## LOS 25.g: Explain and calculate the weighted average cost of capital for a company.
 
 $$
-\operatorname{WACC} = \frac{\operatorname{market value of debt}}{\operatorname{market value of debt and equity}} * r_{d} * (1 - t) + \frac{\operatorname{market value of equity}}{\operatorname{market value of debt and equity}} * r_{e}
+\\\operatorname{WACC} = \frac{\operatorname{market value of debt}}{\operatorname{market value of debt and equity}} * r_{d} * (1 - t) + \frac{\operatorname{market value of equity}}{\operatorname{market value of debt and equity}} * r_{e}
 $$
 
 the tax rate should be the marginal tax rate.
@@ -343,9 +343,9 @@ Economies of scale are observed when larger companies in an industry have larger
 
 Because cost of goods sold is closely related to revenue, future COGS is usually estimated as a percentage of future revenue:
 $$
-\operatorname{forecast COGS} = \operatorname{historical COGS} / \operatorname{revenue} * \operatorname{estimate of future revenue}\\
-\operatorname{or}\\
-\operatorname{forecast COGS} = (1 - \operatorname{gross margin}) * \operatorname{estimate of future revenue}
+\\\operatorname{forecast COGS} = \operatorname{historical COGS} / \operatorname{revenue} * \operatorname{estimate of future revenue}
+\\\operatorname{or}
+\\\operatorname{forecast COGS} = (1 - \operatorname{gross margin}) * \operatorname{estimate of future revenue}
 $$
 It can be worthwhile to examine the gross margins of a firm's competitor in the market as a check of the reasonableness of future gross margin estimates. In some cases, differences between firms' business models may be the underlying reason for differences in gross margins.
 
@@ -381,7 +381,7 @@ Net income less dividends declared will flow through to retained earnings. Worki
 
 The forecasted annual COGS divided by the inventory turnover ratio can be used to forecast an inventory value for the balance sheet that is consistent with income statement projections of COGS.
 $$
-\operatorname{projected accounts receivable} = \operatorname{days sales outstanding} * \operatorname{forecasted sales} / 365
+\\\operatorname{projected accounts receivable} = \operatorname{days sales outstanding} * \operatorname{forecasted sales} / 365
 $$
 Working capital items will increase at the same rate as revenues.
 
@@ -441,7 +441,7 @@ Some advances in technology decrease costs of production, which will increase pr
 
 Other advances in technology will result in either improved substitutes or wholly new products. Some technological advances can disrupt not only markets but entire industries. One way for an analyst to model the introduction of new substitutes for a company's products is to estimate a cannibalization factor, which is the percentage of new product sales that will replace existing product sales.
 $$
-\operatorname{cannibalization rate} = \frac{\operatorname{new product sales that replace existing product sales}}{\operatorname{total new product sales}}
+\\\operatorname{cannibalization rate} = \frac{\operatorname{new product sales that replace existing product sales}}{\operatorname{total new product sales}}
 $$
 
 ## LOS 26.k: Explain considerations in the choice of an explicit forecast horizon.
@@ -474,8 +474,8 @@ Steps in developing a sales-based pro forma model:
 
 ![image-20210928192755212](/Kevin_Min/images/2021-09-29-CFA-Level-2-Equity/image-20210928192755212.png)
 $$
-FCFF = NI + NCC + Interest * (1 - t) - WC_{I} - FC_{I}\\
-FCFE = FCFF - Interest * (1 - t) + \operatorname{Net Borrowing}
+\\FCFF = NI + NCC + Interest * (1 - t) - WC_{I} - FC_{I}
+\\FCFE = FCFF - Interest * (1 - t) + \operatorname{Net Borrowing}
 $$
 
 ### Choice of Discounted Cash Flow Models
@@ -498,19 +498,19 @@ $$
 ### One-period DDM
 
 $$
-V_{0} = \frac{D_{1} + P_{1}}{1 + r}
+\\V_{0} = \frac{D_{1} + P_{1}}{1 + r}
 $$
 
 ### Two-period DDM
 
 $$
-V_{0} = \frac{D_{1}}{(1 + r)} + \frac{D_{2} + P_{2}}{(1 + r)^{2}}
+\\V_{0} = \frac{D_{1}}{(1 + r)} + \frac{D_{2} + P_{2}}{(1 + r)^{2}}
 $$
 
 ### Multi-period DDM
 
 $$
-V_{0} = \sum_{t = 1}^{\infty}\frac{D_{t}}{(1 + r)^{t}}
+\\V_{0} = \sum_{t = 1}^{\infty}\frac{D_{t}}{(1 + r)^{t}}
 $$
 
 ## LOS 27.c: Calculate the value of a common stock using the Gordon growth model and explain the model's underlying assumptions.
@@ -520,7 +520,7 @@ The GGM assumes that dividends increase at a constant rate indefinitely.
 ### GGM
 
 $$
-V_{0} = \frac{D_{1}}{r - g}
+\\V_{0} = \frac{D_{1}}{r - g}
 $$
 
 The model assumes that:
@@ -539,7 +539,7 @@ It is unrealistic to assume that any firm can continue to grow indefinitely at a
 
 stock value - 1) no growth rate, 2) PVGO
 $$
-V_{0} = \frac{E_{1}}{r} + PVGO
+\\V_{0} = \frac{E_{1}}{r} + PVGO
 $$
 This means the value of a firm's equity has two components:
 
@@ -549,15 +549,15 @@ This means the value of a firm's equity has two components:
 ## LOS 27.f: Calculate and interpret the justified leading and trailing P/Es using the Gordon growth model.
 
 $$
-\operatorname{justified\, leading\, P/E} = \frac{P_{0}}{E_{1}} = \frac{D_{1} / E_{1}}{r - g} = \frac{1 - b}{r - g}\\
-\operatorname{justified\, trailing\, P/E} = \frac{P_{0}}{E_{0}} = \frac{D_{0} * (1 + g) / E_{0}}{r - g} = \frac{(1 - b) * (1 + g)}{r - g} = \operatorname{justified\, leading\, P/E} * (1 + g)\\
-b = \operatorname{retention ratio}
+\operatorname{justified\, leading\, P/E} = \frac{P_{0}}{E_{1}} = \frac{D_{1} / E_{1}}{r - g} = \frac{1 - b}{r - g}
+\\\\\operatorname{justified\, trailing\, P/E} = \frac{P_{0}}{E_{0}} = \frac{D_{0} * (1 + g) / E_{0}}{r - g} = \frac{(1 - b) * (1 + g)}{r - g} = \operatorname{justified\, leading\, P/E} * (1 + g)
+\\b = \operatorname{retention ratio}
 $$
 
 ## LOS 27.g: Calculate the value of noncallable fixed-rate perpetual preferred stock.
 
 $$
-\operatorname{value of perpetual preferred shares} = \frac{D_{p}}{r_{p}}
+\\\operatorname{value of perpetual preferred shares} = \frac{D_{p}}{r_{p}}
 $$
 
 ## LOS 27.h: Describe strengths and limitations of the Gordon growth model and justify its selection to value a company's common shares.
@@ -606,8 +606,8 @@ The growth rate starts out high and then decline linearly over the high-growth s
 ## LOS 27.k: Describe terminal value and explain alternative approaches to determining the terminal value in a DDM.
 
 $$
-\operatorname{DCF: }TV_{10} = \frac{D_{11}}{r - g}\\
-\operatorname{Multiple: }TV_{10} = \frac{P}{E_{10}} * E_{10}\, or\, \frac{P}{E_{11}} * E_{11}
+\\\operatorname{DCF: }TV_{10} = \frac{D_{11}}{r - g}
+\\\operatorname{Multiple: }TV_{10} = \frac{P}{E_{10}} * E_{10}\, or\, \frac{P}{E_{11}} * E_{11}
 $$
 
 ## LOS 27.l: Calculate and interpret the value of common shares using the two-stage DDM, the H-model, and the three-stage DDM.
@@ -615,10 +615,10 @@ $$
 ### Valuation using the H-model
 
 $$
-V_{0} = \frac{D_{0} * (1 + g_{L})}{r - g_{L}} + \frac{D_{0} * H * (g_{S} - g_{L})}{r - g_{L}}\\
-H = \frac{t}{2} = \operatorname{half-life\, (in\, years)\, of\, high-growth\, period}\\
-g_{S} = \operatorname{short-term\, growth\, rate}\\
-g_{L} = \operatorname{long-term\, growth\, rate}
+\\V_{0} = \frac{D_{0} * (1 + g_{L})}{r - g_{L}} + \frac{D_{0} * H * (g_{S} - g_{L})}{r - g_{L}}
+\\H = \frac{t}{2} = \operatorname{half-life\, (in\, years)\, of\, high-growth\, period}
+\\g_{S} = \operatorname{short-term\, growth\, rate}
+\\g_{L} = \operatorname{long-term\, growth\, rate}
 $$
 
 ## LOS 27.m: Estimate a required return based on any DDM, including the Gordon growth model and the H-model.
@@ -632,9 +632,9 @@ $$
 ## LOS 27.o: Calculate and interpret the sustainable growth rate of a company and demonstrate the use of DuPont analysis to estimate a company's sustainable growth rate.
 
 $$
-g = b * ROE\\
-ROE = \frac{\operatorname{Net Income}}{Sales} * \frac{Sales}{\operatorname{Total assets}}*\frac{\operatorname{Total assets}}{Equity} = \operatorname{Profit Margin} * \operatorname{Total asset turnover} * \operatorname{Leverage ratio}\\
-g = \frac{\operatorname{Net Income} - Dividends}{\operatorname{Net Income}} * \frac{\operatorname{Net Income}}{Sales} * \frac{Sales}{\operatorname{Total assets}}*\frac{\operatorname{Total assets}}{Equity} = b * ROA * \frac{\operatorname{Total assets}}{Equity}\\
+\\g = b * ROE
+\\ROE = \frac{\operatorname{Net Income}}{Sales} * \frac{Sales}{\operatorname{Total assets}}*\frac{\operatorname{Total assets}}{Equity} = \operatorname{Profit Margin} * \operatorname{Total asset turnover} * \operatorname{Leverage ratio}
+\\g = \frac{\operatorname{Net Income} - Dividends}{\operatorname{Net Income}} * \frac{\operatorname{Net Income}}{Sales} * \frac{Sales}{\operatorname{Total assets}}*\frac{\operatorname{Total assets}}{Equity} = b * ROA * \frac{\operatorname{Total assets}}{Equity}
 $$
 
 ## LOS 27.p: Evaluate whether is overvalued, fairly valued, or undervalued by the market based on a DDM estimate of value.
@@ -649,9 +649,9 @@ $$
 
 ![image-20210928210814093](/Kevin_Min/images/2021-09-29-CFA-Level-2-Equity/image-20210928210814093.png)
 $$
-\operatorname{firm value} = \operatorname{FCFF discouunted at the WACC}\\
-\operatorname{equity value} = \operatorname{FCFE discounted at the required return on equity}\\
-\operatorname{equity value} = \operatorname{firm value} - \operatorname{market value of debt}
+\\\operatorname{firm value} = \operatorname{FCFF discouunted at the WACC}
+\\\operatorname{equity value} = \operatorname{FCFE discounted at the required return on equity}
+\\\operatorname{equity value} = \operatorname{firm value} - \operatorname{market value of debt}
 $$
 FCFE is easier and more straightforward to use in cases where the company's capital structure is not particularly volatile. On the other hand, if a company has negative FCFE and significant debt outstanding, FCFF is generally the best choice.
 
@@ -671,7 +671,7 @@ Analysts often prefer to use free cash flow rather than dividend-based valuation
 ### Calculating FCFF from net income
 
 $$
-FCFF = NI + NCC + Interest * (1 - t) - FCInv - WCInv
+\\FCFF = NI + NCC + Interest * (1 - t) - FCInv - WCInv
 $$
 
 #### Noncash charges
@@ -692,10 +692,10 @@ The most significant noncash charge is usually depreciation.
 
 Fixed capital investment is a net amount: it is equal to the difference between capital expenditures (investments in long-term fixed assets) and the proceeds from the sale of long-term assets:
 $$
-\text{If no long-term assets were sold during the year,}\\
-FCInv = \operatorname{ending\, net\, PP\&E} - \operatorname{beginning\, net\, PP\&E} + depreciation\\
-\text{If long-term assets were sold during the year,}\\
-FCInv = \operatorname{ending\, net\, PP\&E} - \operatorname{beginning\, net\, PP\&E} + depreciation - \operatorname{gain on sale}
+\\\text{If no long-term assets were sold during the year,}
+\\FCInv = \operatorname{ending\, net\, PP\&E} - \operatorname{beginning\, net\, PP\&E} + depreciation
+\\\text{If long-term assets were sold during the year,}
+\\FCInv = \operatorname{ending\, net\, PP\&E} - \operatorname{beginning\, net\, PP\&E} + depreciation - \operatorname{gain on sale}
 $$
 
 ### Working capital investment
@@ -709,7 +709,7 @@ Only the after-tax interest cost because paying interest reduces our tax bill.
 ### Calculating FCFF from EBIT
 
 $$
-FCFF = EBIT * (1 - t) + Dep - FCInv - WCInv
+\\FCFF = EBIT * (1 - t) + Dep - FCInv - WCInv
 $$
 
 Because many noncash adjustments occur on the income statement below EBIT, we don't need to adjust for them when calculating free cash flwo if we start with EBIT.
@@ -717,31 +717,31 @@ Because many noncash adjustments occur on the income statement below EBIT, we do
 ### Calculating FCFF from EBITDA
 
 $$
-FCFF = EBITDA * (1 - t) + Dep * t - FCInv - WCInv
+\\FCFF = EBITDA * (1 - t) + Dep * t - FCInv - WCInv
 $$
 
 ### Calculating FCFF from CFO
 
 $$
-FCFF = CFO + Int * (1 - t) - FCInv
+\\FCFF = CFO + Int * (1 - t) - FCInv
 $$
 
 ### Calculating FCFE from FCFF
 
 $$
-FCFE = FCFF - Int * (1 - t) + \operatorname{net borrowing}
+\\FCFE = FCFF - Int * (1 - t) + \operatorname{net borrowing}
 $$
 
 ### Calculating FCFE from net income
 
 $$
-FCFE = NI + NCC - FCInv - WCInv + \operatorname{net borrowing}
+\\FCFE = NI + NCC - FCInv - WCInv + \operatorname{net borrowing}
 $$
 
 ### Calculating FCFE from CFO
 
 $$
-FCFE = CFO - FCInv + \operatorname{net borrowing}
+\\FCFE = CFO - FCInv + \operatorname{net borrowing}
 $$
 
 ### Free cash flow with preferred stock
@@ -758,8 +758,8 @@ The first method is to calculate historical free cash flow and apply a growth ra
 
 The second method is to forecast the underlying components of free cash flow and calculate each year separately.
 $$
-FCFE = NI - (1 - DR) * (FC_{I} - Dep + WC_{I})\\
-DR =\frac{Debt}{Debt + Equity} = \operatorname{Debt Ratio}
+\\FCFE = NI - (1 - DR) * (FC_{I} - Dep + WC_{I})
+\\DR =\frac{Debt}{Debt + Equity} = \operatorname{Debt Ratio}
 $$
 
 ## LOS 28.f: Compare the FCFE model and dividend discount models.
@@ -776,11 +776,11 @@ Dividends, share repurchases, and share issues have no effect on FCFF and FCFE; 
 
 Net income is a poor proxy for FCFE.
 $$
-FCFE = NI + NCC - FCInv - WCInv + \operatorname{net borrowing}
+\\FCFE = NI + NCC - FCInv - WCInv + \operatorname{net borrowing}
 $$
 EBITDA is a poor proxy for FCFF.
 $$
-FCFF = EBITDA * (1 - t) + Dep * t - FCInv - WCInv
+\\FCFF = EBITDA * (1 - t) + Dep * t - FCInv - WCInv
 $$
 
 ## LOS 28.i: Explain the single-stage (stable-growth), two-stage, and three-stage FCFF and FCFE models and select and justify the appropriate model given a company's characteristics.
@@ -788,15 +788,15 @@ $$
 ### Single-stage FCFF model
 
 $$
-\operatorname{value of the firm} = \frac{FCFF_{1}}{WACC - g} = \frac{FCFF_{0} * (1 + g)}{WACC - g}\\
-WACC = W_{e} * r_{e} + W_{d} * r_{d} * (1 - t)\\
-\operatorname{Equity value} = \operatorname{Firm value} - \operatorname{MV of Debt}
+\\\operatorname{value of the firm} = \frac{FCFF_{1}}{WACC - g} = \frac{FCFF_{0} * (1 + g)}{WACC - g}\\
+WACC = W_{e} * r_{e} + W_{d} * r_{d} * (1 - t)
+\\\operatorname{Equity value} = \operatorname{Firm value} - \operatorname{MV of Debt}\\
 $$
 
 ### Single-stage FCFE model
 
 $$
-\operatorname{value of equity} = \frac{FCFE_{1}}{r - g} = \frac{FCFE_{0} * (1 + g)}{r - g}
+\\\operatorname{value of equity} = \frac{FCFE_{1}}{r - g} = \frac{FCFE_{0} * (1 + g)}{r - g}
 $$
 
 ## LOS 28.j: Estimate a company's value using the appropriate free cash flow model(s).
@@ -813,8 +813,8 @@ There are two major sources of error in valuation analysis:
 ## LOS 28.l: Describe approaches for calculating the terminal value in a multistage valuation model.
 
 $$
-\operatorname{terminal value in year n} = \operatorname{trailing\, P/E} * \operatorname{earnings in year n}\\
-\operatorname{terminal value in year n} = \operatorname{leading\, P/E} * \operatorname{forecasted\, earnings\, in\, year\, n + 1}
+\\\operatorname{terminal value in year n} = \operatorname{trailing\, P/E} * \operatorname{earnings in year n}
+\\\operatorname{terminal value in year n} = \operatorname{leading\, P/E} * \operatorname{forecasted\, earnings\, in\, year\, n + 1}
 $$
 
 ## LOS 28.m: Evaluate whether a stock is overvalued, fairly valued, or undervalued based on a free cash flow valuation model.
@@ -849,8 +849,8 @@ P/E ratio have a number of shortcomings:
 
 ![image-20210929001135503](/Kevin_Min/images/2021-09-29-CFA-Level-2-Equity/image-20210929001135503.png)
 $$
-\operatorname{trailing\, P/E} = \frac{\operatorname{market price per share}}{EPS over previous 12 months}\\
-\operatorname{leading\, P/E} = \frac{\operatorname{market price per share}}{\operatorname{forecasted EPS over next 12 months}}
+\\\operatorname{trailing\, P/E} = \frac{\operatorname{market price per share}}{EPS over previous 12 months}
+\\\operatorname{leading\, P/E} = \frac{\operatorname{market price per share}}{\operatorname{forecasted EPS over next 12 months}}
 $$
 Trailing P/E is not useful for forecasting and valuation if the firm's business has changed. Leading P/E may not be relevant if earnings are sufficiently volatile so that next year's earnings are not forecastable with any degree of accuracy.
 
@@ -874,8 +874,8 @@ Disadvantages of using P/B include:
 -   Inflation and technological change can cause the book and market values of assets to differ significantly, so book value is not an accurate measure of the value of shareholders' investment.
 
 $$
-\operatorname{P/B\, ratio} = \frac{\operatorname{market value of equity}}{\operatorname{book value of equity}} = \frac{\operatorname{market price per share}}{\operatorname{book value per share}}\\
-\operatorname{book value of equity} = \operatorname{common\, shareholders'\, equity} = \operatorname{total assets} - \operatorname{total liabilities} - \operatorname{preferred stock}\\
+\\\operatorname{P/B\, ratio} = \frac{\operatorname{market value of equity}}{\operatorname{book value of equity}} = \frac{\operatorname{market price per share}}{\operatorname{book value per share}}
+\\\operatorname{book value of equity} = \operatorname{common\, shareholders'\, equity} = \operatorname{total assets} - \operatorname{total liabilities} - \operatorname{preferred stock}\\
 $$
 
 A common adjustment is to use tangible book value, which is equal to book value of equity less intangible assets. Balance sheets should be adjusted for significant off-balance-sheet assets and liabilities and for differences between the fair and recorded value of assets and liabilities. Finally, book values often need to be adjusted to ensure comparability.
@@ -897,7 +897,7 @@ The disadvantages of using P/S ratios include:
 -   While less subject to distortion, revenue recognition practices can still distort sales forecasts.
 
 $$
-\operatorname{P/S\, ratio} = \frac{\operatorname{market value of equity}}{\operatorname{total sales}} = \frac{\operatorname{market price per share}}{\operatorname{sales per share}}
+\\\operatorname{P/S\, ratio} = \frac{\operatorname{market value of equity}}{\operatorname{total sales}} = \frac{\operatorname{market price per share}}{\operatorname{sales per share}}
 $$
 
 ### P/CF ratio
@@ -960,13 +960,13 @@ A high E/P suggests a cheap security, and a low E/P suggests an expensive securi
 ## LOS 29.h: Calculate and interpret the justified price-to-earnings ratio (P/E), price-to-book ratio (P/B), and price-to-sales ratio (P/S) for a stock, based on forecasted fundamentals.
 
 $$
-\operatorname{Leading\, P_{0}/E_{1}} = \frac{D_{1} / E_{1}}{r - g} = \frac{1 - b}{r - g}\\
-\operatorname{Trailing\, P_{0}/E_{0}} = \frac{D_{0} / E_{0} * (1 + g)}{r - g} = \frac{(1 - b)(1 + g)}{r - g}\\
-\operatorname{Justified\, P/B} = \frac{ROE(1 - b)}{r - g} = \frac{ROE - ROE*b}{r - g} = \frac{ROE - g}{r - g}\\
-\operatorname{Justified\, P/S} = \frac{E_{0} / S_{0}(1 - b)(1 + g)} {r - g} = \operatorname{profit margin} * \operatorname{trailing\, P/E}\\
-\operatorname{Justified\, P/CF} = \frac{\frac{FCFE_{0}(1 + g)}{r - g}}{CF}\\
-\operatorname{Justified\, EV/EBITDA} = \frac{\frac{FCFF_{0}(1 + g)}{WACC - g}}{EBITDA}\\
-\operatorname{Justified\, D/P} = \frac{r - g}{1 + g}\\
+\\\operatorname{Leading\, P_{0}/E_{1}} = \frac{D_{1} / E_{1}}{r - g} = \frac{1 - b}{r - g}
+\\\operatorname{Trailing\, P_{0}/E_{0}} = \frac{D_{0} / E_{0} * (1 + g)}{r - g} = \frac{(1 - b)(1 + g)}{r - g}
+\\\operatorname{Justified\, P/B} = \frac{ROE(1 - b)}{r - g} = \frac{ROE - ROE*b}{r - g} = \frac{ROE - g}{r - g}
+\\\operatorname{Justified\, P/S} = \frac{E_{0} / S_{0}(1 - b)(1 + g)} {r - g} = \operatorname{profit margin} * \operatorname{trailing\, P/E}
+\\\operatorname{Justified\, P/CF} = \frac{\frac{FCFE_{0}(1 + g)}{r - g}}{CF}
+\\\operatorname{Justified\, EV/EBITDA} = \frac{\frac{FCFF_{0}(1 + g)}{WACC - g}}{EBITDA}
+\\\operatorname{Justified\, D/P} = \frac{r - g}{1 + g}
 $$
 
 ## LOS 29.j: Evaluate a stock by the method of comparables and explain the importance of fundamentals in using the method of comparables.
@@ -989,15 +989,15 @@ The Fed model considers the overall market to be overvalued (undervalued) when t
 
 The Yardeni model includes expected earnings growth rate in the analysis:
 $$
-CEY = CBY - k * LTEG + \epsilon_{i}\\
-CEY = \text{current earnings yield of the market}\\
-CBY = \text{current Moody's A-rated corporate bond yield}\\
-LTEG = \text{five-year consensus earnings growth rate}\\
-k = \text{constant assigned by the market to earnings growth (about 0.20 in recent years)}
+\\CEY = CBY - k * LTEG + \epsilon_{i}
+\\CEY = \text{current earnings yield of the market}
+\\CBY = \text{current Moody's A-rated corporate bond yield}
+\\LTEG = \text{five-year consensus earnings growth rate}
+\\k = \text{constant assigned by the market to earnings growth (about 0.20 in recent years)}
 $$
 
 $$
-\frac{P}{E} = \frac{1}{CBY - k * LTEG}
+\\\frac{P}{E} = \frac{1}{CBY - k * LTEG}
 $$
 
 P/E ratio is negatively related to interest rates and positively related to growth.
@@ -1005,7 +1005,7 @@ P/E ratio is negatively related to interest rates and positively related to grow
 ## LOS 29.k: Calculate and interpret the P/E-to-growth ratio (PEG) and explain its use in relative valuation.
 
 $$
-\operatorname{PEG ratio} = \frac{\operatorname{P/E\, ratio}}{g}
+\\\operatorname{PEG ratio} = \frac{\operatorname{P/E\, ratio}}{g}
 $$
 
 The PEG is interpreted as P/E per unit of expected growth. This implied valuation rule is that stocks with lower PEGs are more attractive than stocks with higher PEGs.
@@ -1021,13 +1021,13 @@ There are a number of drawbacks to using the PEG ratio:
 ### Fundamental approach
 
 $$
-TV_{n} = \operatorname{Justified}\frac{P}{E_{n}} * EPS_{n}\,/ TV_{n} = \operatorname{Justified}\frac{P}{E_{n + 1}} * EPS_{n + 1}
+\\TV_{n} = \operatorname{Justified}\frac{P}{E_{n}} * EPS_{n}\,/ TV_{n} = \operatorname{Justified}\frac{P}{E_{n + 1}} * EPS_{n + 1}
 $$
 
 ### Comparable approach
 
 $$
-TV_{n} = \operatorname{Benchmark}\frac{P}{E_{n}} * EPS_{n}\, / TV_{n} = \operatorname{Benchmark}\frac{P}{E_{n + 1}} * EPS_{n + 1}
+\\TV_{n} = \operatorname{Benchmark}\frac{P}{E_{n}} * EPS_{n}\, / TV_{n} = \operatorname{Benchmark}\frac{P}{E_{n + 1}} * EPS_{n + 1}
 $$
 
 ## LOS 29.m: Explain alternative definitions of cash flow used in price and enterprise value (EV) multiples and describe limitations of each definition.
@@ -1036,7 +1036,7 @@ There are at least four definitions of cash flow available for use
 
 1.   Earnings-plus-non-cash-charges (CF)
      $$
-     CF = \operatorname{net income} + depreciation + amortization
+     \\CF = \operatorname{net income} + depreciation + amortization
      $$
 
      -   It ignores some items that affect cash flow, such as noncash revenue and changes in net working capital.
@@ -1049,7 +1049,7 @@ There are at least four definitions of cash flow available for use
 
      -   Theory suggests that FCFE is the preferred way to define cash flow, but it is more volatile than straight cash flow.
          $$
-         FCFE = CFO - FCInv + \operatorname{net borrowing}
+         \\FCFE = CFO - FCInv + \operatorname{net borrowing}
          $$
 
 4.   Earnings before interest, taxes, depreciation, and amortization (EBITDA)
@@ -1057,7 +1057,7 @@ There are at least four definitions of cash flow available for use
      -   EBITDA is a pretax, pre-interest measure that represents a flow to both equity and debt. Thus, it is better suited as an indicator of total company value than just equity value. Enterprise value-to-EBITDA ratio.
 
 $$
-\operatorname{P/CF\, ratio} = \frac{market value of equity}{cash flow} = \frac{\operatorname{market price per share}}{\operatorname{cash flow per share}}
+\\\operatorname{P/CF\, ratio} = \frac{market value of equity}{cash flow} = \frac{\operatorname{market price per share}}{\operatorname{cash flow per share}}
 $$
 
 ## LOS 29.n: Calculate and interpret EV multiples and evaluate the use of EV/EBITDA.
@@ -1065,12 +1065,12 @@ $$
 ### Enterprise value (EV)
 
 $$
-EV = \operatorname{market value of common stock} + \operatorname{market value of preferred stock} + \operatorname{market value of debt} + \operatorname{minority interest} - \operatorname{cash and investments}
+\\EV = \operatorname{market value of common stock} + \operatorname{market value of preferred stock} + \operatorname{market value of debt} + \operatorname{minority interest} - \operatorname{cash and investments}
 $$
 
 The rationale for subtracting cash and investments is that an acquirer's net price paid for an acquisition target would be lower by the amount of the target's liquid assets.
 $$
-\operatorname{EV/EBITDA\, ratio} = \frac{\operatorname{enterprise value}}{EBITDA}
+\\\operatorname{EV/EBITDA\, ratio} = \frac{\operatorname{enterprise value}}{EBITDA}
 $$
 EV/EBITDA is useful in a number of situations:
 
@@ -1089,7 +1089,7 @@ EV/EBITDA has a number of drawbacks, however:
 
 sometimes referred to as market value of invested capital.
 $$
-TIC = \operatorname{market value of equity} + \operatorname{market value of debt}
+\\TIC = \operatorname{market value of equity} + \operatorname{market value of debt}
 $$
 TIC includes cash and short-term investments.
 
@@ -1106,13 +1106,13 @@ The usefulness of all price multiples is affected to some degree by differences 
 ### Unexpected earnings or earnings surprise
 
 $$
-\operatorname{earnings surprise} = \operatorname{reported EPS} - \operatorname{expected EPS}
+\\\operatorname{earnings surprise} = \operatorname{reported EPS} - \operatorname{expected EPS}
 $$
 
 ### Standardized Unexpected Earnings (SUE)
 
 $$
-\operatorname{Standardized Unexpected Earnings} = \frac{\operatorname{earnings surprise}}{\operatorname{standard deviation of earnings surprise}}
+\\\operatorname{Standardized Unexpected Earnings} = \frac{\operatorname{earnings surprise}}{\operatorname{standard deviation of earnings surprise}}
 $$
 
 A given size forecast error is more meaningful the smaller the size of the historical forecast errors.
@@ -1126,7 +1126,7 @@ Relative strength indicators compare a stock's price or return performance durin
 -   Weighted harmonic mean - 가장 ideal
 
 $$
-\operatorname{weighted harmonic mean} = \frac{1}{\sum_{i = 1}^{n}\frac{w_{i}}{X_{i}}}
+\\\operatorname{weighted harmonic mean} = \frac{1}{\sum_{i = 1}^{n}\frac{w_{i}}{X_{i}}}
 $$
 
 ## LOS 30.a: Calculate and interpret residual income, economic value added, and market value added.
@@ -1137,8 +1137,8 @@ Residual income (RI), or economic profit, is the net income of a firm less a cha
 
 Economic value added (EVA) measures the value added for shareholders by management during a given year.
 $$
-EVA = NOPAT - WACC * \operatorname{total capital} = EBIT * (1 - t) - \$WACC\\
-NOPAT = \text{net operating profit after tax}
+\\EVA = NOPAT - WACC * \operatorname{total capital} = EBIT * (1 - t) - \$WACC\\
+\\NOPAT = \text{net operating profit after tax}
 $$
 The analyst should make the following adjustments (if applicable) to the financial statements before calculating NOPAT and invested capital:
 
@@ -1150,7 +1150,7 @@ The analyst should make the following adjustments (if applicable) to the financi
 
 Market value added (MVA) is the different between the market value of a firm's long-term debt and equity and the book value of instead capital supplied by investors. It measures the value created by management's decisions since the firm's inception.
 $$
-MVA = \operatorname{MV of firm} - \operatorname{BV of firm}
+\\MVA = \operatorname{MV of firm} - \operatorname{BV of firm}
 $$
 
 ## LOS 30.b: Describe the uses of residual income models.
@@ -1162,13 +1162,13 @@ $$
 ## LOS 30.c: Calculate the intrinsic value of a common stock using the residual income model and compare value recognition in residual income and other present value models.
 
 $$
-RI_{t} = E_{t} - r * B_{t - 1} = (ROE - r) * B_{t - 1} = NI - \$r\\
-\text{Clean surplus relationship}: B_{t} = B_{t - 1} + E_{t} - D_{t}
+\\RI_{t} = E_{t} - r * B_{t - 1} = (ROE - r) * B_{t - 1} = NI - \$r
+\\\text{Clean surplus relationship}: B_{t} = B_{t - 1} + E_{t} - D_{t}
 $$
 
 The residual income valuation model breaks the intrinsic value of a stock into two elements: 1) current book value of equity and 2) present value of expected future residual income.
 $$
-V_{0} = B_{0} + (\frac{RI_{1}}{(1 + r)^{1}} + \frac{RI_{2}}{(1 + r)^{2}} + \frac{RI_{3}}{(1 + r)^{3}} + ...)
+\\V_{0} = B_{0} + (\frac{RI_{1}}{(1 + r)^{1}} + \frac{RI_{2}}{(1 + r)^{2}} + \frac{RI_{3}}{(1 + r)^{3}} + ...)
 $$
 Values tends to be recognized earlier in the RI approach than in other present value-based approaches. To see this, recall that with a dividend discount model (DDM) or free cash flow to equity (FCFE) model, a large portion of the estimated intrinsic value comes from the present value of the expected terminal value. Yet the uncertainty of the expected terminal value is usually greater than any of the other forecasted cash flows because it occurs several years in the future. Valuation with residual income models, however, is relatively less sensitive to terminal value estimates, which reduces forecast error.
 
@@ -1179,13 +1179,13 @@ Values tends to be recognized earlier in the RI approach than in other present v
 ### Single stage RIM
 
 $$
-V = B_{0} + \frac{(ROE - r) * B_{0}}{r - g} = B_{0} + \frac{RI_{1}}{r - g}
+\\V = B_{0} + \frac{(ROE - r) * B_{0}}{r - g} = B_{0} + \frac{RI_{1}}{r - g}
 $$
 
 ### Tobin's Q
 
 $$
-\operatorname{Tobin's\, Q} = \frac{\operatorname{MV of debt} + \operatorname{MV of equity}}{\operatorname{Replacement cost of total assets}} > 1: \text{economic profit}
+\\\operatorname{Tobin's\, Q} = \frac{\operatorname{MV of debt} + \operatorname{MV of equity}}{\operatorname{Replacement cost of total assets}} > 1: \text{economic profit}
 $$
 
 Fundamental drivers of residual income:
@@ -1226,36 +1226,36 @@ Lower persistence factors will be associated with the following:
 -   지나치게 높으면 장기적으로 ROE가 감소
 
 $$
-V_{0} = B_{0} + \operatorname{PV\, of\, interim\, high-growth\, RI} + \operatorname{PV of continuing residual income}\\
-\operatorname{PV\, of\, continuing\, residual\, income\, in\, year\, T-1} = \frac{RI_{T}}{1 + r - \omega}
+\\V_{0} = B_{0} + \operatorname{PV\, of\, interim\, high-growth\, RI} + \operatorname{PV of continuing residual income}
+\\\operatorname{PV\, of\, continuing\, residual\, income\, in\, year\, T-1} = \frac{RI_{T}}{1 + r - \omega}
 $$
 
 ### Assumption #1: Residual income persists at the current level forever
 
 If $\omega=1$
 $$
-\operatorname{PV\, of\, continuing\, residual\, income\, in\, year\, T - 1} = \frac{RI_{T}}{1 + r - \omega} = \frac{RI_{T}}{r}
+\\\operatorname{PV\, of\, continuing\, residual\, income\, in\, year\, T - 1} = \frac{RI_{T}}{1 + r - \omega} = \frac{RI_{T}}{r}
 $$
 
 ### Assumption #2: Residual income drops immediately to zero.
 
 If $\omega=0$
 $$
-\operatorname{PV\, of\, coninuing\, residual\, income\, in\, year\, T - 1} = \frac{RI_{T}}{1 + r - \omega} = \frac{RI_{T}}{1 + r}
+\\\operatorname{PV\, of\, coninuing\, residual\, income\, in\, year\, T - 1} = \frac{RI_{T}}{1 + r - \omega} = \frac{RI_{T}}{1 + r}
 $$
 
 ### Assumption #3: Residual income declines over time to zero.
 
 $$
-\operatorname{PV\, of\, continuing\, residual\, income\, in\, year\, T - 1} = \frac{RI_{T}}{1 + r - \omega}
+\\\operatorname{PV\, of\, continuing\, residual\, income\, in\, year\, T - 1} = \frac{RI_{T}}{1 + r - \omega}
 $$
 
 ### Assumption #4: Residual income declines to long-run level in mature industry.
 
 $$
-CRI_{T - 1} = \frac{RI_{t} + (P_{T} - B_{T})}{1 + r}\\
-\operatorname{PV\, of\, continuing\, residual\, income\, in\, year\, T} = P_{T} - B_{T}\\
-P_{T} = B_{T} * \operatorname{forecasted\, price-to-book\, ratio}
+\\CRI_{T - 1} = \frac{RI_{t} + (P_{T} - B_{T})}{1 + r}
+\\\operatorname{PV\, of\, continuing\, residual\, income\, in\, year\, T} = P_{T} - B_{T}
+\\P_{T} = B_{T} * \operatorname{forecasted\, price-to-book\, ratio}
 $$
 
 Long-run level에 도달하면 MV - BV가 RI일 것이라는 가정
@@ -1471,8 +1471,8 @@ Under this method, a single measure of economic benefit is divided by a capitali
 
 If growth is non-constant, the capitalized cash flow method (CCM) should be avoided in favor of the free cash flow method.
 $$
-\operatorname{value of a firm} = \frac{FCFF_{1}}{WACC - g}\\
-\operatorname{value of equity} = \frac{FCFE_{1}}{r - g}
+\\\operatorname{value of a firm} = \frac{FCFF_{1}}{WACC - g}
+\\\operatorname{value of equity} = \frac{FCFE_{1}}{r - g}
 $$
 
 ### The excess earnings method
@@ -1481,7 +1481,7 @@ Excess earnings are firm earnings minus the earnings required to provide the req
 
 The excess earnings method (EEM) is used infrequently but can be used for small firms when their intangible assets are significant. However, the required return for working capital and fixed assets is subject to estimation error.
 $$
-\operatorname{firm value} = \operatorname{value\, of\, FC\, / WC (tangible)} + \operatorname{PV\, of\, future\, excess\, earning\, (Intangible)}
+\\\\\\operatorname{firm value} = \operatorname{value\, of\, FC\, / WC (tangible)} + \operatorname{PV\, of\, future\, excess\, earning\, (Intangible)}
 $$
 
 ## LOS 31.g: Explain factors that require adjustment when estimating the discount rate for private companies.
@@ -1561,8 +1561,8 @@ Minority shareholders are at a disadvantage relative to controlling shareholders
 
 Controlling shareholders can also enjoy excessive compensation and other perquisites to the detriment of minority shareholders.
 $$
-DLOC = 1 - \frac{1}{1 + \operatorname{control premium}}\\
-DLOC = \text{Discount Lack of Control}
+\\DLOC = 1 - \frac{1}{1 + \operatorname{control premium}}
+\\DLOC = \text{Discount Lack of Control}
 $$
 ![image-20210929193013787](/Kevin_Min/images/2021-09-29-CFA-Level-2-Equity/image-20210929193013787.png)
 
@@ -1583,7 +1583,7 @@ To estimate the DLOM, an analyst can use one of three methods. The price of the 
 
 A third method would estimate the DLOM as the price of a put option divided by the stock price.
 $$
-\operatorname{total discount} = 1 - (1 - DLOC)(1 - DLOM)
+\\\operatorname{total discount} = 1 - (1 - DLOC)(1 - DLOM)
 $$
 
 ![image-20210929193918102](/Kevin_Min/images/2021-09-29-CFA-Level-2-Equity/image-20210929193918102.png)
