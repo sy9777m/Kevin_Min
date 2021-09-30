@@ -16,9 +16,9 @@ the valuation of an asset or security by someone who has complete understanding 
 
 Efficient market theory: Intrinsic value = Market value
 
-![image-20210928150009224]({{ site.baseurl }}/images/images/image-20210928150009224.png)
+![image-20210928150009224](../images/image-20210928150009224.png)
 
-![image-20210928150038904]({{ site.baseurl }}\images\images\image-20210928150038904.png)
+![image-20210928150038904](../images\image-20210928150038904.png)
 
 ## LOS 24.b: Explain the going concern assumption and contrast a going concern value to a liquidation value.
 
@@ -85,7 +85,7 @@ value to specific buyer: synergy 고려
 2.   product differentiation
 3.   focus - employing one of the previous strategies within a particular segment of the industry in order to gain a competitive advantage.
 
-![image-20210928151955656]({{ site.baseurl }}/images/images/image-20210928151955656.png)
+![image-20210928151955656](../images/image-20210928151955656.png)
 
 ### Quality of earnings examples
 
@@ -105,7 +105,9 @@ value to specific buyer: synergy 고려
 
 ### Absolute valuation
 
-![image-20210928152423281](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928152423281.png)
+![image-20210930093912093](../images/2020-01-14-CFA-Level-2-Equity/image-20210930093912093.png)
+
+![image-20210928152423281](../images/2020-01-14-CFA-Level-2-Equity/image-20210928152423281.png)
 
 One absolute valuation approach is to determine the value of a firm today as the discounted or present value of all the cash flows expected in the future.
 
@@ -113,7 +115,7 @@ Another absolute approach to valuation is represented by asset-based models. Thi
 
 ### Relative valuation
 
-![image-20210928152430326](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928152430326.png)
+![image-20210928152430326](../images/2020-01-14-CFA-Level-2-Equity/image-20210928152430326.png)
 
 Another very common approach to valuation is to determine the value of an asset in relation to the values of other assets.
 
@@ -139,13 +141,13 @@ The purpose of the analysis may be valuation for making a purchase offer for a c
 
 ### Holding period return
 
-![image-20210928153839545](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928153839545.png)
+![image-20210928153839545](../images/2020-01-14-CFA-Level-2-Equity/image-20210928153839545.png)
 
 ### price convergence
 
 If the expected return is not equal to required return, there can be a "return from convergence of price to intrinsic value".
 
-![image-20210928153936586](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928153936586.png)
+![image-20210928153936586](../images/2020-01-14-CFA-Level-2-Equity/image-20210928153936586.png)
 
 만약 expected return = 20%, required rate of return = 10%이면, 이 차이에서 발생하는 convergence에서 오는 return을 price convergence라고 함
 
@@ -167,17 +169,17 @@ The risk premium is always be lower when the geometric mean is used instead of t
 
 #### Gordon Growth Model
 
-![image-20210928155312172](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928155312172.png)
+![image-20210928155312172](../images/2020-01-14-CFA-Level-2-Equity/image-20210928155312172.png)
 
 A weakness of the approach is that the forward-looking estimates will change through time and need to be updated.
 
 Another weakness is the assumption of a stable growth rate, which is often not appropriate in rapidly growing economies.
 
-![image-20210928161607976](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928161607976.png)
+![image-20210928161607976](../images/2020-01-14-CFA-Level-2-Equity/image-20210928161607976.png)
 
 #### Supply-side Estimates (Macroeconomic models)
 
-![image-20210928155423600](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928155423600.png)
+![image-20210928155423600](../images/2020-01-14-CFA-Level-2-Equity/image-20210928155423600.png)
 
 Macroeconomic model estimates of the equity risk premium are based on the relationships between macroeconomic variables and financial variables.
 
@@ -185,11 +187,11 @@ break-even inflation rate = (1 + YTM of 20-year T-bonds) / (1 + YTM of 20-year T
 
 Expected real growth rate in EPS should be approximately equal to the real GDP growth rate. Growth in GDP can be estimated as the sum of labor productivity growth and growth in the labor supply.
 
-![image-20210928155637456](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928155637456.png)
+![image-20210928155637456](../images/2020-01-14-CFA-Level-2-Equity/image-20210928155637456.png)
 
 If the market is believed to be overvalued ($\hat{PEg} < 0$), P/E ratios would be expected to decrease and the opposite would be true if the market were believed to be undervalued ($\hat{PEg} > 0$). If the market is correctly priced, $\hat{PEg} = 0$. The $\hat{Y}$ can be estimated using estimated dividends on the index including reinvestment return.
 
-![image-20210928161620305](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928161620305.png)
+![image-20210928161620305](../images/2020-01-14-CFA-Level-2-Equity/image-20210928161620305.png)
 
 ## LOS 25.c: Estimate the required return on an equity investment using the capital asset pricing model, the Fama-French model, the Pastor-Stambaugh model, macroeconomic multifactor models, and the build-up method (e.g., bond yield plus risk premium)
 
@@ -230,7 +232,7 @@ Macroeconomic multifactor models use factors associated with economic variables 
 4.   Business cycle risk - unexpected change in the level of real business activity.
 5.   Market timing risk - the equity market return that is not explained by the other four factors.
 
-![image-20210928165331662](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928165331662.png)
+![image-20210928165331662](../images/2020-01-14-CFA-Level-2-Equity/image-20210928165331662.png)
 
 ### Build-up Method
 
@@ -280,7 +282,7 @@ $$
 
 ## LOS 25.e: Describe strengths and weaknesses of methods used to estimate the required return on an equity investment.
 
-![image-20210928165532985](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928165532985.png)
+![image-20210928165532985](../images/2020-01-14-CFA-Level-2-Equity/image-20210928165532985.png)
 
 ## LOS 25.f: Explain international consideration in required return estimation.
 
@@ -327,7 +329,7 @@ A hybrid analysis incorporates elements of both top-down and bottom-up analysis.
 
 ## LOS 26.b: Compare "growth relative to GDP growth" and "market growth and market share" approaches to forecasting revenue.
 
-![image-20210928171050936](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928171050936.png)
+![image-20210928171050936](../images/2020-01-14-CFA-Level-2-Equity/image-20210928171050936.png)
 
 ## LOS 26.c: Evaluate whether economies of scale are present in an industry by analyzing operating margins and sales levels.
 
@@ -371,7 +373,7 @@ Net interest expense is gross interest expense minus interest income on cash and
 2.   effective tax rate
 3.   cash tax rate
 
-![image-20210928172318121](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928172318121.png)
+![image-20210928172318121](../images/2020-01-14-CFA-Level-2-Equity/image-20210928172318121.png)
 
 ## LOS 26.e: Describe approaches to balance sheet modeling.
 
@@ -387,9 +389,9 @@ Property, plant and equipment (PP&E) on the balance sheet is determined by depre
 
 Forecasts may also be improved by analyzing capital expenditures for maintenance separately from capital expenditure for growth. Historical depreciation should be increased by the inflation rate when estimating capital expenditure for maintenance because replacement cost can be expected to increase with inflation.
 
-![image-20210928172921226](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928172921226.png)
+![image-20210928172921226](../images/2020-01-14-CFA-Level-2-Equity/image-20210928172921226.png)
 
-![image-20210928172926084](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928172926084.png)
+![image-20210928172926084](../images/2020-01-14-CFA-Level-2-Equity/image-20210928172926084.png)
 
 ## LOS 26.f: Describe the relationship between return on invested capital and competitive advantage.
 
@@ -397,7 +399,7 @@ Once financial projections are completed, the return on invested capital (ROIC) 
 
 A related measure, return on capital employed, is similar to ROIC but uses pretax operating earnings in the numerator to facilitate comparison between companies that face different tax rates.
 
-![image-20210928173304640](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928173304640.png)
+![image-20210928173304640](../images/2020-01-14-CFA-Level-2-Equity/image-20210928173304640.png)
 
 ## LOS 26.g: Explain how competitive factors affect prices and costs.
 
@@ -415,7 +417,7 @@ A firm's future competitive success is possibly the most important factor in det
 
 ## LOS 26.i: Explain how to forecast industry and company sales and costs when they are subject to price inflation or deflation.
 
-![image-20210928173651908](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928173651908.png)
+![image-20210928173651908](../images/2020-01-14-CFA-Level-2-Equity/image-20210928173651908.png)
 
 가격 인상 시 demand elasticity에 대한 고려 필요 - 탄력적이면 price 상승 시 revenue 하락, 비탄력적이면 price 상승 시 revenue 하락이 덜함
 
@@ -444,7 +446,7 @@ $$
 
 ## LOS 26.k: Explain considerations in the choice of an explicit forecast horizon.
 
-![image-20210928175154104](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928175154104.png)
+![image-20210928175154104](../images/2020-01-14-CFA-Level-2-Equity/image-20210928175154104.png)
 
 ## LOS 26.l: Explain an analyst's choices in developing projections beyond the short-term forecasts horizon.
 
@@ -470,7 +472,7 @@ Steps in developing a sales-based pro forma model:
 
 ## LOS 27.a: Compare dividends, free cash flow, and residual income as inputs to discounted cash flow models and identify investment situations for which each measure is suitable.
 
-![image-20210928192755212](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928192755212.png)
+![image-20210928192755212](../images/2020-01-14-CFA-Level-2-Equity/image-20210928192755212.png)
 $$
 FCFF = NI + NCC + Interest * (1 - t) - WC_{I} - FC_{I}\\
 FCFE = FCFF - Interest * (1 - t) + \operatorname{Net Borrowing}
@@ -531,7 +533,7 @@ It is unrealistic to assume that any firm can continue to grow indefinitely at a
 
 ## LOS 27.d: Calculate and interpret the implied growth rate of dividends using the Gordon growth model and current stock price.
 
-![image-20210928195238185](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928195238185.png)
+![image-20210928195238185](../images/2020-01-14-CFA-Level-2-Equity/image-20210928195238185.png)
 
 ## LOS 27.e: Calculate and interpret the present value of growth opportunities (PVGO) and the component of the leading price-to-earnings ratio (P/E) related to PVGO.
 
@@ -580,7 +582,7 @@ $$
 
 The growth rate starts out high and then decline linearly over the high-growth stage until it reaches the long-run average growth rate.
 
-![image-20210928200508045](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928200508045.png)
+![image-20210928200508045](../images/2020-01-14-CFA-Level-2-Equity/image-20210928200508045.png)
 
 ## LOS 27.j: Explain the growth phase, transition phase, and maturity phase of a business.
 
@@ -588,7 +590,7 @@ The growth rate starts out high and then decline linearly over the high-growth s
 -   transition phase
 -   mature phase
 
-![image-20210928200600541](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928200600541.png)
+![image-20210928200600541](../images/2020-01-14-CFA-Level-2-Equity/image-20210928200600541.png)
 
 |                         | growth phase             |                              |                          |
 | ----------------------- | ------------------------ | ---------------------------- | ------------------------ |
@@ -621,9 +623,9 @@ $$
 
 ## LOS 27.m: Estimate a required return based on any DDM, including the Gordon growth model and the H-model.
 
-![image-20210928205937750](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928205937750.png)
+![image-20210928205937750](../images/2020-01-14-CFA-Level-2-Equity/image-20210928205937750.png)
 
-![image-20210928205950664](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928205950664.png)
+![image-20210928205950664](../images/2020-01-14-CFA-Level-2-Equity/image-20210928205950664.png)
 
 ## LOS 27.n: Explain the use of spreadsheet modeling to forecast dividends and to value common shares.
 
@@ -643,9 +645,9 @@ $$
 
 ## LOS 28.a: Compare the free cash flow to the firm (FCFF) and free cash flow to equity (FCFE) approaches to valuation.
 
-![image-20210928210735515](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928210735515.png)
+![image-20210928210735515](../images/2020-01-14-CFA-Level-2-Equity/image-20210928210735515.png)
 
-![image-20210928210814093](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928210814093.png)
+![image-20210928210814093](../images/2020-01-14-CFA-Level-2-Equity/image-20210928210814093.png)
 $$
 \operatorname{firm value} = \operatorname{FCFF discouunted at the WACC}\\
 \operatorname{equity value} = \operatorname{FCFE discounted at the required return on equity}\\
@@ -674,7 +676,7 @@ $$
 
 #### Noncash charges
 
-![image-20210928221457064](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928221457064.png)
+![image-20210928221457064](../images/2020-01-14-CFA-Level-2-Equity/image-20210928221457064.png)
 
 The most significant noncash charge is usually depreciation.
 
@@ -686,7 +688,7 @@ The most significant noncash charge is usually depreciation.
 
 ### Fixed capital investment
 
-![image-20210928224141856](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928224141856.png)
+![image-20210928224141856](../images/2020-01-14-CFA-Level-2-Equity/image-20210928224141856.png)
 
 Fixed capital investment is a net amount: it is equal to the difference between capital expenditures (investments in long-term fixed assets) and the proceeds from the sale of long-term assets:
 $$
@@ -768,7 +770,7 @@ The free cash flow to equity approach takes a control perspective that assumes t
 
 Dividends, share repurchases, and share issues have no effect on FCFF and FCFE; changes in leverage have only a minor effect on FCFE and no effect on FCFF.
 
-![image-20210928224733024](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210928224733024.png)
+![image-20210928224733024](../images/2020-01-14-CFA-Level-2-Equity/image-20210928224733024.png)
 
 ## LOS 28.h: Evaluate the use of net income and EBITDA as proxies for cash flow in valuation.
 
@@ -845,7 +847,7 @@ P/E ratio have a number of shortcomings:
 -   The volatile, transitory portion of earnings makes the interpretation of P/Es diffciult for analysts.
 -   Management discretion within allowed accounting practices can distort reported earnings, and thereby lessen the comparability of P/Es across firms.
 
-![image-20210929001135503](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929001135503.png)
+![image-20210929001135503](../images/2020-01-14-CFA-Level-2-Equity/image-20210929001135503.png)
 $$
 \operatorname{trailing\, P/E} = \frac{\operatorname{market price per share}}{EPS over previous 12 months}\\
 \operatorname{leading\, P/E} = \frac{\operatorname{market price per share}}{\operatorname{forecasted EPS over next 12 months}}
@@ -854,7 +856,7 @@ Trailing P/E is not useful for forecasting and valuation if the firm's business 
 
 ### P/B ratio
 
-![image-20210929011159080](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929011159080.png)
+![image-20210929011159080](../images/2020-01-14-CFA-Level-2-Equity/image-20210929011159080.png)
 
 Advantages of using the price-to-book (P/B) ratio include:
 
@@ -924,7 +926,7 @@ Disadvantages of the dividend yield approach include:
 -   The focus on dividend yield is incomplete because it ignores capital appreciation.
 -   The dividend displacement of earnings concept argues that dividends paid now displace future earnings, which implies a trade-off between current and future cash flows.
 
-![image-20210929011213448](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929011213448.png)
+![image-20210929011213448](../images/2020-01-14-CFA-Level-2-Equity/image-20210929011213448.png)
 
 ## LOS 29.e: Calculate and interpret underlying earnings, explain methods of normalizing earning per share (EPS), and calculate normalized EPS.
 
@@ -934,7 +936,7 @@ Underlying earnings are earnings that exclude nonrecurring components.
 
 The countercyclical tendency to have high P/Es due to lower EPS at the bottom of the cycle and low P/Es due to high EPS at the top of the cycle is known as the Molodovsky effect.
 
-![image-20210929011500247](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929011500247.png)
+![image-20210929011500247](../images/2020-01-14-CFA-Level-2-Equity/image-20210929011500247.png)
 
 ### Normalized earnings
 
@@ -971,11 +973,11 @@ $$
 
 ## LOS 29.r: Evaluate whether a stock is overvalued, fairly valued, or undervalued based on comparison of multiples.
 
-![image-20210929013002675](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929013002675.png)
+![image-20210929013002675](../images/2020-01-14-CFA-Level-2-Equity/image-20210929013002675.png)
 
 Firms with multiples below the benchmark are undervalued, and firms with multiples above the benchmark are overvalued.
 
-![image-20210929013009757](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929013009757.png)
+![image-20210929013009757](../images/2020-01-14-CFA-Level-2-Equity/image-20210929013009757.png)
 
 Most analysts use trailing book values in calculating P/Bs. Relative P/B valuation must consider differences in ROE, risk, and expected growth in making comparisons among stocks.
 
@@ -1081,7 +1083,7 @@ EV/EBITDA has a number of drawbacks, however:
 -   If working capital is growing, EBITDA will overstate CFO.
 -   Because FCFF captures the amount of capital expenditures, it is more strongly linked with valuation theory than EBITDA.
 
-![image-20210929092305355](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929092305355.png)
+![image-20210929092305355](../images/2020-01-14-CFA-Level-2-Equity/image-20210929092305355.png)
 
 ### Total Invested Capital (TIC)
 
@@ -1258,9 +1260,9 @@ $$
 
 Long-run level에 도달하면 MV - BV가 RI일 것이라는 가정
 
-![image-20210929125935092](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929125935092.png)
+![image-20210929125935092](../images/2020-01-14-CFA-Level-2-Equity/image-20210929125935092.png)
 
-![image-20210929125926654](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929125926654.png)
+![image-20210929125926654](../images/2020-01-14-CFA-Level-2-Equity/image-20210929125926654.png)
 
 ## LOS 30.i: Compare residual income models to dividend discount and free cash flow models.
 
@@ -1343,7 +1345,7 @@ Firms may adopt other types of aggressive accounting practices that overstate th
 
 ## LOS 31.a: Compare public and private company valuation.
 
-![image-20210929182136504](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929182136504.png)
+![image-20210929182136504](../images/2020-01-14-CFA-Level-2-Equity/image-20210929182136504.png)
 
 ### Company-specific factors
 
@@ -1365,7 +1367,7 @@ Overall, company-specific factors can have positive or negative effects on priva
 
 ## LOS 31.b: Describe uses of private business valuation and explain applications of greater concern of financial analysts.
 
-![image-20210929183057053](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929183057053.png)
+![image-20210929183057053](../images/2020-01-14-CFA-Level-2-Equity/image-20210929183057053.png)
 
 ### Transactions-related valuations
 
@@ -1401,7 +1403,7 @@ Litigation-related valuations may be required for shareholders suits, damage cla
     -   An arm's length transaction
     -   An asset that has been marketed.
     -   A well-informed and prudent buyer and seller
--   Intrinsic value: Investment analysi
+-   Intrinsic value: Investment analysis
 
 Effects of value definition - value의 정의가 다르면 자산가치가 다르게 산정
 
@@ -1455,7 +1457,7 @@ The analyst should be aware of the potential bias in management estimates. For e
 
 Although analysts use FCFF or FCFE depending on the purposes of the valuation, FCFF is usually more appropriate when the significant changes in the firm's capital structure are anticipated. The reasoning is that the discount rate used for FCFF valuation, the weighted average cost of capital (WACC), is less sensitive to leverage changes than the cost of equity, the discount rate used for FCFE valuation.
 
-![image-20210929185438842](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929185438842.png)
+![image-20210929185438842](../images/2020-01-14-CFA-Level-2-Equity/image-20210929185438842.png)
 
 ## LOS 31.f: Calculate the value of a private company using free cash flow, capitalized cash flow, and / or excess earnings methods.
 
@@ -1490,7 +1492,7 @@ $$
 -   Projection risk: Because of the lower availability of information from private firms and managers who are inexperienced at forecasting, that analysts should increase the discount rate used.
 -   Lifecycle stage: It is particularly difficult to estimate the discount rate for firms in an early stage of development. If such firms have unusually high levels of unsystematic risk, the use of the CAPM may be inappropriate.
 
-![image-20210929191029630](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929191029630.png)
+![image-20210929191029630](../images/2020-01-14-CFA-Level-2-Equity/image-20210929191029630.png)
 
 ## LOS 31.h: Compare models used to estimate the required rate of return to private company equity (for example, the CAPM, the expanded CAPM, and the build-up approach).
 
@@ -1498,7 +1500,7 @@ $$
 -   Expanded CAPM: This version of the CAPM includes additional premiums for size and firm-specific (unsystematic) risk.
 -   Build-up method: When it is not possible to find comparable public firms for beta estimation, the build-up method can be used. Beginning with the expected return on the market (beta is implicitly assumed to be one), premiums are added for small size, industry factors, and company specific factors.
 
-![image-20210929191347008](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929191347008.png)
+![image-20210929191347008](../images/2020-01-14-CFA-Level-2-Equity/image-20210929191347008.png)
 
 ## LOS 31.i: Calculate the value of a private company based on market approach methods and describe advantages and disadvantages of each method.
 
@@ -1508,7 +1510,7 @@ Market approaches to valuing private firms use price multiples and data from pre
 -   small private firm: NI multiple
 -   Extremely small private firm: Revenue multiple
 
-![image-20210929191604234](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929191604234.png)
+![image-20210929191604234](../images/2020-01-14-CFA-Level-2-Equity/image-20210929191604234.png)
 
 ### Guideline public company method
 
@@ -1562,7 +1564,7 @@ $$
 DLOC = 1 - \frac{1}{1 + \operatorname{control premium}}\\
 DLOC = \text{Discount Lack of Control}
 $$
-![image-20210929193013787](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929193013787.png)
+![image-20210929193013787](../images/2020-01-14-CFA-Level-2-Equity/image-20210929193013787.png)
 
 ### The discount for lack of marketability
 
@@ -1584,7 +1586,7 @@ $$
 \operatorname{total discount} = 1 - (1 - DLOC)(1 - DLOM)
 $$
 
-![image-20210929193918102](https://raw.githubusercontent.com/sy9777m/Kevin_Min/images/images/image-20210929193918102.png)
+![image-20210929193918102](../images/2020-01-14-CFA-Level-2-Equity/image-20210929193918102.png)
 
 ## LOS 31.l: Describe the role of valuation standards in valuing private companies.
 
