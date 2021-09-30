@@ -20,7 +20,7 @@ It behaves as follows:
 -   Otherwise, choose a pivot and partition around it.
 -   Recursively apply quicksort to the sublists to the left and right of the pivot.
 
-![image-20210930183827208](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2020-09-30-algorithms-week-5\image-20210930183827208.png)
+![image-20210930183827208](/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930183827208.png)
 
 ```c++
 void qucikSort (int array[], int l, int r) {
@@ -58,11 +58,11 @@ Expected - $O(n\log{n})$
 
 There's a really good case, in which partition always picks the median element as the pivot.
 
-![image-20210930184713329](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2020-09-30-algorithms-week-5\image-20210930184713329.png)
+![image-20210930184713329](/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930184713329.png)
 
 There's a really bad case, in which partition always picks the smallest or largest element as the pivot.
 
-![image-20210930184746442](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2020-09-30-algorithms-week-5\image-20210930184746442.png)
+![image-20210930184746442](/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930184746442.png)
 
 ### Expected runtime of randomized quicksort
 
@@ -99,19 +99,19 @@ So any comparison-based sorting algorithm must have worst-case running time at l
 
 ## Decision tree
 
-![image-20210930185525497](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2020-09-30-algorithms-week-5\image-20210930185525497.png)
+![image-20210930185525497](/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930185525497.png)
 
-![image-20210930185537302](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2020-09-30-algorithms-week-5\image-20210930185537302.png)
+![image-20210930185537302](/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930185537302.png)
 
 The leaves of this tree are all possible orderings of the items: when we reach a leaf we return it.
 
 Running the algorithm on a given input corresponds to taking a particular path through the tree.
 
-![image-20210930185728867](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2020-09-30-algorithms-week-5\image-20210930185728867.png)
+![image-20210930185728867](/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930185728867.png)
 
-![image-20210930185812594](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2020-09-30-algorithms-week-5\image-20210930185812594.png)
+![image-20210930185812594](/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930185812594.png)
 
-![image-20210930191734418](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2020-09-30-algorithms-week-5\image-20210930191734418.png)
+![image-20210930191734418](/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930191734418.png)
 
 ## Linear-time sorting
 
@@ -142,9 +142,9 @@ void countingsort(int array[], int n) {
 
 Assumption: $\operatorname{input value rance} = [0, k - 1]$
 
-![image-20210930192504411](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2020-09-30-algorithms-week-5\image-20210930192504411.png)
+![image-20210930192504411](/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930192504411.png)
 
-![image-20210930192658163](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2020-09-30-algorithms-week-5\image-20210930192658163.png)
+![image-20210930192658163](/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930192658163.png)
 
 ### Bucket sort
 
@@ -152,7 +152,7 @@ similar to the counting sort, but
 
 Might be multiple keys per bucket, so buckets need another stable_sort to be sorted.
 
-![image-20210930192817360](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2020-09-30-algorithms-week-5\image-20210930192817360.png)
+![image-20210930192817360](/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930192817360.png)
 
 ```c++
 static void bucketsort(int array[], int n, int k) {
@@ -186,13 +186,13 @@ Two cases for um_buckets and k:
 -   $k <= \operatorname{num\_buckets}$: At most one key per bucket, so buckets don't need another stable_sort to be sorted (similar to counting_sort).
 -   $k > \operatorname{num\_buckets}$: Might be multiple keys per buckets, so buckets need another stable_sort to be sorted.
 
-![image-20210930193654631](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2020-09-30-algorithms-week-5\image-20210930193654631.png)
+![image-20210930193654631](/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930193654631.png)
 
 ### Radix sort
 
 기수정렬
 
-![image-20210930193810934](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2020-09-30-algorithms-week-5\image-20210930193810934.png)
+![image-20210930193810934](/Kevin_Min/images/2021-09-30-algorithms-week-5/image-20210930193810934.png)
 
 자릿수로 정렬
 
