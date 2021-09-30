@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: A minimal example of using markdown with fastpages.
+description: CFA Level 2 Equity summary.
 categories: [markdown]
-title: An Example Markdown Post
+title: CFA Level 2 Equity Summary
 ---
 
 # CFA Level 2 Equity
