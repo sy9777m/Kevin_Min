@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Kaggle Data Cleaning | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Kaggle Data Cleaning" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kaggle course Data Cleaning for Find-A." />
+<meta property="og:description" content="Kaggle course Data Cleaning for Find-A." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-Data-Cleaning.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-Data-Cleaning.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-02T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-10-02T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-Data-Cleaning.html","@type":"BlogPosting","headline":"Kaggle Data Cleaning","dateModified":"2021-10-02T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-Data-Cleaning.html"},"description":"Kaggle course Data Cleaning for Find-A.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Kaggle Data Cleaning</h1><p class="page-description">Kaggle course Data Cleaning for Find-A.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-02T00:00:00-05:00" itemprop="datePublished">
+        Oct 2, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      10 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#kaggle-data-cleaning">kaggle Data Cleaning</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#handling-missing-values">Handling Missing Values</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#how-many-missing-data-points-do-we-have">How many missing data points do we have?</a></li>
+<li class="toc-entry toc-h3"><a href="#figure-out-why-the-data-is-missing">Figure out why the data is missing</a></li>
+<li class="toc-entry toc-h3"><a href="#drop-missing-values">Drop missing values</a></li>
+<li class="toc-entry toc-h3"><a href="#filling-in-missing-values-automatically">Filling in missing values automatically</a></li>
+<li class="toc-entry toc-h3"><a href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#scaling-and-normalization">Scaling and Normalization</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#scaling-vs-normalization-whats-the-difference">Scaling vs. Normalization: What’s the difference?</a></li>
+<li class="toc-entry toc-h3"><a href="#scaling">Scaling</a></li>
+<li class="toc-entry toc-h3"><a href="#normalization">Normalization</a></li>
+<li class="toc-entry toc-h3"><a href="#exercise-1">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#parsing-dates">Parsing Dates</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#convert-our-date-columns-to-datetime">Convert our date columns to datetime</a></li>
+<li class="toc-entry toc-h3"><a href="#selecting-the-day-of-the-month">Selecting the day of the month</a></li>
+<li class="toc-entry toc-h3"><a href="#plot-the-day-of-the-month-to-check-the-date-parsing">Plot the day of the month to check the date parsing</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#character-encodings">Character Encodings</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#what-are-encodings">What are encodings?</a></li>
+<li class="toc-entry toc-h3"><a href="#reading-in-files-with-encoding-problems">Reading in files with encoding problems</a></li>
+<li class="toc-entry toc-h3"><a href="#saving-your-files-with-utf-8-encoding">Saving your files with UTF-8 encoding</a></li>
+<li class="toc-entry toc-h3"><a href="#exercise-2">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#inconsistent-data-entry">Inconsistent Data Entry</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#do-some-preliminary-text-pre-processing">Do some preliminary text pre-processing</a></li>
+<li class="toc-entry toc-h3"><a href="#use-fuzzy-matching-to-correct-inconsistent-data-entry">Use fuzzy matching to correct inconsistent data entry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h1 id="kaggle-data-cleaning">
+<a class="anchor" href="#kaggle-data-cleaning" aria-hidden="true"><span class="octicon octicon-link"></span></a>kaggle Data Cleaning</h1>
+
+<h2 id="handling-missing-values">
+<a class="anchor" href="#handling-missing-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Handling Missing Values</h2>
+
+<h3 id="how-many-missing-data-points-do-we-have">
+<a class="anchor" href="#how-many-missing-data-points-do-we-have" aria-hidden="true"><span class="octicon octicon-link"></span></a>How many missing data points do we have?</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># get the number of missing data points per column
+</span><span class="n">missing_values_count</span> <span class="o">=</span> <span class="n">nfl_data</span><span class="p">.</span><span class="n">isnull</span><span class="p">().</span><span class="nb">sum</span><span class="p">()</span>
+
+<span class="c1"># look at the # of missing points in the first ten columns
+</span><span class="n">missing_values_count</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># how many total missing values do we have?
+total_cells = np.product(nfl_data.shape)
+total_missing = missing_values_count.sum()
+
+# percent of data that is missing
+percent_missing = (total_missing/total_cells) * 100
+print(percent_missing)
+</code></pre></div></div>
+
+<h3 id="figure-out-why-the-data-is-missing">
+<a class="anchor" href="#figure-out-why-the-data-is-missing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Figure out why the data is missing</h3>
+
+<p>This is the point at which we get into the part of data science that I like to call “data intution”, by which I mean “really looking at your data and trying to figure out why it is the way it is and how that will affect your analysis”.</p>
+
+<p>For dealing with missing values, you’ll need to use your intution to figure out why the value is missing. One of the most important questions you can ask yourself to help figure this out is this:</p>
+
+<blockquote>
+  <p><strong>Is this value missing because it wasn’t recorded or because it doesn’t exist?</strong></p>
+</blockquote>
+
+<p>If a value is missing becuase it doesn’t exist (like the height of the oldest child of someone who doesn’t have any children) then it doesn’t make sense to try and guess what it might be. These values you probably do want to keep as <code class="language-plaintext highlighter-rouge">NaN</code>. On the other hand, if a value is missing because it wasn’t recorded, then you can try to guess what it might have been based on the other values in that column and row. This is called <strong>imputation</strong>.</p>
+
+<p>If you’re doing very careful data analysis, this is the point at which you’d look at each column individually to figure out the best strategy for filling those missing values.</p>
+
+<h3 id="drop-missing-values">
+<a class="anchor" href="#drop-missing-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Drop missing values</h3>
+
+<p>If you’re in a hurry or don’t have a reason to figure out why your values are missing, one option you have is to just remove any rows or columns that contain missing values. (Note: I don’t generally recommend this approch for important projects! It’s usually worth it to take the time to go through your data and really look at all the columns with missing values one-by-one to really get to know your dataset.)</p>
+
+<p>If you’re sure you want to drop rows with missing values, pandas does have a handy function, <code class="language-plaintext highlighter-rouge">dropna()</code> to help you do this.</p>
+
+<h3 id="filling-in-missing-values-automatically">
+<a class="anchor" href="#filling-in-missing-values-automatically" aria-hidden="true"><span class="octicon octicon-link"></span></a>Filling in missing values automatically</h3>
+
+<p>We can use the Panda’s <code class="language-plaintext highlighter-rouge">fillna()</code> function to fill in missing values in a dataframe for us. One option we have is to specify what we want the <code class="language-plaintext highlighter-rouge">NaN</code> values to be replaced with.</p>
+
+<p>I could also be a bit more savvy and replace missing values with whatever value comes directly after it in the same column. (This makes a lot of sense for datasets where the observations have some sort of logical order to them.)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># replace all NA's the value that comes directly after it in the same column, 
+# then replace all the remaining na's with 0
+</span><span class="n">subset_nfl_data</span><span class="p">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">'bfill'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">).</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="exercise">
+<a class="anchor" href="#exercise" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># TODO: Your code here!
+</span><span class="n">sf_permits</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># TODO: Your code here!
+</span><span class="n">percent_missing</span> <span class="o">=</span> <span class="n">sf_permits</span><span class="p">.</span><span class="n">isnull</span><span class="p">().</span><span class="nb">sum</span><span class="p">().</span><span class="nb">sum</span><span class="p">()</span> <span class="o">/</span> <span class="n">np</span><span class="p">.</span><span class="n">product</span><span class="p">(</span><span class="n">sf_permits</span><span class="p">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="c1"># Check your answer
+</span><span class="n">q2</span><span class="p">.</span><span class="n">check</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002030542339.png" alt="image-20211002030542339"></p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002030629934.png" alt="image-20211002030629934"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># TODO: Your code here
+</span><span class="n">sf_permits_with_na_dropped</span> <span class="o">=</span> <span class="n">sf_permits</span><span class="p">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">dropped_columns</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">sf_permits</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">sf_permits_with_na_dropped</span><span class="p">.</span><span class="n">columns</span><span class="p">)</span>
+
+<span class="c1"># Check your answer
+</span><span class="n">q5</span><span class="p">.</span><span class="n">check</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># TODO: Your code here
+</span><span class="n">sf_permits_with_na_imputed</span> <span class="o">=</span> <span class="n">sf_permits</span><span class="p">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s">'bfill'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">).</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Check your answer
+</span><span class="n">q6</span><span class="p">.</span><span class="n">check</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="scaling-and-normalization">
+<a class="anchor" href="#scaling-and-normalization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scaling and Normalization</h2>
+
+<h3 id="scaling-vs-normalization-whats-the-difference">
+<a class="anchor" href="#scaling-vs-normalization-whats-the-difference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scaling vs. Normalization: What’s the difference?</h3>
+
+<ul>
+  <li>in <strong>scaling</strong>, you’re changing the <em>range</em> of your data, while</li>
+  <li>in <strong>normalization</strong>, you’re changing the <em>shape of the distribution</em> of your data.</li>
+</ul>
+
+<h3 id="scaling">
+<a class="anchor" href="#scaling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scaling</h3>
+
+<p>This means that you’re transforming your data so that it fits within a specific scale, like 0-100 or 0-1.</p>
+
+<p>By scaling your variables, you can help compare different variables on equal footing.</p>
+
+<p>Notice that the <em>shape</em> of the data doesn’t change, but that instead of ranging from 0 to 8ish, it now ranges from 0 to 1.</p>
+
+<h3 id="normalization">
+<a class="anchor" href="#normalization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Normalization</h3>
+
+<p>Normalization is a more radical transformation. The point of normalization is to change your observations so that they can be described as a normal distribution.</p>
+
+<p>In general, you’ll normalize your data if you’re going to be using a machine learning or statistics technique that assumes your data is normally distributed</p>
+
+<p>Notice that the <em>shape</em> of our data has changed. Before normalizing it was almost L-shaped. But after normalizing it looks more like the outline of a bell (hence “bell curve”).</p>
+
+<h3 id="exercise-1">
+<a class="anchor" href="#exercise-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># TODO: Your code here
+</span><span class="n">scaled_goal_data</span> <span class="o">=</span> <span class="n">minmax_scaling</span><span class="p">(</span><span class="n">original_goal_data</span><span class="p">,</span> <span class="p">[</span><span class="s">'goal'</span><span class="p">],</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Check your answer
+</span><span class="n">q1</span><span class="p">.</span><span class="n">check</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="parsing-dates">
+<a class="anchor" href="#parsing-dates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parsing Dates</h2>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002032243408.png" alt="image-20211002032243408"></p>
+
+<p>Notice that at the bottom of the output of <code class="language-plaintext highlighter-rouge">head()</code>, you can see that it says that the data type of this column is “object”.</p>
+
+<blockquote>
+  <p>Pandas uses the “object” dtype for storing various types of data types, but most often when you see a column with the dtype “object” it will have strings in it.</p>
+</blockquote>
+
+<p>If you check the pandas dtype documentation <a href="http://pandas.pydata.org/pandas-docs/stable/basics.html#dtypes">here</a>, you’ll notice that there’s also a specific <code class="language-plaintext highlighter-rouge">datetime64</code> dtypes. Because the dtype of our column is <code class="language-plaintext highlighter-rouge">object</code> rather than <code class="language-plaintext highlighter-rouge">datetime64</code>, we can tell that Python doesn’t know that this column contains dates.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002032324133.png" alt="image-20211002032324133"></p>
+
+<p>You may have to check the <a href="https://docs.scipy.org/doc/numpy-1.12.0/reference/generated/numpy.dtype.kind.html#numpy.dtype.kind">numpy documentation</a> to match the letter code to the dtype of the object. “O” is the code for “object”, so we can see that these two methods give us the same information.</p>
+
+<h3 id="convert-our-date-columns-to-datetime">
+<a class="anchor" href="#convert-our-date-columns-to-datetime" aria-hidden="true"><span class="octicon octicon-link"></span></a>Convert our date columns to datetime</h3>
+
+<p>We can pandas what the format of our dates are with a guide called as <a href="http://strftime.org/">“strftime directive”, which you can find more information on at this link</a>. The basic idea is that you need to point out which parts of the date are where and what punctuation is between them. There are <a href="http://strftime.org/">lots of possible parts of a date</a>, but the most common are <code class="language-plaintext highlighter-rouge">%d</code> for day, <code class="language-plaintext highlighter-rouge">%m</code> for month, <code class="language-plaintext highlighter-rouge">%y</code> for a two-digit year and <code class="language-plaintext highlighter-rouge">%Y</code> for a four digit year.</p>
+
+<p>Some examples:</p>
+
+<ul>
+  <li>1/17/07 has the format “%m/%d/%y”</li>
+  <li>17-1-2007 has the format “%d-%m-%Y”</li>
+</ul>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002032411835.png" alt="image-20211002032411835"></p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002032419381.png" alt="image-20211002032419381"></p>
+
+<ul>
+  <li>
+<strong>What if I run into an error with multiple date formats?</strong> While we’re specifying the date format here, sometimes you’ll run into an error when there are multiple date formats in a single column. If that happens, you have have pandas try to infer what the right date format should be. You can do that like so:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>landslides['date_parsed'] = pd.to_datetime(landslides['Date'], infer_datetime_format=True)
+</code></pre></div></div>
+
+<ul>
+  <li>
+<strong>Why don’t you always use <code class="language-plaintext highlighter-rouge">infer_datetime_format = True?</code></strong> There are two big reasons not to always have pandas guess the time format. The first is that pandas won’t always been able to figure out the correct date format, especially if someone has gotten creative with data entry. The second is that it’s much slower than specifying the exact format of the dates.</li>
+</ul>
+
+<h3 id="selecting-the-day-of-the-month">
+<a class="anchor" href="#selecting-the-day-of-the-month" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selecting the day of the month</h3>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002032513853.png" alt="image-20211002032513853"></p>
+
+<h3 id="plot-the-day-of-the-month-to-check-the-date-parsing">
+<a class="anchor" href="#plot-the-day-of-the-month-to-check-the-date-parsing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plot the day of the month to check the date parsing</h3>
+
+<p>One of the biggest dangers in parsing dates is mixing up the months and days. The <code class="language-plaintext highlighter-rouge">to_datetime()</code> function does have very helpful error messages, but it doesn’t hurt to double-check that the days of the month we’ve extracted make sense.</p>
+
+<p>To do this, let’s plot a histogram of the days of the month. We expect it to have values between 1 and 31 and, since there’s no reason to suppose the landslides are more common on some days of the month than others, a relatively even distribution. (With a dip on 31 because not all months have 31 days.) Let’s see if that’s the case:</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002032619957.png" alt="image-20211002032619957"></p>
+
+<h2 id="character-encodings">
+<a class="anchor" href="#character-encodings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Character Encodings</h2>
+
+<h3 id="what-are-encodings">
+<a class="anchor" href="#what-are-encodings" aria-hidden="true"><span class="octicon octicon-link"></span></a>What are encodings?</h3>
+
+<p><strong>Character encodings</strong> are specific sets of rules for mapping from raw binary byte strings (that look like this: 0110100001101001) to characters that make up human-readable text (like “hi”). There are many different encodings, and if you tried to read in text with a different encoding than the one it was originally written in, you ended up with scrambled text called “mojibake” (said like mo-gee-bah-kay). Here’s an example of mojibake:</p>
+
+<p>æ–‡å—åŒ–ã??</p>
+
+<p>You might also end up with a “unknown” characters. There are what gets printed when there’s no mapping between a particular byte and a character in the encoding you’re using to read your byte string in and they look like this:</p>
+
+<p>����������</p>
+
+<p>Character encoding mismatches are less common today than they used to be, but it’s definitely still a problem. There are lots of different character encodings, but the main one you need to know is UTF-8.</p>
+
+<blockquote>
+  <p>UTF-8 is <strong>the</strong> standard text encoding. All Python code is in UTF-8 and, ideally, all your data should be as well. It’s when things aren’t in UTF-8 that you run into trouble.</p>
+</blockquote>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002033900935.png" alt="image-20211002033900935"></p>
+
+<p>If you look at a bytes object, you’ll see that it has a b in front of it, and then maybe some text after. That’s because bytes are printed out as if they were characters encoded in ASCII. (ASCII is an older character encoding that doesn’t really work for writing any language other than English.) Here you can see that our euro symbol has been replaced with some mojibake that looks like “\xe2\x82\xac” when it’s printed as if it were an ASCII string.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002033947123.png" alt="image-20211002033947123"></p>
+
+<p>However, when we try to use a different encoding to map our bytes into a string, we get an error. This is because the encoding we’re trying to use doesn’t know what to do with the bytes we’re trying to pass it. You need to tell Python the encoding that the byte string is actually supposed to be in.</p>
+
+<p>Like I said earlier, strings are UTF-8 by default in Python 3, so if we try to treat them like they were in another encoding we’ll create problems.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002034050924.png" alt="image-20211002034050924"></p>
+
+<h3 id="reading-in-files-with-encoding-problems">
+<a class="anchor" href="#reading-in-files-with-encoding-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading in files with encoding problems</h3>
+
+<p>Notice that we get the same <code class="language-plaintext highlighter-rouge">UnicodeDecodeError</code> we got when we tried to decode UTF-8 bytes as if they were ASCII! This tells us that this file isn’t actually UTF-8. We don’t know what encoding it actually <em>is</em> though. One way to figure it out is to try and test a bunch of different character encodings and see if any of them work. A better way, though, is to use the chardet module to try and automatically guess what the right encoding is. It’s not 100% guaranteed to be right, but it’s usually faster than just trying to guess.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002034205908.png" alt="image-20211002034205908"></p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002034214164.png" alt="image-20211002034214164"></p>
+
+<p><strong>What if the encoding chardet guesses isn’t right?</strong> Since chardet is basically just a fancy guesser, sometimes it will guess the wrong encoding. One thing you can try is looking at more or less of the file and seeing if you get a different result and then try that.</p>
+
+<h3 id="saving-your-files-with-utf-8-encoding">
+<a class="anchor" href="#saving-your-files-with-utf-8-encoding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Saving your files with UTF-8 encoding</h3>
+
+<p>The good news is, since UTF-8 is the standard encoding in Python, when you save a file it will be saved as UTF-8 by default:</p>
+
+<h3 id="exercise-2">
+<a class="anchor" href="#exercise-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">new_entry</span> <span class="o">=</span> <span class="n">sample_entry</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'big5-tw'</span><span class="p">).</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">)</span>
+
+<span class="c1"># Check your answer
+</span><span class="n">q1</span><span class="p">.</span><span class="n">check</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># TODO: Load in the DataFrame correctly.
+</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"../input/fatal-police-shootings-in-the-us/PoliceKillingsUS.csv"</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)</span> <span class="k">as</span> <span class="n">rawdata</span><span class="p">:</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">chardet</span><span class="p">.</span><span class="n">detect</span><span class="p">(</span><span class="n">rawdata</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="mi">30000</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="n">police_killings</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">"../input/fatal-police-shootings-in-the-us/PoliceKillingsUS.csv"</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'Windows-1252'</span><span class="p">)</span>
+
+<span class="c1"># Check your answer
+</span><span class="n">q2</span><span class="p">.</span><span class="n">check</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># TODO: Save the police killings dataset to CSV
+</span><span class="n">police_killings</span><span class="p">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">"/kaggle/working/my_file.csv"</span><span class="p">)</span>
+
+<span class="c1"># Check your answer
+</span><span class="n">q3</span><span class="p">.</span><span class="n">check</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="inconsistent-data-entry">
+<a class="anchor" href="#inconsistent-data-entry" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inconsistent Data Entry</h2>
+
+<h3 id="do-some-preliminary-text-pre-processing">
+<a class="anchor" href="#do-some-preliminary-text-pre-processing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Do some preliminary text pre-processing</h3>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002035130731.png" alt="image-20211002035130731"></p>
+
+<h3 id="use-fuzzy-matching-to-correct-inconsistent-data-entry">
+<a class="anchor" href="#use-fuzzy-matching-to-correct-inconsistent-data-entry" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use fuzzy matching to correct inconsistent data entry</h3>
+
+<p>We’re going to use the <a href="https://github.com/seatgeek/fuzzywuzzy">fuzzywuzzy</a> package to help identify which strings are closest to each other. This dataset is small enough that we could probably could correct errors by hand, but that approach doesn’t scale well.</p>
+
+<blockquote>
+  <p><strong>Fuzzy matching:</strong> The process of automatically finding text strings that are very similar to the target string. In general, a string is considered “closer” to another one the fewer characters you’d need to change if you were transforming one string into another. So “apple” and “snapple” are two changes away from each other (add “s” and “n”) while “in” and “on” and one change away (rplace “i” with “o”). You won’t always be able to rely on fuzzy matching 100%, but it will usually end up saving you at least a little time.</p>
+</blockquote>
+
+<p>Fuzzywuzzy returns a ratio given two strings. The closer the ratio is to 100, the smaller the edit distance between the two strings.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002035245766.png" alt="image-20211002035245766"></p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002035303096.png" alt="image-20211002035303096"></p>
+
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/02/kaggle-Data-Cleaning.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

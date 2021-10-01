@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Kaggle Intro to AI Ethics | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Kaggle Intro to AI Ethics" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kaggle course Intro to AI Ethics for Find-A." />
+<meta property="og:description" content="Kaggle course Intro to AI Ethics for Find-A." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-AI-ethics.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-AI-ethics.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-02T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-10-02T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-AI-ethics.html","@type":"BlogPosting","headline":"Kaggle Intro to AI Ethics","dateModified":"2021-10-02T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-AI-ethics.html"},"description":"Kaggle course Intro to AI Ethics for Find-A.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Kaggle Intro to AI Ethics</h1><p class="page-description">Kaggle course Intro to AI Ethics for Find-A.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-02T00:00:00-05:00" itemprop="datePublished">
+        Oct 2, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      13 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#kaggle-intro-to-ai-ethics">kaggle Intro to AI Ethics</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#human-centered-design-for-ai">Human-Centered Design for AI</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#1-understand-peoples-needs-to-define-the-problem">1. Understand people’s needs to define the problem.</a></li>
+<li class="toc-entry toc-h3"><a href="#2-ask-if-ai-adds-value-to-any-potential-solution">2. Ask if AI adds value to any potential solution.</a></li>
+<li class="toc-entry toc-h3"><a href="#3-consider-the-potential-harms-that-the-ai-system-could-cause">3. Consider the potential harms that the AI system could cause</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#example">example</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#4-prototype-starting-with-non-ai-solutions">4. Prototype, starting with non-AI solutions</a></li>
+<li class="toc-entry toc-h3"><a href="#5-provide-ways-for-people-to-challenge-the-system">5. Provide ways for people to challenge the system</a></li>
+<li class="toc-entry toc-h3"><a href="#6-build-in-safety-measures">6. Build in safety measures</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#identifying-bias-in-ai">Identifying bias in AI</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#bias-is-complex">Bias is complex</a></li>
+<li class="toc-entry toc-h3"><a href="#6-types-of-bias">6 types of bias</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#historical-bias">Historical bias</a></li>
+<li class="toc-entry toc-h4"><a href="#measurement-bias">Measurement bias</a></li>
+<li class="toc-entry toc-h4"><a href="#aggregation-bias">Aggregation bias</a></li>
+<li class="toc-entry toc-h4"><a href="#evaluation-bias">Evaluation bias</a></li>
+<li class="toc-entry toc-h4"><a href="#deployment-bias">Deployment bias</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#ai-fairness">AI Fairness</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#four-fairness-criteria">Four fairness criteria</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#1-demographic-parity--statistical-parity">1. Demographic parity / statistical parity</a></li>
+<li class="toc-entry toc-h4"><a href="#2-equal-oppportunity">2. Equal oppportunity</a></li>
+<li class="toc-entry toc-h4"><a href="#3-equal-accuracy">3. Equal accuracy</a></li>
+<li class="toc-entry toc-h4"><a href="#4-group-unaware--fairness-through-unawareness">4. Group unaware / “Fairness through unawareness”</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#confusion-matrix">Confusion matrix</a></li>
+<li class="toc-entry toc-h3"><a href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#model-cards">Model Cards</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#who-is-the-audience-of-your-model-card">Who is the audience of your model card?</a></li>
+<li class="toc-entry toc-h3"><a href="#what-sections-should-a-model-card-contain">What sections should a model card contain?</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#1-model-details">1. Model Details</a></li>
+<li class="toc-entry toc-h4"><a href="#2-intended-use">2. Intended Use</a></li>
+<li class="toc-entry toc-h4"><a href="#3-factors">3. Factors</a></li>
+<li class="toc-entry toc-h4"><a href="#4-metrics">4. Metrics</a></li>
+<li class="toc-entry toc-h4"><a href="#5-evaluation-data">5. Evaluation Data</a></li>
+<li class="toc-entry toc-h4"><a href="#6-training-data">6. Training Data</a></li>
+<li class="toc-entry toc-h4"><a href="#7-quantitative-analyses">7. quantitative Analyses</a></li>
+<li class="toc-entry toc-h4"><a href="#8-ethical-considerations">8. Ethical Considerations</a></li>
+<li class="toc-entry toc-h4"><a href="#9-caveats-and-recommendations">9. Caveats and Recommendations</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#how-can-you-use-model-cards-in-your-organization">How can you use model cards in your organization?</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#learn-more">Learn more</a></li>
+</ul>
+</li>
+</ul><h1 id="kaggle-intro-to-ai-ethics">
+<a class="anchor" href="#kaggle-intro-to-ai-ethics" aria-hidden="true"><span class="octicon octicon-link"></span></a>kaggle Intro to AI Ethics</h1>
+
+<p>These technologies have the potential to harm or help the people that they serve. By applying an ethical lens, we can work toward identifying the harms that these technologies can cause to people and we can design and build them to reduce these harms - or decide not to build them.</p>
+
+<p>This course covers several topics:</p>
+
+<ul>
+  <li>In the <strong>human-centered design</strong> lesson, you’ll learn how to design an AI system to ensure that it serves the needs of the people that it is intended for.</li>
+  <li>In the <strong>bias</strong> lesson, you’ll determine how AI systems can learn to discriminate against certain groups.</li>
+  <li>In the <strong>fairness</strong> lesson, you’ll learn to quantify the extent of the bias in AI systems.</li>
+  <li>In the <strong>model cards</strong> lesson, you’ll learn how to use a popular framework for improving public accountability for AI models.</li>
+</ul>
+
+<h2 id="human-centered-design-for-ai">
+<a class="anchor" href="#human-centered-design-for-ai" aria-hidden="true"><span class="octicon octicon-link"></span></a>Human-Centered Design for AI</h2>
+
+<p>Before selecting data and training models, it is important to carefully consider the human needs an AI system should serve - and if it should be built at all.</p>
+
+<p><strong>Human-centered design (HCD)</strong> is an approach to designing systems that serve people’s needs.</p>
+
+<p>6 steps</p>
+
+<h3 id="1-understand-peoples-needs-to-define-the-problem">
+<a class="anchor" href="#1-understand-peoples-needs-to-define-the-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Understand people’s needs to define the problem.</h3>
+
+<p>Your entire team – including data scientists and engineers – should be involved in this step, so that every team member gains an understanding of the people they hope to serve. Your team should include and involve people with diverse perspectives and backgrounds, along race, gender, and other characteristics. Sharpen your problem definition and brainstorm creative and inclusive solutions together.</p>
+
+<h3 id="2-ask-if-ai-adds-value-to-any-potential-solution">
+<a class="anchor" href="#2-ask-if-ai-adds-value-to-any-potential-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Ask if AI adds value to any potential solution.</h3>
+
+<ul>
+  <li>Would people generally agree that what you are trying to achieve is a good outcome?</li>
+  <li>Would non-AI systems - such as rule-based solutions, which are easier to create, audit and maintain - be significantly less effective than an AI system?</li>
+  <li>Is the task that you are using AI for one that people would find boring, repetitive or otherwise difficult to concentrate on?</li>
+  <li>Have AI solutions proven to be better than other solutions for similar use cases in the past?</li>
+</ul>
+
+<p>If you answered no to any of these questions, an AI solution may not be necessary or appropriate.</p>
+
+<h3 id="3-consider-the-potential-harms-that-the-ai-system-could-cause">
+<a class="anchor" href="#3-consider-the-potential-harms-that-the-ai-system-could-cause" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Consider the potential harms that the AI system could cause</h3>
+
+<p>Weigh the benefits of using AI against the potential harms, throughout the design pipeline: from collecting and labeling data, to training a model, to deploying the AI system. Consider the impact on users and on society. Your privacy team can help uncover hidden privacy issues and determine whether privacy-preserving techniques like <a href="https://developers.googleblog.com/2019/09/enabling-developers-and-organizations.html">differential privacy</a> or <a href="https://ai.googleblog.com/2017/04/federated-learning-collaborative.html">federated learning</a> may be appropriate. Take steps to reduce harms, including by embedding people - and therefore human judgment - more effectively in data selection, in model training and in the operation of the system. If you estimate that the harms are likely to outweigh the benefits, do not build the system.</p>
+
+<h4 id="example">
+<a class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>example</h4>
+
+<p>An online education company wants to use an AI system to ‘read’ and automatically assign scores to student essays, while redirecting company staff to double-check random essays and to review essays that the AI system has trouble with. The system would enable the company to quickly get scores back to students. The company creates a harms review committee, which recommends that the system not be built. Some of the major harms flagged by the committee include: the potential for the AI system to pick up bias against certain patterns of language from training data and amplify it (harming people in the groups that use those patterns of language), to encourage students to ‘game’ the algorithm rather than improve their essays and to reduce the classroom role of education experts while increasing the role of technology experts.</p>
+
+<h3 id="4-prototype-starting-with-non-ai-solutions">
+<a class="anchor" href="#4-prototype-starting-with-non-ai-solutions" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Prototype, starting with non-AI solutions</h3>
+
+<p>Develop a non-AI prototype of your AI system quickly to see how people interact with it. This makes prototyping easier, faster and less expensive. It also gives you early information about what users expect from your system and how to make their interactions more rewarding and meaningful.</p>
+
+<p>The people giving feedback should have diverse backgrounds – including along race, gender, expertise and other characteristics. They should also understand and consent to what they are helping with and how.</p>
+
+<h3 id="5-provide-ways-for-people-to-challenge-the-system">
+<a class="anchor" href="#5-provide-ways-for-people-to-challenge-the-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Provide ways for people to challenge the system</h3>
+
+<p>People who use your AI system once it is live should be able to challenge its recommendations or easily opt out of using it. Put systems and tools in place to accept, monitor and address challenges.</p>
+
+<p>Talk to users and think from the perspective of a user: if you are curious or dissatisfied with the system’s recommendations, would you want to challenge it by:</p>
+
+<ul>
+  <li>Requesting an explanation of how it arrived at its recommendation?</li>
+  <li>Requesting a change in the information you input?</li>
+  <li>Turning off certain features?</li>
+  <li>Reaching out to the product team on social media?</li>
+  <li>Taking some other action?</li>
+</ul>
+
+<h3 id="6-build-in-safety-measures">
+<a class="anchor" href="#6-build-in-safety-measures" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. Build in safety measures</h3>
+
+<p>Safety measures protect users against harm. They seek to limit unintended behavior and accidents, by ensuring that a system reliably delivers high-quality outcomes. This can only be achieved through extensive and continuous evaluation and testing. Design processes around your AI system to continuously monitor performance, delivery of intended benefits, reduction of harms, fairness metrics and any changes in how people are <em>actually</em> using it.</p>
+
+<p>Human oversight of your AI system is crucial:</p>
+
+<ul>
+  <li>Create a human ‘red team’ to play the role of a person trying to manipulate your system into unintended behavior. Then, strengthen your system against any such manipulation.</li>
+  <li>Determine how people in your organization can best monitor the system’s safety once it is live.</li>
+  <li>Explore ways for your AI system to quickly alert a human when it is faced with a challenging case.</li>
+  <li>Create ways for users and others to flag potential safety issues.</li>
+</ul>
+
+<h2 id="identifying-bias-in-ai">
+<a class="anchor" href="#identifying-bias-in-ai" aria-hidden="true"><span class="octicon octicon-link"></span></a>Identifying bias in AI</h2>
+
+<p>ML applications have discriminated against individuals on the basis of race, sex, religion, socioeconomic status, and other categories.</p>
+
+<h3 id="bias-is-complex">
+<a class="anchor" href="#bias-is-complex" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bias is complex</h3>
+
+<p>Bias in data is complex. Flawed data can also result in <strong>representation bias</strong> (covered later in this tutorial), if a group is underrepresented in the training data. For instance, when training a facial detection system, if the training data contains mostly individuals with lighter skin tones, it will fail to perform well for users with darker skin tones. A third type of bias that can arise from the training data is called <strong>measurement bias</strong>, which you’ll learn about below.</p>
+
+<p>bias can also result from the way in which the ML model is defined, from the way the model is compared to other models, and from the way that everyday users interpret the final results of the model. Harm can come from anywhere in the ML process.</p>
+
+<h3 id="6-types-of-bias">
+<a class="anchor" href="#6-types-of-bias" aria-hidden="true"><span class="octicon octicon-link"></span></a>6 types of bias</h3>
+
+<h4 id="historical-bias">
+<a class="anchor" href="#historical-bias" aria-hidden="true"><span class="octicon octicon-link"></span></a>Historical bias</h4>
+
+<p><strong>Historical bias</strong> occurs when the state of the world in which the data was generated is flawed.</p>
+
+<h4 id="measurement-bias">
+<a class="anchor" href="#measurement-bias" aria-hidden="true"><span class="octicon octicon-link"></span></a>Measurement bias</h4>
+
+<p><strong>Measurement bias</strong> occurs when the accuracy of the data varies across groups. This can happen when working with proxy variables (variables that take the place of a variable that cannot be directly measured), if the quality of the proxy varies in different groups.</p>
+
+<h4 id="aggregation-bias">
+<a class="anchor" href="#aggregation-bias" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aggregation bias</h4>
+
+<p><strong>Aggregation bias</strong> occurs when groups are inappropriately combined, resulting in a model that does not perform well for any group or only performs well for the majority group. (This is often not an issue, but most commonly arises in medical applications.)</p>
+
+<h4 id="evaluation-bias">
+<a class="anchor" href="#evaluation-bias" aria-hidden="true"><span class="octicon octicon-link"></span></a>Evaluation bias</h4>
+
+<p><strong>Evaluation bias</strong> occurs when evaluating a model, if the benchmark data (used to compare the model to other models that perform similar tasks) does not represent the population that the model will serve.</p>
+
+<h4 id="deployment-bias">
+<a class="anchor" href="#deployment-bias" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deployment bias</h4>
+
+<p><strong>Deployment bias</strong> occurs when the problem the model is intended to solve is different from the way it is actually used. If the end users don’t use the model in the way it is intended, there is no guarantee that the model will perform well.</p>
+
+<p>Note that these are <em>not mutually exclusive</em>: that is, an ML application can easily suffer from more than one type of bias.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-AI-ethics/image-20211002021354944.png" alt="image-20211002021354944"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-AI-ethics/image-20211002021457078.png" alt="image-20211002021457078"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-AI-ethics/image-20211002021549954.png" alt="image-20211002021549954"></p>
+
+<h2 id="ai-fairness">
+<a class="anchor" href="#ai-fairness" aria-hidden="true"><span class="octicon octicon-link"></span></a>AI Fairness</h2>
+
+<h3 id="four-fairness-criteria">
+<a class="anchor" href="#four-fairness-criteria" aria-hidden="true"><span class="octicon octicon-link"></span></a>Four fairness criteria</h3>
+
+<h4 id="1-demographic-parity--statistical-parity">
+<a class="anchor" href="#1-demographic-parity--statistical-parity" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Demographic parity / statistical parity</h4>
+
+<p><strong>Demographic parity</strong> says the model is fair if the composition of people who are selected by the model matches the group membership percentages of the applicants.</p>
+
+<blockquote>
+  <p>A nonprofit is organizing an international conference, and 20,000 people have signed up to attend. The organizers write a ML model to select 100 attendees who could potentially give interesting talks at the conference. Since 50% of the attendees will be women (10,000 out of 20,000), they design the model so that 50% of the selected speaker candidates are women.</p>
+</blockquote>
+
+<h4 id="2-equal-oppportunity">
+<a class="anchor" href="#2-equal-oppportunity" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Equal oppportunity</h4>
+
+<p><strong>Equal opportunity</strong> fairness ensures that the proportion of people who should be selected by the model (“positives”) that are correctly selected by the model is the same for each group. We refer to this proportion as the <strong>true positive rate</strong> (TPR) or <strong>sensitivity</strong> of the model.</p>
+
+<h4 id="3-equal-accuracy">
+<a class="anchor" href="#3-equal-accuracy" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Equal accuracy</h4>
+
+<p>Alternatively, we could check that the model has <strong>equal accuracy</strong> for each group. That is, the percentage of correct classifications (people who should be denied and are denied, and people who should be approved who are approved) should be the same for each group.</p>
+
+<h4 id="4-group-unaware--fairness-through-unawareness">
+<a class="anchor" href="#4-group-unaware--fairness-through-unawareness" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Group unaware / “Fairness through unawareness”</h4>
+
+<p><strong>Group unaware</strong> fairness removes all group membership information from the dataset. For instance, we can remove gender data to try to make the model fair to different gender groups. Similarly, we can remove information about race or age.</p>
+
+<blockquote>
+  <p>One difficulty of applying this approach in practice is that one has to be careful to identify and remove proxies for the group membership data. For instance, in cities that are racially segregated, zip code is a strong proxy for race. That is, when the race data is removed, the zip code data should also be removed, or else the ML application may still be able to infer an individual’s race from the data. Additionally, group unaware fairness is unlikely to be a good solution for historical bias.</p>
+</blockquote>
+
+<h3 id="confusion-matrix">
+<a class="anchor" href="#confusion-matrix" aria-hidden="true"><span class="octicon octicon-link"></span></a>Confusion matrix</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-AI-ethics/xFZG5fF.png" alt="img"></p>
+
+<p>Note that <strong><em>*group unaware*</em></strong> fairness cannot be detected from the confusion matrix, and is more concerned with removing group membership information from the dataset.</p>
+
+<p>Also note that none of the examples satisfy more than one type of fairness. For instance, the demographic parity example does not satisfy equal accuracy or equal opportunity. Take the time to verify this now. In practice, it is not possible to optimize a model for more than one type of fairness: to read more about this, explore the <a href="https://arxiv.org/abs/2007.06024">Impossibility Theorem of Machine Fairness</a>. <em>So which fairness criterion should you select, if you can only satisfy one?</em> As with most ethical questions, the correct answer is usually not straightforward, and picking a criterion should be a long conversation involving everyone on your team.</p>
+
+<p>When working with a real project, the data will be much, much larger. In this case, confusion matrices are still a useful tool for analyzing model performance. One important thing to note, however, is that real-world models typically cannot be expected to satisfy any fairness definition perfectly.</p>
+
+<h3 id="exercise">
+<a class="anchor" href="#exercise" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-AI-ethics/image-20211002023258614.png" alt="image-20211002023258614"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-AI-ethics/image-20211002023452065.png" alt="image-20211002023452065"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-AI-ethics/image-20211002023622243.png" alt="image-20211002023622243"></p>
+
+<h2 id="model-cards">
+<a class="anchor" href="#model-cards" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model Cards</h2>
+
+<p>A <strong>model card</strong> is a short document that provides key information about a machine learning model. Model cards increase transparency by communicating information about trained models to broad audiences.</p>
+
+<p>AI researchers are exploring many ways to communicate key information about models to inform people who use AI systems, people who are affected by AI systems and others.</p>
+
+<p>Model cards - introduced in a <a href="https://arxiv.org/abs/1810.03993">2019 paper</a> - are one way for teams to communicate key information about their AI system to a broad audience. This information generally includes intended uses for the model, how the model works, and how the model performs in different situations.</p>
+
+<h3 id="who-is-the-audience-of-your-model-card">
+<a class="anchor" href="#who-is-the-audience-of-your-model-card" aria-hidden="true"><span class="octicon octicon-link"></span></a>Who is the audience of your model card?</h3>
+
+<p>A model card should strike a balance between being easy-to-understand and communicating important technical information. When writing a model card, you should consider your audience: the groups of people who are most likely to read your model card. These groups will vary according to the AI system’s purpose.</p>
+
+<h3 id="what-sections-should-a-model-card-contain">
+<a class="anchor" href="#what-sections-should-a-model-card-contain" aria-hidden="true"><span class="octicon octicon-link"></span></a>What sections should a model card contain?</h3>
+
+<h4 id="1-model-details">
+<a class="anchor" href="#1-model-details" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Model Details</h4>
+
+<ul>
+  <li>Include background information, such as developer and model version.</li>
+</ul>
+
+<h4 id="2-intended-use">
+<a class="anchor" href="#2-intended-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Intended Use</h4>
+
+<ul>
+  <li>What use cases are in scope?</li>
+  <li>Who are your intended users?</li>
+  <li>What use cases are out of scope?</li>
+</ul>
+
+<h4 id="3-factors">
+<a class="anchor" href="#3-factors" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Factors</h4>
+
+<ul>
+  <li>What factors affect the impact of the model?</li>
+</ul>
+
+<h4 id="4-metrics">
+<a class="anchor" href="#4-metrics" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Metrics</h4>
+
+<ul>
+  <li>What metrics are you using to measure the performance of the model? Why did you pick those metrics?
+    <ul>
+      <li>For <strong>classification systems</strong> – in which the output is a class label – potential error types include false positive rate, false negative rate, false discovery rate, and false omission rate. The relative importance of each of these depends on the use case.</li>
+      <li>For <strong>score-based analyses</strong> – in which the output is a score or price – consider reporting model performance across groups.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="5-evaluation-data">
+<a class="anchor" href="#5-evaluation-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Evaluation Data</h4>
+
+<ul>
+  <li>Which datasets did you use to evaluate model performance? Provide the datasets if you can.</li>
+  <li>Why did you choose these datasets for evaluation?</li>
+  <li>Are the datasets representative of typical use cases, anticipated test cases and/or challenging cases?</li>
+</ul>
+
+<h4 id="6-training-data">
+<a class="anchor" href="#6-training-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. Training Data</h4>
+
+<ul>
+  <li>Which data was the model trained on?</li>
+</ul>
+
+<h4 id="7-quantitative-analyses">
+<a class="anchor" href="#7-quantitative-analyses" aria-hidden="true"><span class="octicon octicon-link"></span></a>7. quantitative Analyses</h4>
+
+<ul>
+  <li>How did the model perform on the metrics you chose? Break down performance by important factors and their intersections.</li>
+</ul>
+
+<h4 id="8-ethical-considerations">
+<a class="anchor" href="#8-ethical-considerations" aria-hidden="true"><span class="octicon octicon-link"></span></a>8. Ethical Considerations</h4>
+
+<ul>
+  <li>Describe ethical considerations related to the model, such as sensitive data used to train the model, whether the model has implications for human life, health, or safety, how risk was mitigated, and what harms may be present in model usage.</li>
+</ul>
+
+<h4 id="9-caveats-and-recommendations">
+<a class="anchor" href="#9-caveats-and-recommendations" aria-hidden="true"><span class="octicon octicon-link"></span></a>9. Caveats and Recommendations</h4>
+
+<ul>
+  <li>Add anything important that you have not covered elsewhere in the model card.</li>
+</ul>
+
+<h3 id="how-can-you-use-model-cards-in-your-organization">
+<a class="anchor" href="#how-can-you-use-model-cards-in-your-organization" aria-hidden="true"><span class="octicon octicon-link"></span></a>How can you use model cards in your organization?</h3>
+
+<p>The use of detailed model cards can often be challenging because an organization may not want to reveal its processes, proprietary data or trade secrets. In such cases, the developer team should think about how model cards can be useful and empowering, without including sensitive information.</p>
+
+<h2 id="learn-more">
+<a class="anchor" href="#learn-more" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learn more</h2>
+
+<p>To dive deeper into the application of HCD to AI, check out these resources:</p>
+
+<ul>
+  <li>Lex Fridman’s <a href="https://www.youtube.com/watch?v=bmjamLZ3v8A">introductory lecture</a> on Human-Centered Artificial Intelligence</li>
+  <li>Google’s People + AI Research (PAIR) <a href="https://pair.withgoogle.com/guidebook/">Guidebook</a>
+</li>
+  <li>Stanford Human-Centered Artificial Intelligence (HAI) <a href="https://hai.stanford.edu/research">research</a>
+</li>
+</ul>
+
+<p>To continue learning about bias, check out the <a href="https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification/overview">Jigsaw Unintended Bias in Toxicity Classification</a> competition that was introduced in this exercise.</p>
+
+<ul>
+  <li>Kaggler <a href="https://www.kaggle.com/christofhenkel">Dieter</a> has written a helpful two-part series that teaches you how to preprocess the data and train a neural network to make a competition submission.  <a href="https://www.kaggle.com/christofhenkel/how-to-preprocessing-for-glove-part1-eda">Get started here</a>.</li>
+  <li>Many Kagglers have written helpful notebooks that you can use to get started.  <a href="https://www.kaggle.com/c/jigsaw-unintended-bias-in-toxicity-classification/notebooks?sortBy=voteCount&amp;group=everyone&amp;pageSize=20&amp;competitionId=12500">Check them out</a> on the competition page.</li>
+</ul>
+
+<p>Another Kaggle competition that you can use to learn about bias is the <a href="https://www.kaggle.com/c/inclusive-images-challenge">Inclusive Images Challenge</a>, which you can read more about in <a href="https://ai.googleblog.com/2018/09/introducing-inclusive-images-competition.html">this blog post</a>.  The competition focuses on <strong>evaluation bias</strong> in computer vision.</p>
+
+<ul>
+  <li>Explore different types of fairness with an <a href="http://research.google.com/bigpicture/attacking-discrimination-in-ml/">interactive tool</a>.</li>
+  <li>You can read more about equal opportunity in <a href="https://ai.googleblog.com/2016/10/equality-of-opportunity-in-machine.html">this blog post</a>.</li>
+  <li>Analyze ML fairness with <a href="https://pair-code.github.io/what-if-tool/learn/tutorials/walkthrough/">this walkthrough</a> of the What-If Tool, created by the People and AI Research (PAIR) team at Google. This tool allows you to quickly amend an ML model, once you’ve picked the fairness criterion that is best for your use case.</li>
+</ul>
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/02/kaggle-AI-ethics.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
