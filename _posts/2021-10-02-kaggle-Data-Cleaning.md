@@ -74,9 +74,9 @@ percent_missing = sf_permits.isnull().sum().sum() / np.product(sf_permits.shape)
 q2.check()
 ```
 
-![image-20211002030542339](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002030542339.png)
+![image-20211002030542339](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002030542339.png)
 
-![image-20211002030629934](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002030629934.png)
+![image-20211002030629934](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002030629934.png)
 
 ```python
 # TODO: Your code here
@@ -131,7 +131,7 @@ q1.check()
 
 ## Parsing Dates
 
-![image-20211002032243408](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002032243408.png)
+![image-20211002032243408](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002032243408.png)
 
 Notice that at the bottom of the output of `head()`, you can see that it says that the data type of this column is "object".
 
@@ -139,7 +139,7 @@ Notice that at the bottom of the output of `head()`, you can see that it says th
 
 If you check the pandas dtype documentation [here](http://pandas.pydata.org/pandas-docs/stable/basics.html#dtypes), you'll notice that there's also a specific `datetime64` dtypes. Because the dtype of our column is `object` rather than `datetime64`, we can tell that Python doesn't know that this column contains dates.
 
-![image-20211002032324133](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002032324133.png)
+![image-20211002032324133](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002032324133.png)
 
 You may have to check the [numpy documentation](https://docs.scipy.org/doc/numpy-1.12.0/reference/generated/numpy.dtype.kind.html#numpy.dtype.kind) to match the letter code to the dtype of the object. "O" is the code for "object", so we can see that these two methods give us the same information.
 
@@ -152,9 +152,9 @@ Some examples:
 -   1/17/07 has the format "%m/%d/%y"
 -   17-1-2007 has the format "%d-%m-%Y"
 
-![image-20211002032411835](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002032411835.png)
+![image-20211002032411835](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002032411835.png)
 
-![image-20211002032419381](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002032419381.png)
+![image-20211002032419381](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002032419381.png)
 
 -   **What if I run into an error with multiple date formats?** While we're specifying the date format here, sometimes you'll run into an error when there are multiple date formats in a single column. If that happens, you have have pandas try to infer what the right date format should be. You can do that like so:
 
@@ -166,7 +166,7 @@ landslides['date_parsed'] = pd.to_datetime(landslides['Date'], infer_datetime_fo
 
 ### Selecting the day of the month
 
-![image-20211002032513853](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002032513853.png)
+![image-20211002032513853](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002032513853.png)
 
 ### Plot the day of the month to check the date parsing
 
@@ -174,7 +174,7 @@ One of the biggest dangers in parsing dates is mixing up the months and days. Th
 
 To do this, let's plot a histogram of the days of the month. We expect it to have values between 1 and 31 and, since there's no reason to suppose the landslides are more common on some days of the month than others, a relatively even distribution. (With a dip on 31 because not all months have 31 days.) Let's see if that's the case:
 
-![image-20211002032619957](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002032619957.png)
+![image-20211002032619957](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002032619957.png)
 
 ## Character Encodings
 
@@ -192,25 +192,25 @@ Character encoding mismatches are less common today than they used to be, but it
 
 >   UTF-8 is **the** standard text encoding. All Python code is in UTF-8 and, ideally, all your data should be as well. It's when things aren't in UTF-8 that you run into trouble.
 
-![image-20211002033900935](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002033900935.png)
+![image-20211002033900935](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002033900935.png)
 
 If you look at a bytes object, you'll see that it has a b in front of it, and then maybe some text after. That's because bytes are printed out as if they were characters encoded in ASCII. (ASCII is an older character encoding that doesn't really work for writing any language other than English.) Here you can see that our euro symbol has been replaced with some mojibake that looks like "\xe2\x82\xac" when it's printed as if it were an ASCII string.
 
-![image-20211002033947123](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002033947123.png)
+![image-20211002033947123](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002033947123.png)
 
 However, when we try to use a different encoding to map our bytes into a string, we get an error. This is because the encoding we're trying to use doesn't know what to do with the bytes we're trying to pass it. You need to tell Python the encoding that the byte string is actually supposed to be in.
 
 Like I said earlier, strings are UTF-8 by default in Python 3, so if we try to treat them like they were in another encoding we'll create problems.
 
-![image-20211002034050924](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002034050924.png)
+![image-20211002034050924](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002034050924.png)
 
 ### Reading in files with encoding problems
 
 Notice that we get the same `UnicodeDecodeError` we got when we tried to decode UTF-8 bytes as if they were ASCII! This tells us that this file isn't actually UTF-8. We don't know what encoding it actually *is* though. One way to figure it out is to try and test a bunch of different character encodings and see if any of them work. A better way, though, is to use the chardet module to try and automatically guess what the right encoding is. It's not 100% guaranteed to be right, but it's usually faster than just trying to guess.
 
-![image-20211002034205908](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002034205908.png)
+![image-20211002034205908](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002034205908.png)
 
-![image-20211002034214164](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002034214164.png)
+![image-20211002034214164](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002034214164.png)
 
 **What if the encoding chardet guesses isn't right?** Since chardet is basically just a fancy guesser, sometimes it will guess the wrong encoding. One thing you can try is looking at more or less of the file and seeing if you get a different result and then try that.
 
@@ -251,7 +251,7 @@ q3.check()
 
 ### Do some preliminary text pre-processing
 
-![image-20211002035130731](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002035130731.png)
+![image-20211002035130731](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002035130731.png)
 
 ### Use fuzzy matching to correct inconsistent data entry
 
@@ -261,7 +261,7 @@ We're going to use the [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) pack
 
 Fuzzywuzzy returns a ratio given two strings. The closer the ratio is to 100, the smaller the edit distance between the two strings.
 
-![image-20211002035245766](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002035245766.png)
+![image-20211002035245766](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002035245766.png)
 
-![image-20211002035303096](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Cleaning\image-20211002035303096.png)
+![image-20211002035303096](/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002035303096.png)
 
