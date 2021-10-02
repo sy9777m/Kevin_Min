@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Kaggle Pandas | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Kaggle Pandas" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kaggle course Pandas for Find-A." />
+<meta property="og:description" content="Kaggle course Pandas for Find-A." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-Pandas.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-Pandas.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-02T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-10-02T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-Pandas.html","@type":"BlogPosting","headline":"Kaggle Pandas","dateModified":"2021-10-02T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-Pandas.html"},"description":"Kaggle course Pandas for Find-A.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Kaggle Pandas</h1><p class="page-description">Kaggle course Pandas for Find-A.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-02T00:00:00-05:00" itemprop="datePublished">
+        Oct 2, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#kaggle-pandas">kaggle Pandas</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#creating-reading-and-writing">Creating, Reading and Writing</a></li>
+<li class="toc-entry toc-h2"><a href="#indexing-selecting--assigning">Indexing, Selecting &amp; Assigning</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#indexing-in-pandas">Indexing in pandas</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#summary-functions-and-maps">Summary Functions and Maps</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#maps">Maps</a></li>
+<li class="toc-entry toc-h3"><a href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#grouping-and-sorting">Grouping and Sorting</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#groupwise-analysis">Groupwise analysis</a></li>
+<li class="toc-entry toc-h3"><a href="#multi-indexes">Multi-indexes</a></li>
+<li class="toc-entry toc-h3"><a href="#sorting">Sorting</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#data-types-and-missing-values">Data Types and Missing Values</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#dtypes">Dtypes</a></li>
+<li class="toc-entry toc-h3"><a href="#missing-data">Missing data</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#renaming-and-combining">Renaming and Combining</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#renaming">Renaming</a></li>
+<li class="toc-entry toc-h3"><a href="#combining">Combining</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h1 id="kaggle-pandas">
+<a class="anchor" href="#kaggle-pandas" aria-hidden="true"><span class="octicon octicon-link"></span></a>kaggle Pandas</h1>
+
+<h2 id="creating-reading-and-writing">
+<a class="anchor" href="#creating-reading-and-writing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating, Reading and Writing</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002094657783.png" alt="image-20211002094657783"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002094819228.png" alt="image-20211002094819228"></p>
+
+<h2 id="indexing-selecting--assigning">
+<a class="anchor" href="#indexing-selecting--assigning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Indexing, Selecting &amp; Assigning</h2>
+
+<h3 id="indexing-in-pandas">
+<a class="anchor" href="#indexing-in-pandas" aria-hidden="true"><span class="octicon octicon-link"></span></a>Indexing in pandas</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002095402026.png" alt="image-20211002095402026"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002095420960.png" alt="image-20211002095420960"></p>
+
+<h2 id="summary-functions-and-maps">
+<a class="anchor" href="#summary-functions-and-maps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary Functions and Maps</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002100732122.png" alt="image-20211002100732122"></p>
+
+<h3 id="maps">
+<a class="anchor" href="#maps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maps</h3>
+
+<p>A <strong>map</strong> is a term, borrowed from mathematics, for a function that takes one set of values and “maps” them to another set of values.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002100817452.png" alt="image-20211002100817452"></p>
+
+<p>The function you pass to <code class="language-plaintext highlighter-rouge">map()</code> should expect a single value from the Series (a point value, in the above example), and return a transformed version of that value. <code class="language-plaintext highlighter-rouge">map()</code> returns a new Series where all the values have been transformed by your function.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002100913583.png" alt="image-20211002100913583"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002101001344.png" alt="image-20211002101001344"></p>
+
+<h3 id="exercise">
+<a class="anchor" href="#exercise" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">descriptor_counts</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">Series</span><span class="p">([</span><span class="n">reviews</span><span class="p">[</span><span class="s">'description'</span><span class="p">].</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s">'tropical'</span> <span class="ow">in</span> <span class="n">x</span><span class="p">).</span><span class="nb">sum</span><span class="p">(),</span> <span class="n">reviews</span><span class="p">[</span><span class="s">'description'</span><span class="p">].</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s">'fruity'</span> <span class="ow">in</span> <span class="n">x</span><span class="p">).</span><span class="nb">sum</span><span class="p">()],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s">'tropical'</span><span class="p">,</span> <span class="s">'fruity'</span><span class="p">])</span>
+<span class="c1"># descriptor_counts
+</span>
+<span class="c1"># Check your answer
+</span><span class="n">q6</span><span class="p">.</span><span class="n">check</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="grouping-and-sorting">
+<a class="anchor" href="#grouping-and-sorting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grouping and Sorting</h2>
+
+<h3 id="groupwise-analysis">
+<a class="anchor" href="#groupwise-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Groupwise analysis</h3>
+
+<p><code class="language-plaintext highlighter-rouge">groupby()</code> created a group of reviews which allotted the same point values to the given wines. Then, for each of these groups, we grabbed the <code class="language-plaintext highlighter-rouge">points()</code> column and counted how many times it appeared. <code class="language-plaintext highlighter-rouge">value_counts()</code> is just a shortcut to this <code class="language-plaintext highlighter-rouge">groupby()</code> operation.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002145008983.png" alt="image-20211002145008983"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002145105647.png" alt="image-20211002145105647"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002145157713.png" alt="image-20211002145157713"></p>
+
+<p>Another <code class="language-plaintext highlighter-rouge">groupby()</code> method worth mentioning is <code class="language-plaintext highlighter-rouge">agg()</code>, which lets you run a bunch of different functions on your DataFrame simultaneously. For example, we can generate a simple statistical summary of the dataset as follows:</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002145227678.png" alt="image-20211002145227678"></p>
+
+<h3 id="multi-indexes">
+<a class="anchor" href="#multi-indexes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multi-indexes</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002145549134.png" alt="image-20211002145549134"></p>
+
+<p>Multi-indices have several methods for dealing with their tiered structure which are absent for single-level indices. They also require two levels of labels to retrieve a value.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002145648037.png" alt="image-20211002145648037"></p>
+
+<h3 id="sorting">
+<a class="anchor" href="#sorting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sorting</h3>
+
+<p><code class="language-plaintext highlighter-rouge">sort_values()</code> defaults to an ascending sort, where the lowest values go first. However, most of the time we want a descending sort, where the higher numbers go first.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002145731562.png" alt="image-20211002145731562"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002145742868.png" alt="image-20211002145742868"></p>
+
+<h2 id="data-types-and-missing-values">
+<a class="anchor" href="#data-types-and-missing-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Types and Missing Values</h2>
+
+<h3 id="dtypes">
+<a class="anchor" href="#dtypes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dtypes</h3>
+
+<p>The data type for a column in a DataFrame or a Series is known as the <strong>dtype</strong>.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002152246617.png" alt="image-20211002152246617"></p>
+
+<p><code class="language-plaintext highlighter-rouge">float64</code> means that it’s using a 64-bit floating point number; <code class="language-plaintext highlighter-rouge">int64</code> means a similarly sized integer instead, and so on.</p>
+
+<p>One peculiarity to keep in mind (and on display very clearly here) is that columns consisting entirely of strings do not get their own type; they are instead given the <code class="language-plaintext highlighter-rouge">object</code> type.</p>
+
+<p>It’s possible to convert a column of one type into another wherever such a conversion makes sense by using the <code class="language-plaintext highlighter-rouge">astype()</code> function.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002152325928.png" alt="image-20211002152325928"></p>
+
+<h3 id="missing-data">
+<a class="anchor" href="#missing-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Missing data</h3>
+
+<p>Entries missing values are given the value <code class="language-plaintext highlighter-rouge">NaN</code>, short for “Not a Number”. For technical reasons these <code class="language-plaintext highlighter-rouge">NaN</code> values are always of the <code class="language-plaintext highlighter-rouge">float64</code> dtype.</p>
+
+<p>Pandas provides some methods specific to missing data. To select <code class="language-plaintext highlighter-rouge">NaN</code> entries you can use <code class="language-plaintext highlighter-rouge">pd.isnull()</code> (or its companion <code class="language-plaintext highlighter-rouge">pd.notnull()</code>). This is meant to be used thusly:</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002152400996.png" alt="image-20211002152400996"></p>
+
+<p>Replacing missing values is a common operation. Pandas provides a really handy method for this problem: <code class="language-plaintext highlighter-rouge">fillna()</code>. <code class="language-plaintext highlighter-rouge">fillna()</code> provides a few different strategies for mitigating such data.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002152429049.png" alt="image-20211002152429049"></p>
+
+<p>Or we could fill each missing value with the first non-null value that appears sometime after the given record in the database. This is known as the backfill strategy.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002152459962.png" alt="image-20211002152459962"></p>
+
+<h2 id="renaming-and-combining">
+<a class="anchor" href="#renaming-and-combining" aria-hidden="true"><span class="octicon octicon-link"></span></a>Renaming and Combining</h2>
+
+<h3 id="renaming">
+<a class="anchor" href="#renaming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Renaming</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002153750555.png" alt="image-20211002153750555"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002153803885.png" alt="image-20211002153803885"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002153827767.png" alt="image-20211002153827767"></p>
+
+<h3 id="combining">
+<a class="anchor" href="#combining" aria-hidden="true"><span class="octicon octicon-link"></span></a>Combining</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002153859890.png" alt="image-20211002153859890"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Pandas/image-20211002153919768.png" alt="image-20211002153919768"></p>
+
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/02/kaggle-Pandas.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -225,9 +225,9 @@ print(percent_missing)
 </span><span class="n">q2</span><span class="p">.</span><span class="n">check</span><span class="p">()</span>
 </code></pre></div></div>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002030542339.png" alt="image-20211002030542339"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002030542339.png" alt="image-20211002030542339"></p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002030629934.png" alt="image-20211002030629934"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002030629934.png" alt="image-20211002030629934"></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># TODO: Your code here
 </span><span class="n">sf_permits_with_na_dropped</span> <span class="o">=</span> <span class="n">sf_permits</span><span class="p">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -287,7 +287,7 @@ print(percent_missing)
 <h2 id="parsing-dates">
 <a class="anchor" href="#parsing-dates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parsing Dates</h2>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002032243408.png" alt="image-20211002032243408"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002032243408.png" alt="image-20211002032243408"></p>
 
 <p>Notice that at the bottom of the output of <code class="language-plaintext highlighter-rouge">head()</code>, you can see that it says that the data type of this column is “object”.</p>
 
@@ -297,7 +297,7 @@ print(percent_missing)
 
 <p>If you check the pandas dtype documentation <a href="http://pandas.pydata.org/pandas-docs/stable/basics.html#dtypes">here</a>, you’ll notice that there’s also a specific <code class="language-plaintext highlighter-rouge">datetime64</code> dtypes. Because the dtype of our column is <code class="language-plaintext highlighter-rouge">object</code> rather than <code class="language-plaintext highlighter-rouge">datetime64</code>, we can tell that Python doesn’t know that this column contains dates.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002032324133.png" alt="image-20211002032324133"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002032324133.png" alt="image-20211002032324133"></p>
 
 <p>You may have to check the <a href="https://docs.scipy.org/doc/numpy-1.12.0/reference/generated/numpy.dtype.kind.html#numpy.dtype.kind">numpy documentation</a> to match the letter code to the dtype of the object. “O” is the code for “object”, so we can see that these two methods give us the same information.</p>
 
@@ -313,9 +313,9 @@ print(percent_missing)
   <li>17-1-2007 has the format “%d-%m-%Y”</li>
 </ul>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002032411835.png" alt="image-20211002032411835"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002032411835.png" alt="image-20211002032411835"></p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002032419381.png" alt="image-20211002032419381"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002032419381.png" alt="image-20211002032419381"></p>
 
 <ul>
   <li>
@@ -333,7 +333,7 @@ print(percent_missing)
 <h3 id="selecting-the-day-of-the-month">
 <a class="anchor" href="#selecting-the-day-of-the-month" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selecting the day of the month</h3>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002032513853.png" alt="image-20211002032513853"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002032513853.png" alt="image-20211002032513853"></p>
 
 <h3 id="plot-the-day-of-the-month-to-check-the-date-parsing">
 <a class="anchor" href="#plot-the-day-of-the-month-to-check-the-date-parsing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Plot the day of the month to check the date parsing</h3>
@@ -342,7 +342,7 @@ print(percent_missing)
 
 <p>To do this, let’s plot a histogram of the days of the month. We expect it to have values between 1 and 31 and, since there’s no reason to suppose the landslides are more common on some days of the month than others, a relatively even distribution. (With a dip on 31 because not all months have 31 days.) Let’s see if that’s the case:</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002032619957.png" alt="image-20211002032619957"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002032619957.png" alt="image-20211002032619957"></p>
 
 <h2 id="character-encodings">
 <a class="anchor" href="#character-encodings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Character Encodings</h2>
@@ -364,26 +364,26 @@ print(percent_missing)
   <p>UTF-8 is <strong>the</strong> standard text encoding. All Python code is in UTF-8 and, ideally, all your data should be as well. It’s when things aren’t in UTF-8 that you run into trouble.</p>
 </blockquote>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002033900935.png" alt="image-20211002033900935"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002033900935.png" alt="image-20211002033900935"></p>
 
 <p>If you look at a bytes object, you’ll see that it has a b in front of it, and then maybe some text after. That’s because bytes are printed out as if they were characters encoded in ASCII. (ASCII is an older character encoding that doesn’t really work for writing any language other than English.) Here you can see that our euro symbol has been replaced with some mojibake that looks like “\xe2\x82\xac” when it’s printed as if it were an ASCII string.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002033947123.png" alt="image-20211002033947123"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002033947123.png" alt="image-20211002033947123"></p>
 
 <p>However, when we try to use a different encoding to map our bytes into a string, we get an error. This is because the encoding we’re trying to use doesn’t know what to do with the bytes we’re trying to pass it. You need to tell Python the encoding that the byte string is actually supposed to be in.</p>
 
 <p>Like I said earlier, strings are UTF-8 by default in Python 3, so if we try to treat them like they were in another encoding we’ll create problems.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002034050924.png" alt="image-20211002034050924"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002034050924.png" alt="image-20211002034050924"></p>
 
 <h3 id="reading-in-files-with-encoding-problems">
 <a class="anchor" href="#reading-in-files-with-encoding-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading in files with encoding problems</h3>
 
 <p>Notice that we get the same <code class="language-plaintext highlighter-rouge">UnicodeDecodeError</code> we got when we tried to decode UTF-8 bytes as if they were ASCII! This tells us that this file isn’t actually UTF-8. We don’t know what encoding it actually <em>is</em> though. One way to figure it out is to try and test a bunch of different character encodings and see if any of them work. A better way, though, is to use the chardet module to try and automatically guess what the right encoding is. It’s not 100% guaranteed to be right, but it’s usually faster than just trying to guess.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002034205908.png" alt="image-20211002034205908"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002034205908.png" alt="image-20211002034205908"></p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002034214164.png" alt="image-20211002034214164"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002034214164.png" alt="image-20211002034214164"></p>
 
 <p><strong>What if the encoding chardet guesses isn’t right?</strong> Since chardet is basically just a fancy guesser, sometimes it will guess the wrong encoding. One thing you can try is looking at more or less of the file and seeing if you get a different result and then try that.</p>
 
@@ -425,7 +425,7 @@ print(percent_missing)
 <h3 id="do-some-preliminary-text-pre-processing">
 <a class="anchor" href="#do-some-preliminary-text-pre-processing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Do some preliminary text pre-processing</h3>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002035130731.png" alt="image-20211002035130731"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002035130731.png" alt="image-20211002035130731"></p>
 
 <h3 id="use-fuzzy-matching-to-correct-inconsistent-data-entry">
 <a class="anchor" href="#use-fuzzy-matching-to-correct-inconsistent-data-entry" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use fuzzy matching to correct inconsistent data entry</h3>
@@ -438,9 +438,9 @@ print(percent_missing)
 
 <p>Fuzzywuzzy returns a ratio given two strings. The closer the ratio is to 100, the smaller the edit distance between the two strings.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002035245766.png" alt="image-20211002035245766"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002035245766.png" alt="image-20211002035245766"></p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-02-kaggle-Data-Cleaning%5Cimage-20211002035303096.png" alt="image-20211002035303096"></p>
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Data-Cleaning/image-20211002035303096.png" alt="image-20211002035303096"></p>
 
 
   </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/02/kaggle-Data-Cleaning.html" hidden></a>

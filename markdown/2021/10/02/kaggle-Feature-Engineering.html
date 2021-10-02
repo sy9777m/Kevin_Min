@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Kaggle Feature Engineering | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Kaggle Feature Engineering" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kaggle course Feature Engineering for Find-A." />
+<meta property="og:description" content="Kaggle course Feature Engineering for Find-A." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-Feature-Engineering.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-Feature-Engineering.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-02T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-10-02T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-Feature-Engineering.html","@type":"BlogPosting","headline":"Kaggle Feature Engineering","dateModified":"2021-10-02T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/02/kaggle-Feature-Engineering.html"},"description":"Kaggle course Feature Engineering for Find-A.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Kaggle Feature Engineering</h1><p class="page-description">Kaggle course Feature Engineering for Find-A.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-02T00:00:00-05:00" itemprop="datePublished">
+        Oct 2, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      15 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#kaggle-feature-engineering">kaggle Feature Engineering</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#what-is-feature-engineering">What Is Feature Engineering</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#the-goal-of-feature-engineering">The goal of feature engineering</a></li>
+<li class="toc-entry toc-h3"><a href="#a-guiding-principle-of-feature-engineering">A guiding principle of feature engineering</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#mutual-information">Mutual Information</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#mutual-information-and-what-it-measures">Mutual information and what it measures</a></li>
+<li class="toc-entry toc-h3"><a href="#interpreting-mutual-information-scores">Interpreting mutual information scores</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#creating-features">Creating Features</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#mathematical-transforms">Mathematical transforms</a></li>
+<li class="toc-entry toc-h3"><a href="#counts">Counts</a></li>
+<li class="toc-entry toc-h3"><a href="#building-up-and-breaking-down-features">Building-up and breaking-down features</a></li>
+<li class="toc-entry toc-h3"><a href="#group-transforms">Group transforms</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#clustering-with-k-means">Clustering With K-Means</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#cluster-labels-as-a-feature">Cluster labels as a feature</a></li>
+<li class="toc-entry toc-h3"><a href="#k-means-clustering">K-means clustering</a></li>
+<li class="toc-entry toc-h3"><a href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#principal-component-analysis">Principal component Analysis</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#principal-component-analysis-1">Principal component analysis</a></li>
+<li class="toc-entry toc-h3"><a href="#pca-for-feature-engineering">PCA for feature engineering</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#target-encoding">Target Encoding</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#smoothing">Smoothing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h1 id="kaggle-feature-engineering">
+<a class="anchor" href="#kaggle-feature-engineering" aria-hidden="true"><span class="octicon octicon-link"></span></a>kaggle Feature Engineering</h1>
+
+<h2 id="what-is-feature-engineering">
+<a class="anchor" href="#what-is-feature-engineering" aria-hidden="true"><span class="octicon octicon-link"></span></a>What Is Feature Engineering</h2>
+
+<ul>
+  <li>determine which features are the most important with <em>mutual information</em>
+</li>
+  <li>invent new features in several real-world problem domains</li>
+  <li>encode high-cardinality categoricals with a <em>target encoding</em>
+</li>
+  <li>create segmentation features with <em>k-means clustering</em>
+</li>
+  <li>decompose a dataset’s variation into features with <em>principal component analysis</em>
+</li>
+</ul>
+
+<h3 id="the-goal-of-feature-engineering">
+<a class="anchor" href="#the-goal-of-feature-engineering" aria-hidden="true"><span class="octicon octicon-link"></span></a>The goal of feature engineering</h3>
+
+<p>The goal of feature engineering is simply to make your data better suited to the problem at hand.</p>
+
+<p>You might perform feature engineering to:</p>
+
+<ul>
+  <li>improve a model’s predictive performance</li>
+  <li>reduce computational or data needs</li>
+  <li>improve interpretability of the results</li>
+</ul>
+
+<h3 id="a-guiding-principle-of-feature-engineering">
+<a class="anchor" href="#a-guiding-principle-of-feature-engineering" aria-hidden="true"><span class="octicon octicon-link"></span></a>A guiding principle of feature engineering</h3>
+
+<p>For a feature to be useful, it must have a relationship to the target that your model is able to learn.</p>
+
+<p>The key idea here is that a transformation you apply to a feature becomes in essence a part of the model itself. Say you were trying to predict the <code class="language-plaintext highlighter-rouge">Price</code> of square plots of land from the <code class="language-plaintext highlighter-rouge">Length</code> of one side. Fitting a linear model directly to <code class="language-plaintext highlighter-rouge">Length</code> gives poor results: the relationship is not linear.</p>
+
+<p>Whatever relationships your model can’t learn, you can provide yourself through transformations. As you develop your feature set, think about what information your model could use to achieve its best performance.</p>
+
+<h2 id="mutual-information">
+<a class="anchor" href="#mutual-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mutual Information</h2>
+
+<p>A great first step is to construct a ranking with a <strong>feature utility metric</strong>, a function measuring associations between a feature and the target. Then you can choose a smaller set of the most useful features to develop initially and have more confidence that your time will be well spent.</p>
+
+<p>The metric we’ll use is called “mutual information”. Mutual information is a lot like correlation in that it measures a relationship between two quantities. The advantage of mutual information is that it can detect <em>any</em> kind of relationship, while correlation only detects <em>linear</em> relationships.</p>
+
+<p>Mutual information is a great general-purpose metric and especially useful at the start of feature development when you might not know what model you’d like to use yet. It is:</p>
+
+<ul>
+  <li>easy to use and interpret,</li>
+  <li>computationally efficient,</li>
+  <li>theoretically well-founded,</li>
+  <li>resistant to overfitting, and,</li>
+  <li>able to detect any kind of relationship</li>
+</ul>
+
+<h3 id="mutual-information-and-what-it-measures">
+<a class="anchor" href="#mutual-information-and-what-it-measures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mutual information and what it measures</h3>
+
+<p>Mutual information describes relationships in terms of <em>uncertainty</em>. The <strong>mutual information</strong> (MI) between two quantities is a measure of the extent to which knowledge of one quantity reduces uncertainty about the other.</p>
+
+<p>Technical note: What we’re calling uncertainty is measured using a quantity from information theory known as “entropy”. The entropy of a variable means roughly: “how many yes-or-no questions you would need to describe an occurance of that variable, on average.” The more questions you have to ask, the more uncertain you must be about the variable. Mutual information is how many questions you expect the feature to answer about the target.</p>
+
+<h3 id="interpreting-mutual-information-scores">
+<a class="anchor" href="#interpreting-mutual-information-scores" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interpreting mutual information scores</h3>
+
+<p>The least possible mutual information between quantities is 0.0. When MI is zero, the quantities are independent: neither can tell you anything about the other. Conversely, in theory there’s no upper bound to what MI can be. In practice though values above 2.0 or so are uncommon. (Mutual information is a logarithmic quantity, so it increases very slowly.)</p>
+
+<p>Here are some things to remember when applying mutual information:</p>
+
+<ul>
+  <li>MI can help you to understand the <em>relative potential</em> of a feature as a predictor of the target, considered by itself.</li>
+  <li>It’s possible for a feature to be very informative when interacting with other features, but not so informative all alone. MI <em>can’t detect interactions</em> between features. It is a <strong>univariate</strong> metric.</li>
+  <li>The <em>actual</em> usefulness of a feature <em>depends on the model you use it with</em>. A feature is only useful to the extent that its relationship with the target is one your model can learn. Just because a feature has a high MI score doesn’t mean your model will be able to do anything with that information. You may need to transform the feature first to expose the association.</li>
+</ul>
+
+<p>Scikit-learn has two mutual information metrics in its <code class="language-plaintext highlighter-rouge">feature_selection</code> module: one for real-valued targets (<code class="language-plaintext highlighter-rouge">mutual_info_regression</code>) and one for categorical targets (<code class="language-plaintext highlighter-rouge">mutual_info_classif</code>).</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002165106048.png" alt="image-20211002165106048"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002165210148.png" alt="image-20211002165210148"></p>
+
+<h2 id="creating-features">
+<a class="anchor" href="#creating-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating Features</h2>
+
+<p><strong>Tips on Discovering New Features</strong></p>
+
+<ul>
+  <li>Understand the features. Refer to your dataset’s <em>data documentation</em>, if available.</li>
+  <li>Research the problem domain to acquire <strong>domain knowledge</strong>. If your problem is predicting house prices, do some research on real-estate for instance. Wikipedia can be a good starting point, but books and <a href="https://scholar.google.com/">journal articles</a> will often have the best information.</li>
+  <li>Study previous work. <a href="https://www.kaggle.com/sudalairajkumar/winning-solutions-of-kaggle-competitions">Solution write-ups</a> from past Kaggle competitions are a great resource.</li>
+  <li>Use data visualization. Visualization can reveal pathologies in the distribution of a feature or complicated relationships that could be simplified. Be sure to visualize your dataset as you work through the feature engineering process.</li>
+</ul>
+
+<h3 id="mathematical-transforms">
+<a class="anchor" href="#mathematical-transforms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mathematical transforms</h3>
+
+<p>Relationships among numerical features are often expressed through mathematical formulas, which you’ll frequently come across as part of your domain research. In Pandas, you can apply arithmetic operations to columns just as if they were ordinary numbers.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002172808194.png" alt="image-20211002172808194"></p>
+
+<p>Data visualization can suggest transformations, often a “reshaping” of a feature through powers or logarithms.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002172830886.png" alt="image-20211002172830886"></p>
+
+<h3 id="counts">
+<a class="anchor" href="#counts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Counts</h3>
+
+<p>Features describing the presence or absence of something often come in sets, the set of risk factors for a disease, say. You can aggregate such features by creating a <strong>count</strong>.</p>
+
+<p>You could also use a dataframe’s built-in methods to <em>create</em> boolean values. In the <em>Concrete</em> dataset are the amounts of components in a concrete formulation. Many formulations lack one or more components (that is, the component has a value of 0). This will count how many components are in a formulation with the dataframe’s built-in greater-than <code class="language-plaintext highlighter-rouge">gt</code> method:</p>
+
+<h3 id="building-up-and-breaking-down-features">
+<a class="anchor" href="#building-up-and-breaking-down-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building-up and breaking-down features</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002173033385.png" alt="image-20211002173033385"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002173043206.png" alt="image-20211002173043206"></p>
+
+<h3 id="group-transforms">
+<a class="anchor" href="#group-transforms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Group transforms</h3>
+
+<p>Finally we have <strong>Group transforms</strong>, which aggregate information across multiple rows grouped by some category.  If you had discovered a category interaction, a group transform over that categry could be something good to investigate.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002173131527.png" alt="image-20211002173131527"></p>
+
+<p>If you’re using training and validation splits, to preserve their independence, it’s best to create a grouped feature using only the training set and then join it to the validation set. We can use the validation set’s <code class="language-plaintext highlighter-rouge">merge</code> method after creating a unique set of values with <code class="language-plaintext highlighter-rouge">drop_duplicates</code> on the training set:</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002173241055.png" alt="image-20211002173241055"></p>
+
+<p><strong>Tips on Creating Features</strong>
+It’s good to keep in mind your model’s own strengths and weaknesses when creating features. Here are some guidelines:</p>
+
+<ul>
+  <li>Linear models learn sums and differences naturally, but can’t learn anything more complex.</li>
+  <li>Ratios seem to be difficult for most models to learn. Ratio combinations often lead to some easy performance gains.</li>
+  <li>Linear models and neural nets generally do better with normalized features. Neural nets especially need features scaled to values not too far from 0. Tree-based models (like random forests and XGBoost) can sometimes benefit from normalization, but usually much less so.</li>
+  <li>Tree models can learn to approximate almost any combination of features, but when a combination is especially important they can still benefit from having it explicitly created, especially when data is limited.</li>
+  <li>Counts are especially helpful for tree models, since these models don’t have a natural way of aggregating information across many features at once.</li>
+</ul>
+
+<h2 id="clustering-with-k-means">
+<a class="anchor" href="#clustering-with-k-means" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clustering With K-Means</h2>
+
+<p>Unsupervised algorithms don’t make use of a target; instead, their purpose is to learn some property of the data, to represent the structure of the features in a certain way. In the context of feature engineering for prediction, you could think of an unsupervised algorithm as a “feature discovery” technique.</p>
+
+<p><strong>Clustering</strong> simply means the assigning of data points to groups based upon how similar the points are to each other.</p>
+
+<p>Adding a feature of cluster labels can help machine learning models untangle complicated relationships of space or proximity.</p>
+
+<h3 id="cluster-labels-as-a-feature">
+<a class="anchor" href="#cluster-labels-as-a-feature" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cluster labels as a feature</h3>
+
+<p>Applied to a single real-valued feature, clustering acts like a traditional “binning” or <a href="https://scikit-learn.org/stable/auto_examples/preprocessing/plot_discretization_classification.html">“discretization”</a> transform. On multiple features, it’s like “multi-dimensional binning” (sometimes called <em>vector quantization</em>).</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/sr3pdYI.png" alt="img"></p>
+
+<p>It’s important to remember that this <code class="language-plaintext highlighter-rouge">Cluster</code> feature is categorical.Here, it’s shown with a label encoding (that is, as a sequence of integers) as a typical clustering algorithm would produce; depending on your model, a one-hot encoding may be more appropriate.</p>
+
+<p>The motivating idea for adding cluster labels is that the clusters will break up complicated relationships across features into simpler chunks. Our model can then just learn the simpler chunks one-by-one instead having to learn the complicated whole all at once. It’s a “divide and conquer” strategy.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/rraXFed.png" alt="img"></p>
+
+<h3 id="k-means-clustering">
+<a class="anchor" href="#k-means-clustering" aria-hidden="true"><span class="octicon octicon-link"></span></a>K-means clustering</h3>
+
+<p>There are a great many clustering algorithms. They differ primarily in how they measure “similarity” or “proximity” and in what kinds of features they work with. The algorithm we’ll use, k-means, is intuitive and easy to apply in a feature engineering context. Depending on your application another algorithm might be more appropriate.</p>
+
+<p><strong>K-means clustering</strong> measures similarity using ordinary straight-line distance (Euclidean distance, in other words). It creates clusters by placing a number of points, called <strong>centroids</strong>, inside the feature-space. Each point in the dataset is assigned to the cluster of whichever centroid it’s closest to. The “k” in “k-means” is how many centroids (that is, clusters) it creates. You define the k yourself.</p>
+
+<p>You could imagine each centroid capturing points through a sequence of radiating circles. When sets of circles from competing centroids overlap they form a line. The result is what’s called a <strong>Voronoi tessallation</strong>. The tessallation shows you to what clusters future data will be assigned; the tessallation is essentially what k-means learns from its training data.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/KSoLd3o.jpg.png" alt="img"></p>
+
+<p>We’ll focus on three parameters from scikit-learn’s implementation: <code class="language-plaintext highlighter-rouge">n_clusters</code>, <code class="language-plaintext highlighter-rouge">max_iter</code>, and <code class="language-plaintext highlighter-rouge">n_init</code>.</p>
+
+<p>It’s a simple two-step process. The algorithm starts by randomly initializing some predefined number (<code class="language-plaintext highlighter-rouge">n_clusters</code>) of centroids. It then iterates over these two operations:</p>
+
+<ol>
+  <li>assign points to the nearest cluster centroid</li>
+  <li>move each centroid to minimize the distance to its points</li>
+</ol>
+
+<p>It iterates over these two steps until the centroids aren’t moving anymore, or until some maximum number of iterations has passed (<code class="language-plaintext highlighter-rouge">max_iter</code>).</p>
+
+<p>It often happens that the initial random position of the centroids ends in a poor clustering. For this reason the algorithm repeats a number of times (<code class="language-plaintext highlighter-rouge">n_init</code>) and returns the clustering that has the least total distance between each point and its centroid, the optimal clustering.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/tBkCqXJ.gif" alt="img"></p>
+
+<p>You may need to increase the <code class="language-plaintext highlighter-rouge">max_iter</code> for a large number of clusters or <code class="language-plaintext highlighter-rouge">n_init</code> for a complex dataset. Ordinarily though the only parameter you’ll need to choose yourself is <code class="language-plaintext highlighter-rouge">n_clusters</code> (k, that is). The best partitioning for a set of features depends on the model you’re using and what you’re trying to predict, so it’s best to tune it like any hyperparameter (through cross-validation, say).</p>
+
+<p>Since k-means clustering is sensitive to scale, it can be a good idea rescale or normalize data with extreme values.</p>
+
+<h3 id="exercise">
+<a class="anchor" href="#exercise" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002180704464.png" alt="image-20211002180704464"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="s">"SalePrice"</span><span class="p">)</span>
+
+
+<span class="c1"># YOUR CODE HERE: Define a list of the features to be used for the clustering
+</span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s">'LotArea'</span><span class="p">,</span> <span class="s">'TotalBsmtSF'</span><span class="p">,</span> <span class="s">'FirstFlrSF'</span><span class="p">,</span> <span class="s">'SecondFlrSF'</span><span class="p">,</span> <span class="s">'GrLivArea'</span><span class="p">]</span>
+
+
+<span class="c1"># Standardize
+</span><span class="n">X_scaled</span> <span class="o">=</span> <span class="n">X</span><span class="p">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="n">features</span><span class="p">]</span>
+<span class="n">X_scaled</span> <span class="o">=</span> <span class="p">(</span><span class="n">X_scaled</span> <span class="o">-</span> <span class="n">X_scaled</span><span class="p">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span> <span class="o">/</span> <span class="n">X_scaled</span><span class="p">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+
+<span class="c1"># YOUR CODE HERE: Fit the KMeans model to X_scaled and create the cluster labels
+</span><span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">n_init</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">X</span><span class="p">[</span><span class="s">"Cluster"</span><span class="p">]</span> <span class="o">=</span> <span class="n">kmeans</span><span class="p">.</span><span class="n">fit_predict</span><span class="p">(</span><span class="n">X_scaled</span><span class="p">)</span>
+
+
+<span class="c1"># Check your answer
+</span><span class="n">q_2</span><span class="p">.</span><span class="n">check</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h2 id="principal-component-analysis">
+<a class="anchor" href="#principal-component-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Principal component Analysis</h2>
+
+<p>Just like clustering is a partitioning of the dataset based on proximity, you could think of PCA as a partitioning of the variation in the data. PCA is a great tool to help you discover important relationships in the data and can also be used to create more informative features.</p>
+
+<p>(Technical note: PCA is typically applied to <a href="https://www.kaggle.com/alexisbcook/scaling-and-normalization">standardized</a> data. With standardized data “variation” means “correlation”. With unstandardized data “variation” means “covariance”. All data in this course will be standardized before applying PCA.)</p>
+
+<h3 id="principal-component-analysis-1">
+<a class="anchor" href="#principal-component-analysis-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Principal component analysis</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/rr8NCDy.png" alt="img"></p>
+
+<p>Notice that instead of describing abalones by their <code class="language-plaintext highlighter-rouge">'Height'</code> and <code class="language-plaintext highlighter-rouge">'Diameter'</code>, we could just as well describe them by their <code class="language-plaintext highlighter-rouge">'Size'</code> and <code class="language-plaintext highlighter-rouge">'Shape'</code>. This, in fact, is the whole idea of PCA: instead of describing the data with the original features, we describe it with its axes of variation. The axes of variation become the new features.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/XQlRD1q.png" alt="img"></p>
+
+<p>These new features are called the <strong>principal components</strong> of the data. The weights themselves are called <strong>loadings</strong>. There will be as many principal components as there are features in the original dataset: if we had used ten features instead of two, we would have ended up with ten components.</p>
+
+<p>PCA also tells us the <em>amount</em> of variation in each component. We can see from the figures that there is more variation in the data along the <code class="language-plaintext highlighter-rouge">Size</code> component than along the <code class="language-plaintext highlighter-rouge">Shape</code> component. PCA makes this precise through each component’s <strong>percent of explained variance</strong>.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/xWTvqDA.png" alt="img"></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">Size</code> component captures the majority of the variation between <code class="language-plaintext highlighter-rouge">Height</code> and <code class="language-plaintext highlighter-rouge">Diameter</code>. It’s important to remember, however, that the amount of variance in a component doesn’t necessarily correspond to how good it is as a predictor: it depends on what you’re trying to predict.</p>
+
+<h3 id="pca-for-feature-engineering">
+<a class="anchor" href="#pca-for-feature-engineering" aria-hidden="true"><span class="octicon octicon-link"></span></a>PCA for feature engineering</h3>
+
+<p>The first way is to use it as a descriptive technique. Since the components tell you about the variation, you could compute the MI scores for the components and see what kind of variation is most predictive of your target. That could give you ideas for kinds of features to create – a product of <code class="language-plaintext highlighter-rouge">'Height'</code> and <code class="language-plaintext highlighter-rouge">'Diameter'</code> if <code class="language-plaintext highlighter-rouge">'Size'</code> is important, say, or a ratio of <code class="language-plaintext highlighter-rouge">'Height'</code> and <code class="language-plaintext highlighter-rouge">'Diameter'</code> if <code class="language-plaintext highlighter-rouge">Shape</code> is important. You could even try clustering on one or more of the high-scoring components.</p>
+
+<p>The second way is to use the components themselves as features. Because the components expose the variational structure of the data directly, they can often be more informative than the original features. Here are some use-cases:</p>
+
+<ul>
+  <li>
+<strong>Dimensionality reduction</strong>: When your features are highly redundant (<em>multicollinear</em>, specifically), PCA will partition out the redundancy into one or more near-zero variance components, which you can then drop since they will contain little or no information.</li>
+  <li>
+<strong>Anomaly detection</strong>: Unusual variation, not apparent from the original features, will often show up in the low-variance components. These components could be highly informative in an anomaly or outlier detection task.</li>
+  <li>
+<strong>Noise reduction</strong>: A collection of sensor readings will often share some common background noise. PCA can sometimes collect the (informative) signal into a smaller number of features while leaving the noise alone, thus boosting the signal-to-noise ratio.</li>
+  <li>
+<strong>Decorrelation</strong>: Some ML algorithms struggle with highly-correlated features. PCA transforms correlated features into uncorrelated components, which could be easier for your algorithm to work with.</li>
+</ul>
+
+<p>PCA basically gives you direct access to the correlational structure of your data.</p>
+
+<p><strong>PCA Best Practices</strong>
+There are a few things to keep in mind when applying PCA:</p>
+
+<ul>
+  <li>PCA only works with numeric features, like continuous quantities or counts.</li>
+  <li>PCA is sensitive to scale. It’s good practice to standardize your data before applying PCA, unless you know you have good reason not to.</li>
+  <li>Consider removing or constraining outliers, since they can an have an undue influence on the results.</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002182102193.png" alt="image-20211002182102193"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002182134006.png" alt="image-20211002182134006"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002182150973.png" alt="image-20211002182150973"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002182202310.png" alt="image-20211002182202310"></p>
+
+<h2 id="target-encoding">
+<a class="anchor" href="#target-encoding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Target Encoding</h2>
+
+<p><em>target encoding</em>, is instead meant for categorical features. It’s a method of encoding categories as numbers, like one-hot or label encoding, with the difference that it also uses the <em>target</em> to create the encoding. This makes it what we call a <strong>supervised</strong> feature engineering technique.</p>
+
+<p>A <strong>target encoding</strong> is any kind of encoding that replaces a feature’s categories with some number derived from the target.</p>
+
+<p>This kind of target encoding is sometimes called a <strong>mean encoding</strong>. Applied to a binary target, it’s also called <strong>bin counting</strong>. (Other names you might come across include: likelihood encoding, impact encoding, and leave-one-out encoding.)</p>
+
+<h3 id="smoothing">
+<a class="anchor" href="#smoothing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Smoothing</h3>
+
+<p>An encoding like this presents a couple of problems, however. First are <em>unknown categories</em>. Target encodings create a special risk of overfitting, which means they need to be trained on an independent “encoding” split. When you join the encoding to future splits, Pandas will fill in missing values for any categories not present in the encoding split. These missing values you would have to impute somehow.</p>
+
+<p>Second are <em>rare categories</em>. When a category only occurs a few times in the dataset, any statistics calculated on its group are unlikely to be very accurate.</p>
+
+<p>A solution to these problems is to add <strong>smoothing</strong>. The idea is to blend the <em>in-category</em> average with the <em>overall</em> average. Rare categories get less weight on their category average, while missing categories just get the overall average.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-02-kaggle-Feature-Engineering/image-20211002183225844.png" alt="image-20211002183225844"></p>
+
+<p>When choosing a value for <code class="language-plaintext highlighter-rouge">m</code>, consider how noisy you expect the categories to be. Does the price of a vehicle vary a great deal within each make? Would you need a lot of data to get good estimates? If so, it could be better to choose a larger value for <code class="language-plaintext highlighter-rouge">m</code>; if the average price for each make were relatively stable, a smaller value could be okay.</p>
+
+<p><strong>Use Cases for Target Encoding</strong>
+Target encoding is great for:</p>
+
+<ul>
+  <li>
+<strong>High-cardinality features</strong>: A feature with a large number of categories can be troublesome to encode: a one-hot encoding would generate too many features and alternatives, like a label encoding, might not be appropriate for that feature. A target encoding derives numbers for the categories using the feature’s most important property: its relationship with the target.</li>
+  <li>
+<strong>Domain-motivated features</strong>: From prior experience, you might suspect that a categorical feature should be important even if it scored poorly with a feature metric. A target encoding can help reveal a feature’s true informativeness.</li>
+</ul>
+
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/02/kaggle-Feature-Engineering.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
