@@ -7,7 +7,7 @@ title: Tiny Python Project chapter 5 ~ 8
 ---
 # Tiny Python Project Chapter 5 ~ 8
 
-## Chapter 5
+# Chapter 5
 
 ![image-20211001233148710](/Kevin_Min/images/2021-10-01-tiny-python-project-chapter-5~8/image-20211001233148710.png)
 
