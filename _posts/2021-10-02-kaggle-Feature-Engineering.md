@@ -193,7 +193,7 @@ X["Cluster"] = kmeans.fit_predict(X_scaled)
 q_2.check()
 ```
 
-## Principal component Analysis
+## Principal Component Analysis
 
 Just like clustering is a partitioning of the dataset based on proximity, you could think of PCA as a partitioning of the variation in the data. PCA is a great tool to help you discover important relationships in the data and can also be used to create more informative features.
 
