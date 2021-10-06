@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Kaggle Intro to Deep Learning | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Kaggle Intro to Deep Learning" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Kaggle course Intro to Deep Learning for Find-A." />
+<meta property="og:description" content="Kaggle course Intro to Deep Learning for Find-A." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/06/kaggle-Intro-to-Deep-Learning.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/06/kaggle-Intro-to-Deep-Learning.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-06T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-10-06T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/06/kaggle-Intro-to-Deep-Learning.html","@type":"BlogPosting","headline":"Kaggle Intro to Deep Learning","dateModified":"2021-10-06T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/06/kaggle-Intro-to-Deep-Learning.html"},"description":"Kaggle course Intro to Deep Learning for Find-A.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Kaggle Intro to Deep Learning</h1><p class="page-description">Kaggle course Intro to Deep Learning for Find-A.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-06T00:00:00-05:00" itemprop="datePublished">
+        Oct 6, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      20 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#kaggle-intro-to-deep-learning">kaggle Intro to Deep Learning</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#a-single-neuron">A Single Neuron</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#what-is-deep-learning">What is Deep Learning?</a></li>
+<li class="toc-entry toc-h3"><a href="#the-linear-unit">The linear unit</a></li>
+<li class="toc-entry toc-h3"><a href="#multiple-inputs">Multiple inputs</a></li>
+<li class="toc-entry toc-h3"><a href="#linear-units-in-keras">Linear units in Keras</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#deep-neural-networks">Deep Neural Networks</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#layers">Layers</a></li>
+<li class="toc-entry toc-h3"><a href="#the-activation-function">The activation function</a></li>
+<li class="toc-entry toc-h3"><a href="#stacking-dense-layers">Stacking dense layers</a></li>
+<li class="toc-entry toc-h3"><a href="#building-sequential-models">Building sequential models</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#stochastic-gradient-descent">Stochastic Gradient Descent</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#the-loss-function">The loss function</a></li>
+<li class="toc-entry toc-h3"><a href="#the-optimizer---stochastic-gradient-descent">The optimizer - Stochastic gradient descent</a></li>
+<li class="toc-entry toc-h3"><a href="#learning-rate-and-batch-size">Learning rate and batch size</a></li>
+<li class="toc-entry toc-h3"><a href="#adding-the-loss-and-optimizer">Adding the loss and optimizer</a></li>
+<li class="toc-entry toc-h3"><a href="#exercise">Exercise</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#overfitting-and-underfitting">Overfitting and Underfitting</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#interpreting-the-learning-curves">Interpreting the learning curves</a></li>
+<li class="toc-entry toc-h3"><a href="#capacity">Capacity</a></li>
+<li class="toc-entry toc-h3"><a href="#early-stopping">Early stopping</a></li>
+<li class="toc-entry toc-h3"><a href="#adding-early-stopping">Adding early stopping</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#dropout-and-batch-normalization">Dropout and Batch Normalization</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#dropout">Dropout</a></li>
+<li class="toc-entry toc-h3"><a href="#batch-normalization">Batch normalization</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#binary-classification">Binary Classification</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#binary-classification-1">Binary classification</a></li>
+<li class="toc-entry toc-h3"><a href="#accuracy-and-cross-entropy">Accuracy and cross-entropy</a></li>
+<li class="toc-entry toc-h3"><a href="#making-probabilities-with-the-sigmoid-function">Making probabilities with the Sigmoid function</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h1 id="kaggle-intro-to-deep-learning">
+<a class="anchor" href="#kaggle-intro-to-deep-learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>kaggle Intro to Deep Learning</h1>
+
+<h2 id="a-single-neuron">
+<a class="anchor" href="#a-single-neuron" aria-hidden="true"><span class="octicon octicon-link"></span></a>A Single Neuron</h2>
+
+<p>Using Keras and Tensorflow you’ll learn how to:</p>
+
+<ul>
+  <li>create a <strong>fully-connected</strong> neural network architecture</li>
+  <li>apply neural nets to two classic ML problems: <strong>regression</strong> and <strong>classification</strong>
+</li>
+  <li>train neural nets with <strong>stochastic gradient descent</strong>, and</li>
+  <li>improve performance with <strong>dropout</strong>, <strong>batch normalization</strong>, and other techniques</li>
+</ul>
+
+<h3 id="what-is-deep-learning">
+<a class="anchor" href="#what-is-deep-learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Deep Learning?</h3>
+
+<p><strong>Deep learning</strong> is an approach to machine learning characterized by deep stacks of computations. This depth of computation is what has enabled deep learning models to disentangle the kinds of complex and hierarchical patterns found in the most challenging real-world datasets.</p>
+
+<p>Through their power and scalability <strong>neural networks</strong> have become the defining model of deep learning. Neural networks are composed of neurons, where each neuron individually performs only a simple computation. The power of a neural network comes instead from the complexity of the connections these neurons can form.</p>
+
+<h3 id="the-linear-unit">
+<a class="anchor" href="#the-linear-unit" aria-hidden="true"><span class="octicon octicon-link"></span></a>The linear unit</h3>
+
+<p>As a diagram, a <strong>neuron</strong> (or <strong>unit</strong>) with one input looks like:</p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/mfOlDR6.png" alt="Diagram of a linear unit."></p>
+
+<p>The input is <code class="language-plaintext highlighter-rouge">x</code>. Its connection to the neuron has a <strong>weight</strong> which is <code class="language-plaintext highlighter-rouge">w</code>. Whenever a value flows through a connection, you multiply the value by the connection’s weight. For the input <code class="language-plaintext highlighter-rouge">x</code>, what reaches the neuron is <code class="language-plaintext highlighter-rouge">w * x</code>. A neural network “learns” by modifying its weights.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">b</code> is a special kind of weight we call the <strong>bias</strong>. The bias doesn’t have any input data associated with it; instead, we put a <code class="language-plaintext highlighter-rouge">1</code> in the diagram so that the value that reaches the neuron is just <code class="language-plaintext highlighter-rouge">b</code> (since <code class="language-plaintext highlighter-rouge">1 * b = b</code>). The bias enables the neuron to modify the output independently of its inputs.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">y</code> is the value the neuron ultimately outputs. To get the output, the neuron sums up all the values it receives through its connections. This neuron’s activation is <code class="language-plaintext highlighter-rouge">y = w * x + b</code>, or as a formula $y=wx+b$.</p>
+
+<p>Though individual neurons will usually only function as part of a larger network, it’s often useful to start with a single neuron model as a baseline. Single neuron models are <em>linear</em> models.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CyjsfFvY.png" alt="Computing with the linear unit."></p>
+
+<h3 id="multiple-inputs">
+<a class="anchor" href="#multiple-inputs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiple inputs</h3>
+
+<p>We can just add more input connections to the neuron, one for each additional feature. To find the output, we would multiply each input to its connection weight and then add them all together.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CvyXSnlZ.png" alt="Three input connections: x0, x1, and x2, along with the bias."></p>
+
+<p>The formula for this neuron would be $y=w_{0}x_{0}+w_{1}x_{1}+w_{2}x_{2}+b$. A linear unit with two inputs will fit a plane, and a unit with more inputs than that will fit a hyperplane.</p>
+
+<h3 id="linear-units-in-keras">
+<a class="anchor" href="#linear-units-in-keras" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linear units in Keras</h3>
+
+<p>The easiest way to create a model in Keras is through <code class="language-plaintext highlighter-rouge">keras.Sequential</code>, which creates a neural network as a stack of <em>layers</em>. We can create models like those above using a <em>dense</em> layer (which we’ll learn more about in the next lesson).</p>
+
+<p>We could define a linear model accepting three input features (<code class="language-plaintext highlighter-rouge">'sugars'</code>, <code class="language-plaintext highlighter-rouge">'fiber'</code>, and <code class="language-plaintext highlighter-rouge">'protein'</code>) and producing a single output (<code class="language-plaintext highlighter-rouge">'calories'</code>) like so:</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006183116710.png" alt="image-20211006183116710"></p>
+
+<p>With the first argument, <code class="language-plaintext highlighter-rouge">units</code>, we define how many outputs we want. In this case we are just predicting <code class="language-plaintext highlighter-rouge">'calories'</code>, so we’ll use <code class="language-plaintext highlighter-rouge">units=1</code>.</p>
+
+<p>With the second argument, <code class="language-plaintext highlighter-rouge">input_shape</code>, we tell Keras the dimensions of the inputs. Setting <code class="language-plaintext highlighter-rouge">input_shape=[3]</code> ensures the model will accept three features as input (<code class="language-plaintext highlighter-rouge">'sugars'</code>, <code class="language-plaintext highlighter-rouge">'fiber'</code>, and <code class="language-plaintext highlighter-rouge">'protein'</code>).</p>
+
+<p><strong>Why is <code class="language-plaintext highlighter-rouge">input_shape</code> a Python list?</strong>
+The data we’ll use in this course will be tabular data, like in a Pandas dataframe. We’ll have one input for each feature in the dataset. The features are arranged by column, so we’ll always have <code class="language-plaintext highlighter-rouge">input_shape=[num_columns]</code>. The reason Keras uses a list here is to permit use of more complex datasets. Image data, for instance, might need three dimensions: <code class="language-plaintext highlighter-rouge">[height, width, channels]</code>.</p>
+
+<h2 id="deep-neural-networks">
+<a class="anchor" href="#deep-neural-networks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deep Neural Networks</h2>
+
+<p>In this lesson we’re going to see how we can build neural networks capable of learning the complex kinds of relationships deep neural nets are famous for.</p>
+
+<p>The key idea here is <em>modularity</em>, building up a complex network from simpler functional units. We’ve seen how a linear unit computes a linear function – now we’ll see how to combine and modify these single units to model more complex relationships.</p>
+
+<h3 id="layers">
+<a class="anchor" href="#layers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Layers</h3>
+
+<p>Neural networks typically organize their neurons into <strong>layers</strong>. When we collect together linear units having a common set of inputs we get a <strong>dense</strong> layer.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5C2MA4iMV.png" alt="A stack of three circles in an input layer connected to two circles in a dense layer."></p>
+
+<p>You could think of each layer in a neural network as performing some kind of relatively simple transformation. Through a deep stack of layers, a neural network can transform its inputs in more and more complex ways. In a well-trained neural network, each layer is a transformation getting us a little bit closer to a solution.</p>
+
+<p><strong>Many Kinds of Layers</strong>
+A “layer” in Keras is a very general kind of thing. A layer can be, essentially, any kind of <em>data transformation</em>. Many layers, like the <a href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/Conv2D">convolutional</a> and <a href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/RNN">recurrent</a> layers, transform data through use of neurons and differ primarily in the pattern of connections they form. Others though are used for <a href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/Embedding">feature engineering</a> or just <a href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/Add">simple arithmetic</a>. There’s a whole world of layers to discover – <a href="https://www.tensorflow.org/api_docs/python/tf/keras/layers">check them out</a>!</p>
+
+<h3 id="the-activation-function">
+<a class="anchor" href="#the-activation-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>The activation function</h3>
+
+<p>It turns out, however, that two dense layers with nothing in between are no better than a single dense layer by itself. Dense layers by themselves can never move us out of the world of lines and planes. What we need is something <em>nonlinear</em>. What we need are activation functions.</p>
+
+<p><em>Without activation functions, neural networks can only learn linear relationships. In order to fit curves, we’ll need to use activation functions.</em></p>
+
+<p>An <strong>activation function</strong> is simply some function we apply to each of a layer’s outputs (its <em>activations</em>). The most common is the <em>rectifier</em> function max(0,x)max(0,x).</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CaeIyAlF.png" alt="A graph of the rectifier function. The line y=x when x&gt;0 and y=0 when x&lt;0, making a 'hinge' shape like '_/'."></p>
+
+<p>The rectifier function has a graph that’s a line with the negative part “rectified” to zero. Applying the function to the outputs of a neuron will put a <em>bend</em> in the data, moving us away from simple lines.</p>
+
+<p>When we attach the rectifier to a linear unit, we get a <strong>rectified linear unit</strong> or <strong>ReLU</strong>. (For this reason, it’s common to call the rectifier function the “ReLU function”.) Applying a ReLU activation to a linear unit means the output becomes <code class="language-plaintext highlighter-rouge">max(0, w * x + b)</code>, which we might draw in a diagram like:</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CeFry7Yu.png" alt="Diagram of a single ReLU. Like a linear unit, but instead of a '+' symbol we now have a hinge '_/'. "></p>
+
+<h3 id="stacking-dense-layers">
+<a class="anchor" href="#stacking-dense-layers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stacking dense layers</h3>
+
+<p>Now that we have some nonlinearity, let’s see how we can stack layers to get complex data transformations.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CY5iwFQZ.png" alt="An input layer, two hidden layers, and a final linear layer."></p>
+
+<p>The layers before the output layer are sometimes called <strong>hidden</strong> since we never see their outputs directly.</p>
+
+<p>Now, notice that the final (output) layer is a linear unit (meaning, no activation function). That makes this network appropriate to a regression task, where we are trying to predict some arbitrary numeric value. Other tasks (like classification) might require an activation function on the output.</p>
+
+<h3 id="building-sequential-models">
+<a class="anchor" href="#building-sequential-models" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building sequential models</h3>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006184240869.png" alt="image-20211006184240869"></p>
+
+<p>Be sure to pass all the layers together in a list, like <code class="language-plaintext highlighter-rouge">[layer, layer, layer, ...]</code>, instead of as separate arguments. To add an activation function to a layer, just give its name in the <code class="language-plaintext highlighter-rouge">activation</code> argument.</p>
+
+<h2 id="stochastic-gradient-descent">
+<a class="anchor" href="#stochastic-gradient-descent" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stochastic Gradient Descent</h2>
+
+<p>As with all machine learning tasks, we begin with a set of training data. Each example in the training data consists of some features (the inputs) together with an expected target (the output). Training the network means adjusting its weights in such a way that it can transform the features into the target. In the <em>80 Cereals</em> dataset, for instance, we want a network that can take each cereal’s <code class="language-plaintext highlighter-rouge">'sugar'</code>, <code class="language-plaintext highlighter-rouge">'fiber'</code>, and <code class="language-plaintext highlighter-rouge">'protein'</code> content and produce a prediction for that cereal’s <code class="language-plaintext highlighter-rouge">'calories'</code>. If we can successfully train a network to do that, its weights must represent in some way the relationship between those features and that target as expressed in the training data.</p>
+
+<p>In addition to the training data, we need two more things:</p>
+
+<ul>
+  <li>A “loss function” that measures how good the network’s predictions are.</li>
+  <li>An “optimizer” that can tell the network how to change its weights.</li>
+</ul>
+
+<h3 id="the-loss-function">
+<a class="anchor" href="#the-loss-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>The loss function</h3>
+
+<p>We’ve seen how to design an architecture for a network, but we haven’t seen how to tell a network <em>what</em> problem to solve. This is the job of the loss function.</p>
+
+<p>The <strong>loss function</strong> measures the disparity between the the target’s true value and the value the model predicts.</p>
+
+<p>Different problems call for different loss functions. We have been looking at <strong>regression</strong> problems, where the task is to predict some numerical value – calories in <em>80 Cereals</em>, rating in <em>Red Wine Quality</em>. Other regression tasks might be predicting the price of a house or the fuel efficiency of a car.</p>
+
+<p>A common loss function for regression problems is the <strong>mean absolute error</strong> or <strong>MAE</strong>. For each prediction <code class="language-plaintext highlighter-rouge">y_pred</code>, MAE measures the disparity from the true target <code class="language-plaintext highlighter-rouge">y_true</code> by an absolute difference <code class="language-plaintext highlighter-rouge">abs(y_true - y_pred)</code>.</p>
+
+<p>The total MAE loss on a dataset is the mean of all these absolute differences.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CVDcvkZN.png" alt="A graph depicting error bars from data points to the fitted line.."></p>
+
+<p>Besides MAE, other loss functions you might see for regression problems are the mean-squared error (MSE) or the Huber loss (both available in Keras).</p>
+
+<p>During training, the model will use the loss function as a guide for finding the correct values of its weights (lower loss is better). In other words, the loss function tells the network its objective.</p>
+
+<h3 id="the-optimizer---stochastic-gradient-descent">
+<a class="anchor" href="#the-optimizer---stochastic-gradient-descent" aria-hidden="true"><span class="octicon octicon-link"></span></a>The optimizer - Stochastic gradient descent</h3>
+
+<p>We’ve described the problem we want the network to solve, but now we need to say <em>how</em> to solve it. This is the job of the <strong>optimizer</strong>. The optimizer is an algorithm that adjusts the weights to minimize the loss.</p>
+
+<p>Virtually all of the optimization algorithms used in deep learning belong to a family called <strong>stochastic gradient descent</strong>. They are iterative algorithms that train a network in steps. One <strong>step</strong> of training goes like this:</p>
+
+<ol>
+  <li>Sample some training data and run it through the network to make predictions.</li>
+  <li>Measure the loss between the predictions and the true values.</li>
+  <li>Finally, adjust the weights in a direction that makes the loss smaller.</li>
+</ol>
+
+<p>Then just do this over and over until the loss is as small as you like (or until it won’t decrease any further.)</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CrFI1tIk.gif" alt="Fitting a line batch by batch. The loss decreases and the weights approach their true values."></p>
+
+<p>Each iteration’s sample of training data is called a <strong>minibatch</strong> (or often just “batch”), while a complete round of the training data is called an <strong>epoch</strong>. The number of epochs you train for is how many times the network will see each training example.</p>
+
+<h3 id="learning-rate-and-batch-size">
+<a class="anchor" href="#learning-rate-and-batch-size" aria-hidden="true"><span class="octicon octicon-link"></span></a>Learning rate and batch size</h3>
+
+<p>Notice that the line only makes a small shift in the direction of each batch (instead of moving all the way). The size of these shifts is determined by the <strong>learning rate</strong>. A smaller learning rate means the network needs to see more minibatches before its weights converge to their best values.</p>
+
+<p>The learning rate and the size of the minibatches are the two parameters that have the largest effect on how the SGD training proceeds. Their interaction is often subtle and the right choice for these parameters isn’t always obvious.</p>
+
+<p>Fortunately, for most work it won’t be necessary to do an extensive hyperparameter search to get satisfactory results. <strong>Adam</strong> is an SGD algorithm that has an adaptive learning rate that makes it suitable for most problems without any parameter tuning (it is “self tuning”, in a sense). Adam is a great general-purpose optimizer.</p>
+
+<h3 id="adding-the-loss-and-optimizer">
+<a class="anchor" href="#adding-the-loss-and-optimizer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding the loss and optimizer</h3>
+
+<p>After defining a model, you can add a loss function and optimizer with the model’s <code class="language-plaintext highlighter-rouge">compile</code> method:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>model.compile(
+    optimizer="adam",
+    loss="mae",
+)
+</code></pre></div></div>
+
+<p>Notice that we are able to specify the loss and optimizer with just a string. You can also access these directly through the Keras API – if you wanted to tune parameters, for instance – but for us, the defaults will work fine.</p>
+
+<p><strong>What’s In a Name?</strong>
+The <strong>gradient</strong> is a vector that tells us in what direction the weights need to go. More precisely, it tells us how to change the weights to make the loss change <em>fastest</em>. We call our process gradient <strong>descent</strong> because it uses the gradient to <em>descend</em> the loss curve towards a minimum. <strong>Stochastic</strong> means “determined by chance.” Our training is <em>stochastic</em> because the minibatches are <em>random samples</em> from the dataset. And that’s why it’s called SGD!</p>
+
+<p>One thing you might note for now though is that we’ve rescaled each feature to lie in the interval [0,1][0,1]. As we’ll discuss more in Lesson 5, neural networks tend to perform best when their inputs are on a common scale.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006185813175.png" alt="image-20211006185813175"></p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006185829299.png" alt="image-20211006185829299"></p>
+
+<h3 id="exercise">
+<a class="anchor" href="#exercise" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise</h3>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006190149421.png" alt="image-20211006190149421"></p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006190231572.png" alt="image-20211006190231572"></p>
+
+<h2 id="overfitting-and-underfitting">
+<a class="anchor" href="#overfitting-and-underfitting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overfitting and Underfitting</h2>
+
+<p>In this lesson, we’re going to learn how to interpret these learning curves and how we can use them to guide model development. In particular, we’ll examine at the learning curves for evidence of <em>underfitting</em> and <em>overfitting</em> and look at a couple of strategies for correcting it.</p>
+
+<h3 id="interpreting-the-learning-curves">
+<a class="anchor" href="#interpreting-the-learning-curves" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interpreting the learning curves</h3>
+
+<p>You might think about the information in the training data as being of two kinds: <em>signal</em> and <em>noise</em>. The signal is the part that generalizes, the part that can help our model make predictions from new data. The noise is that part that is <em>only</em> true of the training data; the noise is all of the random fluctuation that comes from data in the real-world or all of the incidental, non-informative patterns that can’t actually help the model make predictions. The noise is the part might look useful but really isn’t.</p>
+
+<p>We train a model by choosing weights or parameters that minimize the loss on a training set. You might know, however, that to accurately assess a model’s performance, we need to evaluate it on a new set of data, the <em>validation</em> data.</p>
+
+<p>When we train a model we’ve been plotting the loss on the training set epoch by epoch. To this we’ll add a plot the validation data too. These plots we call the <strong>learning curves</strong>. To train deep learning models effectively, we need to be able to interpret them.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CtHiVFnM.png" alt="A graph of training and validation loss."></p>
+
+<p>Now, the training loss will go down either when the model learns signal or when it learns noise. But the validation loss will go down only when the model learns signal. (Whatever noise the model learned from the training set won’t generalize to new data.) So, when a model learns signal both curves go down, but when it learns noise a <em>gap</em> is created in the curves. The size of the gap tells you how much noise the model has learned.</p>
+
+<p>Ideally, we would create models that learn all of the signal and none of the noise. This will practically never happen. Instead we make a trade. We can get the model to learn more signal at the cost of learning more noise. So long as the trade is in our favor, the validation loss will continue to decrease. After a certain point, however, the trade can turn against us, the cost exceeds the benefit, and the validation loss begins to rise.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CeUF6mfo.png" alt="Two graphs. On the left, a line through a few data points with the true fit a parabola. On the right, a curve running through each datapoint with the true fit a parabola."></p>
+
+<p>This trade-off indicates that there can be two problems that occur when training a model: not enough signal or too much noise. <strong>Underfitting</strong> the training set is when the loss is not as low as it could be because the model hasn’t learned enough <em>signal</em>. <strong>Overfitting</strong> the training set is when the loss is not as low as it could be because the model learned too much <em>noise</em>. The trick to training deep learning models is finding the best balance between the two.</p>
+
+<h3 id="capacity">
+<a class="anchor" href="#capacity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Capacity</h3>
+
+<p>A model’s <strong>capacity</strong> refers to the size and complexity of the patterns it is able to learn. For neural networks, this will largely be determined by how many neurons it has and how they are connected together. If it appears that your network is underfitting the data, you should try increasing its capacity.</p>
+
+<p>You can increase the capacity of a network either by making it <em>wider</em> (more units to existing layers) or by making it <em>deeper</em> (adding more layers). Wider networks have an easier time learning more linear relationships, while deeper networks prefer more nonlinear ones.</p>
+
+<h3 id="early-stopping">
+<a class="anchor" href="#early-stopping" aria-hidden="true"><span class="octicon octicon-link"></span></a>Early stopping</h3>
+
+<p>We mentioned that when a model is too eagerly learning noise, the validation loss may start to increase during training. To prevent this, we can simply stop the training whenever it seems the validation loss isn’t decreasing anymore. Interrupting the training this way is called <strong>early stopping</strong>.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CeP0gppr.png" alt="A graph of the learning curves with early stopping at the minimum validation loss, underfitting to the left of it and overfitting to the right."></p>
+
+<p>Once we detect that the validation loss is starting to rise again, we can reset the weights back to where the minimum occured. This ensures that the model won’t continue to learn noise and overfit the data.</p>
+
+<p>Training with early stopping also means we’re in less danger of stopping the training too early, before the network has finished learning signal. So besides preventing overfitting from training too long, early stopping can also prevent <em>underfitting</em> from not training long enough. Just set your training epochs to some large number (more than you’ll need), and early stopping will take care of the rest.</p>
+
+<h3 id="adding-early-stopping">
+<a class="anchor" href="#adding-early-stopping" aria-hidden="true"><span class="octicon octicon-link"></span></a>Adding early stopping</h3>
+
+<p>In Keras, we include early stopping in our training through a callback. A <strong>callback</strong> is just a function you want run every so often while the network trains. The early stopping callback will run after every epoch. (Keras has <a href="https://www.tensorflow.org/api_docs/python/tf/keras/callbacks">a variety of useful callbacks</a> pre-defined, but you can <a href="https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/LambdaCallback">define your own</a>, too.)</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006191222318.png" alt="image-20211006191222318"></p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006191311344.png" alt="image-20211006191311344"></p>
+
+<h2 id="dropout-and-batch-normalization">
+<a class="anchor" href="#dropout-and-batch-normalization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dropout and Batch Normalization</h2>
+
+<p>There’s more to the world of deep learning than just dense layers. There are dozens of kinds of layers you might add to a model. (Try browsing through the <a href="https://www.tensorflow.org/api_docs/python/tf/keras/layers/">Keras docs</a> for a sample!) Some are like dense layers and define connections between neurons, and others can do preprocessing or transformations of other sorts.</p>
+
+<p>In this lesson, we’ll learn about a two kinds of special layers, not containing any neurons themselves, but that add some functionality that can sometimes benefit a model in various ways. Both are commonly used in modern architectures.</p>
+
+<h3 id="dropout">
+<a class="anchor" href="#dropout" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dropout</h3>
+
+<p>The first of these is the “dropout layer”, which can help correct overfitting.</p>
+
+<p>In the last lesson we talked about how overfitting is caused by the network learning spurious patterns in the training data. To recognize these spurious patterns a network will often rely on very a specific combinations of weight, a kind of “conspiracy” of weights. Being so specific, they tend to be fragile: remove one and the conspiracy falls apart.</p>
+
+<p>This is the idea behind <strong>dropout</strong>. To break up these conspiracies, we randomly <em>drop out</em> some fraction of a layer’s input units every step of training, making it much harder for the network to learn those spurious patterns in the training data. Instead, it has to search for broad, general patterns, whose weight patterns tend to be more robust.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Ca86utxY.gif" alt="An animation of a network cycling through various random dropout configurations."></p>
+
+<p>You could also think about dropout as creating a kind of <em>ensemble</em> of networks. The predictions will no longer be made by one big network, but instead by a committee of smaller networks. Individuals in the committee tend to make different kinds of mistakes, but be right at the same time, making the committee as a whole better than any individual. (If you’re familiar with random forests as an ensemble of decision trees, it’s the same idea.)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">keras</span><span class="p">.</span><span class="n">Sequential</span><span class="p">([</span>
+    <span class="c1"># ...
+</span>    <span class="n">layers</span><span class="p">.</span><span class="n">Dropout</span><span class="p">(</span><span class="n">rate</span><span class="o">=</span><span class="mf">0.3</span><span class="p">),</span> <span class="c1"># apply 30% dropout to the next layer
+</span>    <span class="n">layers</span><span class="p">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">16</span><span class="p">),</span>
+    <span class="c1"># ...
+</span><span class="p">])</span>
+</code></pre></div></div>
+
+<h3 id="batch-normalization">
+<a class="anchor" href="#batch-normalization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Batch normalization</h3>
+
+<p>The next special layer we’ll look at performs “batch normalization” (or “batchnorm”), which can help correct training that is slow or unstable.</p>
+
+<p>With neural networks, it’s generally a good idea to put all of your data on a common scale, perhaps with something like scikit-learn’s <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html">StandardScaler</a> or <a href="https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html">MinMaxScaler</a>. The reason is that SGD will shift the network weights in proportion to how large an activation the data produces. Features that tend to produce activations of very different sizes can make for unstable training behavior.</p>
+
+<p>Now, if it’s good to normalize the data before it goes into the network, maybe also normalizing inside the network would be better! In fact, we have a special kind of layer that can do this, the <strong>batch normalization layer</strong>. A batch normalization layer looks at each batch as it comes in, first normalizing the batch with its own mean and standard deviation, and then also putting the data on a new scale with two trainable rescaling parameters. Batchnorm, in effect, performs a kind of coordinated rescaling of its inputs.</p>
+
+<p>Most often, batchnorm is added as an aid to the optimization process (though it can sometimes also help prediction performance). Models with batchnorm tend to need fewer epochs to complete training. Moreover, batchnorm can also fix various problems that can cause the training to get “stuck”. Consider adding batch normalization to your models, especially if you’re having trouble during training.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">layers</span><span class="p">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">16</span><span class="p">),</span>
+<span class="n">layers</span><span class="p">.</span><span class="n">BatchNormalization</span><span class="p">(),</span>
+<span class="n">layers</span><span class="p">.</span><span class="n">Activation</span><span class="p">(</span><span class="s">'relu'</span><span class="p">),</span>
+</code></pre></div></div>
+
+<p>And if you add it as the first layer of your network it can act as a kind of adaptive preprocessor, standing in for something like Sci-Kit Learn’s <code class="language-plaintext highlighter-rouge">StandardScaler</code>.</p>
+
+<h2 id="binary-classification">
+<a class="anchor" href="#binary-classification" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary Classification</h2>
+
+<p>Now we’re going to apply neural networks to another common machine learning problem: classification.</p>
+
+<h3 id="binary-classification-1">
+<a class="anchor" href="#binary-classification-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary classification</h3>
+
+<p>Classification into one of two classes is a common machine learning problem. These are all <strong>binary classification</strong> problems.</p>
+
+<p>Before using this data we’ll assign a <strong>class label</strong>: one class will be <code class="language-plaintext highlighter-rouge">0</code> and the other will be <code class="language-plaintext highlighter-rouge">1</code>. Assigning numeric labels puts the data in a form a neural network can use.</p>
+
+<h3 id="accuracy-and-cross-entropy">
+<a class="anchor" href="#accuracy-and-cross-entropy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accuracy and cross-entropy</h3>
+
+<p><strong>Accuracy</strong> is one of the many metrics in use for measuring success on a classification problem. Accuracy is the ratio of correct predictions to total predictions: <code class="language-plaintext highlighter-rouge">accuracy = number_correct / total</code>.</p>
+
+<p>The problem with accuracy (and most other classification metrics) is that it can’t be used as a loss function. SGD needs a loss function that changes smoothly, but accuracy, being a ratio of counts, changes in “jumps”. So, we have to choose a substitute to act as the loss function. This substitute is the <em>cross-entropy</em> function.</p>
+
+<p>Now, recall that the loss function defines the <em>objective</em> of the network during training. With regression, our goal was to minimize the distance between the expected outcome and the predicted outcome. We chose MAE to measure this distance.</p>
+
+<p>For classification, what we want instead is a distance between <em>probabilities</em>, and this is what cross-entropy provides. <strong>Cross-entropy</strong> is a sort of measure for the distance from one probability distribution to another.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CDwVV9bR.png" alt="Graphs of accuracy and cross-entropy."></p>
+
+<p>The technical reasons we use cross-entropy are a bit subtle, but the main thing to take away from this section is just this: use cross-entropy for a classification loss; other metrics you might care about (like accuracy) will tend to improve along with it.</p>
+
+<h3 id="making-probabilities-with-the-sigmoid-function">
+<a class="anchor" href="#making-probabilities-with-the-sigmoid-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Making probabilities with the Sigmoid function</h3>
+
+<p>The cross-entropy and accuracy functions both require probabilities as inputs, meaning, numbers from 0 to 1. To covert the real-valued outputs produced by a dense layer into probabilities, we attach a new kind of activation function, the <strong>sigmoid activation</strong>.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CFYbRvJo.png" alt="The sigmoid graph is an 'S' shape with horizontal asymptotes at 0 to the left and 1 to the right. "></p>
+
+<p>To get the final class prediction, we define a <em>threshold</em> probability. Typically this will be 0.5, so that rounding will give us the correct class: below 0.5 means the class with label 0 and 0.5 or above means the class with label 1. A 0.5 threshold is what Keras uses by default with its <a href="https://www.tensorflow.org/api_docs/python/tf/keras/metrics/BinaryAccuracy">accuracy metric</a>.</p>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006193905258.png" alt="image-20211006193905258"></p>
+
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/06/kaggle-Intro-to-Deep-Learning.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
