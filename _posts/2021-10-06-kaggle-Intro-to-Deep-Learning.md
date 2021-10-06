@@ -36,13 +36,13 @@ The `y` is the value the neuron ultimately outputs. To get the output, the neuro
 
 Though individual neurons will usually only function as part of a larger network, it's often useful to start with a single neuron model as a baseline. Single neuron models are *linear* models.
 
-![Computing with the linear unit.](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\yjsfFvY.png)
+![Computing with the linear unit.](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/yjsfFvY.png)
 
 ### Multiple inputs
 
 We can just add more input connections to the neuron, one for each additional feature. To find the output, we would multiply each input to its connection weight and then add them all together.
 
-![Three input connections: x0, x1, and x2, along with the bias.](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\vyXSnlZ.png)
+![Three input connections: x0, x1, and x2, along with the bias.](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/vyXSnlZ.png)
 
 The formula for this neuron would be $y=w_{0}x_{0}+w_{1}x_{1}+w_{2}x_{2}+b$. A linear unit with two inputs will fit a plane, and a unit with more inputs than that will fit a hyperplane.
 
@@ -52,7 +52,7 @@ The easiest way to create a model in Keras is through `keras.Sequential`, which 
 
 We could define a linear model accepting three input features (`'sugars'`, `'fiber'`, and `'protein'`) and producing a single output (`'calories'`) like so:
 
-![image-20211006183116710](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\image-20211006183116710.png)
+![image-20211006183116710](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006183116710.png)
 
 With the first argument, `units`, we define how many outputs we want. In this case we are just predicting `'calories'`, so we'll use `units=1`.
 
@@ -71,7 +71,7 @@ The key idea here is *modularity*, building up a complex network from simpler fu
 
 Neural networks typically organize their neurons into **layers**. When we collect together linear units having a common set of inputs we get a **dense** layer.
 
-![A stack of three circles in an input layer connected to two circles in a dense layer.](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\2MA4iMV.png)
+![A stack of three circles in an input layer connected to two circles in a dense layer.](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/2MA4iMV.png)
 
 You could think of each layer in a neural network as performing some kind of relatively simple transformation. Through a deep stack of layers, a neural network can transform its inputs in more and more complex ways. In a well-trained neural network, each layer is a transformation getting us a little bit closer to a solution.
 
@@ -86,19 +86,19 @@ It turns out, however, that two dense layers with nothing in between are no bett
 
 An **activation function** is simply some function we apply to each of a layer's outputs (its *activations*). The most common is the *rectifier* function max(0,x)max(0,x).
 
-![A graph of the rectifier function. The line y=x when x>0 and y=0 when x<0, making a 'hinge' shape like '_/'.](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\aeIyAlF.png)
+![A graph of the rectifier function. The line y=x when x>0 and y=0 when x<0, making a 'hinge' shape like '_/'.](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/aeIyAlF.png)
 
 The rectifier function has a graph that's a line with the negative part "rectified" to zero. Applying the function to the outputs of a neuron will put a *bend* in the data, moving us away from simple lines.
 
 When we attach the rectifier to a linear unit, we get a **rectified linear unit** or **ReLU**. (For this reason, it's common to call the rectifier function the "ReLU function".) Applying a ReLU activation to a linear unit means the output becomes `max(0, w * x + b)`, which we might draw in a diagram like:
 
-![Diagram of a single ReLU. Like a linear unit, but instead of a '+' symbol we now have a hinge '_/'. ](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\eFry7Yu.png)
+![Diagram of a single ReLU. Like a linear unit, but instead of a '+' symbol we now have a hinge '_/'. ](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/eFry7Yu.png)
 
 ### Stacking dense layers
 
 Now that we have some nonlinearity, let's see how we can stack layers to get complex data transformations.
 
-![An input layer, two hidden layers, and a final linear layer.](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\Y5iwFQZ.png)
+![An input layer, two hidden layers, and a final linear layer.](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/Y5iwFQZ.png)
 
 The layers before the output layer are sometimes called **hidden** since we never see their outputs directly.
 
@@ -106,7 +106,7 @@ Now, notice that the final (output) layer is a linear unit (meaning, no activati
 
 ### Building sequential models
 
-![image-20211006184240869](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\image-20211006184240869.png)
+![image-20211006184240869](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006184240869.png)
 
 Be sure to pass all the layers together in a list, like `[layer, layer, layer, ...]`, instead of as separate arguments. To add an activation function to a layer, just give its name in the `activation` argument.
 
@@ -131,7 +131,7 @@ A common loss function for regression problems is the **mean absolute error** or
 
 The total MAE loss on a dataset is the mean of all these absolute differences.
 
-![A graph depicting error bars from data points to the fitted line..](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\VDcvkZN.png)
+![A graph depicting error bars from data points to the fitted line..](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/VDcvkZN.png)
 
 Besides MAE, other loss functions you might see for regression problems are the mean-squared error (MSE) or the Huber loss (both available in Keras).
 
@@ -149,7 +149,7 @@ Virtually all of the optimization algorithms used in deep learning belong to a f
 
 Then just do this over and over until the loss is as small as you like (or until it won't decrease any further.)
 
-![Fitting a line batch by batch. The loss decreases and the weights approach their true values.](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\rFI1tIk.gif)
+![Fitting a line batch by batch. The loss decreases and the weights approach their true values.](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/rFI1tIk.gif)
 
 Each iteration's sample of training data is called a **minibatch** (or often just "batch"), while a complete round of the training data is called an **epoch**. The number of epochs you train for is how many times the network will see each training example.
 
@@ -179,15 +179,15 @@ The **gradient** is a vector that tells us in what direction the weights need to
 
 One thing you might note for now though is that we've rescaled each feature to lie in the interval [0,1][0,1]. As we'll discuss more in Lesson 5, neural networks tend to perform best when their inputs are on a common scale.
 
-![image-20211006185813175](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\image-20211006185813175.png)
+![image-20211006185813175](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006185813175.png)
 
-![image-20211006185829299](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\image-20211006185829299.png)
+![image-20211006185829299](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006185829299.png)
 
 ### Exercise
 
-![image-20211006190149421](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\image-20211006190149421.png)
+![image-20211006190149421](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006190149421.png)
 
-![image-20211006190231572](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\image-20211006190231572.png)
+![image-20211006190231572](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006190231572.png)
 
 ## Overfitting and Underfitting
 
@@ -201,13 +201,13 @@ We train a model by choosing weights or parameters that minimize the loss on a t
 
 When we train a model we've been plotting the loss on the training set epoch by epoch. To this we'll add a plot the validation data too. These plots we call the **learning curves**. To train deep learning models effectively, we need to be able to interpret them.
 
-![A graph of training and validation loss.](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\tHiVFnM.png)
+![A graph of training and validation loss.](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/tHiVFnM.png)
 
 Now, the training loss will go down either when the model learns signal or when it learns noise. But the validation loss will go down only when the model learns signal. (Whatever noise the model learned from the training set won't generalize to new data.) So, when a model learns signal both curves go down, but when it learns noise a *gap* is created in the curves. The size of the gap tells you how much noise the model has learned.
 
 Ideally, we would create models that learn all of the signal and none of the noise. This will practically never happen. Instead we make a trade. We can get the model to learn more signal at the cost of learning more noise. So long as the trade is in our favor, the validation loss will continue to decrease. After a certain point, however, the trade can turn against us, the cost exceeds the benefit, and the validation loss begins to rise.
 
-![Two graphs. On the left, a line through a few data points with the true fit a parabola. On the right, a curve running through each datapoint with the true fit a parabola.](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\eUF6mfo.png)
+![Two graphs. On the left, a line through a few data points with the true fit a parabola. On the right, a curve running through each datapoint with the true fit a parabola.](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/eUF6mfo.png)
 
 This trade-off indicates that there can be two problems that occur when training a model: not enough signal or too much noise. **Underfitting** the training set is when the loss is not as low as it could be because the model hasn't learned enough *signal*. **Overfitting** the training set is when the loss is not as low as it could be because the model learned too much *noise*. The trick to training deep learning models is finding the best balance between the two.
 
@@ -221,7 +221,7 @@ You can increase the capacity of a network either by making it *wider* (more uni
 
 We mentioned that when a model is too eagerly learning noise, the validation loss may start to increase during training. To prevent this, we can simply stop the training whenever it seems the validation loss isn't decreasing anymore. Interrupting the training this way is called **early stopping**.
 
-![A graph of the learning curves with early stopping at the minimum validation loss, underfitting to the left of it and overfitting to the right.](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\eP0gppr.png)
+![A graph of the learning curves with early stopping at the minimum validation loss, underfitting to the left of it and overfitting to the right.](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/eP0gppr.png)
 
 Once we detect that the validation loss is starting to rise again, we can reset the weights back to where the minimum occured. This ensures that the model won't continue to learn noise and overfit the data.
 
@@ -231,9 +231,9 @@ Training with early stopping also means we're in less danger of stopping the tra
 
 In Keras, we include early stopping in our training through a callback. A **callback** is just a function you want run every so often while the network trains. The early stopping callback will run after every epoch. (Keras has [a variety of useful callbacks](https://www.tensorflow.org/api_docs/python/tf/keras/callbacks) pre-defined, but you can [define your own](https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/LambdaCallback), too.)
 
-![image-20211006191222318](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\image-20211006191222318.png)
+![image-20211006191222318](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006191222318.png)
 
-![image-20211006191311344](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\image-20211006191311344.png)
+![image-20211006191311344](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006191311344.png)
 
 
 
@@ -251,7 +251,7 @@ In the last lesson we talked about how overfitting is caused by the network lear
 
 This is the idea behind **dropout**. To break up these conspiracies, we randomly *drop out* some fraction of a layer's input units every step of training, making it much harder for the network to learn those spurious patterns in the training data. Instead, it has to search for broad, general patterns, whose weight patterns tend to be more robust.
 
-![An animation of a network cycling through various random dropout configurations.](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\a86utxY.gif)
+![An animation of a network cycling through various random dropout configurations.](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/a86utxY.gif)
 
 You could also think about dropout as creating a kind of *ensemble* of networks. The predictions will no longer be made by one big network, but instead by a committee of smaller networks. Individuals in the committee tend to make different kinds of mistakes, but be right at the same time, making the committee as a whole better than any individual. (If you're familiar with random forests as an ensemble of decision trees, it's the same idea.)
 
@@ -302,7 +302,7 @@ Now, recall that the loss function defines the *objective* of the network during
 
 For classification, what we want instead is a distance between *probabilities*, and this is what cross-entropy provides. **Cross-entropy** is a sort of measure for the distance from one probability distribution to another.
 
-![Graphs of accuracy and cross-entropy.](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\DwVV9bR.png)
+![Graphs of accuracy and cross-entropy.](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/DwVV9bR.png)
 
 The technical reasons we use cross-entropy are a bit subtle, but the main thing to take away from this section is just this: use cross-entropy for a classification loss; other metrics you might care about (like accuracy) will tend to improve along with it.
 
@@ -310,9 +310,9 @@ The technical reasons we use cross-entropy are a bit subtle, but the main thing 
 
 The cross-entropy and accuracy functions both require probabilities as inputs, meaning, numbers from 0 to 1. To covert the real-valued outputs produced by a dense layer into probabilities, we attach a new kind of activation function, the **sigmoid activation**.
 
-![The sigmoid graph is an 'S' shape with horizontal asymptotes at 0 to the left and 1 to the right. ](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\FYbRvJo.png)
+![The sigmoid graph is an 'S' shape with horizontal asymptotes at 0 to the left and 1 to the right. ](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/FYbRvJo.png)
 
 To get the final class prediction, we define a *threshold* probability. Typically this will be 0.5, so that rounding will give us the correct class: below 0.5 means the class with label 0 and 0.5 or above means the class with label 1. A 0.5 threshold is what Keras uses by default with its [accuracy metric](https://www.tensorflow.org/api_docs/python/tf/keras/metrics/BinaryAccuracy).
 
-![image-20211006193905258](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-03-kaggle-Data-Visualization\image-20211006193905258.png)
+![image-20211006193905258](/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006193905258.png)
 
