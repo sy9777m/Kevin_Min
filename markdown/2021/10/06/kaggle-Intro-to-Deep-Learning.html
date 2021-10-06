@@ -198,14 +198,14 @@ window.onload = wrap_img;
 
 <p>Though individual neurons will usually only function as part of a larger network, it’s often useful to start with a single neuron model as a baseline. Single neuron models are <em>linear</em> models.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CyjsfFvY.png" alt="Computing with the linear unit."></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/yjsfFvY.png" alt="Computing with the linear unit."></p>
 
 <h3 id="multiple-inputs">
 <a class="anchor" href="#multiple-inputs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiple inputs</h3>
 
 <p>We can just add more input connections to the neuron, one for each additional feature. To find the output, we would multiply each input to its connection weight and then add them all together.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CvyXSnlZ.png" alt="Three input connections: x0, x1, and x2, along with the bias."></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/vyXSnlZ.png" alt="Three input connections: x0, x1, and x2, along with the bias."></p>
 
 <p>The formula for this neuron would be $y=w_{0}x_{0}+w_{1}x_{1}+w_{2}x_{2}+b$. A linear unit with two inputs will fit a plane, and a unit with more inputs than that will fit a hyperplane.</p>
 
@@ -216,7 +216,7 @@ window.onload = wrap_img;
 
 <p>We could define a linear model accepting three input features (<code class="language-plaintext highlighter-rouge">'sugars'</code>, <code class="language-plaintext highlighter-rouge">'fiber'</code>, and <code class="language-plaintext highlighter-rouge">'protein'</code>) and producing a single output (<code class="language-plaintext highlighter-rouge">'calories'</code>) like so:</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006183116710.png" alt="image-20211006183116710"></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006183116710.png" alt="image-20211006183116710"></p>
 
 <p>With the first argument, <code class="language-plaintext highlighter-rouge">units</code>, we define how many outputs we want. In this case we are just predicting <code class="language-plaintext highlighter-rouge">'calories'</code>, so we’ll use <code class="language-plaintext highlighter-rouge">units=1</code>.</p>
 
@@ -237,7 +237,7 @@ The data we’ll use in this course will be tabular data, like in a Pandas dataf
 
 <p>Neural networks typically organize their neurons into <strong>layers</strong>. When we collect together linear units having a common set of inputs we get a <strong>dense</strong> layer.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5C2MA4iMV.png" alt="A stack of three circles in an input layer connected to two circles in a dense layer."></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/2MA4iMV.png" alt="A stack of three circles in an input layer connected to two circles in a dense layer."></p>
 
 <p>You could think of each layer in a neural network as performing some kind of relatively simple transformation. Through a deep stack of layers, a neural network can transform its inputs in more and more complex ways. In a well-trained neural network, each layer is a transformation getting us a little bit closer to a solution.</p>
 
@@ -253,20 +253,20 @@ A “layer” in Keras is a very general kind of thing. A layer can be, essentia
 
 <p>An <strong>activation function</strong> is simply some function we apply to each of a layer’s outputs (its <em>activations</em>). The most common is the <em>rectifier</em> function max(0,x)max(0,x).</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CaeIyAlF.png" alt="A graph of the rectifier function. The line y=x when x&gt;0 and y=0 when x&lt;0, making a 'hinge' shape like '_/'."></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/aeIyAlF.png" alt="A graph of the rectifier function. The line y=x when x&gt;0 and y=0 when x&lt;0, making a 'hinge' shape like '_/'."></p>
 
 <p>The rectifier function has a graph that’s a line with the negative part “rectified” to zero. Applying the function to the outputs of a neuron will put a <em>bend</em> in the data, moving us away from simple lines.</p>
 
 <p>When we attach the rectifier to a linear unit, we get a <strong>rectified linear unit</strong> or <strong>ReLU</strong>. (For this reason, it’s common to call the rectifier function the “ReLU function”.) Applying a ReLU activation to a linear unit means the output becomes <code class="language-plaintext highlighter-rouge">max(0, w * x + b)</code>, which we might draw in a diagram like:</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CeFry7Yu.png" alt="Diagram of a single ReLU. Like a linear unit, but instead of a '+' symbol we now have a hinge '_/'. "></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/eFry7Yu.png" alt="Diagram of a single ReLU. Like a linear unit, but instead of a '+' symbol we now have a hinge '_/'. "></p>
 
 <h3 id="stacking-dense-layers">
 <a class="anchor" href="#stacking-dense-layers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stacking dense layers</h3>
 
 <p>Now that we have some nonlinearity, let’s see how we can stack layers to get complex data transformations.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CY5iwFQZ.png" alt="An input layer, two hidden layers, and a final linear layer."></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/Y5iwFQZ.png" alt="An input layer, two hidden layers, and a final linear layer."></p>
 
 <p>The layers before the output layer are sometimes called <strong>hidden</strong> since we never see their outputs directly.</p>
 
@@ -275,7 +275,7 @@ A “layer” in Keras is a very general kind of thing. A layer can be, essentia
 <h3 id="building-sequential-models">
 <a class="anchor" href="#building-sequential-models" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building sequential models</h3>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006184240869.png" alt="image-20211006184240869"></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006184240869.png" alt="image-20211006184240869"></p>
 
 <p>Be sure to pass all the layers together in a list, like <code class="language-plaintext highlighter-rouge">[layer, layer, layer, ...]</code>, instead of as separate arguments. To add an activation function to a layer, just give its name in the <code class="language-plaintext highlighter-rouge">activation</code> argument.</p>
 
@@ -304,7 +304,7 @@ A “layer” in Keras is a very general kind of thing. A layer can be, essentia
 
 <p>The total MAE loss on a dataset is the mean of all these absolute differences.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CVDcvkZN.png" alt="A graph depicting error bars from data points to the fitted line.."></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/VDcvkZN.png" alt="A graph depicting error bars from data points to the fitted line.."></p>
 
 <p>Besides MAE, other loss functions you might see for regression problems are the mean-squared error (MSE) or the Huber loss (both available in Keras).</p>
 
@@ -325,7 +325,7 @@ A “layer” in Keras is a very general kind of thing. A layer can be, essentia
 
 <p>Then just do this over and over until the loss is as small as you like (or until it won’t decrease any further.)</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CrFI1tIk.gif" alt="Fitting a line batch by batch. The loss decreases and the weights approach their true values."></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/rFI1tIk.gif" alt="Fitting a line batch by batch. The loss decreases and the weights approach their true values."></p>
 
 <p>Each iteration’s sample of training data is called a <strong>minibatch</strong> (or often just “batch”), while a complete round of the training data is called an <strong>epoch</strong>. The number of epochs you train for is how many times the network will see each training example.</p>
 
@@ -356,16 +356,16 @@ The <strong>gradient</strong> is a vector that tells us in what direction the we
 
 <p>One thing you might note for now though is that we’ve rescaled each feature to lie in the interval [0,1][0,1]. As we’ll discuss more in Lesson 5, neural networks tend to perform best when their inputs are on a common scale.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006185813175.png" alt="image-20211006185813175"></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006185813175.png" alt="image-20211006185813175"></p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006185829299.png" alt="image-20211006185829299"></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006185829299.png" alt="image-20211006185829299"></p>
 
 <h3 id="exercise">
 <a class="anchor" href="#exercise" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise</h3>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006190149421.png" alt="image-20211006190149421"></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006190149421.png" alt="image-20211006190149421"></p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006190231572.png" alt="image-20211006190231572"></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006190231572.png" alt="image-20211006190231572"></p>
 
 <h2 id="overfitting-and-underfitting">
 <a class="anchor" href="#overfitting-and-underfitting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overfitting and Underfitting</h2>
@@ -381,13 +381,13 @@ The <strong>gradient</strong> is a vector that tells us in what direction the we
 
 <p>When we train a model we’ve been plotting the loss on the training set epoch by epoch. To this we’ll add a plot the validation data too. These plots we call the <strong>learning curves</strong>. To train deep learning models effectively, we need to be able to interpret them.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CtHiVFnM.png" alt="A graph of training and validation loss."></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/tHiVFnM.png" alt="A graph of training and validation loss."></p>
 
 <p>Now, the training loss will go down either when the model learns signal or when it learns noise. But the validation loss will go down only when the model learns signal. (Whatever noise the model learned from the training set won’t generalize to new data.) So, when a model learns signal both curves go down, but when it learns noise a <em>gap</em> is created in the curves. The size of the gap tells you how much noise the model has learned.</p>
 
 <p>Ideally, we would create models that learn all of the signal and none of the noise. This will practically never happen. Instead we make a trade. We can get the model to learn more signal at the cost of learning more noise. So long as the trade is in our favor, the validation loss will continue to decrease. After a certain point, however, the trade can turn against us, the cost exceeds the benefit, and the validation loss begins to rise.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CeUF6mfo.png" alt="Two graphs. On the left, a line through a few data points with the true fit a parabola. On the right, a curve running through each datapoint with the true fit a parabola."></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/eUF6mfo.png" alt="Two graphs. On the left, a line through a few data points with the true fit a parabola. On the right, a curve running through each datapoint with the true fit a parabola."></p>
 
 <p>This trade-off indicates that there can be two problems that occur when training a model: not enough signal or too much noise. <strong>Underfitting</strong> the training set is when the loss is not as low as it could be because the model hasn’t learned enough <em>signal</em>. <strong>Overfitting</strong> the training set is when the loss is not as low as it could be because the model learned too much <em>noise</em>. The trick to training deep learning models is finding the best balance between the two.</p>
 
@@ -403,7 +403,7 @@ The <strong>gradient</strong> is a vector that tells us in what direction the we
 
 <p>We mentioned that when a model is too eagerly learning noise, the validation loss may start to increase during training. To prevent this, we can simply stop the training whenever it seems the validation loss isn’t decreasing anymore. Interrupting the training this way is called <strong>early stopping</strong>.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CeP0gppr.png" alt="A graph of the learning curves with early stopping at the minimum validation loss, underfitting to the left of it and overfitting to the right."></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/eP0gppr.png" alt="A graph of the learning curves with early stopping at the minimum validation loss, underfitting to the left of it and overfitting to the right."></p>
 
 <p>Once we detect that the validation loss is starting to rise again, we can reset the weights back to where the minimum occured. This ensures that the model won’t continue to learn noise and overfit the data.</p>
 
@@ -414,9 +414,9 @@ The <strong>gradient</strong> is a vector that tells us in what direction the we
 
 <p>In Keras, we include early stopping in our training through a callback. A <strong>callback</strong> is just a function you want run every so often while the network trains. The early stopping callback will run after every epoch. (Keras has <a href="https://www.tensorflow.org/api_docs/python/tf/keras/callbacks">a variety of useful callbacks</a> pre-defined, but you can <a href="https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/LambdaCallback">define your own</a>, too.)</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006191222318.png" alt="image-20211006191222318"></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006191222318.png" alt="image-20211006191222318"></p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006191311344.png" alt="image-20211006191311344"></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006191311344.png" alt="image-20211006191311344"></p>
 
 <h2 id="dropout-and-batch-normalization">
 <a class="anchor" href="#dropout-and-batch-normalization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dropout and Batch Normalization</h2>
@@ -434,7 +434,7 @@ The <strong>gradient</strong> is a vector that tells us in what direction the we
 
 <p>This is the idea behind <strong>dropout</strong>. To break up these conspiracies, we randomly <em>drop out</em> some fraction of a layer’s input units every step of training, making it much harder for the network to learn those spurious patterns in the training data. Instead, it has to search for broad, general patterns, whose weight patterns tend to be more robust.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Ca86utxY.gif" alt="An animation of a network cycling through various random dropout configurations."></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/a86utxY.gif" alt="An animation of a network cycling through various random dropout configurations."></p>
 
 <p>You could also think about dropout as creating a kind of <em>ensemble</em> of networks. The predictions will no longer be made by one big network, but instead by a committee of smaller networks. Individuals in the committee tend to make different kinds of mistakes, but be right at the same time, making the committee as a whole better than any individual. (If you’re familiar with random forests as an ensemble of decision trees, it’s the same idea.)</p>
 
@@ -487,7 +487,7 @@ The <strong>gradient</strong> is a vector that tells us in what direction the we
 
 <p>For classification, what we want instead is a distance between <em>probabilities</em>, and this is what cross-entropy provides. <strong>Cross-entropy</strong> is a sort of measure for the distance from one probability distribution to another.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CDwVV9bR.png" alt="Graphs of accuracy and cross-entropy."></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/DwVV9bR.png" alt="Graphs of accuracy and cross-entropy."></p>
 
 <p>The technical reasons we use cross-entropy are a bit subtle, but the main thing to take away from this section is just this: use cross-entropy for a classification loss; other metrics you might care about (like accuracy) will tend to improve along with it.</p>
 
@@ -496,11 +496,11 @@ The <strong>gradient</strong> is a vector that tells us in what direction the we
 
 <p>The cross-entropy and accuracy functions both require probabilities as inputs, meaning, numbers from 0 to 1. To covert the real-valued outputs produced by a dense layer into probabilities, we attach a new kind of activation function, the <strong>sigmoid activation</strong>.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5CFYbRvJo.png" alt="The sigmoid graph is an 'S' shape with horizontal asymptotes at 0 to the left and 1 to the right. "></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/FYbRvJo.png" alt="The sigmoid graph is an 'S' shape with horizontal asymptotes at 0 to the left and 1 to the right. "></p>
 
 <p>To get the final class prediction, we define a <em>threshold</em> probability. Typically this will be 0.5, so that rounding will give us the correct class: below 0.5 means the class with label 0 and 0.5 or above means the class with label 1. A 0.5 threshold is what Keras uses by default with its <a href="https://www.tensorflow.org/api_docs/python/tf/keras/metrics/BinaryAccuracy">accuracy metric</a>.</p>
 
-<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-10-03-kaggle-Data-Visualization%5Cimage-20211006193905258.png" alt="image-20211006193905258"></p>
+<p><img src="/Kevin_Min/images/2021-10-06-kaggle-Intro-to-Deep-Learning/image-20211006193905258.png" alt="image-20211006193905258"></p>
 
 
   </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/06/kaggle-Intro-to-Deep-Learning.html" hidden></a>
