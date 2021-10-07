@@ -24,3 +24,4 @@ Instruction set of Architecture
 Address, Data, Instruction
 
 Condition code - Status를 표시해주는 코드
+
