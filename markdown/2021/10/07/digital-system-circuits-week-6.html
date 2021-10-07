@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Digital System Circuits week 6 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Digital System Circuits week 6" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 Digital System Circuits 6th week." />
+<meta property="og:description" content="Soongsil University 2-2 Digital System Circuits 6th week." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/07/digital-system-circuits-week-6.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/07/digital-system-circuits-week-6.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-07T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-10-07T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/07/digital-system-circuits-week-6.html","@type":"BlogPosting","headline":"Digital System Circuits week 6","dateModified":"2021-10-07T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/07/digital-system-circuits-week-6.html"},"description":"Soongsil University 2-2 Digital System Circuits 6th week.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Digital System Circuits week 6</h1><p class="page-description">Soongsil University 2-2 Digital System Circuits 6th week.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-07T00:00:00-05:00" itemprop="datePublished">
+        Oct 7, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#digital-system-circuits-week-6">Digital System Circuits Week 6</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#completeness-of-nand">Completeness of NAND</a></li>
+<li class="toc-entry toc-h2"><a href="#number-of-possible-boolean-functions">Number of possible boolean functions</a></li>
+<li class="toc-entry toc-h2"><a href="#decoders">Decoders</a></li>
+<li class="toc-entry toc-h2"><a href="#multiplexor-mux">Multiplexor (Mux)</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#muxes-commonly-together---n-bit-mux">Muxes commonly together - N-bit Mux</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#critical-delay-and-critical-path">Critical delay and critical path</a></li>
+<li class="toc-entry toc-h2"><a href="#active-low-inputs">Active low inputs</a></li>
+<li class="toc-entry toc-h2"><a href="#schematic-capture-and-simulation">Schematic capture and simulation</a></li>
+<li class="toc-entry toc-h2"><a href="#introduction-to-optimization-of-digital-logic-design">Introduction to optimization of digital logic design</a></li>
+<li class="toc-entry toc-h2"><a href="#tradeoff">Tradeoff</a></li>
+<li class="toc-entry toc-h2"><a href="#optimization-and-trade-off">Optimization and Trade off</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#combinational-logic-optimization-and-tradeoffs">Combinational logic optimization and tradeoffs</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#algebraic-two-level-size-optimization">Algebraic two-level size optimization</a></li>
+<li class="toc-entry toc-h2"><a href="#karnaugh-maps-for-two-level-size-optimization">Karnaugh maps for two-level size optimization</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#digital-design-process">Digital design process</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#what-is-an-hdl">What is an HDL?</a></li>
+<li class="toc-entry toc-h2"><a href="#simulating--validating-hdl">Simulating / Validating HDL</a></li>
+<li class="toc-entry toc-h2"><a href="#what-is-synthesis">What is synthesis?</a></li>
+<li class="toc-entry toc-h2"><a href="#synthesizing-the-hardware-described">Synthesizing the hardware described</a></li>
+<li class="toc-entry toc-h2"><a href="#why-use-an-hdl">Why use an HDL?</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#homework">Homework</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#week-5">Week 5</a></li>
+<li class="toc-entry toc-h2"><a href="#week-6">Week 6</a></li>
+</ul>
+</li>
+</ul><h1 id="digital-system-circuits-week-6">
+<a class="anchor" href="#digital-system-circuits-week-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Digital System Circuits Week 6</h1>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007131425282.png" alt="image-20211007131425282"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007131434954.png" alt="image-20211007131434954"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007131536125.png" alt="image-20211007131536125"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007131654062.png" alt="image-20211007131654062"></p>
+
+<h2 id="completeness-of-nand">
+<a class="anchor" href="#completeness-of-nand" aria-hidden="true"><span class="octicon octicon-link"></span></a>Completeness of NAND</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007131705582.png" alt="image-20211007131705582"></p>
+
+<h2 id="number-of-possible-boolean-functions">
+<a class="anchor" href="#number-of-possible-boolean-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Number of possible boolean functions</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007132127367.png" alt="image-20211007132127367"></p>
+
+<h2 id="decoders">
+<a class="anchor" href="#decoders" aria-hidden="true"><span class="octicon octicon-link"></span></a>Decoders</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007132235512.png" alt="image-20211007132235512"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007132708963.png" alt="image-20211007132708963"></p>
+
+<h2 id="multiplexor-mux">
+<a class="anchor" href="#multiplexor-mux" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiplexor (Mux)</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007132821767.png" alt="image-20211007132821767"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007132951199.png" alt="image-20211007132951199"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007133116999.png" alt="image-20211007133116999"></p>
+
+<p>Decoder: Code -&gt; Signal / Encoder: Signal -&gt; Code</p>
+
+<p>Mux</p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007133339738.png" alt="image-20211007133339738"></p>
+
+<p>Demux</p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007133402448.png" alt="image-20211007133402448"></p>
+
+<p>Mux / Demux는 회선의 방향을 결정할 뿐, 0과 1의 결정에는 관여하지 않는다. 어디로 출력이 나갈지, 어디로 입력을 받을지 결정하는 것.</p>
+
+<h3 id="muxes-commonly-together---n-bit-mux">
+<a class="anchor" href="#muxes-commonly-together---n-bit-mux" aria-hidden="true"><span class="octicon octicon-link"></span></a>Muxes commonly together - N-bit Mux</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007133723156.png" alt="image-20211007133723156"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007133843501.png" alt="image-20211007133843501"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007134315165.png" alt="image-20211007134315165"></p>
+
+<h2 id="critical-delay-and-critical-path">
+<a class="anchor" href="#critical-delay-and-critical-path" aria-hidden="true"><span class="octicon octicon-link"></span></a>Critical delay and critical path</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007134739202.png" alt="image-20211007134739202"></p>
+
+<h2 id="active-low-inputs">
+<a class="anchor" href="#active-low-inputs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Active low inputs</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007134942656.png" alt="image-20211007134942656"></p>
+
+<h2 id="schematic-capture-and-simulation">
+<a class="anchor" href="#schematic-capture-and-simulation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Schematic capture and simulation</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211007135105884.png" alt="image-20211007135105884"></p>
+
+<h2 id="introduction-to-optimization-of-digital-logic-design">
+<a class="anchor" href="#introduction-to-optimization-of-digital-logic-design" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to optimization of digital logic design</h2>
+
+<p>How can we build better circuits?</p>
+
+<ul>
+  <li>Delay - the time from input changing to new correct stable output</li>
+  <li>Size - the number of transistors</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008024400694.png" alt="image-20211008024400694"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008024412197.png" alt="image-20211008024412197"></p>
+
+<p>transistor 갯수는 입력 당 2개 생각하면 됨</p>
+
+<h2 id="tradeoff">
+<a class="anchor" href="#tradeoff" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tradeoff</h2>
+
+<p>Improves some, but worsens other, criteria of interest</p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008024628036.png" alt="image-20211008024628036"></p>
+
+<p>Optimization은 해야 하는 것, Tradeoff는 선택의 문제</p>
+
+<h2 id="optimization-and-trade-off">
+<a class="anchor" href="#optimization-and-trade-off" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimization and Trade off</h2>
+
+<p>Optimizations</p>
+
+<ul>
+  <li>All criteria of interest are improved (or at least kept the same)</li>
+</ul>
+
+<p>Tradeoff</p>
+
+<ul>
+  <li>Some criteria of interest are improved, while others are worsened.</li>
+</ul>
+
+<p>We obviously prefer optimizations, but often must accept tradeoffs.</p>
+
+<ul>
+  <li>You can’t build a car that is the most comfortable and has the best fuel efficiency, and is the fastest - you have to give up something to gain other things.</li>
+</ul>
+
+<h1 id="combinational-logic-optimization-and-tradeoffs">
+<a class="anchor" href="#combinational-logic-optimization-and-tradeoffs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Combinational logic optimization and tradeoffs</h1>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008025056715.png" alt="image-20211008025056715"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008025218642.png" alt="image-20211008025218642"></p>
+
+<p>보통 sum-of-products로 주어지는 회로는 two-level size라서 delay는 일정해서 transistor를 줄이는 방향으로 optimization을 한다.</p>
+
+<h2 id="algebraic-two-level-size-optimization">
+<a class="anchor" href="#algebraic-two-level-size-optimization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algebraic two-level size optimization</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008025347002.png" alt="image-20211008025347002"></p>
+
+<h2 id="karnaugh-maps-for-two-level-size-optimization">
+<a class="anchor" href="#karnaugh-maps-for-two-level-size-optimization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Karnaugh maps for two-level size optimization</h2>
+
+<p>Karnaugh maps (K-maps)</p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008025721847.png" alt="image-20211008025721847"></p>
+
+<p>K-map에서 인접한 11은 줄일 수 있다는 의미</p>
+
+<h1 id="digital-design-process">
+<a class="anchor" href="#digital-design-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Digital design process</h1>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008031116729.png" alt="image-20211008031116729"></p>
+
+<h2 id="what-is-an-hdl">
+<a class="anchor" href="#what-is-an-hdl" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is an HDL?</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008032320925.png" alt="image-20211008032320925"></p>
+
+<p>It looks like a programming language but not a programming language.</p>
+
+<ul>
+  <li>It is always critical to recall you are describing hardware.</li>
+  <li>This code’s primary purpose is to generate hardware.</li>
+  <li>The hardware this code describes (a counter) can be simulated on a computer. In this secondary use of the language it does act more like a programming language.</li>
+</ul>
+
+<h2 id="simulating--validating-hdl">
+<a class="anchor" href="#simulating--validating-hdl" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulating / Validating HDL</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008032329562.png" alt="image-20211008032329562"></p>
+
+<h2 id="what-is-synthesis">
+<a class="anchor" href="#what-is-synthesis" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is synthesis?</h2>
+
+<ul>
+  <li>Takes a description of what a circuit does</li>
+  <li>Creates the hardware to do it</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008032546838.png" alt="image-20211008032546838"></p>
+
+<h2 id="synthesizing-the-hardware-described">
+<a class="anchor" href="#synthesizing-the-hardware-described" aria-hidden="true"><span class="octicon octicon-link"></span></a>Synthesizing the hardware described</h2>
+
+<ul>
+  <li>All hardware created during synthesis
+    <ul>
+      <li>Even if a is true, still computing d&amp;c</li>
+    </ul>
+  </li>
+  <li>learn to understand how descriptions are translated to hardware</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008032827627.png" alt="image-20211008032827627"></p>
+
+<h2 id="why-use-an-hdl">
+<a class="anchor" href="#why-use-an-hdl" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why use an HDL?</h2>
+
+<p>Enables larger designs via rich syntax, modularity</p>
+
+<ul>
+  <li>more abstract than schematics, allows larger designs
+    <ul>
+      <li>register transfer level description</li>
+      <li>wide datapaths (16, 32, or 64 bits wide) can be abstracted to a single vecotr</li>
+      <li>synthesis tool does the bulk of the tedious repetitive work vs schematic capture</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Portable design</p>
+
+<ul>
+  <li>Behavioral or dataflow Verilog can be synthesized to a new process library with little effort</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008033148367.png" alt="image-20211008033148367"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008033334873.png" alt="image-20211008033334873"></p>
+
+<h1 id="homework">
+<a class="anchor" href="#homework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Homework</h1>
+
+<h2 id="week-5">
+<a class="anchor" href="#week-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Week 5</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034552330.png" alt="image-20211008034552330"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034606282.png" alt="image-20211008034606282"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034615692.png" alt="image-20211008034615692"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034623776.png" alt="image-20211008034623776"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034630789.png" alt="image-20211008034630789"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034638331.png" alt="image-20211008034638331"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034644713.png" alt="image-20211008034644713"></p>
+
+<h2 id="week-6">
+<a class="anchor" href="#week-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Week 6</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034716106.png" alt="image-20211008034716106"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034722899.png" alt="image-20211008034722899"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034735938.png" alt="image-20211008034735938"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008041829289.png" alt="image-20211008041829289"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034747145.png" alt="image-20211008034747145"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034754012.png" alt="image-20211008034754012"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034801316.png" alt="image-20211008034801316"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034811025.png" alt="image-20211008034811025"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008044410708.png" alt="image-20211008044410708"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-07-digital-system-circuits-week-6/image-20211008034817913.png" alt="image-20211008034817913"></p>
+
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/07/digital-system-circuits-week-6.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
