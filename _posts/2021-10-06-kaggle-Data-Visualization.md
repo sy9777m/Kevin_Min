@@ -9,7 +9,7 @@ title: Kaggle Data Visualization
 
 ## Hello, Seaborn
 
-![image-20211002220017090](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-02-kaggle-Data-Visualization\image-20211002220017090.png)
+![image-20211002220017090](/Kevin_Min/images/2021-10-06-kaggle-Data-Visualization/image-20211002220017090.png)
 
 ![tut0_read_csv](/Kevin_Min/images/2021-10-06-kaggle-Data-Visualization/I6UEDSK.png)
 
