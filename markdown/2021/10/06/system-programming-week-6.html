@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -116,6 +116,35 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#cisc-architecture">CISC architecture</a></li>
 <li class="toc-entry toc-h2"><a href="#isa">ISA</a></li>
 <li class="toc-entry toc-h2"><a href="#information-flowing-through-cpu-and-memory">Information flowing through CPU and memory</a></li>
+<li class="toc-entry toc-h2"><a href="#mechanisms-in-procedures">Mechanisms in procedures</a></li>
+<li class="toc-entry toc-h2"><a href="#x86-64-stack">x86-64 Stack</a></li>
+<li class="toc-entry toc-h2"><a href="#procedure-control-flow">Procedure control flow</a></li>
+<li class="toc-entry toc-h2"><a href="#procedure-data-flow">Procedure data flow</a></li>
+<li class="toc-entry toc-h2"><a href="#stack-based-languages">Stack-based languages</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#call-chain-example">Call chain example</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#stack-frame">Stack Frame</a></li>
+<li class="toc-entry toc-h2"><a href="#x86-64--linux-stack-frame">x86-64 / Linux Stack Frame</a></li>
+<li class="toc-entry toc-h2"><a href="#register-saving-conventions">Register Saving Conventions</a></li>
+<li class="toc-entry toc-h2"><a href="#recursive-function">Recursive function</a></li>
+<li class="toc-entry toc-h2"><a href="#observations-about-recursion">Observations about recursion</a></li>
+<li class="toc-entry toc-h2"><a href="#x86-64-procedure-summary">x86-64 Procedure summary</a></li>
+<li class="toc-entry toc-h2"><a href="#array-allocation">Array Allocation</a></li>
+<li class="toc-entry toc-h2"><a href="#multidimensional-nested-arrays">Multidimensional (Nested) Arrays</a></li>
+<li class="toc-entry toc-h2"><a href="#nested-array-row-access">Nested Array Row Access</a></li>
+<li class="toc-entry toc-h2"><a href="#nested-array-element-access">Nested Array Element Access</a></li>
+<li class="toc-entry toc-h2"><a href="#multi-level-array-example">Multi-level array example</a></li>
+<li class="toc-entry toc-h2"><a href="#n--m-matrix-code">N * M Matrix Code</a></li>
+<li class="toc-entry toc-h2"><a href="#structure-representation">Structure Representation</a></li>
+<li class="toc-entry toc-h2"><a href="#structures--alignment">Structures &amp; Alignment</a></li>
+<li class="toc-entry toc-h2"><a href="#alignment-principles">Alignment principles</a></li>
+<li class="toc-entry toc-h2"><a href="#satisfying-alignment-with-structures">Satisfying alignment with structures</a></li>
+<li class="toc-entry toc-h2"><a href="#meeting-overall-alignment-requirement">Meeting overall alignment requirement</a></li>
+<li class="toc-entry toc-h2"><a href="#array-of-structures">Array of structures</a></li>
+<li class="toc-entry toc-h2"><a href="#accessing-array-elements">Accessing array elements</a></li>
+<li class="toc-entry toc-h2"><a href="#saving-space">Saving space</a></li>
 </ul>
 </li>
 </ul><h1 id="system-programming-week-6">
@@ -142,6 +171,346 @@ window.onload = wrap_img;
 <p>Address, Data, Instruction</p>
 
 <p>Condition code - Status를 표시해주는 코드</p>
+
+<h2 id="mechanisms-in-procedures">
+<a class="anchor" href="#mechanisms-in-procedures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mechanisms in procedures</h2>
+
+<p>Passing control</p>
+
+<ul>
+  <li>to beginning of procedure code</li>
+  <li>back to return point</li>
+</ul>
+
+<p>Passing data</p>
+
+<ul>
+  <li>Procedure arguments</li>
+  <li>return value</li>
+</ul>
+
+<p>Memory management</p>
+
+<ul>
+  <li>Allocate during procedure execution</li>
+  <li>deallocate upon return</li>
+</ul>
+
+<p>Mechanisms all implemented with machine instructions</p>
+
+<p>x86-64 implementation of a procedure uses only those mechanisms required.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008085851743.png" alt="image-20211008085851743"></p>
+
+<h2 id="x86-64-stack">
+<a class="anchor" href="#x86-64-stack" aria-hidden="true"><span class="octicon octicon-link"></span></a>x86-64 Stack</h2>
+
+<p>Region of memory managed with stack discipline</p>
+
+<p>Grows toward lower addresses</p>
+
+<p>Register %rsp contains lowest stack address</p>
+
+<ul>
+  <li>address of top element</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008085944955.png" alt="image-20211008085944955"></p>
+
+<p>stack pointer는 stack의 끝을 나타내는 pointer</p>
+
+<p>stack은 위에서부터 아래로 쌓이고, heap은 아래에서부터 위로 쌓는다</p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008090441015.png" alt="image-20211008090441015"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008090447952.png" alt="image-20211008090447952"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008090455907.png" alt="image-20211008090455907"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008090506338.png" alt="image-20211008090506338"></p>
+
+<h2 id="procedure-control-flow">
+<a class="anchor" href="#procedure-control-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Procedure control flow</h2>
+
+<p>Use stack to support procedure call and return</p>
+
+<p>Procedure call: <code class="language-plaintext highlighter-rouge">call label</code></p>
+
+<ul>
+  <li>Push return address on stack</li>
+  <li>Jump to label</li>
+</ul>
+
+<p>Return address:</p>
+
+<ul>
+  <li>Address of the next instruction right after call</li>
+</ul>
+
+<p>Procedure return: <code class="language-plaintext highlighter-rouge">ret</code></p>
+
+<ul>
+  <li>pop address from stack</li>
+  <li>jump to address</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008090731399.png" alt="image-20211008090731399"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008090817579.png" alt="image-20211008090817579"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008091002521.png" alt="image-20211008091002521"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008091011760.png" alt="image-20211008091011760"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008091019865.png" alt="image-20211008091019865"></p>
+
+<h2 id="procedure-data-flow">
+<a class="anchor" href="#procedure-data-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Procedure data flow</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008091033753.png" alt="image-20211008091033753"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008091223043.png" alt="image-20211008091223043"></p>
+
+<h2 id="stack-based-languages">
+<a class="anchor" href="#stack-based-languages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stack-based languages</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008091240033.png" alt="image-20211008091240033"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008091429536.png" alt="image-20211008091429536"></p>
+
+<h3 id="call-chain-example">
+<a class="anchor" href="#call-chain-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Call chain example</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008091647636.png" alt="image-20211008091647636"></p>
+
+<h2 id="stack-frame">
+<a class="anchor" href="#stack-frame" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stack Frame</h2>
+
+<p>Content</p>
+
+<ul>
+  <li>Return information</li>
+  <li>Local storage (if needed)</li>
+  <li>Temporary space (if needed)</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008152722723.png" alt="image-20211008152722723"></p>
+
+<p>Management</p>
+
+<ul>
+  <li>Space allocated when enter procedure
+    <ul>
+      <li>set-up code</li>
+      <li>includes push by <code class="language-plaintext highlighter-rouge">call</code> instruction</li>
+    </ul>
+  </li>
+  <li>Deallocated when return
+    <ul>
+      <li>Finish code</li>
+      <li>Includes pop by <code class="language-plaintext highlighter-rouge">ret</code> instruction</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008152753528.png" alt="image-20211008152753528"></p>
+
+<p>일단 main에서 시작, yoo 호출</p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008152759216.png" alt="image-20211008152759216"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008152815288.png" alt="image-20211008152815288"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008152820416.png" alt="image-20211008152820416"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008152827847.png" alt="image-20211008152827847"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008152835905.png" alt="image-20211008152835905"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008152840783.png" alt="image-20211008152840783"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008152845893.png" alt="image-20211008152845893"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008152850367.png" alt="image-20211008152850367"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008152854981.png" alt="image-20211008152854981"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008152900343.png" alt="image-20211008152900343"></p>
+
+<h2 id="x86-64--linux-stack-frame">
+<a class="anchor" href="#x86-64--linux-stack-frame" aria-hidden="true"><span class="octicon octicon-link"></span></a>x86-64 / Linux Stack Frame</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008152943633.png" alt="image-20211008152943633"></p>
+
+<p>Current Stack Frame (Top to Bottom)</p>
+
+<ul>
+  <li>Argument build - Parameters for function about to call</li>
+  <li>Local variables if can’t keep in registers</li>
+  <li>Saved register context</li>
+  <li>Old frame pointer (optional)</li>
+</ul>
+
+<p>Caller Stack Frame</p>
+
+<ul>
+  <li>Return address
+    <ul>
+      <li>pushed by <code class="language-plaintext highlighter-rouge">call</code> instruction</li>
+    </ul>
+  </li>
+  <li>Arguments for this call</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008153204164.png" alt="image-20211008153204164"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008153315722.png" alt="image-20211008153315722"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008153325561.png" alt="image-20211008153325561"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008153405751.png" alt="image-20211008153405751"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008153413906.png" alt="image-20211008153413906"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008153421612.png" alt="image-20211008153421612"></p>
+
+<h2 id="register-saving-conventions">
+<a class="anchor" href="#register-saving-conventions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Register Saving Conventions</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008153603592.png" alt="image-20211008153603592"></p>
+
+<p>CPU내의 register들은 일종의 공유하는 책상 느낌. 내가 쓰다가 남이 쓰면 데이터가 날아갈 수 있는데, 이 데이터를 다른데 보관해둬야 함. 그런데 매번 책상의 모든 데이터를 다 옮기는 것은 불편하니까, 레지스터의 일부는 저장용도로 남겨두는 것.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008153715346.png" alt="image-20211008153715346"></p>
+
+<p>경우에 따라 달라서 뭐가 더 좋은지에 대한 구분이 힘듦</p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008153839239.png" alt="image-20211008153839239"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008153957750.png" alt="image-20211008153957750"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008154055255.png" alt="image-20211008154055255"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008154104800.png" alt="image-20211008154104800"></p>
+
+<h2 id="recursive-function">
+<a class="anchor" href="#recursive-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursive function</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008154154471.png" alt="image-20211008154154471"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008154219682.png" alt="image-20211008154219682"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008154335199.png" alt="image-20211008154335199"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008154402627.png" alt="image-20211008154402627"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008154409542.png" alt="image-20211008154409542"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008154423654.png" alt="image-20211008154423654"></p>
+
+<h2 id="observations-about-recursion">
+<a class="anchor" href="#observations-about-recursion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Observations about recursion</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008154442628.png" alt="image-20211008154442628"></p>
+
+<h2 id="x86-64-procedure-summary">
+<a class="anchor" href="#x86-64-procedure-summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>x86-64 Procedure summary</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008154506229.png" alt="image-20211008154506229"></p>
+
+<h2 id="array-allocation">
+<a class="anchor" href="#array-allocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array Allocation</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008154733853.png" alt="image-20211008154733853"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008154834886.png" alt="image-20211008154834886"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008155015980.png" alt="image-20211008155015980"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008155119244.png" alt="image-20211008155119244"></p>
+
+<p><code class="language-plaintext highlighter-rouge">movl (base, index, scale), Dest</code></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008155227757.png" alt="image-20211008155227757"></p>
+
+<h2 id="multidimensional-nested-arrays">
+<a class="anchor" href="#multidimensional-nested-arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multidimensional (Nested) Arrays</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008155356930.png" alt="image-20211008155356930"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008155434657.png" alt="image-20211008155434657"></p>
+
+<h2 id="nested-array-row-access">
+<a class="anchor" href="#nested-array-row-access" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nested Array Row Access</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008155511418.png" alt="image-20211008155511418"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008155544301.png" alt="image-20211008155544301"></p>
+
+<h2 id="nested-array-element-access">
+<a class="anchor" href="#nested-array-element-access" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nested Array Element Access</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008155707066.png" alt="image-20211008155707066"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008155715792.png" alt="image-20211008155715792"></p>
+
+<h2 id="multi-level-array-example">
+<a class="anchor" href="#multi-level-array-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multi-level array example</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008155829959.png" alt="image-20211008155829959"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008155842362.png" alt="image-20211008155842362"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008160001130.png" alt="image-20211008160001130"></p>
+
+<h2 id="n--m-matrix-code">
+<a class="anchor" href="#n--m-matrix-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>N * M Matrix Code</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008160031292.png" alt="image-20211008160031292"></p>
+
+<h2 id="structure-representation">
+<a class="anchor" href="#structure-representation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Structure Representation</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008160507000.png" alt="image-20211008160507000"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008160606843.png" alt="image-20211008160606843"></p>
+
+<h2 id="structures--alignment">
+<a class="anchor" href="#structures--alignment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Structures &amp; Alignment</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008161026504.png" alt="image-20211008161026504"></p>
+
+<h2 id="alignment-principles">
+<a class="anchor" href="#alignment-principles" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alignment principles</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008161101826.png" alt="image-20211008161101826"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008161251491.png" alt="image-20211008161251491"></p>
+
+<h2 id="satisfying-alignment-with-structures">
+<a class="anchor" href="#satisfying-alignment-with-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Satisfying alignment with structures</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008161301869.png" alt="image-20211008161301869"></p>
+
+<h2 id="meeting-overall-alignment-requirement">
+<a class="anchor" href="#meeting-overall-alignment-requirement" aria-hidden="true"><span class="octicon octicon-link"></span></a>Meeting overall alignment requirement</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008161332164.png" alt="image-20211008161332164"></p>
+
+<h2 id="array-of-structures">
+<a class="anchor" href="#array-of-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array of structures</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008161401910.png" alt="image-20211008161401910"></p>
+
+<h2 id="accessing-array-elements">
+<a class="anchor" href="#accessing-array-elements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accessing array elements</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008161436606.png" alt="image-20211008161436606"></p>
+
+<h2 id="saving-space">
+<a class="anchor" href="#saving-space" aria-hidden="true"><span class="octicon octicon-link"></span></a>Saving space</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-06-system-programming-week-6/image-20211008161600410.png" alt="image-20211008161600410"></p>
 
 
   </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/06/system-programming-week-6.html" hidden></a>

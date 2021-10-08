@@ -93,7 +93,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      5 min read
     
 </span></p>
 
@@ -110,9 +110,502 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#algorithms-week-6">Algorithms Week 6</a></li>
+<li class="toc-entry toc-h1"><a href="#algorithms-week-6">Algorithms Week 6</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#hashing-randomized-algorithms">Hashing (Randomized algorithms)</a></li>
+<li class="toc-entry toc-h2"><a href="#data-structures">Data structures</a></li>
+<li class="toc-entry toc-h2"><a href="#hashing-basics">Hashing basics</a></li>
+<li class="toc-entry toc-h2"><a href="#applications-of-dictionary">Applications of dictionary</a></li>
+<li class="toc-entry toc-h2"><a href="#direct-addressing">Direct addressing</a></li>
+<li class="toc-entry toc-h2"><a href="#terminology">Terminology</a></li>
+<li class="toc-entry toc-h2"><a href="#hash-tables-with-open-addressing">Hash tables with open addressing</a></li>
+<li class="toc-entry toc-h2"><a href="#worst-case-analysis">Worst-case analysis</a></li>
+<li class="toc-entry toc-h2"><a href="#a-simple-deterministic-hash-function">A simple deterministic hash function</a></li>
+<li class="toc-entry toc-h2"><a href="#a-universal-hash-family">A universal hash family</a></li>
+<li class="toc-entry toc-h2"><a href="#summary">Summary</a></li>
+<li class="toc-entry toc-h2"><a href="#tree-algorithms">Tree algorithms</a></li>
+<li class="toc-entry toc-h2"><a href="#some-data-structure-for-storing-objects">Some data structure for storing objects</a></li>
+<li class="toc-entry toc-h2"><a href="#motivation-for-binary-search-tree">Motivation for binary search tree</a></li>
+<li class="toc-entry toc-h2"><a href="#recall-the-data-structure">Recall the data structure</a></li>
+<li class="toc-entry toc-h2"><a href="#binary-tree-terminology">Binary tree terminology</a></li>
+<li class="toc-entry toc-h2"><a href="#binary-search-tree">Binary search tree</a></li>
+<li class="toc-entry toc-h2"><a href="#search-in-a-binary-search-tree">Search in a binary search tree</a></li>
+<li class="toc-entry toc-h2"><a href="#insert-in-a-binary-search-tree">Insert in a binary search tree</a></li>
+<li class="toc-entry toc-h2"><a href="#delete-in-a-binary-search-tree">Delete in a binary search tree</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#case-1">case 1</a></li>
+<li class="toc-entry toc-h3"><a href="#case-2">case 2</a></li>
+<li class="toc-entry toc-h3"><a href="#case-3">case 3</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#how-long-do-these-operations-take">How long do these operations take?</a></li>
+<li class="toc-entry toc-h2"><a href="#homework">Homework</a></li>
+<li class="toc-entry toc-h2"><a href="#p2-5점-k번째로-많은-원소-찾기">P2 (5점): K번째로 많은 원소 찾기</a></li>
+<li class="toc-entry toc-h2"><a href="#개요-및-요구사항">개요 및 요구사항</a></li>
+<li class="toc-entry toc-h2"><a href="#입출력예">입출력예</a></li>
+<li class="toc-entry toc-h2"><a href="#상세조건">상세조건</a></li>
+<li class="toc-entry toc-h2"><a href="#제출">제출</a></li>
+<li class="toc-entry toc-h2"><a href="#배점">배점</a></li>
+<li class="toc-entry toc-h2"><a href="#solution">Solution</a></li>
+</ul>
+</li>
 </ul><h1 id="algorithms-week-6">
 <a class="anchor" href="#algorithms-week-6" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithms Week 6</h1>
+
+<h2 id="hashing-randomized-algorithms">
+<a class="anchor" href="#hashing-randomized-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hashing (Randomized algorithms)</h2>
+
+<p>direct-address tables, hash tables, hash functions</p>
+
+<h2 id="data-structures">
+<a class="anchor" href="#data-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data structures</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008190311416.png" alt="image-20211008190311416"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008190720235.png" alt="image-20211008190720235"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008191044379.png" alt="image-20211008191044379"></p>
+
+<h2 id="hashing-basics">
+<a class="anchor" href="#hashing-basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hashing basics</h2>
+
+<p>Hash tables are another sort of data structure that allows fast INSERT/DELETE/SEARCH.</p>
+
+<p>Hash families are the magic behind hash tables.</p>
+
+<p>Universal hash families are even more magic.</p>
+
+<p>Hash tables</p>
+
+<ul>
+  <li>$O(1)$ expected time INSERT/DELETE/SEARCH</li>
+  <li>Worst worst-case performance, but often great in practice.</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008191351776.png" alt="image-20211008191351776"></p>
+
+<h2 id="applications-of-dictionary">
+<a class="anchor" href="#applications-of-dictionary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Applications of dictionary</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008191419737.png" alt="image-20211008191419737"></p>
+
+<h2 id="direct-addressing">
+<a class="anchor" href="#direct-addressing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Direct addressing</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008191551590.png" alt="image-20211008191551590"></p>
+
+<p>assumptions</p>
+
+<ul>
+  <li>no duplications (중복이 없음)</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008191522329.png" alt="image-20211008191522329"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008191537816.png" alt="image-20211008191537816"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008191605461.png" alt="image-20211008191605461"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008191631264.png" alt="image-20211008191631264"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008191709672.png" alt="image-20211008191709672"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008191741399.png" alt="image-20211008191741399"></p>
+
+<h2 id="terminology">
+<a class="anchor" href="#terminology" aria-hidden="true"><span class="octicon octicon-link"></span></a>Terminology</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008191844584.png" alt="image-20211008191844584"></p>
+
+<p>But we don’t know which ones will show up in advance.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008191902750.png" alt="image-20211008191902750"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008191933786.png" alt="image-20211008191933786"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008192047386.png" alt="image-20211008192047386"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008192109631.png" alt="image-20211008192109631"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008192406610.png" alt="image-20211008192406610"></p>
+
+<h2 id="hash-tables-with-open-addressing">
+<a class="anchor" href="#hash-tables-with-open-addressing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hash tables with open addressing</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008192500232.png" alt="image-20211008192500232"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008192545882.png" alt="image-20211008192545882"></p>
+
+<h2 id="worst-case-analysis">
+<a class="anchor" href="#worst-case-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Worst-case analysis</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008192639447.png" alt="image-20211008192639447"></p>
+
+<p>Solution: Randoness</p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008192736877.png" alt="image-20211008192736877"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008193001984.png" alt="image-20211008193001984"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008193010091.png" alt="image-20211008193010091"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008193032714.png" alt="image-20211008193032714"></p>
+
+<h2 id="a-simple-deterministic-hash-function">
+<a class="anchor" href="#a-simple-deterministic-hash-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>A simple deterministic hash function</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008193056498.png" alt="image-20211008193056498"></p>
+
+<p>mod: 나머지 연산</p>
+
+<p>n은 소수</p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008193205471.png" alt="image-20211008193205471"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008193212473.png" alt="image-20211008193212473"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008193242646.png" alt="image-20211008193242646"></p>
+
+<h2 id="a-universal-hash-family">
+<a class="anchor" href="#a-universal-hash-family" aria-hidden="true"><span class="octicon octicon-link"></span></a>A universal hash family</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008193322293.png" alt="image-20211008193322293"></p>
+
+<h2 id="summary">
+<a class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008193546011.png" alt="image-20211008193546011"></p>
+
+<h2 id="tree-algorithms">
+<a class="anchor" href="#tree-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tree algorithms</h2>
+
+<p>Tree basics, Binary search tree, red-black tree</p>
+
+<h2 id="some-data-structure-for-storing-objects">
+<a class="anchor" href="#some-data-structure-for-storing-objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Some data structure for storing objects</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008204015319.png" alt="image-20211008204015319"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008204019470.png" alt="image-20211008204019470"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008204029295.png" alt="image-20211008204029295"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008204052191.png" alt="image-20211008204052191"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008204112618.png" alt="image-20211008204112618"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008204204193.png" alt="image-20211008204204193"></p>
+
+<h2 id="motivation-for-binary-search-tree">
+<a class="anchor" href="#motivation-for-binary-search-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation for binary search tree</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008204233121.png" alt="image-20211008204233121"></p>
+
+<h2 id="recall-the-data-structure">
+<a class="anchor" href="#recall-the-data-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recall the data structure</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008204416888.png" alt="image-20211008204416888"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008204523232.png" alt="image-20211008204523232"></p>
+
+<p>connected: 어떤 node에서 출발해도 그 어떤 node에 도달 할 수 있다.</p>
+
+<p>acyclic: 자기 자신으로 돌아오는 cycle이 없다.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008204804192.png" alt="image-20211008204804192"></p>
+
+<p>forest: tree의 집합</p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008204845935.png" alt="image-20211008204845935"></p>
+
+<h2 id="binary-tree-terminology">
+<a class="anchor" href="#binary-tree-terminology" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary tree terminology</h2>
+
+<p>child를 최대 2개까지 가질 수 있음</p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008205456362.png" alt="image-20211008205456362"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008205549192.png" alt="image-20211008205549192"></p>
+
+<h2 id="binary-search-tree">
+<a class="anchor" href="#binary-search-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary search tree</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008205617534.png" alt="image-20211008205617534"></p>
+
+<p>node 선택 -&gt; node의 key 값에 따라 좌우 분류 -&gt; 분류된 집합에서 node 선택 -&gt; 좌우에 붙이고 반복 (recursion)</p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008205908586.png" alt="image-20211008205908586"></p>
+
+<p>이 binary search tree는 unique하지는 않다.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008205937221.png" alt="image-20211008205937221"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008205957919.png" alt="image-20211008205957919"></p>
+
+<h2 id="search-in-a-binary-search-tree">
+<a class="anchor" href="#search-in-a-binary-search-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Search in a binary search tree</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008210404980.png" alt="image-20211008210404980"></p>
+
+<h2 id="insert-in-a-binary-search-tree">
+<a class="anchor" href="#insert-in-a-binary-search-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Insert in a binary search tree</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008210603171.png" alt="image-20211008210603171"></p>
+
+<p><code class="language-plaintext highlighter-rouge">x.key == key</code>의 경우엔 binary search tree내의 값들이 다 unique하다고 가정했기 때문에 그냥 넘어가는데, 구현의 문제로 남겨짐.</p>
+
+<h2 id="delete-in-a-binary-search-tree">
+<a class="anchor" href="#delete-in-a-binary-search-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delete in a binary search tree</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008210718619.png" alt="image-20211008210718619"></p>
+
+<p>이 case에서는 그냥 2를 없애고 2의 자리에 1을 붙여주면 되지만…</p>
+
+<h3 id="case-1">
+<a class="anchor" href="#case-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>case 1</h3>
+
+<p>if 3 is a leaf -&gt; just delete it</p>
+
+<h3 id="case-2">
+<a class="anchor" href="#case-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>case 2</h3>
+
+<p>if 3 has just one child</p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008210826746.png" alt="image-20211008210826746"></p>
+
+<h3 id="case-3">
+<a class="anchor" href="#case-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>case 3</h3>
+
+<p>if 3 has two children, replace 3 with it’s immediate successor, aka next smallest thing after 3</p>
+
+<p>3의 right child 중에서 가장 left에 있는 descendant를 불러와서 3의 자리에 옮김</p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008210921690.png" alt="image-20211008210921690"></p>
+
+<ul>
+  <li>Does this maintain the BST property? yes</li>
+  <li>How do we find the immediate successor? SEARCH for 3 in the subtree under 3.right</li>
+  <li>How do we remove it when we find it? if 3.1 has 0 or 1 children, do one of the previous cases.</li>
+  <li>What if [3.1] has two children? It doesn’t. 3.right의 subtree 중에 가장 좌측에 있는 node이기 때문에 자신보다 작은 left child가 존재할 수 없음. 즉, 2개의 children을 가질 가능성이 없음</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008211203361.png" alt="image-20211008211203361"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008211311943.png" alt="image-20211008211311943"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008211730429.png" alt="image-20211008211730429"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008212344180.png" alt="image-20211008212344180"></p>
+
+<h2 id="how-long-do-these-operations-take">
+<a class="anchor" href="#how-long-do-these-operations-take" aria-hidden="true"><span class="octicon octicon-link"></span></a>How long do these operations take?</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008212435141.png" alt="image-20211008212435141"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008212519980.png" alt="image-20211008212519980"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008212611534.png" alt="image-20211008212611534"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-08-algorithms-week-6/image-20211008212721228.png" alt="image-20211008212721228"></p>
+
+<h2 id="homework">
+<a class="anchor" href="#homework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Homework</h2>
+
+<h2 id="p2-5점-k번째로-많은-원소-찾기">
+<a class="anchor" href="#p2-5%EC%A0%90-k%EB%B2%88%EC%A7%B8%EB%A1%9C-%EB%A7%8E%EC%9D%80-%EC%9B%90%EC%86%8C-%EC%B0%BE%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>P2 (<code class="language-plaintext highlighter-rouge">5점</code>): K번째로 많은 원소 찾기</h2>
+
+<h2 id="개요-및-요구사항">
+<a class="anchor" href="#%EA%B0%9C%EC%9A%94-%EB%B0%8F-%EC%9A%94%EA%B5%AC%EC%82%AC%ED%95%AD" aria-hidden="true"><span class="octicon octicon-link"></span></a>개요 및 요구사항</h2>
+
+<ul>
+  <li>주어진 길이 n의 정수 배열에서, K번째로 많이 등장한 원소를 반환하는 알고리즘을 작성하세요.</li>
+</ul>
+
+<h2 id="입출력예">
+<a class="anchor" href="#%EC%9E%85%EC%B6%9C%EB%A0%A5%EC%98%88" aria-hidden="true"><span class="octicon octicon-link"></span></a>입출력예</h2>
+
+<p>(입력1)
+10
+5
+1 1 2 2 3 3 4 4 4 5</p>
+
+<p>(출력1)
+5</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4 - 3개
+1 - 2개
+2 - 2개
+3 - 2개
+5 - 1개 
+5번째로 많은 수 == 5
+</code></pre></div></div>
+
+<p>(입력2)
+10
+2
+1 1 2 2 3 3 4 4 4 5</p>
+
+<p>(출력2)
+1</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4 - 3개
+1 - 2개
+2 - 2개
+3 - 2개
+5 - 1개 
+2번째로 많은 수 == 1 or 2 or 3
+</code></pre></div></div>
+
+<ul>
+  <li>첫째줄에, 배열의 길이 len이 입력됩니다.</li>
+  <li>둘째줄에, K가 입력됩니다.</li>
+  <li>셋째줄에, 배열의 원소들이 입력됩니다.</li>
+  <li>제공한 sample1.txt 파일과, main.cpp 파일을 참고하세요.</li>
+</ul>
+
+<h2 id="상세조건">
+<a class="anchor" href="#%EC%83%81%EC%84%B8%EC%A1%B0%EA%B1%B4" aria-hidden="true"><span class="octicon octicon-link"></span></a>상세조건</h2>
+
+<ul>
+  <li>0 &lt; len &lt;= 10,000</li>
+  <li>0 &lt; K &lt;= the number of unique elements in arr</li>
+  <li>0 &lt; each element &lt;= 10,000</li>
+  <li>정답이 다수인 경우, 그 중 하나만 출력해도 정답으로 인정 (위 입력2의 경우 1,2,3 모두 정답으로 인정함)</li>
+  <li>자동화된 채점 시스템을 활용할 계획이므로 제공한 템플릿을 활용하되, 기본 제공한 함수 프로토타입 등은 변경하지 말 것.</li>
+  <li>구현은 모두 solution.cpp 파일에 하고, 제출도 solution.cpp 파일만 제출.</li>
+  <li>(main.cpp/ solution.h 파일은 테스트 용으로만 활용)</li>
+  <li>시간제한: 3sec @ 3.0Ghz single core</li>
+  <li>공간제한: 없음</li>
+  <li>체점환경은 c++17 문법을 사용함.</li>
+</ul>
+
+<h2 id="제출">
+<a class="anchor" href="#%EC%A0%9C%EC%B6%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>제출</h2>
+
+<ul>
+  <li>소스코드 (solution.cpp) 와 보고서 (학번.txt)를 압축 (학번.zip)하여 제출</li>
+  <li>main.cpp, soultion.h, sample1.txt 등 기타 파일들은 포함하지 말 것.</li>
+</ul>
+
+<h2 id="배점">
+<a class="anchor" href="#%EB%B0%B0%EC%A0%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>배점</h2>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">4.5점</code> Correctness &amp; Efficiency
+    <ul>
+      <li>총 9개의 테스트 케이스에서 항상 정답을 찾아내는지 여부와 시간 제한을 만족하는지 여부를 검증.</li>
+      <li>각 테스트케이스를 여러번 실행하여 항상 일관된 정답을 출력하는지 여부를 검증하고, 실행 시간은 평균값을 취하여 검증함.</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">주의</code> C/C++ 에서 기본제공하는 sorting/selection 라이브러리 사용시 40% 감점 (e.g., nth_element(), sort() 등)</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">0.5점</code> 보고서
+    <ul>
+      <li>위 문제 해결을 위한 본인의 알고리즘 설계 방법 제시 (소스코드 설명하지 않아도 됨).</li>
+      <li>본인이 설계한 알고리즘의 correctness &amp; efficiency 의견 제시.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="solution">
+<a class="anchor" href="#solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Solution</h2>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include "p2_solution.h"
+</span>
+
+<span class="kt">void</span> <span class="nf">merge</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">m</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">n1</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="n">l</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">n2</span> <span class="o">=</span> <span class="n">r</span> <span class="o">-</span> <span class="n">m</span><span class="p">;</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">L</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">R</span><span class="p">(</span><span class="n">n2</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">l</span> <span class="o">+</span> <span class="n">i</span><span class="p">];</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">j</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">m</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">+</span> <span class="n">j</span><span class="p">];</span>
+
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+            <span class="o">++</span><span class="n">i</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">R</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+            <span class="o">++</span><span class="n">j</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="o">++</span><span class="n">k</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="o">++</span><span class="n">i</span><span class="p">;</span>
+        <span class="o">++</span><span class="n">k</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">arr</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">R</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="o">++</span><span class="n">i</span><span class="p">;</span>
+        <span class="o">++</span><span class="n">k</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="kt">int</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">l</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">l</span> <span class="o">+</span> <span class="n">r</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">);</span>
+        <span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+
+        <span class="n">merge</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">r</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">Solution</span><span class="o">::</span><span class="n">kMost</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">len</span><span class="p">,</span> <span class="kt">int</span> <span class="n">k</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">count_arr</span><span class="p">(</span><span class="n">len</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">count_arr</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">rank_arr</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">index_arr</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="n">count_arr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">res</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="n">j</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">k</span><span class="p">;</span> <span class="o">++</span><span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">rank_arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">res</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="n">n</span><span class="p">;</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="n">j</span><span class="p">;</span> <span class="o">--</span><span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="n">rank_arr</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">rank_arr</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+                        <span class="n">index_arr</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">index_arr</span><span class="p">[</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+                    <span class="p">}</span>
+                    <span class="n">rank_arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span><span class="p">;</span>
+                    <span class="n">index_arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    
+    <span class="k">return</span> <span class="n">index_arr</span><span class="p">[</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
 
   </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/08/algorithms-week-6.html" hidden></a>
 </article>
