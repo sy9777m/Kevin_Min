@@ -7,7 +7,7 @@ title: CFA Level 2 Alternative Investment
 ---
 # CFA Level 2 Alternative Investment
 
-![image-20211012100005645](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012100005645.png)
+![image-20211012100005645](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012100005645.png)
 
 ## LOS 39.a: Classify and describe forms of real estate investments.
 
@@ -18,7 +18,7 @@ title: CFA Level 2 Alternative Investment
 
 REOC (Real Estate Operating Company)
 
-![image-20211012105538564](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012105538564.png)
+![image-20211012105538564](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012105538564.png)
 
 ### Private vs. Public
 
@@ -71,7 +71,7 @@ Shares of a REIT are actively traded and more likely to reflect market value. In
 
 ### Property Classifications
 
-![image-20211012110300224](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012110300224.png)
+![image-20211012110300224](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012110300224.png)
 
 ## LOS 39.c: Explain the role in a portfolio, economic value determinants, investment characteristics, and principal risks of private real estate.
 
@@ -104,7 +104,7 @@ Real estate investment has both bond-like and stock-like characteristics.
 
 ### Role of leverage in real estate investment
 
-![image-20211012145035834](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012145035834.png)
+![image-20211012145035834](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012145035834.png)
 
 ## LOS 39.d: Describe commercial property types, including their distinctive investment characteristics.
 
@@ -127,7 +127,7 @@ Real estate investment has both bond-like and stock-like characteristics.
 
 ### Real estate appraisals
 
-![image-20211012150031551](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012150031551.png)
+![image-20211012150031551](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012150031551.png)
 
 ### Valuation approaches
 
@@ -135,11 +135,11 @@ Real estate investment has both bond-like and stock-like characteristics.
 
 Because of the difficulty in measuring depreciation and obsolescence, the cost approach is most useful when the subject property is relatively new. The cost approach is often used for unusual properties or properties where comparable transactions are limited.
 
-![image-20211012150045029](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012150045029.png)
+![image-20211012150045029](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012150045029.png)
 
-![image-20211012150056453](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012150056453.png)
+![image-20211012150056453](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012150056453.png)
 
-![image-20211012150103973](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012150103973.png)
+![image-20211012150103973](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012150103973.png)
 
 ### Highest and best use
 
@@ -147,7 +147,7 @@ The concept of highest and best use is important in determining value. The highe
 
 Note that the highest and best use is not based on the highest value when the projects are completed but, rather, the highest implied land value.
 
-![image-20211012150113845](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012150113845.png)
+![image-20211012150113845](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012150113845.png)
 
 ## LOS 39.f: Estimate and interpret the inputs (for example, net operating income, capitalization rate, and discount rate) to the direct capitalization and discounted cash flow valuation methods.
 
@@ -165,7 +165,7 @@ $$
 \\- \operatorname{Operating expense}
 \\= \operatorname{Net operating income}
 $$
-![image-20211012150408354](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012150408354.png)
+![image-20211012150408354](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012150408354.png)
 
 ### The capitalization rate
 
@@ -184,15 +184,15 @@ $$
 $$
 If rents are expected to increase at a constant rate each year, the internal rate of return (IRR) can be approximately by summing the cap rate and growth rate.
 
-![image-20211012154503538](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012154503538.png)
+![image-20211012154503538](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012154503538.png)
 
 ### Stabilized NOI
 
 If NOI is not representative of the NOI of similar properties because of a temporary issue, the subject property's NOI should be stabilized. For example, suppose a property is temporarily experiencing high vacancy during a major renovation. In this case, the first-year NOI should be stabilized; NOI should be calculated as if the renovation is complete. Once the stabilized NOI is capitalized, the loss in value, as a result of the temporary decline in NOI, is subtracted in arriving at the value of the property.
 
-![image-20211012151124707](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012151124707.png)
+![image-20211012151124707](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012151124707.png)
 
-![image-20211012151131115](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012151131115.png)
+![image-20211012151131115](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012151131115.png)
 $$
 \\\operatorname{gross income multiplier} = \frac{\operatorname{sales price}}{\operatorname{gross income}}
 \\\operatorname{value} = \operatorname{gross income} * \operatorname{gross income multiplier}
@@ -201,35 +201,35 @@ ball park figure (약식 계산 방법)
 
 A shortfall of the gross income multiplier is that it ignores vacancy rates and operating expenses. Thus, if the subject property's vacancy rate and operating expenses are higher than those of the comparable transactions, an investor will pay more for the same rent.
 
-![image-20211012154616705](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012154616705.png)
+![image-20211012154616705](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012154616705.png)
 
 ### Discounted cash flow method
 
-![image-20211012154520033](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012154520033.png)
+![image-20211012154520033](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012154520033.png)
 
 ### Terminal cap rate
 
-![image-20211012151506276](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012151506276.png)
+![image-20211012151506276](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012151506276.png)
 
-![image-20211012151512213](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012151512213.png)
+![image-20211012151512213](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012151512213.png)
 
-![image-20211012154633226](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012154633226.png)
+![image-20211012154633226](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012154633226.png)
 
 ### Valuation with different lease structures
 
-![image-20211012154541858](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012154541858.png)
+![image-20211012154541858](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012154541858.png)
 
 Lease structures can vary by country. For example, in the UK, it is common for tenants to pay all expenses. In this case, the cap rate is known as the ARY.  Adjustments must be made when the contract rent (passing or term rent) and the current market rent (open market rent) differ. Once the lease expires, rent will likely be adjusted to the current market rent. In the UK, the property is said to have reversionary potential when the contract rent expires.
 
-![image-20211012154100535](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012154100535.png)
+![image-20211012154100535](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012154100535.png)
 
-![image-20211012154106156](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012154106156.png)
+![image-20211012154106156](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012154106156.png)
 
 A variation of the term and reversion approach is the layer method.
 
-![image-20211012154125299](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012154125299.png)
+![image-20211012154125299](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012154125299.png)
 
-![image-20211012154131166](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012154131166.png)
+![image-20211012154131166](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012154131166.png)
 
 Using the term and reversion approach and the layer method, different cap rates were applied to the term rent and the current market rent after review. Alternatively, a single discount rate, known as the equivalent yield, could have been used. The equivalent yield is an average, although not a simple average, of the two separate cap rates.
 
@@ -242,13 +242,13 @@ Using the discounted cash flow method requires the following estimates and assum
 -   Estimated resale price
 -   Appropriate discount rate - The discount rate should be higher than the mortgage rate because more risk.
 
-![image-20211012154420042](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012154420042.png)
+![image-20211012154420042](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012154420042.png)
 
-![image-20211012154426026](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012154426026.png)
+![image-20211012154426026](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012154426026.png)
 
 ## LOS 39.h: Compare the direct capitalization and discounted cash flow valuation methods.
 
-![image-20211012154650128](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012154650128.png)
+![image-20211012154650128](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012154650128.png)
 
 Under the direct capitalization method, a cap rate or income multiplier is applied to first-year NOI. Implicit in the cap rate or multiplier are expected increases in growth.
 
@@ -284,25 +284,25 @@ Locational obsolescence occurs when the location is no longer optional. A prison
 
 Economic obsolescence occurs when new construction is not feasible under current economic conditions. This can occur when rental rates are not sufficient to support the property.
 
-![image-20211012155820063](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012155820063.png)
+![image-20211012155820063](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012155820063.png)
 
-![image-20211012155826189](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012155826189.png)
+![image-20211012155826189](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012155826189.png)
 
 Because of the difficulty in measuring depreciation and obsolescence, the cost approach is most useful when the subject property is relatively new.
 
 The cost approach is sometimes considered the upper limit of value since an investor when never pay more than the cost to build a comparable building.
 
-![image-20211012160342110](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012160342110.png)
+![image-20211012160342110](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012160342110.png)
 
 ### Sales comparison approach
 
-![image-20211012155931379](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012155931379.png)
+![image-20211012155931379](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012155931379.png)
 
-![image-20211012155938894](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012155938894.png)
+![image-20211012155938894](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012155938894.png)
 
 The sales comparison approach is most useful when there are a number of properties similar to the subject that have been recently sold, as is usually the case with single-family homes. Even in an active market, there may be limited transactions of specialized property types, such as regional malls and hospitals. The sales comparison approach assumes purchaser are acting rationally. However, there are times when purchaser become overly exuberant and market bubbles occur.
 
-![image-20211012160351917](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012160351917.png)
+![image-20211012160351917](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012160351917.png)
 
 ### Reconciliation of value
 
@@ -332,7 +332,7 @@ $$
 $$
 Appraisal-based indices tend to lag actual transactions because actual transactions occur before appraisals are performed. Thus, a change in price may not be reflected in appraised values until the next quarter or longer if a property is not appraised every quarter. Also, appraisal lag tends to smooth the index; that is, reduce its volatility, much like a moving average reduces volatility. Finally, appraisal lag results in lower correlation with other asset classes. Appraisal lag can be adjusted by unsmoothing the index or by using a transaction-based index.
 
-![image-20211012161208117](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012161208117.png)
+![image-20211012161208117](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012161208117.png)
 
 ### Transaction-based indices
 
@@ -359,13 +359,13 @@ $$
 
 In order to calculate the IRR with leverage, we need to consider the cash flows over the entire holding period including the change in value of the original investment.
 
-![image-20211012162703898](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012162703898.png)
+![image-20211012162703898](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012162703898.png)
 
 We can see the effects of leverage by calculating an unleveraged IRR. In this case, the initial cash outflow is higher because no debt is incurred.
 
-![image-20211012162756918](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012162756918.png)
+![image-20211012162756918](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012162756918.png)
 
-![image-20211012162821449](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012162821449.png)
+![image-20211012162821449](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012162821449.png)
 
 ## LOS 40.a: Describe types of publicly traded real estate securities.
 
@@ -577,11 +577,11 @@ Due diligence considerations
 
 NAVPS (net asset value per share) is the (per-share) amount by which assets exceed liabilities, using current market values rather than accounting book values. NAVPS is generally considered the most appropriate measure of the fundamental value of REITs (and REOCs). If the market price of a REIT varies from NAVPS, this is seen as a sign of over- or undervaluation.
 
-![image-20211012182300807](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012182300807.png)
+![image-20211012182300807](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012182300807.png)
 
-![image-20211012182315331](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012182315331.png)
+![image-20211012182315331](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012182315331.png)
 
-![image-20211012182322152](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012182322152.png)
+![image-20211012182322152](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012182322152.png)
 $$
 \\\text{step 1: }\operatorname{property value} = \frac{\operatorname{1st\, year\, NOI}}{\operatorname{cap rate}}
 \\\text{step 2: }\operatorname{Total Net Asset Value} = \operatorname{property value} + \operatorname{other tangible assets} - \operatorname{Liabilities}
@@ -637,17 +637,17 @@ There are three key factors that impact that price-to-FFO and price-to-AFFO of R
 
 Dividend discount and discounted cash flow models of valuation are appropriate for use with REITs and REOCs, because these two investment structures typically pay dividends and thereby return a high proportion of their income to investors. For dividend discount models, an analysts will develop near-term, medium-term, and long-term growth forecasts and then use these values at the basis for two- or three-stage dividend discount models. To build a discounted cash flow model, analysts will generally create intermediate-term cash flow projections plus a terminal value that is developed using historical cash flow multiples.
 
-![image-20211012184113171](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012184113171.png)
+![image-20211012184113171](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012184113171.png)
 
 ## LOS 40.h: Calculate the value of a REIT share suing net asset value, price-to-FFO and price-to-AFFO, and discounted cash flow approaches.
 
-![image-20211012184030323](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012184030323.png)
+![image-20211012184030323](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012184030323.png)
 
-![image-20211012184035719](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012184035719.png)
+![image-20211012184035719](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012184035719.png)
 
-![image-20211012184041661](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012184041661.png)
+![image-20211012184041661](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012184041661.png)
 
-![image-20211012184124743](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012184124743.png)
+![image-20211012184124743](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012184124743.png)
 
 ## LOS 41.a: Explain sources of value creation in private equity.
 
@@ -729,7 +729,7 @@ Public companies are bough and sold on regulated exchange daily. Private compani
 -   Replacement cost - It is generally not applicable to mature companies.
 -   Venture capital method and the leveraged buyout method
 
-![image-20211012195838937](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012195838937.png)
+![image-20211012195838937](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012195838937.png)
 
 ### Other considerations
 
@@ -745,9 +745,9 @@ Market data is also used with discounted cash flow (DCF) analysis, with beta and
 
 ### Buyout valuation issues
 
-![image-20211012195849511](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012195849511.png)
+![image-20211012195849511](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012195849511.png)
 
-![image-20211012195945557](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012195945557.png)
+![image-20211012195945557](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012195945557.png)
 
 #### Types of buyouts
 
@@ -759,7 +759,7 @@ The view of the LBO transaction, referred to as the LBO model, is not a form of 
 
 ### LBO model
 
-![image-20211012195905223](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012195905223.png)
+![image-20211012195905223](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012195905223.png)
 
 three main inputs:
 
@@ -777,9 +777,9 @@ $$
 \\\operatorname{investment cost} + \operatorname{earnings growth} + \operatorname{increase in price multiple} + \operatorname{reduction in debt} = \operatorname{exit value}
 $$
 
-![image-20211012211657003](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012211657003.png)
+![image-20211012211657003](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012211657003.png)
 
-![image-20211012211702287](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012211702287.png)
+![image-20211012211702287](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012211702287.png)
 
 The components of the return are:
 
@@ -789,11 +789,11 @@ The components of the return are:
 
 In most LBOs, most of the debt is senior debt that will amortize over time. In the preceding example, the debtholders' claim on assets was reduced from \$600 to \$250. The use of debt in this example is advantageous and magnifies the returns to the equityholders.
 
-![image-20211012212834424](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012212834424.png)
+![image-20211012212834424](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012212834424.png)
 
 ### Valuation issues in venture capital investments
 
-![image-20211012212847111](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012212847111.png)
+![image-20211012212847111](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012212847111.png)
 
 #### Pre- and Post money valuation
 
@@ -867,7 +867,7 @@ When an exit is anticipated in the next year or two, the exit valuation multiple
 
 ## LOS 41.f: Explain private equity fund structures, terms, valuation, and due diligence in the context of an analysis of private equity fund returns.
 
-![image-20211012222056320](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012222056320.png)
+![image-20211012222056320](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012222056320.png)
 
 ### Limited partnership
 
@@ -921,9 +921,9 @@ This is the year the fund was started and facilitates performance comparisons wi
 
 As discussed previously, this is the life of the firm and is usually ten years.
 
-![image-20211012222106796](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012222106796.png)
+![image-20211012222106796](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012222106796.png)
 
-![image-20211012214827897](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012214827897.png)
+![image-20211012214827897](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012214827897.png)
 
 ### Corporate governance terms of a private equity fund
 
@@ -959,9 +959,9 @@ These specify leverage limits, a minimum amount of diversification, etc.
 
 This provision allows the LPs to invest in other funds of the GP at low or no management fees. The provision also prevents the GP from using capital from different funds to invest in the same portfolio company.
 
-![image-20211012215558904](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012215558904.png)
+![image-20211012215558904](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012215558904.png)
 
-![image-20211012215603136](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012215603136.png)
+![image-20211012215603136](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012215603136.png)
 
 ### Net Asset Value (NAV)
 
@@ -982,7 +982,7 @@ This provision allows the LPs to invest in other funds of the GP at low or no ma
 -   Fourth, the investor should be aware that funds with different strategies and maturities may use different valuation methodologies. In the early stages, method based on comparables may be used.
 -   Finally, it is usually the GP who values the fund. LPs are increasingly using third parties to value private equity funds.
 
-![image-20211012222118978](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012222118978.png)
+![image-20211012222118978](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012222118978.png)
 
 ### Due diligence of private equity fund investments
 
@@ -992,7 +992,7 @@ This provision allows the LPs to invest in other funds of the GP at low or no ma
 
 ## LOS 41.g: Explain risks and costs of investing in private equity.
 
-![image-20211012222202864](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012222202864.png)
+![image-20211012222202864](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012222202864.png)
 
 ### General risk factors
 
@@ -1062,30 +1062,30 @@ Because there are cyclical trends in IRR returns, the Net IRR should be benchmar
 
 Note also that the private equity IRR is cash flow weighted whereas most other asset class index returns are time weighted.
 
-![image-20211012224009277](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012224009277.png)
+![image-20211012224009277](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012224009277.png)
 
-![image-20211012224104884](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012224104884.png)
+![image-20211012224104884](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012224104884.png)
 
 ## LOS 41.i: Calculate management fees, carried interest, net asset value, distributed to paid in (DPI), residual value to paid in (RVPI), and total value to paid in (TVPI) of a private equity fund.
 
-![image-20211012224114211](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012224114211.png)
+![image-20211012224114211](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012224114211.png)
 
-![image-20211012224122454](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012224122454.png)
+![image-20211012224122454](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012224122454.png)
 $$
 \\\operatorname{NAV before distribution}_{t} = \operatorname{NAV after distribution}_{t-1} + \operatorname{capital called down}_{t} - \operatorname{management fees}_{t} \pm\operatorname{Operation result}_{t}
 \\\operatorname{NAV before distribution} - \operatorname{GP carry} - \operatorname{LP distribution} = \operatorname{NAV after distribution}
 $$
-![image-20211012224354594](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012224354594.png)
+![image-20211012224354594](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012224354594.png)
 
 ## LOS 41.j: Calculate pre-money valuation, post-money valuation, ownership fraction, and price per share applying the venture capital method 1) with single and multiple financing rounds and 2) in terms of IRR.
 
 ### Venture capital (VC) method
 
-![](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012224454189.png)
+![](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012224454189.png)
 
-![image-20211012224507257](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012224507257.png)
+![image-20211012224507257](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012224507257.png)
 
-![image-20211012224512707](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012224512707.png)
+![image-20211012224512707](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012224512707.png)
 
 ## LOS 41.k: Demonstrate alternative methods to account for risk in venture capital.
 
@@ -1102,7 +1102,7 @@ $$
 $$
 Alternatively, the investor could have deflated each future cash flow for the cumulative probability that the company will fail. The adjusted discount rate approach is more straightforward.
 
-![image-20211012225115729](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012225115729.png)
+![image-20211012225115729](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012225115729.png)
 
 ### Adjusting the terminal value using scenario analysis
 
@@ -1113,7 +1113,7 @@ Difficulties
 1.   진정으로 유사한 comparable 찾기 어려움
 2.   volatile multiple <- scenario analysis 적용
 
-![image-20211012225254131](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012225254131.png)
+![image-20211012225254131](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012225254131.png)
 
 In summary, VC valuation is highly dependent on the assumption used and how risk is accounted for. Additionally, scenario and sensitivity analysis should be used to determine how changes in the input variables will affect the valuation of the company.
 
@@ -1243,7 +1243,7 @@ Commodity regulators are responsible for the regulation of commodities markets a
 
 ## LOS 42.e: Analyze the relationship between spot prices and future prices in markets in contango and markets in backwardation.
 
-![image-20211012235307425](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211012235307425.png)
+![image-20211012235307425](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012235307425.png)
 
 The difference between the spot (cash) market price and the futures price for a date in the future in referred to as the basis of the particular contract. The difference between the futures price of a nearer maturity and the futures price of a more-distant maturity is known as the calendar spread.
 
@@ -1278,7 +1278,7 @@ When a future market is in contango, there is a negative returns component for l
 
 ## LOS 42.g: Describe, calculate, and interpret the components of total return for a fully collateralized commodity futures contract.
 
-![image-20211013000454237](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211013000454237.png)
+![image-20211013000454237](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211013000454237.png)
 
 An investor who desires long exposure to a commodity price will typically achieve this exposure through a derivative investment in forwards or futures.
 
@@ -1300,7 +1300,7 @@ Roll return has a relatively small impact on overall returns on commodity future
 
 ## LOS 42.i: Describe how commodity swaps are used to obtain or modify exposure to commodities.
 
-![image-20211013000543780](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211013000543780.png)
+![image-20211013000543780](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211013000543780.png)
 
 In total return swap the swap buyer (the long) will receive periodic payments based on the change in the futures price of a commodity plus the return on the collateral, in return for a series of fixed payments.
 
@@ -1314,7 +1314,7 @@ In a commodity volatility swap, the underlying factor is the volatility of the c
 
 ## LOS 42.j: Describe how the construction of commodity indexes affects index returns.
 
-![image-20211013001132649](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-10-12-CFA-Level-2-Alternative-Investment\image-20211013001132649.png)
+![image-20211013001132649](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211013001132649.png)
 
 To be most useful, an index should be investable.
 
