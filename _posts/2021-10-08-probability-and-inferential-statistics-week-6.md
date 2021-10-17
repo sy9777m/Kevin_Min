@@ -33,8 +33,6 @@ title: Probability and inferential statistics week 6
 
 ![probability_and_inferential_statistics_week_5_Page_15](/Kevin_Min/images/2021-10-08-probability-and-inferential-statistics-week-6/probability_and_inferential_statistics_week_5_Page_15.jpg)
 
- [probability_and_inferential_statistics_week_6.pdf](..\..\..\learning\SSU\2-2\probability_and_inferential_statistics_2\probability_and_inferential_statistics_week_6.pdf) 
-
 ![probability_and_inferential_statistics_week_6_Page_1](/Kevin_Min/images/2021-10-08-probability-and-inferential-statistics-week-6/probability_and_inferential_statistics_week_6_Page_1.jpg)
 
 ![probability_and_inferential_statistics_week_6_Page_2](/Kevin_Min/images/2021-10-08-probability-and-inferential-statistics-week-6/probability_and_inferential_statistics_week_6_Page_2.jpg)

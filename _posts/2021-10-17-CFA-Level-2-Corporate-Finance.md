@@ -80,7 +80,7 @@ Salvage value 고려 않고 0까지 deprecation in tax.
 
 ### Incremental cash flows
 
--   Initial investment outlay is the up-front costs associated with the project. Components are price, which includes shipping and installation (FCInv) and investment in net working capital (NWCInv)
+-   Initial investment outlay is the up-front costs associated with the project. Components are price, which includes shipping and installation (FCInv) and investment in net working capital ($\operatorname{NWCInv}$)
 
 $$
 \\\operatorname{outlay} = \operatorname{FCInv} + \operatorname{NWCInv}
