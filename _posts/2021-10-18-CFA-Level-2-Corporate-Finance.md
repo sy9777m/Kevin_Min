@@ -279,7 +279,7 @@ Residual income focuses on returns on equity and is determined by subtracting an
 $$
 \\\operatorname{residual income} = \operatorname{net income} - \operatorname{equity charge}
 \\RI_{t} = NI_{t} - r_{e}B_{t - 1}
-\\NPV = \sum_{t = 1}^{\infty}{\frac{RI_{t}}{{(1 + r_{e})^{t}}}}
+\\NPV = \sum_{t = 1}^{\infty}{\frac{RI_{t}}{(1 + r_{e})^{t}}}
 $$
 The residual income approach focuses only on returns on equityholders; therefore, the appropriate discount rate is the required return on equity.
 
