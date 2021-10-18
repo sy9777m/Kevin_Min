@@ -110,9 +110,122 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#digital-system-circuits-week-7">Digital System Circuits Week 7</a></li>
+<li class="toc-entry toc-h1"><a href="#digital-system-circuits-week-7">Digital System Circuits Week 7</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#what-is-an-hdl">What is an HDL?</a></li>
+<li class="toc-entry toc-h2"><a href="#what-is-synthesis">What is synthesis?</a></li>
+<li class="toc-entry toc-h2"><a href="#why-use-an-hdl">Why use an HDL?</a></li>
+<li class="toc-entry toc-h2"><a href="#other-important-hdl-features">Other important HDL features</a></li>
+<li class="toc-entry toc-h2"><a href="#hardware-implementations">Hardware implementations</a></li>
+<li class="toc-entry toc-h2"><a href="#hardware-building-blocks">Hardware building blocks</a></li>
+<li class="toc-entry toc-h2"><a href="#standard-cells">Standard cells</a></li>
+<li class="toc-entry toc-h2"><a href="#fpgas">FPGAs</a></li>
+<li class="toc-entry toc-h2"><a href="#what-is-a-netlist">What is a Netlist?</a></li>
+<li class="toc-entry toc-h2"><a href="#verilog-module">Verilog module</a></li>
+<li class="toc-entry toc-h2"><a href="#karnaugh-maps-for-two-level-size-optimization">Karnaugh Maps for Two-level size optimization</a></li>
+<li class="toc-entry toc-h2"><a href="#k-maps">K-maps</a></li>
+<li class="toc-entry toc-h2"><a href="#two-level-size-optimization-using-k-maps">Two-level size optimization using K-maps</a></li>
+<li class="toc-entry toc-h2"><a href="#dont-care-input-combinations">Don’t care input combinations</a></li>
+</ul>
+</li>
 </ul><h1 id="digital-system-circuits-week-7">
 <a class="anchor" href="#digital-system-circuits-week-7" aria-hidden="true"><span class="octicon octicon-link"></span></a>Digital System Circuits Week 7</h1>
+
+<h2 id="what-is-an-hdl">
+<a class="anchor" href="#what-is-an-hdl" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is an HDL?</h2>
+
+<p>HDL = Hardware Description Language</p>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018084333616.png" alt="image-20211018084333616"></p>
+
+<h2 id="what-is-synthesis">
+<a class="anchor" href="#what-is-synthesis" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is synthesis?</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018084430524.png" alt="image-20211018084430524"></p>
+
+<p>Net list</p>
+
+<h2 id="why-use-an-hdl">
+<a class="anchor" href="#why-use-an-hdl" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why use an HDL?</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018084548539.png" alt="image-20211018084548539"></p>
+
+<h2 id="other-important-hdl-features">
+<a class="anchor" href="#other-important-hdl-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other important HDL features</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018085017419.png" alt="image-20211018085017419"></p>
+
+<ul>
+  <li>Serve as input for synthesis tools</li>
+</ul>
+
+<h2 id="hardware-implementations">
+<a class="anchor" href="#hardware-implementations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hardware implementations</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018085503030.png" alt="image-20211018085503030"></p>
+
+<h2 id="hardware-building-blocks">
+<a class="anchor" href="#hardware-building-blocks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hardware building blocks</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018090138632.png" alt="image-20211018090138632"></p>
+
+<h2 id="standard-cells">
+<a class="anchor" href="#standard-cells" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard cells</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018090219746.png" alt="image-20211018090219746"></p>
+
+<h2 id="fpgas">
+<a class="anchor" href="#fpgas" aria-hidden="true"><span class="octicon octicon-link"></span></a>FPGAs</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018090432186.png" alt="image-20211018090432186"></p>
+
+<h2 id="what-is-a-netlist">
+<a class="anchor" href="#what-is-a-netlist" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is a Netlist?</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018090447851.png" alt="image-20211018090447851"></p>
+
+<h2 id="verilog-module">
+<a class="anchor" href="#verilog-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>Verilog module</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018090657522.png" alt="image-20211018090657522"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018090718849.png" alt="image-20211018090718849"></p>
+
+<h2 id="karnaugh-maps-for-two-level-size-optimization">
+<a class="anchor" href="#karnaugh-maps-for-two-level-size-optimization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Karnaugh Maps for Two-level size optimization</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018092000735.png" alt="image-20211018092000735"></p>
+
+<h2 id="k-maps">
+<a class="anchor" href="#k-maps" aria-hidden="true"><span class="octicon octicon-link"></span></a>K-maps</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018091853424.png" alt="image-20211018091853424"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018092401575.png" alt="image-20211018092401575"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018092744449.png" alt="image-20211018092744449"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018092818681.png" alt="image-20211018092818681"></p>
+
+<p>circle 하나 당 term 하나 -&gt; 최대한 큰 circle 하나를 그리는 것이 식이 간단해짐</p>
+
+<h2 id="two-level-size-optimization-using-k-maps">
+<a class="anchor" href="#two-level-size-optimization-using-k-maps" aria-hidden="true"><span class="octicon octicon-link"></span></a>Two-level size optimization using K-maps</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018093005514.png" alt="image-20211018093005514"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018093131691.png" alt="image-20211018093131691"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018093138860.png" alt="image-20211018093138860"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018093301896.png" alt="image-20211018093301896"></p>
+
+<h2 id="dont-care-input-combinations">
+<a class="anchor" href="#dont-care-input-combinations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Don’t care input combinations</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-18-digital-system-circuits-week-7/image-20211018093520452.png" alt="image-20211018093520452"></p>
+
+<p>X는 1에도 포함 될 수도 있고, 0에도 포함 될 수 있다.</p>
 
 
   </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/18/digital-system-circuits-week-7.html" hidden></a>
