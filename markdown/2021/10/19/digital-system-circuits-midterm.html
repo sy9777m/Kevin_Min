@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Digital System Circuits midterm | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Digital System Circuits midterm" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 Digital System Circuits midterm." />
+<meta property="og:description" content="Soongsil University 2-2 Digital System Circuits midterm." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/19/digital-system-circuits-midterm.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/19/digital-system-circuits-midterm.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-19T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-10-19T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/19/digital-system-circuits-midterm.html","@type":"BlogPosting","headline":"Digital System Circuits midterm","dateModified":"2021-10-19T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/19/digital-system-circuits-midterm.html"},"description":"Soongsil University 2-2 Digital System Circuits midterm.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Digital System Circuits midterm</h1><p class="page-description">Soongsil University 2-2 Digital System Circuits midterm.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-19T00:00:00-05:00" itemprop="datePublished">
+        Oct 19, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      9 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#digital-system-circuits-midterm">Digital System Circuits Midterm</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#what-does-digital-mean">What does ‘digital’ mean?</a></li>
+<li class="toc-entry toc-h2"><a href="#digital-signals-with-only-two-values-binary">Digital signals with only two values: binary</a></li>
+<li class="toc-entry toc-h2"><a href="#how-to-encode-text-ascii-unicode">How to encode text: ASCII, Unicode</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#ascii-american-standard-code-for-information-interchange">ASCII (American Standard Code for Information Interchange)</a></li>
+<li class="toc-entry toc-h3"><a href="#unicode-universal-code-system">Unicode (Universal Code system)</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#how-to-encode-numbers-binary-numbers">How to encode numbers: binary numbers</a></li>
+<li class="toc-entry toc-h2"><a href="#using-digital-data-in-a-digital-system">Using digital data in a digital system</a></li>
+<li class="toc-entry toc-h2"><a href="#converting-from-binary-to-decimal">Converting from binary to decimal</a></li>
+<li class="toc-entry toc-h2"><a href="#hexadecimal-hex">Hexadecimal, hex</a></li>
+<li class="toc-entry toc-h2"><a href="#bytes-kilobytes-megabytes-and-more">Bytes, Kilobytes, Megabytes, and more</a></li>
+<li class="toc-entry toc-h2"><a href="#implementing-digital-systems-programming-microprocessors-vs-designing-digital-circuits">Implementing digital systems: programming microprocessors vs. designing digital circuits</a></li>
+<li class="toc-entry toc-h2"><a href="#digital-design-when-microprocessors-arent-good-enough">Digital design: When microprocessors aren’t good enough</a></li>
+<li class="toc-entry toc-h2"><a href="#switches">Switches</a></li>
+<li class="toc-entry toc-h2"><a href="#the-cmos-transistor">The CMOS transistor</a></li>
+<li class="toc-entry toc-h2"><a href="#boolean-logic-gates---building-blocks-for-digital-circuits">Boolean logic gates - building blocks for digital circuits</a></li>
+<li class="toc-entry toc-h2"><a href="#boolean-algebra-and-its-relation-to-digital-circuits">Boolean Algebra and its relation to digital circuits</a></li>
+<li class="toc-entry toc-h2"><a href="#relating-boolean-algebra-to-digital-design">Relating Boolean Algebra to digital design</a></li>
+<li class="toc-entry toc-h2"><a href="#not-gate">NOT gate</a></li>
+<li class="toc-entry toc-h2"><a href="#or-gate">OR gate</a></li>
+<li class="toc-entry toc-h2"><a href="#and-gate">AND gate</a></li>
+<li class="toc-entry toc-h2"><a href="#example-that-applies-boolean-algebra-properties">Example that applies Boolean Algebra properties</a></li>
+<li class="toc-entry toc-h2"><a href="#truth-table-representation-of-boolean-functions">Truth table representation of Boolean functions</a></li>
+<li class="toc-entry toc-h2"><a href="#converting-among-representations">Converting among representations</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#converting-from-truth-table-to-equation">Converting from truth table to equation</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#standard-representation-truth-table">Standard representation: Truth table</a></li>
+<li class="toc-entry toc-h2"><a href="#canonical-form---sum-of-minterms">Canonical form - sum of minterms</a></li>
+<li class="toc-entry toc-h2"><a href="#combinational-logic-design-process">Combinational logic design process</a></li>
+<li class="toc-entry toc-h2"><a href="#example-keypad-converter">Example: Keypad converter</a></li>
+<li class="toc-entry toc-h2"><a href="#example-sprinkler-controller">Example: Sprinkler controller</a></li>
+<li class="toc-entry toc-h2"><a href="#more-gates">More gates</a></li>
+<li class="toc-entry toc-h2"><a href="#completeness-of-nand">Completeness of NAND</a></li>
+<li class="toc-entry toc-h2"><a href="#number-of-possible-boolean-functions">Number of possible boolean functions</a></li>
+<li class="toc-entry toc-h2"><a href="#decoders-and-muxes">Decoders and Muxes</a></li>
+<li class="toc-entry toc-h2"><a href="#multiplexor-mux">Multiplexor (Mux)</a></li>
+<li class="toc-entry toc-h2"><a href="#additional-considerations---non-ideal-gate-behavior---delay">Additional considerations - non-ideal gate behavior - delay</a></li>
+<li class="toc-entry toc-h2"><a href="#circuit-delay-and-critical-path">Circuit delay and critical path</a></li>
+<li class="toc-entry toc-h2"><a href="#active-low-inputs">Active low inputs</a></li>
+<li class="toc-entry toc-h2"><a href="#schematic-capture-and-simulation">Schematic capture and simulation</a></li>
+<li class="toc-entry toc-h2"><a href="#boolean-algebra-properties">Boolean algebra properties</a></li>
+<li class="toc-entry toc-h2"><a href="#example-that-applies-boolean-algebra-properties-1">Example that applies Boolean algebra properties</a></li>
+<li class="toc-entry toc-h2"><a href="#example-applying-demorgans-law">Example applying DeMorgan’s Law</a></li>
+<li class="toc-entry toc-h2"><a href="#example-applying-properties">Example applying properties</a></li>
+<li class="toc-entry toc-h2"><a href="#complement-of-a-function">Complement of a function</a></li>
+<li class="toc-entry toc-h2"><a href="#introduction-to-optimization-of-digital-logic-design">Introduction to optimization of digital logic design</a></li>
+<li class="toc-entry toc-h2"><a href="#tradeoff">Tradeoff</a></li>
+<li class="toc-entry toc-h2"><a href="#optimization-and-tradeoff">Optimization and tradeoff</a></li>
+<li class="toc-entry toc-h2"><a href="#combinational-logic-optimization-and-tradeoffs">Combinational logic optimization and tradeoffs</a></li>
+<li class="toc-entry toc-h2"><a href="#karnaugh-maps-for-two-level-size-optimization">Karnaugh maps for two-level size optimization</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#general-k-map-method">General K-map method</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#dont-care-input-combinations">Don’t care input combinations</a></li>
+<li class="toc-entry toc-h2"><a href="#digital-design-process">Digital design process</a></li>
+<li class="toc-entry toc-h2"><a href="#what-is-an-hdl">What is an HDL?</a></li>
+<li class="toc-entry toc-h2"><a href="#simulatingvalidating-hdl">Simulating/Validating HDL</a></li>
+<li class="toc-entry toc-h2"><a href="#what-is-synthesis">What is synthesis?</a></li>
+<li class="toc-entry toc-h2"><a href="#synthesizing-the-hardware-described">Synthesizing the hardware described</a></li>
+<li class="toc-entry toc-h2"><a href="#why-use-an-hdl">Why use an HDL?</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#portable-design">Portable design</a></li>
+<li class="toc-entry toc-h3"><a href="#explore-large-solution-space">Explore large solution space</a></li>
+<li class="toc-entry toc-h3"><a href="#other-important-hdl-features">Other important HDL features</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#hardware-implementations">Hardware implementations</a></li>
+<li class="toc-entry toc-h2"><a href="#standard-cells">Standard cells</a></li>
+<li class="toc-entry toc-h2"><a href="#fpgas">FPGAs</a></li>
+<li class="toc-entry toc-h2"><a href="#what-is-a-netlist">What is a Netlist?</a></li>
+<li class="toc-entry toc-h2"><a href="#combinational-logic">Combinational logic</a></li>
+<li class="toc-entry toc-h2"><a href="#verilog-module">Verilog module</a></li>
+</ul>
+</li>
+</ul><h1 id="digital-system-circuits-midterm">
+<a class="anchor" href="#digital-system-circuits-midterm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Digital System Circuits Midterm</h1>
+
+<h2 id="what-does-digital-mean">
+<a class="anchor" href="#what-does-digital-mean" aria-hidden="true"><span class="octicon octicon-link"></span></a>What does ‘digital’ mean?</h2>
+
+<p>Digital signal - signal that at any time one of a finite of possible values</p>
+
+<p>Analog signal or Continuous signal - one of any infinite of possible values</p>
+
+<p>Analog signal -&gt; sampling, quantization, coding -&gt; digital signal</p>
+
+<h2 id="digital-signals-with-only-two-values-binary">
+<a class="anchor" href="#digital-signals-with-only-two-values-binary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Digital signals with only two values: binary</h2>
+
+<p>A single binary signal: binary digit or bit</p>
+
+<p>Typically represented as 0 and 1, on or off</p>
+
+<p>Digital system - takes digital input, generates digital output</p>
+
+<p>Digital circuit - digital components that together comprise a digital system</p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019142744917.png" alt="image-20211019142744917"></p>
+
+<h2 id="how-to-encode-text-ascii-unicode">
+<a class="anchor" href="#how-to-encode-text-ascii-unicode" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to encode text: ASCII, Unicode</h2>
+
+<h3 id="ascii-american-standard-code-for-information-interchange">
+<a class="anchor" href="#ascii-american-standard-code-for-information-interchange" aria-hidden="true"><span class="octicon octicon-link"></span></a>ASCII (American Standard Code for Information Interchange)</h3>
+
+<p>7- (or 8-) bit encoding of each letter, number, or symbol</p>
+
+<h3 id="unicode-universal-code-system">
+<a class="anchor" href="#unicode-universal-code-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unicode (Universal Code system)</h3>
+
+<p>Increasingly popular 16-bit encoding</p>
+
+<p>데이터 교환을 원활하게 하기 위하여 문자 1개에 부여되는 값을 16bit으로 통일</p>
+
+<h2 id="how-to-encode-numbers-binary-numbers">
+<a class="anchor" href="#how-to-encode-numbers-binary-numbers" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to encode numbers: binary numbers</h2>
+
+<p>Most important use of digital circuit - perform arithmetic computations</p>
+
+<p>to perform arithmetic computation -&gt; encode numbers as bits</p>
+
+<h2 id="using-digital-data-in-a-digital-system">
+<a class="anchor" href="#using-digital-data-in-a-digital-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using digital data in a digital system</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019143049569.png" alt="image-20211019143049569"></p>
+
+<h2 id="converting-from-binary-to-decimal">
+<a class="anchor" href="#converting-from-binary-to-decimal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting from binary to decimal</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019143143025.png" alt="image-20211019143143025"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019143152970.png" alt="image-20211019143152970"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019143202562.png" alt="image-20211019143202562"></p>
+
+<h2 id="hexadecimal-hex">
+<a class="anchor" href="#hexadecimal-hex" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hexadecimal, hex</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019143232866.png" alt="image-20211019143232866"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019143917198.png" alt="image-20211019143917198"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019143934759.png" alt="image-20211019143934759"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019143945772.png" alt="image-20211019143945772"></p>
+
+<h2 id="bytes-kilobytes-megabytes-and-more">
+<a class="anchor" href="#bytes-kilobytes-megabytes-and-more" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bytes, Kilobytes, Megabytes, and more</h2>
+
+<p>1 Byte = 8 bits</p>
+
+<p>1KB = $2^{10}$ bytes</p>
+
+<p>KB for kilobyte vs. Kb for kilobit</p>
+
+<h2 id="implementing-digital-systems-programming-microprocessors-vs-designing-digital-circuits">
+<a class="anchor" href="#implementing-digital-systems-programming-microprocessors-vs-designing-digital-circuits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementing digital systems: programming microprocessors vs. designing digital circuits</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019144427248.png" alt="image-20211019144427248"></p>
+
+<h2 id="digital-design-when-microprocessors-arent-good-enough">
+<a class="anchor" href="#digital-design-when-microprocessors-arent-good-enough" aria-hidden="true"><span class="octicon octicon-link"></span></a>Digital design: When microprocessors aren’t good enough</h2>
+
+<p>With Microprocessors so easy, cheap, and available, why design a digital circuit?</p>
+
+<ul>
+  <li>Microprocessor may be to slow</li>
+  <li>or too big, power hungry, or costly</li>
+</ul>
+
+<p>Commonly, designers partition a system among a microprocessor and custom digital circuits</p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019144639391.png" alt="image-20211019144639391"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019144643649.png" alt="image-20211019144643649"></p>
+
+<p>Microprocessors (themselves digital) can implement many digital systems easily and inexpensively</p>
+
+<ul>
+  <li>but often not good enough-need custom digital circuits</li>
+</ul>
+
+<h2 id="switches">
+<a class="anchor" href="#switches" aria-hidden="true"><span class="octicon octicon-link"></span></a>Switches</h2>
+
+<p>Electronic switches are the basis of binary digital circuits</p>
+
+<p>Voltage - difference in electric potential between two points</p>
+
+<p>Resistance - tendency of wire to resist current flow</p>
+
+<p>Current - flow of charged particles</p>
+
+<p>A switch has three parts</p>
+
+<ul>
+  <li>Source input, and output - current tries to flow from source input to output</li>
+  <li>Control input - voltage that controls whether that current can flow</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019144910074.png" alt="image-20211019144910074"></p>
+
+<h2 id="the-cmos-transistor">
+<a class="anchor" href="#the-cmos-transistor" aria-hidden="true"><span class="octicon octicon-link"></span></a>The CMOS transistor</h2>
+
+<p>Basic switch in modern ICs</p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019144929260.png" alt="image-20211019144929260"></p>
+
+<h2 id="boolean-logic-gates---building-blocks-for-digital-circuits">
+<a class="anchor" href="#boolean-logic-gates---building-blocks-for-digital-circuits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boolean logic gates - building blocks for digital circuits</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019145027125.png" alt="image-20211019145027125"></p>
+
+<p>Logic gates are better digital circuit building blocks than switches (transistors)</p>
+
+<h2 id="boolean-algebra-and-its-relation-to-digital-circuits">
+<a class="anchor" href="#boolean-algebra-and-its-relation-to-digital-circuits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boolean Algebra and its relation to digital circuits</h2>
+
+<p>Variables represent 0 or 1 only</p>
+
+<p>Operators return 0 or 1 only</p>
+
+<p>Basic operators</p>
+
+<ul>
+  <li>AND</li>
+  <li>OR</li>
+  <li>NOT</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019145129771.png" alt="image-20211019145129771"></p>
+
+<h2 id="relating-boolean-algebra-to-digital-design">
+<a class="anchor" href="#relating-boolean-algebra-to-digital-design" aria-hidden="true"><span class="octicon octicon-link"></span></a>Relating Boolean Algebra to digital design</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019145214878.png" alt="image-20211019145214878"></p>
+
+<h2 id="not-gate">
+<a class="anchor" href="#not-gate" aria-hidden="true"><span class="octicon octicon-link"></span></a>NOT gate</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019145355561.png" alt="image-20211019145355561"></p>
+
+<h2 id="or-gate">
+<a class="anchor" href="#or-gate" aria-hidden="true"><span class="octicon octicon-link"></span></a>OR gate</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019145417114.png" alt="image-20211019145417114"></p>
+
+<h2 id="and-gate">
+<a class="anchor" href="#and-gate" aria-hidden="true"><span class="octicon octicon-link"></span></a>AND gate</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019145437083.png" alt="image-20211019145437083"></p>
+
+<h2 id="example-that-applies-boolean-algebra-properties">
+<a class="anchor" href="#example-that-applies-boolean-algebra-properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example that applies Boolean Algebra properties</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019150627132.png" alt="image-20211019150627132"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019150731693.png" alt="image-20211019150731693"></p>
+
+<h2 id="truth-table-representation-of-boolean-functions">
+<a class="anchor" href="#truth-table-representation-of-boolean-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Truth table representation of Boolean functions</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019150804826.png" alt="image-20211019150804826"></p>
+
+<p>Define value for F for each possible combination of input values</p>
+
+<ul>
+  <li>2-input function: 4 rows</li>
+  <li>3-input function: 8 rows</li>
+  <li>4-input function: 16 rows</li>
+</ul>
+
+<h2 id="converting-among-representations">
+<a class="anchor" href="#converting-among-representations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting among representations</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019151016513.png" alt="image-20211019151016513"></p>
+
+<h3 id="converting-from-truth-table-to-equation">
+<a class="anchor" href="#converting-from-truth-table-to-equation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting from truth table to equation</h3>
+
+<p>Parity bit - Extra bit added to data, intended to enable detection of error (a bit changed unintentionally)</p>
+
+<p>Even parity - set parity bit so total number of 1s (data + parity) is even</p>
+
+<h2 id="standard-representation-truth-table">
+<a class="anchor" href="#standard-representation-truth-table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard representation: Truth table</h2>
+
+<p>Only one truth table representation of a given function</p>
+
+<ul>
+  <li>Standard representation-for given function, only one version in standard form exists</li>
+</ul>
+
+<h2 id="canonical-form---sum-of-minterms">
+<a class="anchor" href="#canonical-form---sum-of-minterms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Canonical form - sum of minterms</h2>
+
+<p>Truth table too big for numerous inputs</p>
+
+<p>Use standard form of equation instead</p>
+
+<ul>
+  <li>Known as canonical form</li>
+  <li>Boolean algebra - create sum of minterms
+    <ul>
+      <li>minterms - product term with every function literal appearing exactly once, in true or complemented form</li>
+      <li>Just multiply-out equation until sum of product terms</li>
+      <li>Then expand each term until all terms are minterms</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="combinational-logic-design-process">
+<a class="anchor" href="#combinational-logic-design-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Combinational logic design process</h2>
+
+<ol>
+  <li>Capture behavior - Capture the function</li>
+</ol>
+
+<p>Create a truth table or equations, whichever is most natural for the given problem, to describe the desired behavior of each output of the combinational logic.</p>
+
+<ol>
+  <li>
+    <p>Convert to circuit</p>
+
+    <ol>
+      <li>
+        <p>Create equations</p>
+
+        <p>This substep is only necessary if you captured the function using a truth table instead of equations. Create an equation for each output by ORing all the minterms for that output. Simplify the equations if desired.</p>
+      </li>
+      <li>
+        <p>Implement as a get-based circuit</p>
+
+        <p>For each output, create a circuit corresponding to the output’s equation. (Sharing gates among multiple outputs is OK optionally)</p>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="example-keypad-converter">
+<a class="anchor" href="#example-keypad-converter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example: Keypad converter</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019153813107.png" alt="image-20211019153813107"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019153818241.png" alt="image-20211019153818241"></p>
+
+<h2 id="example-sprinkler-controller">
+<a class="anchor" href="#example-sprinkler-controller" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example: Sprinkler controller</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019153832137.png" alt="image-20211019153832137"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019153936469.png" alt="image-20211019153936469"></p>
+
+<h2 id="more-gates">
+<a class="anchor" href="#more-gates" aria-hidden="true"><span class="octicon octicon-link"></span></a>More gates</h2>
+
+<p>NAND - Opposite of AND</p>
+
+<p>NOR - Opposite of OR</p>
+
+<p>XOR - Exactly 1 input is 1, for 2-input XOR</p>
+
+<p>XNOR - Opposite of XOR (‘NOT XOR’)</p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019154029357.png" alt="image-20211019154029357"></p>
+
+<h2 id="completeness-of-nand">
+<a class="anchor" href="#completeness-of-nand" aria-hidden="true"><span class="octicon octicon-link"></span></a>Completeness of NAND</h2>
+
+<p>Any boolean function can be implemented using just NAND gates.</p>
+
+<ul>
+  <li>NOT - 1-input NAND</li>
+  <li>AND - NAND followed by NOT</li>
+  <li>OR - NAND preceded by NOTs</li>
+</ul>
+
+<h2 id="number-of-possible-boolean-functions">
+<a class="anchor" href="#number-of-possible-boolean-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Number of possible boolean functions</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019154401521.png" alt="image-20211019154401521"></p>
+
+<h2 id="decoders-and-muxes">
+<a class="anchor" href="#decoders-and-muxes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Decoders and Muxes</h2>
+
+<p>Decoder - popular combinational logic building block, in addition to logic gates</p>
+
+<ul>
+  <li>Convert input binary number to one high output</li>
+  <li>2-input decoder: four possible input binary numbers</li>
+  <li>n-input decoder: $2^{n}$ outputs</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019154603116.png" alt="image-20211019154603116"></p>
+
+<h2 id="multiplexor-mux">
+<a class="anchor" href="#multiplexor-mux" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiplexor (Mux)</h2>
+
+<p>Routes one of its N data inputs to its one output, based on binary value of select inputs</p>
+
+<ul>
+  <li>4 input mux -&gt; needs 2 select inputs to indicate which input to route through</li>
+  <li>8 input mux -&gt; 3 select inputs</li>
+  <li>N inputs -&gt; $\log_{2}{N}$ selects</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019154756284.png" alt="image-20211019154756284"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019154825139.png" alt="image-20211019154825139"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019154835456.png" alt="image-20211019154835456"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019154949871.png" alt="image-20211019154949871"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019155001367.png" alt="image-20211019155001367"></p>
+
+<h2 id="additional-considerations---non-ideal-gate-behavior---delay">
+<a class="anchor" href="#additional-considerations---non-ideal-gate-behavior---delay" aria-hidden="true"><span class="octicon octicon-link"></span></a>Additional considerations - non-ideal gate behavior - delay</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019155103235.png" alt="image-20211019155103235"></p>
+
+<h2 id="circuit-delay-and-critical-path">
+<a class="anchor" href="#circuit-delay-and-critical-path" aria-hidden="true"><span class="octicon octicon-link"></span></a>Circuit delay and critical path</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019155118740.png" alt="image-20211019155118740"></p>
+
+<h2 id="active-low-inputs">
+<a class="anchor" href="#active-low-inputs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Active low inputs</h2>
+
+<p>Data inputs - flow through component</p>
+
+<p>Control input - influence component behavior</p>
+
+<ul>
+  <li>Normally active high - 1 causes input to carry out its purpose</li>
+  <li>Active low - Instead, 0 causes input to carry out its purpose</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019155317792.png" alt="image-20211019155317792"></p>
+
+<h2 id="schematic-capture-and-simulation">
+<a class="anchor" href="#schematic-capture-and-simulation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Schematic capture and simulation</h2>
+
+<p>Schematic capture - computer tool for user to capture logic circuit graphically</p>
+
+<p>Simulator - computer tool to show what circuit outputs would be for given inputs</p>
+
+<ul>
+  <li>outputs commonly displayed as waveform</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019155433412.png" alt="image-20211019155433412"></p>
+
+<h2 id="boolean-algebra-properties">
+<a class="anchor" href="#boolean-algebra-properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boolean algebra properties</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019155449646.png" alt="image-20211019155449646"></p>
+
+<h2 id="example-that-applies-boolean-algebra-properties-1">
+<a class="anchor" href="#example-that-applies-boolean-algebra-properties-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example that applies Boolean algebra properties</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019155513430.png" alt="image-20211019155513430"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019155525955.png" alt="image-20211019155525955"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019155533495.png" alt="image-20211019155533495"></p>
+
+<h2 id="example-applying-demorgans-law">
+<a class="anchor" href="#example-applying-demorgans-law" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example applying DeMorgan’s Law</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019155551514.png" alt="image-20211019155551514"></p>
+
+<h2 id="example-applying-properties">
+<a class="anchor" href="#example-applying-properties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example applying properties</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019155604379.png" alt="image-20211019155604379"></p>
+
+<h2 id="complement-of-a-function">
+<a class="anchor" href="#complement-of-a-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Complement of a function</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019155641260.png" alt="image-20211019155641260"></p>
+
+<h2 id="introduction-to-optimization-of-digital-logic-design">
+<a class="anchor" href="#introduction-to-optimization-of-digital-logic-design" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to optimization of digital logic design</h2>
+
+<p>Delay - the time from inputs changing to new correct stable output</p>
+
+<p>Size - the number of transistors</p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019161704366.png" alt="image-20211019161704366"></p>
+
+<h2 id="tradeoff">
+<a class="anchor" href="#tradeoff" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tradeoff</h2>
+
+<p>Improves some, but worsens other, criteria of interest</p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019161711162.png" alt="image-20211019161711162"></p>
+
+<h2 id="optimization-and-tradeoff">
+<a class="anchor" href="#optimization-and-tradeoff" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimization and tradeoff</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019161722998.png" alt="image-20211019161722998"></p>
+
+<h2 id="combinational-logic-optimization-and-tradeoffs">
+<a class="anchor" href="#combinational-logic-optimization-and-tradeoffs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Combinational logic optimization and tradeoffs</h2>
+
+<p>Two-level size optimization using algebraic methods</p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019161833339.png" alt="image-20211019161833339"></p>
+
+<ul>
+  <li>Sum-of-products yield two levels</li>
+  <li>Transform sum-of-products equation to have fewest literals and terms</li>
+</ul>
+
+<h2 id="karnaugh-maps-for-two-level-size-optimization">
+<a class="anchor" href="#karnaugh-maps-for-two-level-size-optimization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Karnaugh maps for two-level size optimization</h2>
+
+<p>Easy to miss possible opportunities to combine terms when doing algebraically</p>
+
+<p>Karnaugh Maps (K-maps)</p>
+
+<ul>
+  <li>Graphical method to help us find opportunities to combine terms</li>
+  <li>Minterms differing in one variable are adjacent in the map</li>
+  <li>Can clearly see opportunities to combine terms</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019162046523.png" alt="image-20211019162046523"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019162056139.png" alt="image-20211019162056139"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019162103174.png" alt="image-20211019162103174"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019162110035.png" alt="image-20211019162110035"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019162117868.png" alt="image-20211019162117868"></p>
+
+<h3 id="general-k-map-method">
+<a class="anchor" href="#general-k-map-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>General K-map method</h3>
+
+<ol>
+  <li>Convert the function’s equation into sum-of-minterms form</li>
+  <li>Place 1s in the appropriate K-map cells for each minterm</li>
+  <li>Cover all 1s by drawing the fewest largest circles, with every 1 included at least once; write the corresponding term for each circle</li>
+  <li>OR all the resulting terms to create the minimized function</li>
+</ol>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019162257738.png" alt="image-20211019162257738"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019162303804.png" alt="image-20211019162303804"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019162317921.png" alt="image-20211019162317921"></p>
+
+<h2 id="dont-care-input-combinations">
+<a class="anchor" href="#dont-care-input-combinations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Don’t care input combinations</h2>
+
+<p>What if we know that particular input combinations can never occur?</p>
+
+<ul>
+  <li>On K-map
+    <ul>
+      <li>Draw Xs for don’t care combinations
+        <ul>
+          <li>Include X in circle ONLY if minimizes equation</li>
+          <li>Don’t include other Xs</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019162415602.png" alt="image-20211019162415602"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019162442823.png" alt="image-20211019162442823"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019162512356.png" alt="image-20211019162512356"></p>
+
+<h2 id="digital-design-process">
+<a class="anchor" href="#digital-design-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Digital design process</h2>
+
+<p>Specification - planning - design entry - functional test - synthesis - post-synthesis test - APR, Parasitic Extraction &amp; Timing checks - Manufacture &amp; hardware validation</p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019162758455.png" alt="image-20211019162758455"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019162808160.png" alt="image-20211019162808160"></p>
+
+<h2 id="what-is-an-hdl">
+<a class="anchor" href="#what-is-an-hdl" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is an HDL?</h2>
+
+<p>HDL = Hardware Description Language</p>
+
+<ul>
+  <li>Allows for modeling &amp; simulation (with timing) of digital design</li>
+  <li>Can be synthesized into hardware (netlist) by synthesis tools (Synopsys, Ambit, FPGA compilers)</li>
+  <li>Two major standard in industry &amp; academia
+    <ul>
+      <li>Verilog - flexible, loose, more common</li>
+      <li>VHDL - strongly typed, more common in defense and automotive</li>
+    </ul>
+  </li>
+  <li>It looks like a programming language.</li>
+  <li>It is not a programming language.
+    <ul>
+      <li>It is always critical to recall you are describing hardware.</li>
+      <li>This code’s primary purpose is to generate hardware.</li>
+      <li>The hardware this code describes (a counter) can be simulated on a computer. In this secondary use of the language, it does act more like programming language.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="simulatingvalidating-hdl">
+<a class="anchor" href="#simulatingvalidating-hdl" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulating/Validating HDL</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019163149377.png" alt="image-20211019163149377"></p>
+
+<h2 id="what-is-synthesis">
+<a class="anchor" href="#what-is-synthesis" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is synthesis?</h2>
+
+<ul>
+  <li>Takes a description of what a circuit does.</li>
+  <li>Creates the hardware to do it.</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019163252484.png" alt="image-20211019163252484"></p>
+
+<h2 id="synthesizing-the-hardware-described">
+<a class="anchor" href="#synthesizing-the-hardware-described" aria-hidden="true"><span class="octicon octicon-link"></span></a>Synthesizing the hardware described</h2>
+
+<ul>
+  <li>All hardware created during synthesis</li>
+</ul>
+
+<h2 id="why-use-an-hdl">
+<a class="anchor" href="#why-use-an-hdl" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why use an HDL?</h2>
+
+<p>Enables larger design via rich syntax, modularity</p>
+
+<ul>
+  <li>more abstract than schematics, allows larger designs
+    <ul>
+      <li>register transfer level description</li>
+      <li>wide datapath can be abstracted to a single vector</li>
+      <li>synthesis tool does the bulk of the tedious repetitive work vs. schematic capture</li>
+    </ul>
+  </li>
+  <li>Work at transistor/gate level for large designs - cumbersome</li>
+</ul>
+
+<h3 id="portable-design">
+<a class="anchor" href="#portable-design" aria-hidden="true"><span class="octicon octicon-link"></span></a>Portable design</h3>
+
+<p>Behavioral or dataflow Verilog can be synthesized to a new process library with little effort.</p>
+
+<p>Verilog written in ASCII text. The ultimate in portability. Much more portable than the binary files of a GUI schematic capture tool.</p>
+
+<h3 id="explore-large-solution-space">
+<a class="anchor" href="#explore-large-solution-space" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explore large solution space</h3>
+
+<p>Synthesis options can help optimize (power, area, speed)</p>
+
+<p>Synthesis options and coding styles can help examine tradeoffs</p>
+
+<ul>
+  <li>speed</li>
+  <li>power</li>
+  <li>area</li>
+</ul>
+
+<p>Better validated designs</p>
+
+<ul>
+  <li>Verilog itself is used to create the testbench
+    <ul>
+      <li>flexible method that allows self checking tests</li>
+      <li>unified environment</li>
+    </ul>
+  </li>
+  <li>synthesis tools are very good from the boolean correctness point of view
+    <ul>
+      <li>if you have a logic error in your final design there is a 99.999% change that error exists in your behavioral code</li>
+      <li>error caused in synthesis fall in the following categories
+        <ul>
+          <li>timing</li>
+          <li>bad library definitions</li>
+          <li>bad coding style</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="other-important-hdl-features">
+<a class="anchor" href="#other-important-hdl-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Other important HDL features</h3>
+
+<ul>
+  <li>Are highly portable (text)</li>
+  <li>Are self-documenting (when commented well)</li>
+  <li>Describe multiple levels of abstraction</li>
+  <li>Represent parallelism</li>
+  <li>Provides many descriptive styles
+    <ul>
+      <li>structural</li>
+      <li>register transfer level (RTL)</li>
+      <li>behavioral</li>
+    </ul>
+  </li>
+  <li>Serve as input for synthesis tools</li>
+</ul>
+
+<h2 id="hardware-implementations">
+<a class="anchor" href="#hardware-implementations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hardware implementations</h2>
+
+<p>HDLs can be compiled to semi-custom and programmable hardware implementations</p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019164417861.png" alt="image-20211019164417861"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019164457446.png" alt="image-20211019164457446"></p>
+
+<h2 id="standard-cells">
+<a class="anchor" href="#standard-cells" aria-hidden="true"><span class="octicon octicon-link"></span></a>Standard cells</h2>
+
+<p>Library of common gates and structures (cells)</p>
+
+<p>Decompose hardware in terms of these cells</p>
+
+<p>Arrange the cells on the chip</p>
+
+<p>Connect them using metal wiring</p>
+
+<h2 id="fpgas">
+<a class="anchor" href="#fpgas" aria-hidden="true"><span class="octicon octicon-link"></span></a>FPGAs</h2>
+
+<p>Programmable hardware</p>
+
+<p>Use small memories as truth tables of functions</p>
+
+<p>Decompose circuit into these blocks</p>
+
+<p>Connect using programmable routing</p>
+
+<p>SRAM bits control functionally</p>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019164903281.png" alt="image-20211019164903281"></p>
+
+<h2 id="what-is-a-netlist">
+<a class="anchor" href="#what-is-a-netlist" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is a Netlist?</h2>
+
+<p>A netlist is a ASCII text representation of the interconnect of a schematic.</p>
+
+<p>Many standard exists</p>
+
+<ul>
+  <li>Spice netlist</li>
+  <li>EDIF (Electronic Data Interchange Format)</li>
+  <li>Structural Verilog Netlist</li>
+</ul>
+
+<h2 id="combinational-logic">
+<a class="anchor" href="#combinational-logic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Combinational logic</h2>
+
+<p>Since HDLs try to abstract hardware design, do we even have to consider the hardware?</p>
+
+<ul>
+  <li>Good hardware design requires ability to analyze a problem to find simplifications</li>
+  <li>Multiple variables: throughput, area, latency, power</li>
+  <li>Finding an optimal hardware implementation is a computationally complex problem. This synthesis tools need guidance on where to start.</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019165132636.png" alt="image-20211019165132636"></p>
+
+<h2 id="verilog-module">
+<a class="anchor" href="#verilog-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>Verilog module</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-19-digital-system-circuits-midterm/image-20211019165205061.png" alt="image-20211019165205061"></p>
+
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/19/digital-system-circuits-midterm.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
