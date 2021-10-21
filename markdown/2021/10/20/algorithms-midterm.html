@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Algorithms midterm | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Algorithms midterm" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 Algorithms midterm." />
+<meta property="og:description" content="Soongsil University 2-2 Algorithms midterm." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/20/algorithms-midterm.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/20/algorithms-midterm.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-20T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-10-20T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/20/algorithms-midterm.html","@type":"BlogPosting","headline":"Algorithms midterm","dateModified":"2021-10-20T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/20/algorithms-midterm.html"},"description":"Soongsil University 2-2 Algorithms midterm.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Algorithms midterm</h1><p class="page-description">Soongsil University 2-2 Algorithms midterm.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-20T00:00:00-05:00" itemprop="datePublished">
+        Oct 20, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#algorithms-midterm">Algorithms Midterm</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#what-is-an-algorithm">What is an algorithm?</a></li>
+<li class="toc-entry toc-h2"><a href="#analysis-of-algorithm">Analysis of algorithm</a></li>
+<li class="toc-entry toc-h2"><a href="#sorting-problem">Sorting problem</a></li>
+<li class="toc-entry toc-h2"><a href="#insertion-sort">Insertion sort</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#proving-correctness">Proving correctness</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#four-components-in-a-proof-by-induction">four components in a proof by induction</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#analyzing-runtime">Analyzing runtime</a></li>
+<li class="toc-entry toc-h2"><a href="#runtime-analysis">Runtime analysis</a></li>
+<li class="toc-entry toc-h2"><a href="#asymptotic-analysis">Asymptotic analysis</a></li>
+<li class="toc-entry toc-h2"><a href="#big-o-means-upper-bound">Big-O means upper-bound</a></li>
+<li class="toc-entry toc-h2"><a href="#big-omega-means-lower-bound">Big-$\Omega$ means lower-bound</a></li>
+<li class="toc-entry toc-h2"><a href="#big-theta-means-upper-and-lower-bound">Big-$\Theta$ means upper and lower-bound</a></li>
+<li class="toc-entry toc-h2"><a href="#asymptotic-analysis-1">Asymptotic analysis</a></li>
+<li class="toc-entry toc-h2"><a href="#sort">Sort</a></li>
+<li class="toc-entry toc-h2"><a href="#selection-sort">Selection sort</a></li>
+<li class="toc-entry toc-h2"><a href="#bubble-sort">Bubble sort</a></li>
+<li class="toc-entry toc-h2"><a href="#merge-sort">Merge sort</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#divide-and-conquer">Divide and conquer</a></li>
+<li class="toc-entry toc-h3"><a href="#providing-correctness">Providing Correctness</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#iterative-algorithm">iterative algorithm</a></li>
+<li class="toc-entry toc-h4"><a href="#recursive-algorithm">recursive algorithm</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#analyzing-runtime-1">Analyzing runtime</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#recursion-tree-method">Recursion tree method</a></li>
+<li class="toc-entry toc-h4"><a href="#iteration-method">Iteration method</a></li>
+<li class="toc-entry toc-h4"><a href="#a-formula-that-solves-recurrences-when-all-of-the-sub-problems-are-the-same-size">A formula that solves recurrences when all of the sub-problems are the same size.</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#substitution-method">Substitution method</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#linear-time-selection">Linear-time selection</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#analyzing-runtime-2">Analyzing runtime</a></li>
+<li class="toc-entry toc-h3"><a href="#another-divide-and-conquer-algorithm">Another divide and conquer algorithm</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#randomized-quick-sort">(Randomized) Quick sort</a></li>
+<li class="toc-entry toc-h2"><a href="#lower-bound-of-comparison-based-sorting">Lower-bound of comparison-based sorting</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#decision-tree">Decision tree</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#comparison-based-sorting">Comparison-based sorting</a></li>
+<li class="toc-entry toc-h2"><a href="#linear-time-sorting">Linear-time sorting</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#is-linear-time-sorting-nonsense">Is linear-time sorting nonsense?</a></li>
+<li class="toc-entry toc-h3"><a href="#counting-sort">Counting sort</a></li>
+<li class="toc-entry toc-h3"><a href="#bucket-sort">Bucket sort</a></li>
+<li class="toc-entry toc-h3"><a href="#radix-sort">Radix sort</a></li>
+<li class="toc-entry toc-h3"><a href="#the-story-so-far">The story so far</a></li>
+<li class="toc-entry toc-h3"><a href="#comparison-based-vs-linear-time-sorting">Comparison-based vs. linear-time sorting</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#data-structures">Data structures</a></li>
+<li class="toc-entry toc-h2"><a href="#hash-table">Hash table</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#hash-collision">Hash collision</a></li>
+<li class="toc-entry toc-h3"><a href="#chaining">Chaining</a></li>
+<li class="toc-entry toc-h3"><a href="#aside-hash-tables-with-open-addressing">Aside: Hash tables with open addressing</a></li>
+<li class="toc-entry toc-h3"><a href="#worst-case-analysis">Worst-case analysis</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#a-simple-deterministic-hash-function">A simple (deterministic) hash function</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#tree-algorithms">Tree algorithms</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#sorted-arrays">Sorted arrays</a></li>
+<li class="toc-entry toc-h3"><a href="#sorted-linked-lists">Sorted linked lists</a></li>
+<li class="toc-entry toc-h3"><a href="#motivation-for-binary-search-tree">motivation for Binary search tree</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#binary-search-tree">Binary search tree</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#recall-the-data-structure">Recall the data structure</a></li>
+<li class="toc-entry toc-h3"><a href="#binary-tree-terminology">Binary tree terminology</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#binary-search-trees">Binary search trees</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#search-in-a-binary-search-tree">Search in a binary search tree</a></li>
+<li class="toc-entry toc-h3"><a href="#insert-in-a-binary-search-tree">Insert in a binary search tree</a></li>
+<li class="toc-entry toc-h3"><a href="#delete-in-a-binary-search-tree">Delete in a binary search tree</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#several-delete-cases">Several delete cases</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#how-long-do-these-operations-take">How long do these operations take?</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#self-balancing-binary-search-tree">Self-balancing binary search tree</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#idea-1-rotations">Idea 1: rotations</a></li>
+<li class="toc-entry toc-h3"><a href="#idea-2-have-some-proxy-for-balance">Idea 2: have some proxy for balance</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#red-black-trees">Red-black trees</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#these-rules-are-the-proxy-for-balance">these rules are the proxy for balance</a></li>
+<li class="toc-entry toc-h3"><a href="#intuition">Intuition</a></li>
+<li class="toc-entry toc-h3"><a href="#inserting-into-a-red-black-tree">Inserting into a red-black tree</a></li>
+<li class="toc-entry toc-h3"><a href="#deleting-from-a-red-black-tree">Deleting from a red-black tree</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h1 id="algorithms-midterm">
+<a class="anchor" href="#algorithms-midterm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithms Midterm</h1>
+
+<p>Computer science is abstraction.</p>
+
+<p>Abstraction is to create a new model that allows to ignore irrelevant details.</p>
+
+<h2 id="what-is-an-algorithm">
+<a class="anchor" href="#what-is-an-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is an algorithm?</h2>
+
+<p>Mathematical abstraction of computer program</p>
+
+<ul>
+  <li>At the heart of programs lie algorithms</li>
+</ul>
+
+<p>Well-specified procedure for solving a computational problem.</p>
+
+<p>Computational problem = mapping from inputs to outputs</p>
+
+<h2 id="analysis-of-algorithm">
+<a class="anchor" href="#analysis-of-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analysis of algorithm</h2>
+
+<p>Does an algorithm actually work? - correctness</p>
+
+<p>Is it fast? - Time/space efficiency, lower bounds, optimality</p>
+
+<h2 id="sorting-problem">
+<a class="anchor" href="#sorting-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sorting problem</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021045928551.png" alt="image-20211021045928551"></p>
+
+<h2 id="insertion-sort">
+<a class="anchor" href="#insertion-sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Insertion sort</h2>
+
+<p>Intuition - maintain a growing sorted list. For each element, put it into the ‘right place’ in this growing list.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021050146237.png" alt="image-20211021050146237"></p>
+
+<p>Key insight - to reason about the behavior of algorithms, it often helps to look for things that don’t change.</p>
+
+<h3 id="proving-correctness">
+<a class="anchor" href="#proving-correctness" aria-hidden="true"><span class="octicon octicon-link"></span></a>Proving correctness</h3>
+
+<p>There’s name for a condition that is true before and after each iteration of a loop: a loop invariant</p>
+
+<h4 id="four-components-in-a-proof-by-induction">
+<a class="anchor" href="#four-components-in-a-proof-by-induction" aria-hidden="true"><span class="octicon octicon-link"></span></a>four components in a proof by induction</h4>
+
+<ul>
+  <li>Inductive hypothesis - The loop invariant holds after the ith iteration.</li>
+  <li>Base case - The loop invariant holds before the first iteration.</li>
+  <li>Inductive step - If the loop invariant holds after the ith iteration, then it holds after the (i + 1)st iteration.</li>
+  <li>Conclusion - If the loop invariant holds after the last iteration, then the algorithm is correct.</li>
+</ul>
+
+<h2 id="analyzing-runtime">
+<a class="anchor" href="#analyzing-runtime" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analyzing runtime</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021051227989.png" alt="image-20211021051227989"></p>
+
+<h2 id="runtime-analysis">
+<a class="anchor" href="#runtime-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Runtime analysis</h2>
+
+<ul>
+  <li>Worst-case analysis - What is the runtime of the algorithm on the worst possible input?
+    <ul>
+      <li>Algorithm performs at least this fast for every input.</li>
+    </ul>
+  </li>
+  <li>Best-case analysis - What is the runtime of the algorithm on the best possible input?</li>
+  <li>Average-case analysis - What is the runtime of the algorithm on the average input?</li>
+</ul>
+
+<h2 id="asymptotic-analysis">
+<a class="anchor" href="#asymptotic-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Asymptotic analysis</h2>
+
+<p>What does it mean to measure ‘runtime’ of an algorithm?</p>
+
+<ul>
+  <li>Engineers probably care most about the ‘real-world time’ - how long does the algorithm take in seconds, etc?</li>
+  <li>This heavily depends on computer hardware, programming language, etc.</li>
+  <li>Instead, we want to use a universal measure of runtime that’s independent of these considerations.</li>
+  <li>Time-complexity</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021064234706.png" alt="image-20211021064234706"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021064244895.png" alt="image-20211021064244895"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021064308655.png" alt="image-20211021064308655"></p>
+
+<h2 id="big-o-means-upper-bound">
+<a class="anchor" href="#big-o-means-upper-bound" aria-hidden="true"><span class="octicon octicon-link"></span></a>Big-O means upper-bound</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021064326937.png" alt="image-20211021064326937"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021064339047.png" alt="image-20211021064339047"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021064404835.png" alt="image-20211021064404835"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021064434353.png" alt="image-20211021064434353"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021064442732.png" alt="image-20211021064442732"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021064450186.png" alt="image-20211021064450186"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021064459872.png" alt="image-20211021064459872"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021065532173.png" alt="image-20211021065532173"></p>
+
+<h2 id="big-omega-means-lower-bound">
+<a class="anchor" href="#big-omega-means-lower-bound" aria-hidden="true"><span class="octicon octicon-link"></span></a>Big-$\Omega$ means lower-bound</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021065624103.png" alt="image-20211021065624103"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021065632773.png" alt="image-20211021065632773"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021065713427.png" alt="image-20211021065713427"></p>
+
+<h2 id="big-theta-means-upper-and-lower-bound">
+<a class="anchor" href="#big-theta-means-upper-and-lower-bound" aria-hidden="true"><span class="octicon octicon-link"></span></a>Big-$\Theta$ means upper and lower-bound</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021065743151.png" alt="image-20211021065743151"></p>
+
+<h2 id="asymptotic-analysis-1">
+<a class="anchor" href="#asymptotic-analysis-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Asymptotic analysis</h2>
+
+<p>We call this asymptotic runtime as time-complexity</p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021113646297.png" alt="image-20211021113646297"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021113654535.png" alt="image-20211021113654535"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021113707205.png" alt="image-20211021113707205"></p>
+
+<h2 id="sort">
+<a class="anchor" href="#sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sort</h2>
+
+<ul>
+  <li>Insertion sort - It finds a proper (sorted) position, and insert an element into there</li>
+  <li>Selection sort - It picks a min/max element from the unsorted list, and put the element into the front/end of the sorted list.</li>
+  <li>Bubble sort - It pushes higher values to the end of the list. The highest element in the list will float toward the end of the list.</li>
+</ul>
+
+<h2 id="selection-sort">
+<a class="anchor" href="#selection-sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Selection sort</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021114006059.png" alt="image-20211021114006059"></p>
+
+<h2 id="bubble-sort">
+<a class="anchor" href="#bubble-sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bubble sort</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021114017977.png" alt="image-20211021114017977"></p>
+
+<h2 id="merge-sort">
+<a class="anchor" href="#merge-sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Merge sort</h2>
+
+<p>Merge sort uses divide-and-conquer.</p>
+
+<p>Intuition - Divide the list into halves, recursively sort them, merge the sorted halves into a whole sorted list, and return this list.</p>
+
+<h3 id="divide-and-conquer">
+<a class="anchor" href="#divide-and-conquer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Divide and conquer</h3>
+
+<p>Divide - Break the current problem into smaller (easier) sub-problems.</p>
+
+<p>Conquer - Solve the smaller problems and collect the results to solve the current problem.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021114147750.png" alt="image-20211021114147750"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021114156442.png" alt="image-20211021114156442"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021114323616.png" alt="image-20211021114323616"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021114206080.png" alt="image-20211021114206080"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021114213527.png" alt="image-20211021114213527"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021114342564.png" alt="image-20211021114342564"></p>
+
+<h3 id="providing-correctness">
+<a class="anchor" href="#providing-correctness" aria-hidden="true"><span class="octicon octicon-link"></span></a>Providing Correctness</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021114713745.png" alt="image-20211021114713745"></p>
+
+<h4 id="iterative-algorithm">
+<a class="anchor" href="#iterative-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>iterative algorithm</h4>
+
+<ol>
+  <li>Find the loop invariant</li>
+  <li>Define the inductive hypothesis (internal state at iteration i)</li>
+  <li>Prove the base case</li>
+  <li>Prove the inductive step</li>
+  <li>Prove the conclusion</li>
+</ol>
+
+<h4 id="recursive-algorithm">
+<a class="anchor" href="#recursive-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>recursive algorithm</h4>
+
+<ol>
+  <li>Define the inductive hypothesis (correct for inputs of sizes 1 to i)</li>
+  <li>Prove the base case (i &lt; small constant)</li>
+  <li>Prove the inductive step (i &gt;= i + 1 or {1, 2, …, i} =&gt; i + 1)</li>
+  <li>Prove the conclusion (i = n =&gt; correct)</li>
+</ol>
+
+<h3 id="analyzing-runtime-1">
+<a class="anchor" href="#analyzing-runtime-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analyzing runtime</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021115113577.png" alt="image-20211021115113577"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021115128435.png" alt="image-20211021115128435"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021115139728.png" alt="image-20211021115139728"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021115153888.png" alt="image-20211021115153888"></p>
+
+<p>A recurrence relation is a function or sequence whose values are defined in terms of earlier or smaller values.</p>
+
+<p>Our recurrence relation for the runtime of merge sort isn’t very useful unless we can define the runtime as closed-form expression.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021115320101.png" alt="image-20211021115320101"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021115325460.png" alt="image-20211021115325460"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021115332666.png" alt="image-20211021115332666"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021115402489.png" alt="image-20211021115402489"></p>
+
+<p>There are a few different methods to translate a recurrence relation for T(n) to a closed form expression for T(n).</p>
+
+<ul>
+  <li>Recursion tree method</li>
+  <li>Iteration method</li>
+  <li>Master method</li>
+  <li>Substitution method</li>
+</ul>
+
+<h4 id="recursion-tree-method">
+<a class="anchor" href="#recursion-tree-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursion tree method</h4>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021115511422.png" alt="image-20211021115511422"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021115549864.png" alt="image-20211021115549864"></p>
+
+<h4 id="iteration-method">
+<a class="anchor" href="#iteration-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Iteration method</h4>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021115644792.png" alt="image-20211021115644792"></p>
+
+<h4 id="a-formula-that-solves-recurrences-when-all-of-the-sub-problems-are-the-same-size">
+<a class="anchor" href="#a-formula-that-solves-recurrences-when-all-of-the-sub-problems-are-the-same-size" aria-hidden="true"><span class="octicon octicon-link"></span></a>A formula that solves recurrences when all of the sub-problems are the same size.</h4>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021115749458.png" alt="image-20211021115749458"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021120117774.png" alt="image-20211021120117774"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021120338604.png" alt="image-20211021120338604"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021120353984.png" alt="image-20211021120353984"></p>
+
+<h3 id="substitution-method">
+<a class="anchor" href="#substitution-method" aria-hidden="true"><span class="octicon octicon-link"></span></a>Substitution method</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021120419695.png" alt="image-20211021120419695"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021120855580.png" alt="image-20211021120855580"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021120938894.png" alt="image-20211021120938894"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021121021910.png" alt="image-20211021121021910"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021121033424.png" alt="image-20211021121033424"></p>
+
+<h2 id="linear-time-selection">
+<a class="anchor" href="#linear-time-selection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linear-time selection</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021121111444.png" alt="image-20211021121111444"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021121435241.png" alt="image-20211021121435241"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021123527621.png" alt="image-20211021123527621"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021123604626.png" alt="image-20211021123604626"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021123614720.png" alt="image-20211021123614720"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021123705893.png" alt="image-20211021123705893"></p>
+
+<p>Intuition - Partition the list about a pivot selected at random, either return the pivot itself or recurse on the left or right sublists.</p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021123841793.png" alt="image-20211021123841793"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021123859299.png" alt="image-20211021123859299"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124013222.png" alt="image-20211021124013222"></p>
+
+<h3 id="analyzing-runtime-2">
+<a class="anchor" href="#analyzing-runtime-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analyzing runtime</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124053956.png" alt="image-20211021124053956"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124117908.png" alt="image-20211021124117908"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124206062.png" alt="image-20211021124206062"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124221045.png" alt="image-20211021124221045"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124237358.png" alt="image-20211021124237358"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124302121.png" alt="image-20211021124302121"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124334872.png" alt="image-20211021124334872"></p>
+
+<h3 id="another-divide-and-conquer-algorithm">
+<a class="anchor" href="#another-divide-and-conquer-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Another divide and conquer algorithm</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124543973.png" alt="image-20211021124543973"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124607439.png" alt="image-20211021124607439"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124642884.png" alt="image-20211021124642884"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124756000.png" alt="image-20211021124756000"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124807814.png" alt="image-20211021124807814"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021124921869.png" alt="image-20211021124921869"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125019839.png" alt="image-20211021125019839"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125052810.png" alt="image-20211021125052810"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125120172.png" alt="image-20211021125120172"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125140424.png" alt="image-20211021125140424"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125152001.png" alt="image-20211021125152001"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125306215.png" alt="image-20211021125306215"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125319020.png" alt="image-20211021125319020"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125346128.png" alt="image-20211021125346128"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125402720.png" alt="image-20211021125402720"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125413114.png" alt="image-20211021125413114"></p>
+
+<h2 id="randomized-quick-sort">
+<a class="anchor" href="#randomized-quick-sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>(Randomized) Quick sort</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125455038.png" alt="image-20211021125455038"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125508556.png" alt="image-20211021125508556"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125515292.png" alt="image-20211021125515292"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125522704.png" alt="image-20211021125522704"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125640746.png" alt="image-20211021125640746"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125710320.png" alt="image-20211021125710320"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125720635.png" alt="image-20211021125720635"></p>
+
+<h2 id="lower-bound-of-comparison-based-sorting">
+<a class="anchor" href="#lower-bound-of-comparison-based-sorting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lower-bound of comparison-based sorting</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125835592.png" alt="image-20211021125835592"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125859358.png" alt="image-20211021125859358"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125908463.png" alt="image-20211021125908463"></p>
+
+<h3 id="decision-tree">
+<a class="anchor" href="#decision-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Decision tree</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125927533.png" alt="image-20211021125927533"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021125938128.png" alt="image-20211021125938128"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130018106.png" alt="image-20211021130018106"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130030014.png" alt="image-20211021130030014"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130043823.png" alt="image-20211021130043823"></p>
+
+<h2 id="comparison-based-sorting">
+<a class="anchor" href="#comparison-based-sorting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparison-based sorting</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130236653.png" alt="image-20211021130236653"></p>
+
+<h2 id="linear-time-sorting">
+<a class="anchor" href="#linear-time-sorting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linear-time sorting</h2>
+
+<h3 id="is-linear-time-sorting-nonsense">
+<a class="anchor" href="#is-linear-time-sorting-nonsense" aria-hidden="true"><span class="octicon octicon-link"></span></a>Is linear-time sorting nonsense?</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130330928.png" alt="image-20211021130330928"></p>
+
+<h3 id="counting-sort">
+<a class="anchor" href="#counting-sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Counting sort</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130456924.png" alt="image-20211021130456924"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130514580.png" alt="image-20211021130514580"></p>
+
+<h3 id="bucket-sort">
+<a class="anchor" href="#bucket-sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bucket sort</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130527622.png" alt="image-20211021130527622"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130538816.png" alt="image-20211021130538816"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130545390.png" alt="image-20211021130545390"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130623552.png" alt="image-20211021130623552"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130645631.png" alt="image-20211021130645631"></p>
+
+<h3 id="radix-sort">
+<a class="anchor" href="#radix-sort" aria-hidden="true"><span class="octicon octicon-link"></span></a>Radix sort</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130700769.png" alt="image-20211021130700769"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130723160.png" alt="image-20211021130723160"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130735725.png" alt="image-20211021130735725"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130753189.png" alt="image-20211021130753189"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130809763.png" alt="image-20211021130809763"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130815905.png" alt="image-20211021130815905"></p>
+
+<h3 id="the-story-so-far">
+<a class="anchor" href="#the-story-so-far" aria-hidden="true"><span class="octicon octicon-link"></span></a>The story so far</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130834178.png" alt="image-20211021130834178"></p>
+
+<h3 id="comparison-based-vs-linear-time-sorting">
+<a class="anchor" href="#comparison-based-vs-linear-time-sorting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparison-based vs. linear-time sorting</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021130911653.png" alt="image-20211021130911653"></p>
+
+<h2 id="data-structures">
+<a class="anchor" href="#data-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data structures</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021131022047.png" alt="image-20211021131022047"></p>
+
+<h2 id="hash-table">
+<a class="anchor" href="#hash-table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hash table</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021135954380.png" alt="image-20211021135954380"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140007618.png" alt="image-20211021140007618"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140014875.png" alt="image-20211021140014875"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140038533.png" alt="image-20211021140038533"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140048914.png" alt="image-20211021140048914"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140107324.png" alt="image-20211021140107324"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140117131.png" alt="image-20211021140117131"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140127261.png" alt="image-20211021140127261"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140147163.png" alt="image-20211021140147163"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140210438.png" alt="image-20211021140210438"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140331091.png" alt="image-20211021140331091"></p>
+
+<h3 id="hash-collision">
+<a class="anchor" href="#hash-collision" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hash collision</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140345342.png" alt="image-20211021140345342"></p>
+
+<h3 id="chaining">
+<a class="anchor" href="#chaining" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chaining</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140401201.png" alt="image-20211021140401201"></p>
+
+<h3 id="aside-hash-tables-with-open-addressing">
+<a class="anchor" href="#aside-hash-tables-with-open-addressing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aside: Hash tables with open addressing</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140436508.png" alt="image-20211021140436508"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140558531.png" alt="image-20211021140558531"></p>
+
+<h3 id="worst-case-analysis">
+<a class="anchor" href="#worst-case-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Worst-case analysis</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140628307.png" alt="image-20211021140628307"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140646044.png" alt="image-20211021140646044"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140657468.png" alt="image-20211021140657468"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140712112.png" alt="image-20211021140712112"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140724599.png" alt="image-20211021140724599"></p>
+
+<h2 id="a-simple-deterministic-hash-function">
+<a class="anchor" href="#a-simple-deterministic-hash-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>A simple (deterministic) hash function</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140802968.png" alt="image-20211021140802968"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140819066.png" alt="image-20211021140819066"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140841480.png" alt="image-20211021140841480"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140851270.png" alt="image-20211021140851270"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140930844.png" alt="image-20211021140930844"></p>
+
+<h3 id="summary">
+<a class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021140941021.png" alt="image-20211021140941021"></p>
+
+<h2 id="tree-algorithms">
+<a class="anchor" href="#tree-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tree algorithms</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141100050.png" alt="image-20211021141100050"></p>
+
+<h3 id="sorted-arrays">
+<a class="anchor" href="#sorted-arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sorted arrays</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141124175.png" alt="image-20211021141124175"></p>
+
+<h3 id="sorted-linked-lists">
+<a class="anchor" href="#sorted-linked-lists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sorted linked lists</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141138896.png" alt="image-20211021141138896"></p>
+
+<h3 id="motivation-for-binary-search-tree">
+<a class="anchor" href="#motivation-for-binary-search-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>motivation for Binary search tree</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141204027.png" alt="image-20211021141204027"></p>
+
+<h2 id="binary-search-tree">
+<a class="anchor" href="#binary-search-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary search tree</h2>
+
+<h3 id="recall-the-data-structure">
+<a class="anchor" href="#recall-the-data-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recall the data structure</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141230971.png" alt="image-20211021141230971"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141237742.png" alt="image-20211021141237742"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141247448.png" alt="image-20211021141247448"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141307041.png" alt="image-20211021141307041"></p>
+
+<h3 id="binary-tree-terminology">
+<a class="anchor" href="#binary-tree-terminology" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary tree terminology</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141324893.png" alt="image-20211021141324893"></p>
+
+<h2 id="binary-search-trees">
+<a class="anchor" href="#binary-search-trees" aria-hidden="true"><span class="octicon octicon-link"></span></a>Binary search trees</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141408613.png" alt="image-20211021141408613"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141420978.png" alt="image-20211021141420978"></p>
+
+<p>kinda like quick sort</p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141450278.png" alt="image-20211021141450278"></p>
+
+<h3 id="search-in-a-binary-search-tree">
+<a class="anchor" href="#search-in-a-binary-search-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Search in a binary search tree</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141516883.png" alt="image-20211021141516883"></p>
+
+<h3 id="insert-in-a-binary-search-tree">
+<a class="anchor" href="#insert-in-a-binary-search-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Insert in a binary search tree</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141546068.png" alt="image-20211021141546068"></p>
+
+<h3 id="delete-in-a-binary-search-tree">
+<a class="anchor" href="#delete-in-a-binary-search-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Delete in a binary search tree</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141622910.png" alt="image-20211021141622910"></p>
+
+<h4 id="several-delete-cases">
+<a class="anchor" href="#several-delete-cases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Several delete cases</h4>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141651027.png" alt="image-20211021141651027"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141702181.png" alt="image-20211021141702181"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141732651.png" alt="image-20211021141732651"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141742085.png" alt="image-20211021141742085"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141752435.png" alt="image-20211021141752435"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141857775.png" alt="image-20211021141857775"></p>
+
+<h3 id="how-long-do-these-operations-take">
+<a class="anchor" href="#how-long-do-these-operations-take" aria-hidden="true"><span class="octicon octicon-link"></span></a>How long do these operations take?</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141912341.png" alt="image-20211021141912341"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141923868.png" alt="image-20211021141923868"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021141941401.png" alt="image-20211021141941401"></p>
+
+<h2 id="self-balancing-binary-search-tree">
+<a class="anchor" href="#self-balancing-binary-search-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Self-balancing binary search tree</h2>
+
+<h3 id="idea-1-rotations">
+<a class="anchor" href="#idea-1-rotations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Idea 1: rotations</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142015744.png" alt="image-20211021142015744"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142037839.png" alt="image-20211021142037839"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142049696.png" alt="image-20211021142049696"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142117873.png" alt="image-20211021142117873"></p>
+
+<h3 id="idea-2-have-some-proxy-for-balance">
+<a class="anchor" href="#idea-2-have-some-proxy-for-balance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Idea 2: have some proxy for balance</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142134160.png" alt="image-20211021142134160"></p>
+
+<h2 id="red-black-trees">
+<a class="anchor" href="#red-black-trees" aria-hidden="true"><span class="octicon octicon-link"></span></a>Red-black trees</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142149756.png" alt="image-20211021142149756"></p>
+
+<h3 id="these-rules-are-the-proxy-for-balance">
+<a class="anchor" href="#these-rules-are-the-proxy-for-balance" aria-hidden="true"><span class="octicon octicon-link"></span></a>these rules are the proxy for balance</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142216503.png" alt="image-20211021142216503"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142247516.png" alt="image-20211021142247516"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142653695.png" alt="image-20211021142653695"></p>
+
+<h3 id="intuition">
+<a class="anchor" href="#intuition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intuition</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142724709.png" alt="image-20211021142724709"></p>
+
+<h3 id="inserting-into-a-red-black-tree">
+<a class="anchor" href="#inserting-into-a-red-black-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inserting into a red-black tree</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142821101.png" alt="image-20211021142821101"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142849669.png" alt="image-20211021142849669"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142900482.png" alt="image-20211021142900482"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142914061.png" alt="image-20211021142914061"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142931249.png" alt="image-20211021142931249"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142942187.png" alt="image-20211021142942187"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021142956735.png" alt="image-20211021142956735"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021143016512.png" alt="image-20211021143016512"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021143054322.png" alt="image-20211021143054322"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021143108138.png" alt="image-20211021143108138"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021143130638.png" alt="image-20211021143130638"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021143141392.png" alt="image-20211021143141392"></p>
+
+<h3 id="deleting-from-a-red-black-tree">
+<a class="anchor" href="#deleting-from-a-red-black-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Deleting from a red-black tree</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021143157008.png" alt="image-20211021143157008"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021143208450.png" alt="image-20211021143208450"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-20-algorithms-midterm/image-20211021143233556.png" alt="image-20211021143233556"></p>
+
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/20/algorithms-midterm.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
