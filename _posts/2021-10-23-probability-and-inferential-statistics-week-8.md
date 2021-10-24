@@ -5,7 +5,7 @@ description: Soongsil University 2-2 Probability and Inferential Statistics week
 categories: [markdown]
 title: Probability and Inferential Statistics week 8
 ---
-# Probability and Statistics week 8
+# Probability and Inferential Statistics week 8
 
 ## Lecture note
 
