@@ -23,9 +23,9 @@ i.i.d = independent and identical distribution
 
 ![image-20211023033038401](/Kevin_Min/images/2021-10-23-probability-and-statistics-week-8/image-20211023033038401.png)
 
-![image-20211023033153314](/Kevin_Min/images/2021-10-23-probability-and-statistics-week-8/image-20211023033153314.png)
+![image-20211023033151602](/Kevin_Min/images/2021-10-23-probability-and-statistics-week-8/image-20211023033151602.png)
 
-![image-20211023033201035](/Kevin_Min/images/2021-10-23-probability-and-statistics-week-8/image-20211023033201035.png)
+![image-20211023033153314](/Kevin_Min/images/2021-10-23-probability-and-statistics-week-8/image-20211023033153314.png)
 
 ### jittering
 
@@ -76,4 +76,3 @@ i.i.d = independent and identical distribution
 ![image-20211023034848204](/Kevin_Min/images/2021-10-23-probability-and-statistics-week-8/image-20211023034848204.png)
 
 ![image-20211023034905643](/Kevin_Min/images/2021-10-23-probability-and-statistics-week-8/image-20211023034905643.png)
-
