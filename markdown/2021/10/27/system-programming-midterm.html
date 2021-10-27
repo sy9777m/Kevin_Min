@@ -1,0 +1,2441 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>System Programming midterm | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="System Programming midterm" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 System Programming midterm." />
+<meta property="og:description" content="Soongsil University 2-2 System Programming midterm." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/27/system-programming-midterm.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/27/system-programming-midterm.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-27T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-10-27T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/27/system-programming-midterm.html","@type":"BlogPosting","headline":"System Programming midterm","dateModified":"2021-10-27T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/27/system-programming-midterm.html"},"description":"Soongsil University 2-2 System Programming midterm.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">System Programming midterm</h1><p class="page-description">Soongsil University 2-2 System Programming midterm.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-27T00:00:00-05:00" itemprop="datePublished">
+        Oct 27, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      16 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#system-programming-midterm">System Programming midterm</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#abstraction-is-good-but-dont-forget-reality">Abstraction is good but don’t forget reality</a></li>
+<li class="toc-entry toc-h2"><a href="#ints-are-not-integers-floats-are-not-reals">Ints are not integers, Floats are not reals</a></li>
+<li class="toc-entry toc-h2"><a href="#computer-arithmetic">Computer arithmetic</a></li>
+<li class="toc-entry toc-h2"><a href="#youve-got-to-know-assembly">You’ve got to know assembly</a></li>
+<li class="toc-entry toc-h2"><a href="#memory-matters---random-access-memory-is-an-unphysical-abstraction">Memory matters - Random Access Memory is an unphysical abstraction</a></li>
+<li class="toc-entry toc-h2"><a href="#memory-referencing-errors">Memory referencing errors</a></li>
+<li class="toc-entry toc-h2"><a href="#theres-more-to-performance-than-asymptotic-complexity">There’s more to performance than asymptotic complexity</a></li>
+<li class="toc-entry toc-h2"><a href="#computers-do-more-than-execute-programs">Computers do more than execute programs</a></li>
+<li class="toc-entry toc-h2"><a href="#everything-is-bits">Everything is bits</a></li>
+<li class="toc-entry toc-h2"><a href="#encoding-byte-values">Encoding byte values</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-data-representations">Example data representations</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#boolean-algebra">Boolean algebra</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#general-boolean-algebras">General boolean algebras</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#bit-level-operations-in-c">Bit-level operations in C</a></li>
+<li class="toc-entry toc-h2"><a href="#contrast-logic-operations-in-c">Contrast: Logic operations in C</a></li>
+<li class="toc-entry toc-h2"><a href="#shift-operations">Shift operations</a></li>
+<li class="toc-entry toc-h2"><a href="#integers">Integers</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#encoding-integers">Encoding integers</a></li>
+<li class="toc-entry toc-h3"><a href="#numeric-ranges">Numeric ranges</a></li>
+<li class="toc-entry toc-h3"><a href="#values-for-different-word-sizes">Values for different word sizes</a></li>
+<li class="toc-entry toc-h3"><a href="#unsigned--signed-numeric-values">Unsigned &amp; signed numeric values</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#mapping-between-signed--unsigned">Mapping between signed &amp; unsigned</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#relation-between-signed--unsigned">Relation between signed &amp; unsigned</a></li>
+<li class="toc-entry toc-h3"><a href="#signed-vs-unsigned-in-c">Signed vs. unsigned in C</a></li>
+<li class="toc-entry toc-h3"><a href="#casting-surprises">Casting surprises</a></li>
+<li class="toc-entry toc-h3"><a href="#casting-signed---unsigned-basic-rules">Casting signed &lt;-&gt; unsigned: basic rules</a></li>
+<li class="toc-entry toc-h3"><a href="#sign-extension">Sign extension</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#expanding-short-int-to-int">Expanding (short int to int)</a></li>
+<li class="toc-entry toc-h4"><a href="#truncating-unsigned-to-unsigned-short">Truncating (unsigned to unsigned short)</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#unsigned-addition">Unsigned addition</a></li>
+<li class="toc-entry toc-h3"><a href="#two-complement-addition">Two-complement addition</a></li>
+<li class="toc-entry toc-h3"><a href="#multiplication">Multiplication</a></li>
+<li class="toc-entry toc-h3"><a href="#power-of-2-multiply-with-shift">Power-of-2 multiply with shift</a></li>
+<li class="toc-entry toc-h3"><a href="#arithmetic-basic-rules">Arithmetic: Basic rules</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#addition">Addition:</a></li>
+<li class="toc-entry toc-h4"><a href="#multiplication-1">Multiplication:</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#why-should-i-use-unsigned">Why should I use unsigned?</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#representations-in-memory-pointers-strings">Representations in memory, pointers, strings</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#byte-oriented-memory-organization">Byte-oriented memory organization</a></li>
+<li class="toc-entry toc-h3"><a href="#machine-words">Machine words</a></li>
+<li class="toc-entry toc-h3"><a href="#word-oriented-memory-organization">Word-oriented memory organization</a></li>
+<li class="toc-entry toc-h3"><a href="#byte-ordering">Byte ordering</a></li>
+<li class="toc-entry toc-h3"><a href="#representing-strings">Representing Strings</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#floating-point">Floating point</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#fractional-binary-numbers">Fractional binary numbers</a></li>
+<li class="toc-entry toc-h3"><a href="#representable-numbers">Representable numbers</a></li>
+<li class="toc-entry toc-h3"><a href="#ieee-floating-point">IEEE Floating point</a></li>
+<li class="toc-entry toc-h3"><a href="#floating-point-representation">Floating point representation</a></li>
+<li class="toc-entry toc-h3"><a href="#normalized-values">Normalized values</a></li>
+<li class="toc-entry toc-h3"><a href="#denormalized-values">Denormalized values</a></li>
+<li class="toc-entry toc-h3"><a href="#special-values">Special values</a></li>
+<li class="toc-entry toc-h3"><a href="#distribution-of-values">Distribution of values</a></li>
+<li class="toc-entry toc-h3"><a href="#special-properties-of-the-ieee-encoding">Special properties of the IEEE encoding</a></li>
+<li class="toc-entry toc-h3"><a href="#floating-point-operations-basic-idea">Floating point operations: basic idea</a></li>
+<li class="toc-entry toc-h3"><a href="#rounding">Rounding</a></li>
+<li class="toc-entry toc-h3"><a href="#closer-look-at-round-to-even">Closer look at round-to-even</a></li>
+<li class="toc-entry toc-h3"><a href="#rounding-binary-numbers">Rounding binary numbers</a></li>
+<li class="toc-entry toc-h3"><a href="#fp-multiplication">FP multiplication</a></li>
+<li class="toc-entry toc-h3"><a href="#floating-point-addition">Floating point addition</a></li>
+<li class="toc-entry toc-h3"><a href="#mathematical-properties-of-fp-add">Mathematical properties of FP add</a></li>
+<li class="toc-entry toc-h3"><a href="#mathematical-properties-of-fp-mult">Mathematical properties of FP mult</a></li>
+<li class="toc-entry toc-h3"><a href="#abelian-group">Abelian group</a></li>
+<li class="toc-entry toc-h3"><a href="#floating-point-in-c">Floating point in C</a></li>
+<li class="toc-entry toc-h3"><a href="#floating-point-puzzles">Floating point puzzles</a></li>
+<li class="toc-entry toc-h3"><a href="#dynamic-range-positive-only">Dynamic range (positive-only)</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#intel-x86-processors">Intel x86 processors</a></li>
+<li class="toc-entry toc-h2"><a href="#x86-clones-advanced-micro-devices-amd">x86 clones: Advanced Micro Devices (AMD)</a></li>
+<li class="toc-entry toc-h2"><a href="#definitions">Definitions</a></li>
+<li class="toc-entry toc-h2"><a href="#assembly---machine-code-view">Assembly  / Machine code view</a></li>
+<li class="toc-entry toc-h2"><a href="#turning-c-into-object-code">Turning C into Object code</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#compiling-into-assembly">Compiling into assembly</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#assembly-characteristics-data-types">Assembly characteristics: data types</a></li>
+<li class="toc-entry toc-h2"><a href="#assembly-characteristics-operations">Assembly characteristics: Operations</a></li>
+<li class="toc-entry toc-h2"><a href="#object-code">Object code</a></li>
+<li class="toc-entry toc-h2"><a href="#machine-instruction-example">Machine instruction example</a></li>
+<li class="toc-entry toc-h2"><a href="#disassembling-object-code">Disassembling object code</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#what-can-be-disassembled">What can be disassembled?</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#x86-64-integer-registers">x86-64 Integer Registers</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#some-history-ia32-registers">Some history: IA32 registers</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#moving-data">Moving data</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#movq-operand-combinations">movq operand combinations</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#simple-memory-addressing-modes">Simple memory addressing modes</a></li>
+<li class="toc-entry toc-h2"><a href="#complete-memory-addressing-modes">Complete memory addressing modes</a></li>
+<li class="toc-entry toc-h2"><a href="#address-computation-instruction">Address computation instruction</a></li>
+<li class="toc-entry toc-h2"><a href="#some-arithmetic-operations">Some arithmetic operations</a></li>
+<li class="toc-entry toc-h2"><a href="#processor-state-x86-64-partial">Processor State (x86-64, Partial)</a></li>
+<li class="toc-entry toc-h2"><a href="#condition-codes-implicit-setting">Condition codes (implicit setting)</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#explicit-setting-compare">Explicit setting: Compare</a></li>
+<li class="toc-entry toc-h3"><a href="#explicit-setting-test">Explicit setting: test</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#reading-condition-codes">Reading condition codes</a></li>
+<li class="toc-entry toc-h2"><a href="#jumping">Jumping</a></li>
+<li class="toc-entry toc-h2"><a href="#conditional-branch-example-old-style">Conditional branch example (old style)</a></li>
+<li class="toc-entry toc-h2"><a href="#expressing-with-goto-code">Expressing with Goto code</a></li>
+<li class="toc-entry toc-h2"><a href="#general-conditional-expression-translation-using-branches">General conditional expression translation (using branches)</a></li>
+<li class="toc-entry toc-h2"><a href="#using-conditional-moves">Using conditional moves</a></li>
+<li class="toc-entry toc-h2"><a href="#conditional-move-example">Conditional move example</a></li>
+<li class="toc-entry toc-h2"><a href="#bad-cases-for-conditional-move">Bad cases for conditional move</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#expensive-computations">Expensive computations</a></li>
+<li class="toc-entry toc-h3"><a href="#risky-computations">Risky computations</a></li>
+<li class="toc-entry toc-h3"><a href="#computations-with-side-effects">Computations with side effects</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#do-while-loop-example">Do-while loop example</a></li>
+<li class="toc-entry toc-h2"><a href="#do-while-loop-compilation">Do-while loop compilation</a></li>
+<li class="toc-entry toc-h2"><a href="#general-do-while-translation">General do-while translation</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#general-while-translation-1">General while translation #1</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#while-loop-example">While loop example</a></li>
+<li class="toc-entry toc-h2"><a href="#for-loop-form">For loop form</a></li>
+<li class="toc-entry toc-h2"><a href="#for-loop---while-loop">For loop -&gt; while loop</a></li>
+<li class="toc-entry toc-h2"><a href="#for-while-conversion">For-while conversion</a></li>
+<li class="toc-entry toc-h2"><a href="#for-loop-do-while-conversion">For loop do-while conversion</a></li>
+<li class="toc-entry toc-h2"><a href="#switch-statement-example">Switch statement example</a></li>
+<li class="toc-entry toc-h2"><a href="#jump-table-structure">Jump table structure</a></li>
+<li class="toc-entry toc-h2"><a href="#switch-statement-example-1">Switch statement example</a></li>
+<li class="toc-entry toc-h2"><a href="#assembly-setup-explanation">Assembly setup explanation</a></li>
+<li class="toc-entry toc-h2"><a href="#jump-table">Jump table</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#code-blocks-x--1">Code blocks (x == 1)</a></li>
+<li class="toc-entry toc-h3"><a href="#handling-fall-through">handling fall-through</a></li>
+<li class="toc-entry toc-h3"><a href="#code-blocks-x--2-x--3">Code blocks (x == 2, x == 3)</a></li>
+<li class="toc-entry toc-h3"><a href="#code-blocks-x--5-x--6-default">Code blocks (x == 5, x == 6, default)</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#mechanisms-in-procedures">Mechanisms in procedures</a></li>
+<li class="toc-entry toc-h2"><a href="#x86-64-stack">x86-64 stack</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#x86-64-stack-push">x86-64 stack: push</a></li>
+<li class="toc-entry toc-h3"><a href="#x86-64-stack-pop">x86-64 stack: pop</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#code-example">Code example</a></li>
+<li class="toc-entry toc-h2"><a href="#procedure-control-flow">Procedure control flow</a></li>
+<li class="toc-entry toc-h2"><a href="#procedure-data-flow">Procedure data flow</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#data-flow-examples">data flow examples</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#stack-based-languages">Stack-based languages</a></li>
+<li class="toc-entry toc-h2"><a href="#call-chain-example">call chain example</a></li>
+<li class="toc-entry toc-h2"><a href="#stack-frame">Stack frame</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#x86-64--linux-stack-frame">x86-64 / Linux stack frame</a></li>
+<li class="toc-entry toc-h2"><a href="#example-incr">Example: incr</a></li>
+<li class="toc-entry toc-h2"><a href="#register-saving-conventions">Register saving conventions</a></li>
+<li class="toc-entry toc-h2"><a href="#x86-64-linux-register-usage">x86-64 Linux register usage</a></li>
+<li class="toc-entry toc-h2"><a href="#callee-saved-example">Callee-saved example</a></li>
+<li class="toc-entry toc-h2"><a href="#recursion-function">Recursion function</a></li>
+<li class="toc-entry toc-h2"><a href="#observations-about-recursion">Observations about recursion</a></li>
+<li class="toc-entry toc-h2"><a href="#x86-64-procedure-summary">x86-64 Procedure summary</a></li>
+<li class="toc-entry toc-h2"><a href="#array-allocation">Array allocation</a></li>
+<li class="toc-entry toc-h2"><a href="#array-access">Array access</a></li>
+<li class="toc-entry toc-h2"><a href="#array-example">Array example</a></li>
+<li class="toc-entry toc-h2"><a href="#multidimensional-nested-arrays">Multidimensional (nested) arrays</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#nested-array-example">Nested array example</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#n--n-matrix-code">N * N Matrix code</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#16--16-matrix-access">16 * 16 matrix access</a></li>
+<li class="toc-entry toc-h3"><a href="#n--n-matrix-access">n * n matrix access</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#structure-representation">Structure representation</a></li>
+<li class="toc-entry toc-h2"><a href="#generating-pointer-to-structure-member">Generating pointer to structure member</a></li>
+<li class="toc-entry toc-h2"><a href="#flowwing-linked-list">Flowwing linked list</a></li>
+<li class="toc-entry toc-h2"><a href="#structures--alignment">Structures &amp; alignment</a></li>
+<li class="toc-entry toc-h2"><a href="#alignment-priciples">Alignment priciples</a></li>
+<li class="toc-entry toc-h2"><a href="#specific-cases-of-alignment-x86-64">Specific cases of alignment (x86-64)</a></li>
+<li class="toc-entry toc-h2"><a href="#satisfying-alignment-with-structures">Satisfying alignment with structures</a></li>
+<li class="toc-entry toc-h2"><a href="#meeting-overall-alignment-requirement">Meeting overall alignment requirement</a></li>
+<li class="toc-entry toc-h2"><a href="#arrays-of-structures">arrays of structures</a></li>
+<li class="toc-entry toc-h2"><a href="#accessing-array-elements">Accessing array elements</a></li>
+<li class="toc-entry toc-h2"><a href="#saving-space">Saving space</a></li>
+<li class="toc-entry toc-h2"><a href="#x86-64-linux-memory-layout">x86-64 Linux Memory layout</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#x86-64-example-addresses">x86-64 example addresses</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#memory-referencing-bug-example">Memory referencing bug example</a></li>
+<li class="toc-entry toc-h2"><a href="#such-problems-are-a-big-deal">Such problems are a BIG deal</a></li>
+<li class="toc-entry toc-h2"><a href="#string-library-code">String library code</a></li>
+<li class="toc-entry toc-h2"><a href="#vulnerable-buffer-code">Vulnerable buffer code</a></li>
+<li class="toc-entry toc-h2"><a href="#buffer-overflow-disassembly">Buffer overflow disassembly</a></li>
+<li class="toc-entry toc-h2"><a href="#buffer-overflow-stack">Buffer overflow stack</a></li>
+<li class="toc-entry toc-h2"><a href="#code-injection-attacks">Code injection attacks</a></li>
+<li class="toc-entry toc-h2"><a href="#exploits-based-on-buffer-overflows">Exploits based on buffer overflows</a></li>
+<li class="toc-entry toc-h2"><a href="#what-to-do-about-buffer-overflow-attacks">What to do about buffer overflow attacks</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#avoid-overflow-vulnerabilities-in-code">Avoid overflow vulnerabilities in code</a></li>
+<li class="toc-entry toc-h3"><a href="#system-level-protections-can-help">System-level protections can help</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#stack-canaries-can-help">Stack canaries can help</a></li>
+<li class="toc-entry toc-h2"><a href="#protected-buffer-disassembly">Protected buffer disassembly</a></li>
+<li class="toc-entry toc-h2"><a href="#setting-up-canary">Setting up canary</a></li>
+<li class="toc-entry toc-h2"><a href="#checking-canary">Checking canary</a></li>
+<li class="toc-entry toc-h2"><a href="#return-oriented-programming-attacks">Return-oriented programming attacks</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#gadget-example">Gadget example</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#rop-execution">ROP execution</a></li>
+</ul>
+</li>
+</ul><h1 id="system-programming-midterm">
+<a class="anchor" href="#system-programming-midterm" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Programming midterm</h1>
+
+<h2 id="abstraction-is-good-but-dont-forget-reality">
+<a class="anchor" href="#abstraction-is-good-but-dont-forget-reality" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstraction is good but don’t forget reality</h2>
+
+<p>Abstraction have limits</p>
+
+<ul>
+  <li>Especially in the presence of bugs</li>
+  <li>Need to understand details of underlying implementations</li>
+</ul>
+
+<p>Useful outcomes from taking system programming</p>
+
+<ul>
+  <li>Able to find and eliminate bugs efficiently</li>
+  <li>Able to understand and tune for program performance</li>
+</ul>
+
+<h2 id="ints-are-not-integers-floats-are-not-reals">
+<a class="anchor" href="#ints-are-not-integers-floats-are-not-reals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ints are not integers, Floats are not reals</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027041921386.png" alt="image-20211027041921386"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027041925730.png" alt="image-20211027041925730"></p>
+
+<h2 id="computer-arithmetic">
+<a class="anchor" href="#computer-arithmetic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computer arithmetic</h2>
+
+<p>Does not generate random values</p>
+
+<p>Cannot assume all usual mathematical properties</p>
+
+<ul>
+  <li>Due to finiteness of representations</li>
+  <li>Integer operations satisfy ‘ring’ properties
+    <ul>
+      <li>Commutativity, associativity, distributivity</li>
+    </ul>
+  </li>
+  <li>Floating point operations satisfy ‘ordering’ properties
+    <ul>
+      <li>Monotonicity, values of signs</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Important issues for compiler writers and serious application programmers.</p>
+
+<h2 id="youve-got-to-know-assembly">
+<a class="anchor" href="#youve-got-to-know-assembly" aria-hidden="true"><span class="octicon octicon-link"></span></a>You’ve got to know assembly</h2>
+
+<p>Understanding assembly is key to machine-level execution model</p>
+
+<ul>
+  <li>Behavior of programs in presence of bugs
+    <ul>
+      <li>High-level language models break down</li>
+    </ul>
+  </li>
+  <li>Tuning program performance
+    <ul>
+      <li>Understand optimizations done / not done by the compiler</li>
+      <li>Understanding sources of program inefficiency</li>
+    </ul>
+  </li>
+  <li>Implementing system software
+    <ul>
+      <li>Compiler has machine code as target</li>
+      <li>Operating systems must manage process state</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="memory-matters---random-access-memory-is-an-unphysical-abstraction">
+<a class="anchor" href="#memory-matters---random-access-memory-is-an-unphysical-abstraction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Memory matters - Random Access Memory is an unphysical abstraction</h2>
+
+<p>Memory is not unbounded</p>
+
+<ul>
+  <li>It must be allocated and managed</li>
+  <li>Many applications are memory dominated</li>
+</ul>
+
+<p>Memory referencing bugs especially pernicious</p>
+
+<ul>
+  <li>Effects are distant in both time and space</li>
+</ul>
+
+<p>Memory performance is not uniform</p>
+
+<ul>
+  <li>Cache and virtual memory effects can greatly affect program performance</li>
+  <li>Adapting program to characteristics of memory system can lead to major speed improvements</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027042541071.png" alt="image-20211027042541071"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027042551119.png" alt="image-20211027042551119"></p>
+
+<h2 id="memory-referencing-errors">
+<a class="anchor" href="#memory-referencing-errors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Memory referencing errors</h2>
+
+<ul>
+  <li>C and C++ do not provide any memory protection
+    <ul>
+      <li>out of bounds array refences</li>
+      <li>Invalid pointer values</li>
+      <li>Abuses of malloc / free</li>
+    </ul>
+  </li>
+  <li>Can lead to nasty bugs
+    <ul>
+      <li>Whether or not bug has any affect depends on system and compiler</li>
+      <li>Action at a distance
+        <ul>
+          <li>Corrupted object logically unrelated to one being accessed</li>
+          <li>Effect of bug may be first observed long after it is generated</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="theres-more-to-performance-than-asymptotic-complexity">
+<a class="anchor" href="#theres-more-to-performance-than-asymptotic-complexity" aria-hidden="true"><span class="octicon octicon-link"></span></a>There’s more to performance than asymptotic complexity</h2>
+
+<p>Constant factors matter too</p>
+
+<p>And even exact op count does not predict performance</p>
+
+<ul>
+  <li>Easily see 10:1 performance range depending on how code written</li>
+  <li>Must optimize at multiple levels - algorithm, data representations, procedures, and loops</li>
+</ul>
+
+<p>Must understand system to optimize performance</p>
+
+<ul>
+  <li>how programs compiled and executed</li>
+  <li>how to measure program performance and identify bottlenecks</li>
+  <li>how to improve performance without destroying code modularity and generality</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027042938550.png" alt="image-20211027042938550"></p>
+
+<p>Hierarchical memory organization</p>
+
+<p>Performance depends on access patterns</p>
+
+<ul>
+  <li>Including how step through multi-dimensional array</li>
+</ul>
+
+<h2 id="computers-do-more-than-execute-programs">
+<a class="anchor" href="#computers-do-more-than-execute-programs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computers do more than execute programs</h2>
+
+<p>They need to get data in and out</p>
+
+<ul>
+  <li>I/O system critical to program reliability and performance</li>
+</ul>
+
+<p>They communicate with each other over networks</p>
+
+<ul>
+  <li>Many system-level issues arise in presence of network
+    <ul>
+      <li>Concurrent operations by autonomous processes</li>
+      <li>Coping with unreliable media</li>
+      <li>Cross platform compatibility</li>
+      <li>Complex performance issues</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="everything-is-bits">
+<a class="anchor" href="#everything-is-bits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Everything is bits</h2>
+
+<p>Each bits is 0 or 1</p>
+
+<p>By encoding / interpreting sets of bits in various ways</p>
+
+<p>Why bits? - Electronic implementation</p>
+
+<ul>
+  <li>Easy to store with bistable elements</li>
+  <li>Reliability transmitted on noisy and inaccurate wires</li>
+</ul>
+
+<h2 id="encoding-byte-values">
+<a class="anchor" href="#encoding-byte-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Encoding byte values</h2>
+
+<p>Byte = 8 bits</p>
+
+<h3 id="example-data-representations">
+<a class="anchor" href="#example-data-representations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example data representations</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027043303747.png" alt="image-20211027043303747"></p>
+
+<h2 id="boolean-algebra">
+<a class="anchor" href="#boolean-algebra" aria-hidden="true"><span class="octicon octicon-link"></span></a>Boolean algebra</h2>
+
+<p>Algebraic representation of logic</p>
+
+<ul>
+  <li>Encode true as 1 and false as 0</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027043347856.png" alt="image-20211027043347856"></p>
+
+<h3 id="general-boolean-algebras">
+<a class="anchor" href="#general-boolean-algebras" aria-hidden="true"><span class="octicon octicon-link"></span></a>General boolean algebras</h3>
+
+<p>Operate on bit vectors</p>
+
+<ul>
+  <li>Operations applied bitwise</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027043430808.png" alt="image-20211027043430808"></p>
+
+<p>All of the properties of boolean algebra apply</p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027043452466.png" alt="image-20211027043452466"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027044238795.png" alt="image-20211027044238795"></p>
+
+<h2 id="bit-level-operations-in-c">
+<a class="anchor" href="#bit-level-operations-in-c" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bit-level operations in C</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027044259735.png" alt="image-20211027044259735"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027044309599.png" alt="image-20211027044309599"></p>
+
+<h2 id="contrast-logic-operations-in-c">
+<a class="anchor" href="#contrast-logic-operations-in-c" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contrast: Logic operations in C</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027044328800.png" alt="image-20211027044328800"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027044336152.png" alt="image-20211027044336152"></p>
+
+<h2 id="shift-operations">
+<a class="anchor" href="#shift-operations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shift operations</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027044421381.png" alt="image-20211027044421381"></p>
+
+<h2 id="integers">
+<a class="anchor" href="#integers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Integers</h2>
+
+<h3 id="encoding-integers">
+<a class="anchor" href="#encoding-integers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Encoding integers</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027044701071.png" alt="image-20211027044701071"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027044716057.png" alt="image-20211027044716057"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027044757931.png" alt="image-20211027044757931"></p>
+
+<h3 id="numeric-ranges">
+<a class="anchor" href="#numeric-ranges" aria-hidden="true"><span class="octicon octicon-link"></span></a>Numeric ranges</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027044826093.png" alt="image-20211027044826093"></p>
+
+<h3 id="values-for-different-word-sizes">
+<a class="anchor" href="#values-for-different-word-sizes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Values for different word sizes</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027044913286.png" alt="image-20211027044913286"></p>
+
+<h3 id="unsigned--signed-numeric-values">
+<a class="anchor" href="#unsigned--signed-numeric-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unsigned &amp; signed numeric values</h3>
+
+<p>Equivalence</p>
+
+<ul>
+  <li>same encodings for nonnegative values</li>
+</ul>
+
+<p>Uniqueness</p>
+
+<ul>
+  <li>Every bit pattern represents unique integer value</li>
+  <li>Each representable integer has unique bit encoding</li>
+</ul>
+
+<p>Can inverting mappings</p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027045039055.png" alt="image-20211027045039055"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027045044999.png" alt="image-20211027045044999"></p>
+
+<h2 id="mapping-between-signed--unsigned">
+<a class="anchor" href="#mapping-between-signed--unsigned" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mapping between signed &amp; unsigned</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027045107523.png" alt="image-20211027045107523"></p>
+
+<p>Mappings between unsigned and two’s complement numbers: Keep bit representations and reinterpret</p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027045221125.png" alt="image-20211027045221125"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027045230990.png" alt="image-20211027045230990"></p>
+
+<h3 id="relation-between-signed--unsigned">
+<a class="anchor" href="#relation-between-signed--unsigned" aria-hidden="true"><span class="octicon octicon-link"></span></a>Relation between signed &amp; unsigned</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027045250508.png" alt="image-20211027045250508"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027045308052.png" alt="image-20211027045308052"></p>
+
+<h3 id="signed-vs-unsigned-in-c">
+<a class="anchor" href="#signed-vs-unsigned-in-c" aria-hidden="true"><span class="octicon octicon-link"></span></a>Signed vs. unsigned in C</h3>
+
+<p>Constants</p>
+
+<ul>
+  <li>By default are considered to be signed integers</li>
+  <li>Unsigned if have “U” as suffix</li>
+  <li><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027045337350.png" alt="image-20211027045337350"></li>
+</ul>
+
+<p>Casting</p>
+
+<ul>
+  <li>Explicit casting between signed &amp; unsigned same as U2T and T2U</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027045359829.png" alt="image-20211027045359829"></p>
+
+<ul>
+  <li>Implicit casting also occurs via assignment and procedure calls</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027045429660.png" alt="image-20211027045429660"></p>
+
+<h3 id="casting-surprises">
+<a class="anchor" href="#casting-surprises" aria-hidden="true"><span class="octicon octicon-link"></span></a>Casting surprises</h3>
+
+<p>Expression evaluation</p>
+
+<ul>
+  <li>If there is a mix of unsigned and signed in single expression, signed values implicitly cast to unsigned</li>
+  <li>Including comparison operations</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027045512058.png" alt="image-20211027045512058"></p>
+
+<h3 id="casting-signed---unsigned-basic-rules">
+<a class="anchor" href="#casting-signed---unsigned-basic-rules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Casting signed &lt;-&gt; unsigned: basic rules</h3>
+
+<ul>
+  <li>Bit pattern is maintained</li>
+  <li>but reinterpreted</li>
+  <li>can have unexpected effects: adding or subtracting $2^{w}$</li>
+  <li>Expression containing signed and unsigned int
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">int</code> is cast to <code class="language-plaintext highlighter-rouge">unsigned</code>!!</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="sign-extension">
+<a class="anchor" href="#sign-extension" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sign extension</h3>
+
+<p>Task</p>
+
+<ul>
+  <li>Given w-bit signed integer x</li>
+  <li>Convert it to w + k-bit integer with same value</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027045810403.png" alt="image-20211027045810403"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027045831561.png" alt="image-20211027045831561"></p>
+
+<ul>
+  <li>Converting from smaller to larger integer data type</li>
+  <li>C automatically performs sign extension</li>
+</ul>
+
+<h4 id="expanding-short-int-to-int">
+<a class="anchor" href="#expanding-short-int-to-int" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expanding (short int to int)</h4>
+
+<ul>
+  <li>Unsigned: zeros added</li>
+  <li>Signed: sign extension</li>
+  <li>Both yield expected result</li>
+</ul>
+
+<h4 id="truncating-unsigned-to-unsigned-short">
+<a class="anchor" href="#truncating-unsigned-to-unsigned-short" aria-hidden="true"><span class="octicon octicon-link"></span></a>Truncating (unsigned to unsigned short)</h4>
+
+<ul>
+  <li>Unsigned / signed: bits are truncated</li>
+  <li>Result reinterpreted</li>
+  <li>Unsigned: mod operation</li>
+  <li>Signed: similar to mod</li>
+  <li>For small numbers yield expected behavior</li>
+</ul>
+
+<h3 id="unsigned-addition">
+<a class="anchor" href="#unsigned-addition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unsigned addition</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050155034.png" alt="image-20211027050155034"></p>
+
+<p>Standard addition function</p>
+
+<ul>
+  <li>ignores carry output</li>
+</ul>
+
+<p>Implementations modular arithmetic</p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050240445.png" alt="image-20211027050240445"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050335775.png" alt="image-20211027050335775"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050350882.png" alt="image-20211027050350882"></p>
+
+<h3 id="two-complement-addition">
+<a class="anchor" href="#two-complement-addition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Two-complement addition</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050417014.png" alt="image-20211027050417014"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050425030.png" alt="image-20211027050425030"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050435241.png" alt="image-20211027050435241"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050459580.png" alt="image-20211027050459580"></p>
+
+<h3 id="multiplication">
+<a class="anchor" href="#multiplication" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiplication</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050529807.png" alt="image-20211027050529807"></p>
+
+<p>Maintaining exact results</p>
+
+<ul>
+  <li>would need to keep expanding word size with each product computed</li>
+  <li>is done in software, if needed</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050615217.png" alt="image-20211027050615217"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050623133.png" alt="image-20211027050623133"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050636927.png" alt="image-20211027050636927"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050645206.png" alt="image-20211027050645206"></p>
+
+<h3 id="power-of-2-multiply-with-shift">
+<a class="anchor" href="#power-of-2-multiply-with-shift" aria-hidden="true"><span class="octicon octicon-link"></span></a>Power-of-2 multiply with shift</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050706187.png" alt="image-20211027050706187"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050710469.png" alt="image-20211027050710469"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050743532.png" alt="image-20211027050743532"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027050810877.png" alt="image-20211027050810877"></p>
+
+<h3 id="arithmetic-basic-rules">
+<a class="anchor" href="#arithmetic-basic-rules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arithmetic: Basic rules</h3>
+
+<h4 id="addition">
+<a class="anchor" href="#addition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Addition:</h4>
+
+<ul>
+  <li>Unsigned / signed: normal addition followed by truncate, same operation on bit level</li>
+  <li>Unsigned - addition mode $2^{w}$
+    <ul>
+      <li>Mathematical addition + possible subtraction of $2^{w}$</li>
+    </ul>
+  </li>
+  <li>Signed - modified addition mode $2^{w}$ (result in proper range)
+    <ul>
+      <li>Mathematical addition + possible addition or subtraction of $2^{w}$</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="multiplication-1">
+<a class="anchor" href="#multiplication-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiplication:</h4>
+
+<ul>
+  <li>Unsigned / signed: normal multiplication followed by truncate, same operation on bit level</li>
+  <li>Unsigned - multiplication mod $2^{w}$</li>
+  <li>Signed - modified multiplication mod $2^{w}$ (result in proper range)</li>
+</ul>
+
+<h3 id="why-should-i-use-unsigned">
+<a class="anchor" href="#why-should-i-use-unsigned" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why should I use unsigned?</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027051210460.png" alt="image-20211027051210460"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027051241526.png" alt="image-20211027051241526"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027051258484.png" alt="image-20211027051258484"></p>
+
+<h2 id="representations-in-memory-pointers-strings">
+<a class="anchor" href="#representations-in-memory-pointers-strings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Representations in memory, pointers, strings</h2>
+
+<h3 id="byte-oriented-memory-organization">
+<a class="anchor" href="#byte-oriented-memory-organization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Byte-oriented memory organization</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027051332281.png" alt="image-20211027051332281"></p>
+
+<p>Programs refer to data by address</p>
+
+<ul>
+  <li>Conceptually, envision it as a very large array of bytes</li>
+  <li>An address is like an index into that array
+    <ul>
+      <li>and, a pointer variable stores an address</li>
+    </ul>
+  </li>
+</ul>
+
+<p>System provides private address spaces to each ‘process’</p>
+
+<ul>
+  <li>Think of a process as a program being executed</li>
+  <li>So, a program can clobber its own data, but not that of others</li>
+</ul>
+
+<h3 id="machine-words">
+<a class="anchor" href="#machine-words" aria-hidden="true"><span class="octicon octicon-link"></span></a>Machine words</h3>
+
+<p>Any given computer has a ‘word size’</p>
+
+<ul>
+  <li>Nominal size of integer-valued data and of addresses</li>
+  <li>Until recently, most machines used 32 bits (4 bytes) as word size
+    <ul>
+      <li>Limits addresses to 4GB</li>
+    </ul>
+  </li>
+  <li>Increasingly, machines have 64-bit word size
+    <ul>
+      <li>Potentially, could have 18EB (exabytes) of addressable memory</li>
+    </ul>
+  </li>
+  <li>Machines still support multiple data formats
+    <ul>
+      <li>Fractions or multiples of word size</li>
+      <li>Always integral number of bytes</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="word-oriented-memory-organization">
+<a class="anchor" href="#word-oriented-memory-organization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Word-oriented memory organization</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027065818406.png" alt="image-20211027065818406"></p>
+
+<p>Addresses specify byte locations</p>
+
+<ul>
+  <li>Address of first byte in word</li>
+  <li>Addresses of successive words differ by 4 (32-bit) or 8 (64-bit)</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027065857259.png" alt="image-20211027065857259"></p>
+
+<h3 id="byte-ordering">
+<a class="anchor" href="#byte-ordering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Byte ordering</h3>
+
+<p>Conventions</p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027065913492.png" alt="image-20211027065913492"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027065921688.png" alt="image-20211027065921688"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027065953283.png" alt="image-20211027065953283"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027070043111.png" alt="image-20211027070043111"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027070050642.png" alt="image-20211027070050642"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027070102449.png" alt="image-20211027070102449"></p>
+
+<h3 id="representing-strings">
+<a class="anchor" href="#representing-strings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Representing Strings</h3>
+
+<p>Strings in C</p>
+
+<ul>
+  <li>Represented by array of characters</li>
+  <li>Each character encoded in ASCII format
+    <ul>
+      <li>Standard 7-bit encoding of character set</li>
+    </ul>
+  </li>
+  <li>String should be null-terminated
+    <ul>
+      <li>Final character = 0</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Compatibility</p>
+
+<ul>
+  <li>Byte ordering not an issue</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027070247413.png" alt="image-20211027070247413"></p>
+
+<h2 id="floating-point">
+<a class="anchor" href="#floating-point" aria-hidden="true"><span class="octicon octicon-link"></span></a>Floating point</h2>
+
+<h3 id="fractional-binary-numbers">
+<a class="anchor" href="#fractional-binary-numbers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fractional binary numbers</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027070611400.png" alt="image-20211027070611400"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027070656701.png" alt="image-20211027070656701"></p>
+
+<h3 id="representable-numbers">
+<a class="anchor" href="#representable-numbers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Representable numbers</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027070714526.png" alt="image-20211027070714526"></p>
+
+<h3 id="ieee-floating-point">
+<a class="anchor" href="#ieee-floating-point" aria-hidden="true"><span class="octicon octicon-link"></span></a>IEEE Floating point</h3>
+
+<p>IEEE Standard 754</p>
+
+<p>Driven by numerical concerns</p>
+
+<ul>
+  <li>Nice standards for rounding, overflow, underflow</li>
+  <li>Hard to make fast in hardware
+    <ul>
+      <li>Numerical analysts predominated over hardware designers in defining standard</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="floating-point-representation">
+<a class="anchor" href="#floating-point-representation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Floating point representation</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027070845517.png" alt="image-20211027070845517"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027070927661.png" alt="image-20211027070927661"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027070937032.png" alt="image-20211027070937032"></p>
+
+<h3 id="normalized-values">
+<a class="anchor" href="#normalized-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Normalized values</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027071101884.png" alt="image-20211027071101884"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027072122233.png" alt="image-20211027072122233"></p>
+
+<p>bias = 127</p>
+
+<p>127을 기준으로 0과 255만 제외하고, 소수점 1칸을 움직이고 싶으면 Exp = 128, E = 128 - 172 = 1로 계산</p>
+
+<h3 id="denormalized-values">
+<a class="anchor" href="#denormalized-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Denormalized values</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027072608278.png" alt="image-20211027072608278"></p>
+
+<h3 id="special-values">
+<a class="anchor" href="#special-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Special values</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027072733402.png" alt="image-20211027072733402"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027072953531.png" alt="image-20211027072953531"></p>
+
+<h3 id="distribution-of-values">
+<a class="anchor" href="#distribution-of-values" aria-hidden="true"><span class="octicon octicon-link"></span></a>Distribution of values</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027073027716.png" alt="image-20211027073027716"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027073048133.png" alt="image-20211027073048133"></p>
+
+<h3 id="special-properties-of-the-ieee-encoding">
+<a class="anchor" href="#special-properties-of-the-ieee-encoding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Special properties of the IEEE encoding</h3>
+
+<p>FP zero same as Integer zero</p>
+
+<ul>
+  <li>all bits = 0</li>
+</ul>
+
+<p>Can (almost) use unsigned integer comparison</p>
+
+<ul>
+  <li>Must first compare sign bits</li>
+  <li>Must consider -0 = 0</li>
+  <li>NaNs problematic</li>
+  <li>
+    <ul>
+      <li>Will be greater than any other values</li>
+      <li>What should comparison yield?</li>
+    </ul>
+  </li>
+  <li>Otherwise OK
+    <ul>
+      <li>Denorm vs. normalized</li>
+      <li>Normalized vs. infinity</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="floating-point-operations-basic-idea">
+<a class="anchor" href="#floating-point-operations-basic-idea" aria-hidden="true"><span class="octicon octicon-link"></span></a>Floating point operations: basic idea</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027073309010.png" alt="image-20211027073309010"></p>
+
+<p>Basic idea</p>
+
+<ul>
+  <li>First compute exact result</li>
+  <li>Make it fit into desired precision
+    <ul>
+      <li>Possibly overflow if exponent too large</li>
+      <li>Possibly round to fit into <code class="language-plaintext highlighter-rouge">frac</code>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="rounding">
+<a class="anchor" href="#rounding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rounding</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027073355639.png" alt="image-20211027073355639"></p>
+
+<h3 id="closer-look-at-round-to-even">
+<a class="anchor" href="#closer-look-at-round-to-even" aria-hidden="true"><span class="octicon octicon-link"></span></a>Closer look at round-to-even</h3>
+
+<p>Default rounding mode</p>
+
+<ul>
+  <li>hard to get any other kind without dropping into assembly</li>
+  <li>All other are statistically biased
+    <ul>
+      <li>Sum of set of positive numbers will consistently be over- or under-estimated</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027073540219.png" alt="image-20211027073540219"></p>
+
+<h3 id="rounding-binary-numbers">
+<a class="anchor" href="#rounding-binary-numbers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rounding binary numbers</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027073643032.png" alt="image-20211027073643032"></p>
+
+<h3 id="fp-multiplication">
+<a class="anchor" href="#fp-multiplication" aria-hidden="true"><span class="octicon octicon-link"></span></a>FP multiplication</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027073655642.png" alt="image-20211027073655642"></p>
+
+<p>Fixing</p>
+
+<ul>
+  <li>If $M \geq 2$, shift M right, increment E</li>
+  <li>If E out of range, overflow</li>
+  <li>Round M to fit <code class="language-plaintext highlighter-rouge">frac</code> precision</li>
+</ul>
+
+<p>Implementation</p>
+
+<ul>
+  <li>Biggest chore is multiplying significands</li>
+</ul>
+
+<h3 id="floating-point-addition">
+<a class="anchor" href="#floating-point-addition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Floating point addition</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027073824957.png" alt="image-20211027073824957"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027073911945.png" alt="image-20211027073911945"></p>
+
+<h3 id="mathematical-properties-of-fp-add">
+<a class="anchor" href="#mathematical-properties-of-fp-add" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mathematical properties of FP add</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027073929110.png" alt="image-20211027073929110"></p>
+
+<h3 id="mathematical-properties-of-fp-mult">
+<a class="anchor" href="#mathematical-properties-of-fp-mult" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mathematical properties of FP mult</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027074040391.png" alt="image-20211027074040391"></p>
+
+<h3 id="abelian-group">
+<a class="anchor" href="#abelian-group" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abelian group</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027074127882.png" alt="image-20211027074127882"></p>
+
+<h3 id="floating-point-in-c">
+<a class="anchor" href="#floating-point-in-c" aria-hidden="true"><span class="octicon octicon-link"></span></a>Floating point in C</h3>
+
+<p><code class="language-plaintext highlighter-rouge">float</code> - single precision</p>
+
+<p><code class="language-plaintext highlighter-rouge">double</code> - double precision</p>
+
+<p>Conversions / casting</p>
+
+<ul>
+  <li>Casting between <code class="language-plaintext highlighter-rouge">int, float</code>, and <code class="language-plaintext highlighter-rouge">double</code> changes bit representation.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">double / float</code> -&gt; int
+    <ul>
+      <li>Truncates fractional part</li>
+      <li>like rounding toward zero</li>
+      <li>not defined when out of range or NaN</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">int -&gt; double</code>
+    <ul>
+      <li>exact conversion, as long as <code class="language-plaintext highlighter-rouge">int</code> has $\leq 53$ bit word size</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">int -&gt; float</code>
+    <ul>
+      <li>will round according to rounding mode</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="floating-point-puzzles">
+<a class="anchor" href="#floating-point-puzzles" aria-hidden="true"><span class="octicon octicon-link"></span></a>Floating point puzzles</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027074403219.png" alt="image-20211027074403219"></p>
+
+<h3 id="dynamic-range-positive-only">
+<a class="anchor" href="#dynamic-range-positive-only" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic range (positive-only)</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027074710910.png" alt="image-20211027074710910"></p>
+
+<h2 id="intel-x86-processors">
+<a class="anchor" href="#intel-x86-processors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intel x86 processors</h2>
+
+<p>Complex instruction set computer (CISC)</p>
+
+<ul>
+  <li>Many different instructions with many different formats
+    <ul>
+      <li>but, only small subset encountered with Linux programs</li>
+    </ul>
+  </li>
+  <li>Hard to match performance of Reduced Instruction Set Computers (RISC)</li>
+  <li>In terms of speed. Less so for low power.</li>
+</ul>
+
+<p>Added features</p>
+
+<ul>
+  <li>Instructions to support multimedia operations</li>
+  <li>Instructions to enable more efficient conditional operations</li>
+  <li>Transition from 32 bits to 64 bits</li>
+  <li>More cores</li>
+</ul>
+
+<h2 id="x86-clones-advanced-micro-devices-amd">
+<a class="anchor" href="#x86-clones-advanced-micro-devices-amd" aria-hidden="true"><span class="octicon octicon-link"></span></a>x86 clones: Advanced Micro Devices (AMD)</h2>
+
+<ul>
+  <li>a little bit slow, a lot cheaper</li>
+  <li>Developed x86-64, their own extension to 64 bits</li>
+</ul>
+
+<h2 id="definitions">
+<a class="anchor" href="#definitions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Definitions</h2>
+
+<p>Architecture - (also ISA: Instruction Set Architecture) The parts of a processor design that one needs to understand or write assembly / machine code.</p>
+
+<p>Microarchitecture - Implementation of the architecture</p>
+
+<p>Code forms</p>
+
+<ul>
+  <li>Machine code - The byte-level programs that a processor executes</li>
+  <li>Assembly code - A text representation of machine code</li>
+</ul>
+
+<h2 id="assembly---machine-code-view">
+<a class="anchor" href="#assembly---machine-code-view" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assembly  / Machine code view</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027075257754.png" alt="image-20211027075257754"></p>
+
+<p>Programmer-visible state</p>
+
+<ul>
+  <li>PC - Program counter
+    <ul>
+      <li>address of next instruction</li>
+      <li>called ‘RIP’</li>
+    </ul>
+  </li>
+  <li>Register file
+    <ul>
+      <li>heavily used program data</li>
+    </ul>
+  </li>
+  <li>Condition codes
+    <ul>
+      <li>store status information about most recent arithmetic or logical operation</li>
+      <li>used for conditional branching</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Memory</p>
+
+<ul>
+  <li>Byte addressable array</li>
+  <li>Code and user data</li>
+  <li>Stack to support procedures</li>
+</ul>
+
+<h2 id="turning-c-into-object-code">
+<a class="anchor" href="#turning-c-into-object-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Turning C into Object code</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027075420009.png" alt="image-20211027075420009"></p>
+
+<h3 id="compiling-into-assembly">
+<a class="anchor" href="#compiling-into-assembly" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compiling into assembly</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027075451716.png" alt="image-20211027075451716"></p>
+
+<h2 id="assembly-characteristics-data-types">
+<a class="anchor" href="#assembly-characteristics-data-types" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assembly characteristics: data types</h2>
+
+<p>‘Integer’ data of 1, 2, 4, or 8 bytes</p>
+
+<ul>
+  <li>Data values</li>
+  <li>Addresses (untyped pointers)</li>
+</ul>
+
+<p>Floating point data of 4, 8, or 10 bytes</p>
+
+<p>Code - byte sequences encoding series of instructions</p>
+
+<p>No aggregate types such as arrays or structures</p>
+
+<ul>
+  <li>just contiguously allocated bytes in memory</li>
+</ul>
+
+<h2 id="assembly-characteristics-operations">
+<a class="anchor" href="#assembly-characteristics-operations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assembly characteristics: Operations</h2>
+
+<p>perform arithmetic function on register or memory data</p>
+
+<p>Transfer data between memory and register</p>
+
+<ul>
+  <li>Load data from memory into register</li>
+  <li>Store register data into memory</li>
+</ul>
+
+<p>Transfer control</p>
+
+<ul>
+  <li>Unconditional jumps to / from procedures</li>
+  <li>conditional branches</li>
+</ul>
+
+<h2 id="object-code">
+<a class="anchor" href="#object-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Object code</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027075819838.png" alt="image-20211027075819838"></p>
+
+<h2 id="machine-instruction-example">
+<a class="anchor" href="#machine-instruction-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Machine instruction example</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027075907340.png" alt="image-20211027075907340"></p>
+
+<h2 id="disassembling-object-code">
+<a class="anchor" href="#disassembling-object-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disassembling object code</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027075952304.png" alt="image-20211027075952304"></p>
+
+<p>Disassembler</p>
+
+<p><code class="language-plaintext highlighter-rouge">objdump -d sum</code></p>
+
+<ul>
+  <li>useful tool for examining object code</li>
+  <li>Analyzes bit pattern of series of instructions</li>
+  <li>Produces approximate rendition of assembly code</li>
+  <li>Can be run on either a.out (complete executable) or .o file</li>
+</ul>
+
+<h3 id="what-can-be-disassembled">
+<a class="anchor" href="#what-can-be-disassembled" aria-hidden="true"><span class="octicon octicon-link"></span></a>What can be disassembled?</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080055315.png" alt="image-20211027080055315"></p>
+
+<p>Anything that can be interpreted as executable code</p>
+
+<p>Disassembler examines bytes and reconstructs assembly source</p>
+
+<h2 id="x86-64-integer-registers">
+<a class="anchor" href="#x86-64-integer-registers" aria-hidden="true"><span class="octicon octicon-link"></span></a>x86-64 Integer Registers</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080134896.png" alt="image-20211027080134896"></p>
+
+<h3 id="some-history-ia32-registers">
+<a class="anchor" href="#some-history-ia32-registers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Some history: IA32 registers</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080157590.png" alt="image-20211027080157590"></p>
+
+<h2 id="moving-data">
+<a class="anchor" href="#moving-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Moving data</h2>
+
+<p><code class="language-plaintext highlighter-rouge">movq Source, Dest</code></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080222603.png" alt="image-20211027080222603"></p>
+
+<h3 id="movq-operand-combinations">
+<a class="anchor" href="#movq-operand-combinations" aria-hidden="true"><span class="octicon octicon-link"></span></a><code class="language-plaintext highlighter-rouge">movq</code> operand combinations</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080309631.png" alt="image-20211027080309631"></p>
+
+<h2 id="simple-memory-addressing-modes">
+<a class="anchor" href="#simple-memory-addressing-modes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple memory addressing modes</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080353954.png" alt="image-20211027080353954"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080408919.png" alt="image-20211027080408919"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080425212.png" alt="image-20211027080425212"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080602119.png" alt="image-20211027080602119"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080610058.png" alt="image-20211027080610058"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080617652.png" alt="image-20211027080617652"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080625400.png" alt="image-20211027080625400"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080630845.png" alt="image-20211027080630845"></p>
+
+<h2 id="complete-memory-addressing-modes">
+<a class="anchor" href="#complete-memory-addressing-modes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Complete memory addressing modes</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027080653122.png" alt="image-20211027080653122"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027094428952.png" alt="image-20211027094428952"></p>
+
+<h2 id="address-computation-instruction">
+<a class="anchor" href="#address-computation-instruction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Address computation instruction</h2>
+
+<p><code class="language-plaintext highlighter-rouge">leaq Src, Dst</code></p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">Src</code> is address mode expression</li>
+  <li>Set <code class="language-plaintext highlighter-rouge">Dst</code> to address denoted by expression</li>
+</ul>
+
+<p>Use</p>
+
+<ul>
+  <li>Computing addresses without a memory reference</li>
+  <li>Computing arithmetic expressions of the from $x + k * y$</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027094541160.png" alt="image-20211027094541160"></p>
+
+<h2 id="some-arithmetic-operations">
+<a class="anchor" href="#some-arithmetic-operations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Some arithmetic operations</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027094629212.png" alt="image-20211027094629212"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027094634269.png" alt="image-20211027094634269"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027094704377.png" alt="image-20211027094704377"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027094735037.png" alt="image-20211027094735037"></p>
+
+<h2 id="processor-state-x86-64-partial">
+<a class="anchor" href="#processor-state-x86-64-partial" aria-hidden="true"><span class="octicon octicon-link"></span></a>Processor State (x86-64, Partial)</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027094916448.png" alt="image-20211027094916448"></p>
+
+<h2 id="condition-codes-implicit-setting">
+<a class="anchor" href="#condition-codes-implicit-setting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Condition codes (implicit setting)</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027094954382.png" alt="image-20211027094954382"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027095002281.png" alt="image-20211027095002281"></p>
+
+<p>Not set by <code class="language-plaintext highlighter-rouge">leaq</code> instruction</p>
+
+<h3 id="explicit-setting-compare">
+<a class="anchor" href="#explicit-setting-compare" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explicit setting: Compare</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027095056556.png" alt="image-20211027095056556"></p>
+
+<h3 id="explicit-setting-test">
+<a class="anchor" href="#explicit-setting-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explicit setting: test</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027095130320.png" alt="image-20211027095130320"></p>
+
+<h2 id="reading-condition-codes">
+<a class="anchor" href="#reading-condition-codes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading condition codes</h2>
+
+<p>SetX Instructions</p>
+
+<ul>
+  <li>Set low-order bytes of destination to 0 or 1 based on combinations of condition codes</li>
+  <li>Does not alter remaining 7 bytes</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027095226154.png" alt="image-20211027095226154"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027095236908.png" alt="image-20211027095236908"></p>
+
+<p>SetX Instructions - set single byte based on combination of condition codes</p>
+
+<p>One of addressable byte registers</p>
+
+<ul>
+  <li>Does not alter remaining bytes</li>
+  <li>Typically use <code class="language-plaintext highlighter-rouge">movzbl</code> to finish job
+    <ul>
+      <li>32-bit instructions also set upper 32 bits to 0</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027095339037.png" alt="image-20211027095339037"></p>
+
+<h2 id="jumping">
+<a class="anchor" href="#jumping" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jumping</h2>
+
+<p>jX instructions - Jump to different part of code depending on condition codes</p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027095421739.png" alt="image-20211027095421739"></p>
+
+<h2 id="conditional-branch-example-old-style">
+<a class="anchor" href="#conditional-branch-example-old-style" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conditional branch example (old style)</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027095444228.png" alt="image-20211027095444228"></p>
+
+<h2 id="expressing-with-goto-code">
+<a class="anchor" href="#expressing-with-goto-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expressing with Goto code</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027100123443.png" alt="image-20211027100123443"></p>
+
+<h2 id="general-conditional-expression-translation-using-branches">
+<a class="anchor" href="#general-conditional-expression-translation-using-branches" aria-hidden="true"><span class="octicon octicon-link"></span></a>General conditional expression translation (using branches)</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027100213983.png" alt="image-20211027100213983"></p>
+
+<h2 id="using-conditional-moves">
+<a class="anchor" href="#using-conditional-moves" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using conditional moves</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027100234307.png" alt="image-20211027100234307"></p>
+
+<p>Conditional move instructions</p>
+
+<ul>
+  <li>Instruction supports: <code class="language-plaintext highlighter-rouge">if (Test) Dest &lt;- Src</code>
+</li>
+  <li>Supported in post-1995 x86 processors</li>
+  <li>GCC tries to use them
+    <ul>
+      <li>But, only when known to be safe</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Why?</p>
+
+<ul>
+  <li>Branches are very disruptive instruction flow through pipelines</li>
+  <li>Conditional moves do not require control transfer</li>
+</ul>
+
+<h2 id="conditional-move-example">
+<a class="anchor" href="#conditional-move-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conditional move example</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027100428875.png" alt="image-20211027100428875"></p>
+
+<h2 id="bad-cases-for-conditional-move">
+<a class="anchor" href="#bad-cases-for-conditional-move" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bad cases for conditional move</h2>
+
+<h3 id="expensive-computations">
+<a class="anchor" href="#expensive-computations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expensive computations</h3>
+
+<p><code class="language-plaintext highlighter-rouge">val  = Test(x) ? Hardl(x) : Hard2(x);</code></p>
+
+<ul>
+  <li>both values get computed</li>
+  <li>Only makes sense when computations are very simple</li>
+</ul>
+
+<h3 id="risky-computations">
+<a class="anchor" href="#risky-computations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Risky computations</h3>
+
+<p><code class="language-plaintext highlighter-rouge">val = p ? *p : 0;</code></p>
+
+<ul>
+  <li>Both values get computed</li>
+  <li>May have undesirable effects</li>
+</ul>
+
+<h3 id="computations-with-side-effects">
+<a class="anchor" href="#computations-with-side-effects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computations with side effects</h3>
+
+<p><code class="language-plaintext highlighter-rouge">val = x &gt; 0 ? x *= 7 : x += 3</code></p>
+
+<ul>
+  <li>Both values get computed</li>
+  <li>Must be side-effect free</li>
+</ul>
+
+<h2 id="do-while-loop-example">
+<a class="anchor" href="#do-while-loop-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Do-while loop example</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027100719400.png" alt="image-20211027100719400"></p>
+
+<h2 id="do-while-loop-compilation">
+<a class="anchor" href="#do-while-loop-compilation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Do-while loop compilation</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027100753177.png" alt="image-20211027100753177"></p>
+
+<h2 id="general-do-while-translation">
+<a class="anchor" href="#general-do-while-translation" aria-hidden="true"><span class="octicon octicon-link"></span></a>General do-while translation</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027100829385.png" alt="image-20211027100829385"></p>
+
+<h3 id="general-while-translation-1">
+<a class="anchor" href="#general-while-translation-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>General while translation #1</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027100846135.png" alt="image-20211027100846135"></p>
+
+<h2 id="while-loop-example">
+<a class="anchor" href="#while-loop-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>While loop example</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027100917193.png" alt="image-20211027100917193"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027100933135.png" alt="image-20211027100933135"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027100942738.png" alt="image-20211027100942738"></p>
+
+<h2 id="for-loop-form">
+<a class="anchor" href="#for-loop-form" aria-hidden="true"><span class="octicon octicon-link"></span></a>For loop form</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027101053616.png" alt="image-20211027101053616"></p>
+
+<h2 id="for-loop---while-loop">
+<a class="anchor" href="#for-loop---while-loop" aria-hidden="true"><span class="octicon octicon-link"></span></a>For loop -&gt; while loop</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027101110082.png" alt="image-20211027101110082"></p>
+
+<h2 id="for-while-conversion">
+<a class="anchor" href="#for-while-conversion" aria-hidden="true"><span class="octicon octicon-link"></span></a>For-while conversion</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027101123580.png" alt="image-20211027101123580"></p>
+
+<h2 id="for-loop-do-while-conversion">
+<a class="anchor" href="#for-loop-do-while-conversion" aria-hidden="true"><span class="octicon octicon-link"></span></a>For loop do-while conversion</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027101136420.png" alt="image-20211027101136420"></p>
+
+<h2 id="switch-statement-example">
+<a class="anchor" href="#switch-statement-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Switch statement example</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027101209574.png" alt="image-20211027101209574"></p>
+
+<h2 id="jump-table-structure">
+<a class="anchor" href="#jump-table-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jump table structure</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027101222818.png" alt="image-20211027101222818"></p>
+
+<h2 id="switch-statement-example-1">
+<a class="anchor" href="#switch-statement-example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Switch statement example</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027101241191.png" alt="image-20211027101241191"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027101324338.png" alt="image-20211027101324338"></p>
+
+<h2 id="assembly-setup-explanation">
+<a class="anchor" href="#assembly-setup-explanation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assembly setup explanation</h2>
+
+<p>Table structure</p>
+
+<ul>
+  <li>each target requires 8 bytes</li>
+  <li>base address at <code class="language-plaintext highlighter-rouge">.L4</code>
+</li>
+</ul>
+
+<p>Jumping</p>
+
+<ul>
+  <li>Direct: <code class="language-plaintext highlighter-rouge">jmp .L8</code>
+</li>
+  <li>Jump target is denoted by label <code class="language-plaintext highlighter-rouge">.L8</code>
+</li>
+  <li>Indirect: <code class="language-plaintext highlighter-rouge">jmp *.L4(, %rdi, 8)</code>
+</li>
+  <li>Start of jump table: <code class="language-plaintext highlighter-rouge">.L4</code>
+</li>
+  <li>Must scale by factor of 8 (addresses are 8 bytes)</li>
+  <li>Fetch target from effective address <code class="language-plaintext highlighter-rouge">.L4 + x * 8</code>
+    <ul>
+      <li>only for $0 \leq x \leq 6$</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="jump-table">
+<a class="anchor" href="#jump-table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Jump table</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027101557124.png" alt="image-20211027101557124"></p>
+
+<h3 id="code-blocks-x--1">
+<a class="anchor" href="#code-blocks-x--1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code blocks (<code class="language-plaintext highlighter-rouge">x == 1</code>)</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027101656175.png" alt="image-20211027101656175"></p>
+
+<h3 id="handling-fall-through">
+<a class="anchor" href="#handling-fall-through" aria-hidden="true"><span class="octicon octicon-link"></span></a>handling fall-through</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027101728790.png" alt="image-20211027101728790"></p>
+
+<h3 id="code-blocks-x--2-x--3">
+<a class="anchor" href="#code-blocks-x--2-x--3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code blocks (<code class="language-plaintext highlighter-rouge">x == 2, x == 3</code>)</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027101744257.png" alt="image-20211027101744257"></p>
+
+<h3 id="code-blocks-x--5-x--6-default">
+<a class="anchor" href="#code-blocks-x--5-x--6-default" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code blocks (<code class="language-plaintext highlighter-rouge">x == 5, x == 6, default</code>)</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027101831338.png" alt="image-20211027101831338"></p>
+
+<h2 id="mechanisms-in-procedures">
+<a class="anchor" href="#mechanisms-in-procedures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mechanisms in procedures</h2>
+
+<p>passing control</p>
+
+<ul>
+  <li>To beginning of procedure code</li>
+  <li>back to return point</li>
+</ul>
+
+<p>Passing data</p>
+
+<ul>
+  <li>Procedure arguments</li>
+  <li>return value</li>
+</ul>
+
+<p>Memory management</p>
+
+<ul>
+  <li>allocate during procedure execution</li>
+  <li>deallocate upon return</li>
+</ul>
+
+<p>Mechanisms all implemented with machine instructions</p>
+
+<p>x86-64 implementation of a procedure uses only those mechanisms required</p>
+
+<h2 id="x86-64-stack">
+<a class="anchor" href="#x86-64-stack" aria-hidden="true"><span class="octicon octicon-link"></span></a>x86-64 stack</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027103417450.png" alt="image-20211027103417450"></p>
+
+<p>region of memory managed with stack discipline</p>
+
+<p>grows toward lower addresses</p>
+
+<p>register <code class="language-plaintext highlighter-rouge">%rsp</code> constains lowest stack address</p>
+
+<ul>
+  <li>address of ‘top’ element</li>
+</ul>
+
+<h3 id="x86-64-stack-push">
+<a class="anchor" href="#x86-64-stack-push" aria-hidden="true"><span class="octicon octicon-link"></span></a>x86-64 stack: push</h3>
+
+<p><code class="language-plaintext highlighter-rouge">pushq src</code></p>
+
+<ul>
+  <li>Fetch operand at src</li>
+  <li>Decrement <code class="language-plaintext highlighter-rouge">%rsp</code> by 8</li>
+  <li>Write operand address given by <code class="language-plaintext highlighter-rouge">%rsp</code>
+</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027103538821.png" alt="image-20211027103538821"></p>
+
+<h3 id="x86-64-stack-pop">
+<a class="anchor" href="#x86-64-stack-pop" aria-hidden="true"><span class="octicon octicon-link"></span></a>x86-64 stack: pop</h3>
+
+<p><code class="language-plaintext highlighter-rouge">popq dest</code></p>
+
+<ul>
+  <li>Read value at address given by <code class="language-plaintext highlighter-rouge">%rsp</code>
+</li>
+  <li>increment <code class="language-plaintext highlighter-rouge">%rsp</code> by 8</li>
+  <li>store value at dest (must be register)</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027103627936.png" alt="image-20211027103627936"></p>
+
+<h2 id="code-example">
+<a class="anchor" href="#code-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code example</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027103644808.png" alt="image-20211027103644808"></p>
+
+<h2 id="procedure-control-flow">
+<a class="anchor" href="#procedure-control-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Procedure control flow</h2>
+
+<p>use stack to support procedure call and return</p>
+
+<p>procedure call: <code class="language-plaintext highlighter-rouge">call label</code></p>
+
+<ul>
+  <li>push return address on stack</li>
+  <li>jump to label</li>
+</ul>
+
+<p>return address:</p>
+
+<ul>
+  <li>address of the next instruction right after call</li>
+  <li>example from disassembly</li>
+</ul>
+
+<p>Procedure return: <code class="language-plaintext highlighter-rouge">ret</code></p>
+
+<ul>
+  <li>pop address from stack</li>
+  <li>jump to address</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027103755978.png" alt="image-20211027103755978"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027103818672.png" alt="image-20211027103818672"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027103905789.png" alt="image-20211027103905789"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027103916325.png" alt="image-20211027103916325"></p>
+
+<h2 id="procedure-data-flow">
+<a class="anchor" href="#procedure-data-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Procedure data flow</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027103941719.png" alt="image-20211027103941719"></p>
+
+<h3 id="data-flow-examples">
+<a class="anchor" href="#data-flow-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>data flow examples</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104001697.png" alt="image-20211027104001697"></p>
+
+<h2 id="stack-based-languages">
+<a class="anchor" href="#stack-based-languages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stack-based languages</h2>
+
+<p>languages that support recursion</p>
+
+<ul>
+  <li>code must be ‘reentrant’
+    <ul>
+      <li>multiple simultaneous instantiations of single procedure</li>
+    </ul>
+  </li>
+  <li>need some place to store state of each instantiation
+    <ul>
+      <li>arguments</li>
+      <li>local variables</li>
+      <li>return pointer</li>
+    </ul>
+  </li>
+</ul>
+
+<p>stack discipline</p>
+
+<ul>
+  <li>state for given procedure needed for limited time
+    <ul>
+      <li>from when called to when return</li>
+    </ul>
+  </li>
+  <li>callee returns before caller does</li>
+</ul>
+
+<p>stack allocated in frames</p>
+
+<ul>
+  <li>state for single procedure instantiation</li>
+</ul>
+
+<h2 id="call-chain-example">
+<a class="anchor" href="#call-chain-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>call chain example</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104207381.png" alt="image-20211027104207381"></p>
+
+<h2 id="stack-frame">
+<a class="anchor" href="#stack-frame" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stack frame</h2>
+
+<p>contents</p>
+
+<ul>
+  <li>return information</li>
+  <li>local storage (if needed)</li>
+  <li>temporary space (if needed)</li>
+</ul>
+
+<p>management</p>
+
+<ul>
+  <li>space allocated when enter procedure
+    <ul>
+      <li>set-up code</li>
+      <li>includes push by <code class="language-plaintext highlighter-rouge">call</code> instruction</li>
+    </ul>
+  </li>
+  <li>deallocated when return
+    <ul>
+      <li>finish code</li>
+      <li>includes pop by <code class="language-plaintext highlighter-rouge">ret</code> instruction</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104310318.png" alt="image-20211027104310318"></p>
+
+<h3 id="example">
+<a class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104326446.png" alt="image-20211027104326446"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104338914.png" alt="image-20211027104338914"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104347201.png" alt="image-20211027104347201"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104353955.png" alt="image-20211027104353955"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104402833.png" alt="image-20211027104402833"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104411997.png" alt="image-20211027104411997"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104418160.png" alt="image-20211027104418160"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104426472.png" alt="image-20211027104426472"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104433206.png" alt="image-20211027104433206"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104439712.png" alt="image-20211027104439712"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104445710.png" alt="image-20211027104445710"></p>
+
+<h2 id="x86-64--linux-stack-frame">
+<a class="anchor" href="#x86-64--linux-stack-frame" aria-hidden="true"><span class="octicon octicon-link"></span></a>x86-64 / Linux stack frame</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104501895.png" alt="image-20211027104501895"></p>
+
+<p>Current stack frame (‘top’ to bottom)</p>
+
+<ul>
+  <li>‘argument build’: parameters for function about to call</li>
+  <li>local variables if can’t keep in registers</li>
+  <li>saved register context</li>
+  <li>old frame pointer (optional)</li>
+</ul>
+
+<p>Caller stack frame</p>
+
+<ul>
+  <li>return address
+    <ul>
+      <li>pushed by <code class="language-plaintext highlighter-rouge">call</code> instruction</li>
+    </ul>
+  </li>
+  <li>arguments for this call</li>
+</ul>
+
+<h2 id="example-incr">
+<a class="anchor" href="#example-incr" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example: <code class="language-plaintext highlighter-rouge">incr</code>
+</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027104623434.png" alt="image-20211027104623434"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110105442.png" alt="image-20211027110105442"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110122509.png" alt="image-20211027110122509"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110132835.png" alt="image-20211027110132835"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110152468.png" alt="image-20211027110152468"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110204358.png" alt="image-20211027110204358"></p>
+
+<h2 id="register-saving-conventions">
+<a class="anchor" href="#register-saving-conventions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Register saving conventions</h2>
+
+<p>when procedure <code class="language-plaintext highlighter-rouge">yoo</code> calls <code class="language-plaintext highlighter-rouge">who</code>:</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">yoo</code> is the caller</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">who</code> is the callee</li>
+</ul>
+
+<p>Can register be used for temporary storage?</p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110246294.png" alt="image-20211027110246294"></p>
+
+<p>Conventions</p>
+
+<ul>
+  <li>‘caller saved’
+    <ul>
+      <li>caller saves temporary values in its frame before the call</li>
+    </ul>
+  </li>
+  <li>‘callee saved’
+    <ul>
+      <li>callee saved temporary values in its frame before using</li>
+      <li>callee restores them before returning to caller</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="x86-64-linux-register-usage">
+<a class="anchor" href="#x86-64-linux-register-usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>x86-64 Linux register usage</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110355861.png" alt="image-20211027110355861"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110528349.png" alt="image-20211027110528349"></p>
+
+<h2 id="callee-saved-example">
+<a class="anchor" href="#callee-saved-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Callee-saved example</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110556071.png" alt="image-20211027110556071"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110607046.png" alt="image-20211027110607046"></p>
+
+<h2 id="recursion-function">
+<a class="anchor" href="#recursion-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursion function</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110622761.png" alt="image-20211027110622761"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110734013.png" alt="image-20211027110734013"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110745359.png" alt="image-20211027110745359"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110755966.png" alt="image-20211027110755966"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110804783.png" alt="image-20211027110804783"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110812682.png" alt="image-20211027110812682"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027110825578.png" alt="image-20211027110825578"></p>
+
+<h2 id="observations-about-recursion">
+<a class="anchor" href="#observations-about-recursion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Observations about recursion</h2>
+
+<p>Handled without special consideration</p>
+
+<ul>
+  <li>
+    <p>stack frames mean that each function call has private storage</p>
+
+    <ul>
+      <li>saved registers &amp; local variables</li>
+      <li>saved return pointer</li>
+    </ul>
+  </li>
+  <li>
+    <p>Register saving conventions prevent one function call from corrupting another’s data</p>
+
+    <ul>
+      <li>Unless the C code explicitly does so - buffer overflow</li>
+    </ul>
+  </li>
+  <li>
+    <p>Stack discipline follows call / return pattern</p>
+
+    <ul>
+      <li>If P calls Q, then Q returns before P</li>
+      <li>Last-In, First-Out</li>
+    </ul>
+
+    <p>Also works for mutual recursion</p>
+
+    <ul>
+      <li>P calls Q; Q calls P</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="x86-64-procedure-summary">
+<a class="anchor" href="#x86-64-procedure-summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>x86-64 Procedure summary</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111057784.png" alt="image-20211027111057784"></p>
+
+<h2 id="array-allocation">
+<a class="anchor" href="#array-allocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array allocation</h2>
+
+<p>Basic principle</p>
+
+<p><code class="language-plaintext highlighter-rouge">T A[L];</code></p>
+
+<ul>
+  <li>array of data type T and length L</li>
+  <li>contiguously allocated region of L * <code class="language-plaintext highlighter-rouge">sizeof(T)</code> bytes in memory</li>
+</ul>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111236807.png" alt="image-20211027111236807"></p>
+
+<h2 id="array-access">
+<a class="anchor" href="#array-access" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array access</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111258042.png" alt="image-20211027111258042"></p>
+
+<h2 id="array-example">
+<a class="anchor" href="#array-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Array example</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111335888.png" alt="image-20211027111335888"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111354692.png" alt="image-20211027111354692"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111434013.png" alt="image-20211027111434013"></p>
+
+<h2 id="multidimensional-nested-arrays">
+<a class="anchor" href="#multidimensional-nested-arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multidimensional (nested) arrays</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111455485.png" alt="image-20211027111455485"></p>
+
+<h3 id="nested-array-example">
+<a class="anchor" href="#nested-array-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nested array example</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111514213.png" alt="image-20211027111514213"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111536834.png" alt="image-20211027111536834"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111549363.png" alt="image-20211027111549363"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111731205.png" alt="image-20211027111731205"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111806092.png" alt="image-20211027111806092"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111924809.png" alt="image-20211027111924809"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027111945470.png" alt="image-20211027111945470"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027112047282.png" alt="image-20211027112047282"></p>
+
+<h2 id="n--n-matrix-code">
+<a class="anchor" href="#n--n-matrix-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>N * N Matrix code</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027112137346.png" alt="image-20211027112137346"></p>
+
+<h3 id="16--16-matrix-access">
+<a class="anchor" href="#16--16-matrix-access" aria-hidden="true"><span class="octicon octicon-link"></span></a>16 * 16 matrix access</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027113556133.png" alt="image-20211027113556133"></p>
+
+<h3 id="n--n-matrix-access">
+<a class="anchor" href="#n--n-matrix-access" aria-hidden="true"><span class="octicon octicon-link"></span></a>n * n matrix access</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027113609441.png" alt="image-20211027113609441"></p>
+
+<h2 id="structure-representation">
+<a class="anchor" href="#structure-representation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Structure representation</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027113624871.png" alt="image-20211027113624871"></p>
+
+<p>Structure represented as block of memory</p>
+
+<ul>
+  <li>big enough to hold all of the fields</li>
+</ul>
+
+<p>Fields ordered according to declaration</p>
+
+<ul>
+  <li>Even if another ordering could yield a more compact representation</li>
+</ul>
+
+<p>Compiler determines over size + positions of fields</p>
+
+<ul>
+  <li>Machine-level program has no understanding of the structures in the source code</li>
+</ul>
+
+<h2 id="generating-pointer-to-structure-member">
+<a class="anchor" href="#generating-pointer-to-structure-member" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generating pointer to structure member</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027113744195.png" alt="image-20211027113744195"></p>
+
+<h2 id="flowwing-linked-list">
+<a class="anchor" href="#flowwing-linked-list" aria-hidden="true"><span class="octicon octicon-link"></span></a>Flowwing linked list</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027113801438.png" alt="image-20211027113801438"></p>
+
+<h2 id="structures--alignment">
+<a class="anchor" href="#structures--alignment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Structures &amp; alignment</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027113814816.png" alt="image-20211027113814816"></p>
+
+<h2 id="alignment-priciples">
+<a class="anchor" href="#alignment-priciples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Alignment priciples</h2>
+
+<p>Aligned data</p>
+
+<ul>
+  <li>primitive data type requires K bytes</li>
+  <li>Addres must be multiple of k</li>
+  <li>required on some machines; advised on x86-64</li>
+</ul>
+
+<p>Motivtaion for aligning data</p>
+
+<ul>
+  <li>memory accessed by (alinged) chunks of 4 or 8 bytes (system dependent)
+    <ul>
+      <li>inefficient to load or store datum that spans quad word boundaries</li>
+      <li>virtual memory trickier when datum spans 2 pages</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Compiler</p>
+
+<ul>
+  <li>inserts gaps in structure to ensure correct alignment of fields</li>
+</ul>
+
+<h2 id="specific-cases-of-alignment-x86-64">
+<a class="anchor" href="#specific-cases-of-alignment-x86-64" aria-hidden="true"><span class="octicon octicon-link"></span></a>Specific cases of alignment (x86-64)</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114001119.png" alt="image-20211027114001119"></p>
+
+<h2 id="satisfying-alignment-with-structures">
+<a class="anchor" href="#satisfying-alignment-with-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Satisfying alignment with structures</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114045668.png" alt="image-20211027114045668"></p>
+
+<h2 id="meeting-overall-alignment-requirement">
+<a class="anchor" href="#meeting-overall-alignment-requirement" aria-hidden="true"><span class="octicon octicon-link"></span></a>Meeting overall alignment requirement</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114106542.png" alt="image-20211027114106542"></p>
+
+<h2 id="arrays-of-structures">
+<a class="anchor" href="#arrays-of-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>arrays of structures</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114123050.png" alt="image-20211027114123050"></p>
+
+<h2 id="accessing-array-elements">
+<a class="anchor" href="#accessing-array-elements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Accessing array elements</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114141994.png" alt="image-20211027114141994"></p>
+
+<h2 id="saving-space">
+<a class="anchor" href="#saving-space" aria-hidden="true"><span class="octicon octicon-link"></span></a>Saving space</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114318223.png" alt="image-20211027114318223"></p>
+
+<h2 id="x86-64-linux-memory-layout">
+<a class="anchor" href="#x86-64-linux-memory-layout" aria-hidden="true"><span class="octicon octicon-link"></span></a>x86-64 Linux Memory layout</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114335708.png" alt="image-20211027114335708"></p>
+
+<h3 id="x86-64-example-addresses">
+<a class="anchor" href="#x86-64-example-addresses" aria-hidden="true"><span class="octicon octicon-link"></span></a>x86-64 example addresses</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114406947.png" alt="image-20211027114406947"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114414171.png" alt="image-20211027114414171"></p>
+
+<h2 id="memory-referencing-bug-example">
+<a class="anchor" href="#memory-referencing-bug-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Memory referencing bug example</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114458228.png" alt="image-20211027114458228"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114508272.png" alt="image-20211027114508272"></p>
+
+<h2 id="such-problems-are-a-big-deal">
+<a class="anchor" href="#such-problems-are-a-big-deal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Such problems are a BIG deal</h2>
+
+<p>generally called a ‘buffer overflow’</p>
+
+<ul>
+  <li>When exceeding the memory size allocated for an array</li>
+</ul>
+
+<p>Why a big deal?</p>
+
+<ul>
+  <li>It’s the #1 technical cause of security vulnerabilities
+    <ul>
+      <li>#1 overall cause is social enginerring / user ignorance</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Most common form</p>
+
+<ul>
+  <li>Unchecked lengths on string inputs</li>
+  <li>Particularly for bounded character arrays on the stack
+    <ul>
+      <li>sometimes referred to as stack smashing</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="string-library-code">
+<a class="anchor" href="#string-library-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>String library code</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114642824.png" alt="image-20211027114642824"></p>
+
+<h2 id="vulnerable-buffer-code">
+<a class="anchor" href="#vulnerable-buffer-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Vulnerable buffer code</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114659698.png" alt="image-20211027114659698"></p>
+
+<h2 id="buffer-overflow-disassembly">
+<a class="anchor" href="#buffer-overflow-disassembly" aria-hidden="true"><span class="octicon octicon-link"></span></a>Buffer overflow disassembly</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114714186.png" alt="image-20211027114714186"></p>
+
+<h2 id="buffer-overflow-stack">
+<a class="anchor" href="#buffer-overflow-stack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Buffer overflow stack</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114727477.png" alt="image-20211027114727477"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114738072.png" alt="image-20211027114738072"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114749245.png" alt="image-20211027114749245"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114800681.png" alt="image-20211027114800681"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027114815004.png" alt="image-20211027114815004"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027115817640.png" alt="image-20211027115817640"></p>
+
+<h2 id="code-injection-attacks">
+<a class="anchor" href="#code-injection-attacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code injection attacks</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027115849482.png" alt="image-20211027115849482"></p>
+
+<h2 id="exploits-based-on-buffer-overflows">
+<a class="anchor" href="#exploits-based-on-buffer-overflows" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exploits based on buffer overflows</h2>
+
+<p>Buffer overflow bug can allow remote machines to execute arbitrary code on victim machines</p>
+
+<p>Distressingly common in real programs</p>
+
+<h2 id="what-to-do-about-buffer-overflow-attacks">
+<a class="anchor" href="#what-to-do-about-buffer-overflow-attacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>What to do about buffer overflow attacks</h2>
+
+<ul>
+  <li>avoid overflow vulnerabilities</li>
+  <li>employ system-level protections</li>
+  <li>have compiler use ‘stack canaries’</li>
+</ul>
+
+<h3 id="avoid-overflow-vulnerabilities-in-code">
+<a class="anchor" href="#avoid-overflow-vulnerabilities-in-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Avoid overflow vulnerabilities in code</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027120039759.png" alt="image-20211027120039759"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027120046526.png" alt="image-20211027120046526"></p>
+
+<h3 id="system-level-protections-can-help">
+<a class="anchor" href="#system-level-protections-can-help" aria-hidden="true"><span class="octicon octicon-link"></span></a>System-level protections can help</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027120103535.png" alt="image-20211027120103535"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027120129353.png" alt="image-20211027120129353"></p>
+
+<h2 id="stack-canaries-can-help">
+<a class="anchor" href="#stack-canaries-can-help" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stack canaries can help</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027120251913.png" alt="image-20211027120251913"></p>
+
+<h2 id="protected-buffer-disassembly">
+<a class="anchor" href="#protected-buffer-disassembly" aria-hidden="true"><span class="octicon octicon-link"></span></a>Protected buffer disassembly</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027120327882.png" alt="image-20211027120327882"></p>
+
+<h2 id="setting-up-canary">
+<a class="anchor" href="#setting-up-canary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting up canary</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027120342746.png" alt="image-20211027120342746"></p>
+
+<h2 id="checking-canary">
+<a class="anchor" href="#checking-canary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Checking canary</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027120357226.png" alt="image-20211027120357226"></p>
+
+<h2 id="return-oriented-programming-attacks">
+<a class="anchor" href="#return-oriented-programming-attacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Return-oriented programming attacks</h2>
+
+<p>Challenge (for hackers)</p>
+
+<ul>
+  <li>stack randomization makes it hard to predict buffer location</li>
+  <li>marking stack nonexecutable makes it hard to insert binary code</li>
+</ul>
+
+<p>Alternative strategy</p>
+
+<ul>
+  <li>use existing code</li>
+  <li>string together fragments to achieve oeverall desired outcome</li>
+  <li>does not overcome stack canaries</li>
+</ul>
+
+<p>Construct program from gadgets</p>
+
+<ul>
+  <li>sequence of instructions ending in <code class="language-plaintext highlighter-rouge">ret</code>
+    <ul>
+      <li>Encoded by single byte <code class="language-plaintext highlighter-rouge">0xc3</code>
+</li>
+    </ul>
+  </li>
+  <li>code positions fixed from run to run</li>
+  <li>code is executable</li>
+</ul>
+
+<h3 id="gadget-example">
+<a class="anchor" href="#gadget-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Gadget example</h3>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027120609710.png" alt="image-20211027120609710"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027120623663.png" alt="image-20211027120623663"></p>
+
+<h2 id="rop-execution">
+<a class="anchor" href="#rop-execution" aria-hidden="true"><span class="octicon octicon-link"></span></a>ROP execution</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-27-system-programming-midterm/image-20211027120726700.png" alt="image-20211027120726700"></p>
+
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/27/system-programming-midterm.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
