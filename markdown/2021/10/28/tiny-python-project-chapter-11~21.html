@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Tiny Python Project chapter 11 ~ 21 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Tiny Python Project chapter 11 ~ 21" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tiny Python Project Chapter 11 ~ 21 for Find-A." />
+<meta property="og:description" content="Tiny Python Project Chapter 11 ~ 21 for Find-A." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/28/tiny-python-project-chapter-11~21.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/10/28/tiny-python-project-chapter-11~21.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-28T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-10-28T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/28/tiny-python-project-chapter-11~21.html","@type":"BlogPosting","headline":"Tiny Python Project chapter 11 ~ 21","dateModified":"2021-10-28T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/10/28/tiny-python-project-chapter-11~21.html"},"description":"Tiny Python Project Chapter 11 ~ 21 for Find-A.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Tiny Python Project chapter 11 ~ 21</h1><p class="page-description">Tiny Python Project Chapter 11 ~ 21 for Find-A.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-28T00:00:00-05:00" itemprop="datePublished">
+        Oct 28, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      13 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#tiny-python-project-chapter-11--21">Tiny Python Project Chapter 11 ~ 21</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#chapter-11-맥주병-노래-함수-작성-및-테스트">Chapter 11. 맥주병 노래: 함수 작성 및 테스트</a></li>
+<li class="toc-entry toc-h2"><a href="#chapter-12-협박-편지-텍스트를-무작위로-대문자화하기">Chapter 12. 협박 편지: 텍스트를 무작위로 대문자화하기</a></li>
+<li class="toc-entry toc-h2"><a href="#chapter-13-12일간의-크리스마스-알고리즘-디자인">Chapter 13. 12일간의 크리스마스: 알고리즘 디자인</a></li>
+<li class="toc-entry toc-h2"><a href="#chapter-14-운율-생성기-정규-표현식을-사용해서-운율-맞추기">Chapter 14. 운율 생성기: 정규 표현식을 사용해서 운율 맞추기</a></li>
+<li class="toc-entry toc-h2"><a href="#chapter-15-켄터키-수도사-정규-표현식-더-배워보기">Chapter 15. 켄터키 수도사: 정규 표현식 더 배워보기</a></li>
+<li class="toc-entry toc-h2"><a href="#chapter-16-믹서기-무작위로-단어의-중간-부분-재정렬하기">Chapter 16. 믹서기: 무작위로 단어의 중간 부분 재정렬하기</a></li>
+<li class="toc-entry toc-h2"><a href="#chapter-17-매드립-정규-표현식-사용하기">Chapter 17. 매드립: 정규 표현식 사용하기</a></li>
+<li class="toc-entry toc-h2"><a href="#chapter-18-게마트리아-아스키값을-사용한-텍스트-수치화">Chapter 18. 게마트리아: 아스키값을 사용한 텍스트 수치화</a></li>
+<li class="toc-entry toc-h2"><a href="#chapter-19-오늘의-운동-csv-파일-사용하기와-텍스트-테이블-만들기">Chapter 19. 오늘의 운동: CSV 파일 사용하기와 텍스트 테이블 만들기</a></li>
+<li class="toc-entry toc-h2"><a href="#chapter-20-패스워드-강도-안전하고-기억하기-쉬운-패스워드-생성하기">Chapter 20. 패스워드 강도: 안전하고 기억하기 쉬운 패스워드 생성하기</a></li>
+<li class="toc-entry toc-h2"><a href="#chapter-21-틱택토-게임-상태-확인하기">Chapter 21. 틱택토 게임: 상태 확인하기</a></li>
+<li class="toc-entry toc-h2"><a href="#chapter-22-돌아온-틱택토-게임-타입-힌트를-사용한-대화형-버전">Chapter 22. 돌아온 틱택토 게임: 타입 힌트를 사용한 대화형 버전</a></li>
+<li class="toc-entry toc-h2"><a href="#마치며">마치며</a></li>
+<li class="toc-entry toc-h2"><a href="#argparse-사용하기">argparse 사용하기</a></li>
+</ul>
+</li>
+</ul><h1 id="tiny-python-project-chapter-11--21">
+<a class="anchor" href="#tiny-python-project-chapter-11--21" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tiny Python Project Chapter 11 ~ 21</h1>
+
+<h2 id="chapter-11-맥주병-노래-함수-작성-및-테스트">
+<a class="anchor" href="#chapter-11-%EB%A7%A5%EC%A3%BC%EB%B3%91-%EB%85%B8%EB%9E%98-%ED%95%A8%EC%88%98-%EC%9E%91%EC%84%B1-%EB%B0%8F-%ED%85%8C%EC%8A%A4%ED%8A%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chapter 11. 맥주병 노래: 함수 작성 및 테스트</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028091059547.png" alt="image-20211028091059547"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028091113621.png" alt="image-20211028091113621"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028091118411.png" alt="image-20211028091118411"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028091450877.png" alt="image-20211028091450877"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028104605929.png" alt="image-20211028104605929"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028104616076.png" alt="image-20211028104616076"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span><span class="s">"""
+Author : runner &lt;runner@e5040579c2cf&gt;
+Date   : 2021-10-28
+Purpose: Rock the Casbah
+"""</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">get_args</span><span class="p">():</span>
+    <span class="s">"""Get command-line arguments"""</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s">'Bottles of beer song'</span><span class="p">,</span>
+        <span class="n">formatter_class</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentDefaultsHelpFormatter</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-n'</span><span class="p">,</span>
+                        <span class="s">'--num'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'How many bottles'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'number'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+        <span class="n">parser</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s">f'--num "</span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">num</span><span class="si">}</span><span class="s">" must be greater than 0'</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">args</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""Make a jazz noise here"""</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">()</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">num</span>
+
+    <span class="c1"># for i in range(num, 0, -1):
+</span>    <span class="c1">#     print(verse(i))
+</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">verse</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))))</span>
+        
+<span class="k">def</span> <span class="nf">verse</span><span class="p">(</span><span class="n">bottle</span><span class="p">):</span>
+    <span class="n">sing_verse</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">bottle</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">sing_verse</span> <span class="o">=</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="s">f'</span><span class="si">{</span><span class="n">bottle</span><span class="si">}</span><span class="s"> bottle of beer on the wall,'</span><span class="p">,</span> <span class="s">f'</span><span class="si">{</span><span class="n">bottle</span><span class="si">}</span><span class="s"> bottle of beer,'</span><span class="p">,</span> <span class="s">'Take one down, pass it around,'</span><span class="p">,</span> <span class="s">'No more bottles of beer on the wall!'</span><span class="p">])</span>
+    
+    <span class="k">elif</span> <span class="p">(</span><span class="n">bottle</span> <span class="o">==</span> <span class="mi">2</span><span class="p">):</span>
+        <span class="n">sing_verse</span> <span class="o">=</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="s">f'</span><span class="si">{</span><span class="n">bottle</span><span class="si">}</span><span class="s"> bottles of beer on the wall,'</span><span class="p">,</span> <span class="s">f'</span><span class="si">{</span><span class="n">bottle</span><span class="si">}</span><span class="s"> bottles of beer,'</span><span class="p">,</span> <span class="s">'Take one down, pass it around,'</span><span class="p">,</span> <span class="s">f'</span><span class="si">{</span><span class="n">bottle</span> <span class="o">-</span> <span class="mi">1</span><span class="si">}</span><span class="s"> bottle of beer on the wall!'</span><span class="p">])</span>
+        
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sing_verse</span> <span class="o">=</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="s">f'</span><span class="si">{</span><span class="n">bottle</span><span class="si">}</span><span class="s"> bottles of beer on the wall,'</span><span class="p">,</span> <span class="s">f'</span><span class="si">{</span><span class="n">bottle</span><span class="si">}</span><span class="s"> bottles of beer,'</span><span class="p">,</span> <span class="s">'Take one down, pass it around,'</span><span class="p">,</span> <span class="s">f'</span><span class="si">{</span><span class="n">bottle</span> <span class="o">-</span> <span class="mi">1</span><span class="si">}</span><span class="s"> bottles of beer on the wall!'</span><span class="p">])</span>
+        
+
+    <span class="k">return</span> <span class="n">sing_verse</span>
+
+<span class="k">def</span> <span class="nf">test_verse</span><span class="p">():</span>
+    <span class="s">"""Test verse"""</span>
+
+    <span class="n">last_verse</span> <span class="o">=</span> <span class="n">verse</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">last_verse</span> <span class="o">==</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">([</span>
+        <span class="s">'1 bottle of beer on the wall,'</span><span class="p">,</span> <span class="s">'1 bottle of beer,'</span><span class="p">,</span> <span class="s">'Take one down, pass it around,'</span><span class="p">,</span> <span class="s">'No more bottles of beer on the wall!'</span>
+    <span class="p">])</span>
+
+    <span class="n">two_bottles</span> <span class="o">=</span> <span class="n">verse</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">two_bottles</span> <span class="o">==</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">([</span>
+        <span class="s">'2 bottles of beer on the wall,'</span><span class="p">,</span> <span class="s">'2 bottles of beer,'</span><span class="p">,</span> <span class="s">'Take one down, pass it around,'</span><span class="p">,</span> <span class="s">'1 bottle of beer on the wall!'</span>
+    <span class="p">])</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028110723435.png" alt="image-20211028110723435"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028110728946.png" alt="image-20211028110728946"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028110735521.png" alt="image-20211028110735521"></p>
+
+<h2 id="chapter-12-협박-편지-텍스트를-무작위로-대문자화하기">
+<a class="anchor" href="#chapter-12-%ED%98%91%EB%B0%95-%ED%8E%B8%EC%A7%80-%ED%85%8D%EC%8A%A4%ED%8A%B8%EB%A5%BC-%EB%AC%B4%EC%9E%91%EC%9C%84%EB%A1%9C-%EB%8C%80%EB%AC%B8%EC%9E%90%ED%99%94%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chapter 12. 협박 편지: 텍스트를 무작위로 대문자화하기</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028111110183.png" alt="image-20211028111110183"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028111119362.png" alt="image-20211028111119362"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028111126792.png" alt="image-20211028111126792"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028111750799.png" alt="image-20211028111750799"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span><span class="s">"""
+Author : runner &lt;runner@bc67f35f04dd&gt;
+Date   : 2021-10-28
+Purpose: Rock the Casbah
+"""</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">get_args</span><span class="p">():</span>
+    <span class="s">"""Ransom Note"""</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s">'Ransom Note'</span><span class="p">,</span>
+        <span class="n">formatter_class</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentDefaultsHelpFormatter</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'text'</span><span class="p">,</span>
+    <span class="n">metavar</span><span class="o">=</span><span class="s">'text'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Input text or file'</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-s'</span><span class="p">,</span>
+                        <span class="s">'--seed'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Random seed'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'int'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">text</span><span class="p">):</span>
+        <span class="n">args</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">text</span><span class="p">).</span><span class="n">read</span><span class="p">().</span><span class="n">rstrip</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">args</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""Make a jazz noise here"""</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">()</span>
+    <span class="n">random</span><span class="p">.</span><span class="n">seed</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">seed</span><span class="p">)</span>
+    <span class="n">original_t</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">text</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="n">choose</span><span class="p">(</span><span class="n">original_t</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">original_t</span><span class="p">))])</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">choose</span><span class="p">(</span><span class="n">char</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">([</span><span class="n">char</span><span class="p">.</span><span class="n">lower</span><span class="p">(),</span> <span class="n">char</span><span class="p">.</span><span class="n">upper</span><span class="p">()])</span>
+
+<span class="k">def</span> <span class="nf">test_choose</span><span class="p">():</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">getstate</span><span class="p">()</span>
+    <span class="n">random</span><span class="p">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">choose</span><span class="p">(</span><span class="s">'a'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'a'</span>
+    <span class="k">assert</span> <span class="n">choose</span><span class="p">(</span><span class="s">'b'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'b'</span>
+    <span class="k">assert</span> <span class="n">choose</span><span class="p">(</span><span class="s">'c'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'c'</span>
+    <span class="k">assert</span> <span class="n">choose</span><span class="p">(</span><span class="s">'d'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'d'</span>
+    <span class="n">random</span><span class="p">.</span><span class="n">setstate</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028112436771.png" alt="image-20211028112436771"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028112519886.png" alt="image-20211028112519886"></p>
+
+<h2 id="chapter-13-12일간의-크리스마스-알고리즘-디자인">
+<a class="anchor" href="#chapter-13-12%EC%9D%BC%EA%B0%84%EC%9D%98-%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%94%94%EC%9E%90%EC%9D%B8" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chapter 13. 12일간의 크리스마스: 알고리즘 디자인</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028112633192.png" alt="image-20211028112633192"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028112642264.png" alt="image-20211028112642264"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028113012514.png" alt="image-20211028113012514"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028113019770.png" alt="image-20211028113019770"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028114129950.png" alt="image-20211028114129950"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span><span class="s">"""
+Author : runner &lt;runner@117e0abe372c&gt;
+Date   : 2021-10-28
+Purpose: Rock the Casbah
+"""</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">get_args</span><span class="p">():</span>
+    <span class="s">"""Get command-line arguments"""</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s">'Twelve Days of christmas'</span><span class="p">,</span>
+        <span class="n">formatter_class</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentDefaultsHelpFormatter</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-n'</span><span class="p">,</span>
+                        <span class="s">'--num'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Number of days to sing'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'days'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-o'</span><span class="p">,</span>
+                        <span class="s">'--outfile'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Outfile'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'FILE'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">FileType</span><span class="p">(</span><span class="s">'wt'</span><span class="p">),</span>
+                        <span class="n">default</span><span class="o">=</span><span class="n">sys</span><span class="p">.</span><span class="n">stdout</span><span class="p">)</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="mi">1</span> <span class="o">&lt;=</span> <span class="n">args</span><span class="p">.</span><span class="n">num</span> <span class="o">&lt;=</span> <span class="mi">12</span><span class="p">):</span>
+        <span class="n">parser</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s">f'--num "</span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">num</span><span class="si">}</span><span class="s">" must be between 1 and 12'</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">args</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""Make a jazz noise here"""</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">()</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">num</span>
+    
+    <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="n">verse</span><span class="p">(</span><span class="n">day</span><span class="p">)</span> <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]),</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">,</span> <span class="nb">file</span><span class="o">=</span><span class="n">args</span><span class="p">.</span><span class="n">outfile</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">verse</span><span class="p">(</span><span class="n">day</span><span class="p">):</span>
+    <span class="n">ordinal</span> <span class="o">=</span> <span class="p">[</span><span class="s">'first'</span><span class="p">,</span> <span class="s">'second'</span><span class="p">,</span> <span class="s">'third'</span><span class="p">,</span> <span class="s">'fourth'</span><span class="p">,</span> <span class="s">'fifth'</span><span class="p">,</span> <span class="s">'sixth'</span><span class="p">,</span> <span class="s">'seventh'</span><span class="p">,</span> <span class="s">'eighth'</span><span class="p">,</span> <span class="s">'ninth'</span><span class="p">,</span> <span class="s">'tenth'</span><span class="p">,</span> <span class="s">'eleventh'</span><span class="p">,</span> <span class="s">'twelfth'</span><span class="p">]</span>
+
+    <span class="n">present</span> <span class="o">=</span> <span class="p">[</span><span class="s">'twelve drummers drumming'</span><span class="p">,</span> <span class="s">'eleven pipers piping'</span><span class="p">,</span> <span class="s">'ten lords a leaping'</span><span class="p">,</span> <span class="s">'nine ladies dancing'</span><span class="p">,</span> <span class="s">'eight maids a milking'</span><span class="p">,</span> <span class="s">'seven swans a swimming'</span><span class="p">,</span> <span class="s">'six geese a laying'</span><span class="p">,</span> <span class="s">'five gold rings'</span><span class="p">,</span> <span class="s">'four calling birds'</span><span class="p">,</span> <span class="s">'three French hens'</span><span class="p">,</span> <span class="s">'two turtle doves'</span><span class="p">,</span> <span class="s">'a partridge in a pear tree'</span><span class="p">]</span>
+
+    <span class="n">present_sent</span> <span class="o">=</span> <span class="s">''</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">day</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">day</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">present_sent</span> <span class="o">+=</span> <span class="s">f'And </span><span class="si">{</span><span class="n">present</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">i</span><span class="p">]</span><span class="si">}</span><span class="s">.'</span>
+        
+        <span class="k">elif</span> <span class="p">(</span><span class="n">day</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">present_sent</span> <span class="o">+=</span> <span class="s">f'</span><span class="si">{</span><span class="n">present</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">i</span><span class="p">].</span><span class="n">capitalize</span><span class="p">()</span><span class="si">}</span><span class="s">.'</span>
+        
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">present_sent</span> <span class="o">+=</span> <span class="s">f'</span><span class="si">{</span><span class="n">present</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">].</span><span class="n">upper</span><span class="p">()</span><span class="si">}{</span><span class="n">present</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span><span class="si">}</span><span class="s">,</span><span class="se">\n</span><span class="s">'</span>
+
+    <span class="k">return</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="s">f'On the </span><span class="si">{</span><span class="n">ordinal</span><span class="p">[</span><span class="n">day</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s"> day of Christmas,'</span><span class="p">,</span> <span class="s">'My true love gave to me,'</span><span class="p">,</span> <span class="n">present_sent</span><span class="p">])</span>
+
+<span class="k">def</span> <span class="nf">test_verse</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">verse</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="s">'On the first day of Christmas,'</span><span class="p">,</span> <span class="s">'My true love gave to me,'</span><span class="p">,</span> <span class="s">'A partridge in a pear tree.'</span><span class="p">])</span>
+    <span class="k">assert</span> <span class="n">verse</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="s">'On the second day of Christmas,'</span><span class="p">,</span> <span class="s">'My true love gave to me,'</span><span class="p">,</span> <span class="s">'A partridge in a pear tree.'</span><span class="p">])</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028134238381.png" alt="image-20211028134238381"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028134245241.png" alt="image-20211028134245241"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028134315766.png" alt="image-20211028134315766"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028134324646.png" alt="image-20211028134324646"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028134340037.png" alt="image-20211028134340037"></p>
+
+<h2 id="chapter-14-운율-생성기-정규-표현식을-사용해서-운율-맞추기">
+<a class="anchor" href="#chapter-14-%EC%9A%B4%EC%9C%A8-%EC%83%9D%EC%84%B1%EA%B8%B0-%EC%A0%95%EA%B7%9C-%ED%91%9C%ED%98%84%EC%8B%9D%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%B4%EC%84%9C-%EC%9A%B4%EC%9C%A8-%EB%A7%9E%EC%B6%94%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chapter 14. 운율 생성기: 정규 표현식을 사용해서 운율 맞추기</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028135454852.png" alt="image-20211028135454852"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028135506371.png" alt="image-20211028135506371"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028141608445.png" alt="image-20211028141608445"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028141602464.png" alt="image-20211028141602464"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028141702902.png" alt="image-20211028141702902"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span><span class="s">"""
+Author : runner &lt;runner@c05ebd5110ee&gt;
+Date   : 2021-10-28
+Purpose: Rock the Casbah
+"""</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">string</span> <span class="k">as</span> <span class="n">s</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">get_args</span><span class="p">():</span>
+    <span class="s">"""Get command-line arguments"""</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s">'Make rhyming "word"'</span><span class="p">,</span>
+        <span class="n">formatter_class</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentDefaultsHelpFormatter</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'word'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'word'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'A word to rhyme'</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""Make a jazz noise here"""</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">()</span>
+    <span class="n">word</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">word</span>
+
+    <span class="n">w_list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s">'bcdfghjklmnpqrstvwxyz'</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span>
+        <span class="s">'bl br ch cl cr dr fl fr gl gr pl pr sc '</span>
+        <span class="s">'sh sk sl sm sn sp st sw th tr tw thw wh wr '</span>
+        <span class="s">'sch scr shr sph spl spr squ str thr'</span><span class="p">).</span><span class="n">split</span><span class="p">()</span>
+
+    <span class="n">w_list</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">w_list</span><span class="p">)</span>
+
+    <span class="n">start</span><span class="p">,</span> <span class="n">rest</span> <span class="o">=</span> <span class="n">stemmer</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">rest</span> <span class="o">==</span> <span class="s">''</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">f'Cannot rhyme "</span><span class="si">{</span><span class="n">start</span><span class="si">}</span><span class="s">"'</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="s">f'</span><span class="si">{</span><span class="n">w</span><span class="si">}{</span><span class="n">rest</span><span class="si">}</span><span class="s">'</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">w_list</span><span class="p">]))</span>
+
+<span class="k">def</span> <span class="nf">stemmer</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="n">consonants</span> <span class="o">=</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">.</span><span class="n">ascii_lowercase</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="s">'aeiou'</span><span class="p">])</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="s">f'([</span><span class="si">{</span><span class="n">consonants</span><span class="si">}</span><span class="s">]+)?([aeiou])(.*)'</span>
+
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">match</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">word</span><span class="p">.</span><span class="n">lower</span><span class="p">())</span>
+
+    <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="n">match</span><span class="p">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="s">''</span>
+        <span class="n">aeiou</span> <span class="o">=</span> <span class="n">match</span><span class="p">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="ow">or</span> <span class="s">''</span>
+        <span class="n">rest</span> <span class="o">=</span> <span class="n">match</span><span class="p">.</span><span class="n">group</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="ow">or</span> <span class="s">''</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">aeiou</span> <span class="o">+</span> <span class="n">rest</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_stemmer</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">stemmer</span><span class="p">(</span><span class="s">''</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="s">''</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">stemmer</span><span class="p">(</span><span class="s">'cake'</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="s">'c'</span><span class="p">,</span> <span class="s">'ake'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">stemmer</span><span class="p">(</span><span class="s">'chair'</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="s">'ch'</span><span class="p">,</span> <span class="s">'air'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">stemmer</span><span class="p">(</span><span class="s">'APPLE'</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="s">''</span><span class="p">,</span> <span class="s">'apple'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">stemmer</span><span class="p">(</span><span class="s">'RDNZL'</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="s">'rdnzl'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">stemmer</span><span class="p">(</span><span class="s">'123'</span><span class="p">)</span> <span class="o">==</span> <span class="p">(</span><span class="s">'123'</span><span class="p">,</span> <span class="s">''</span><span class="p">)</span>
+<span class="c1"># --------------------------------------------------
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028171658450.png" alt="image-20211028171658450"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028171720475.png" alt="image-20211028171720475"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028171749321.png" alt="image-20211028171749321"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028171759009.png" alt="image-20211028171759009"></p>
+
+<h2 id="chapter-15-켄터키-수도사-정규-표현식-더-배워보기">
+<a class="anchor" href="#chapter-15-%EC%BC%84%ED%84%B0%ED%82%A4-%EC%88%98%EB%8F%84%EC%82%AC-%EC%A0%95%EA%B7%9C-%ED%91%9C%ED%98%84%EC%8B%9D-%EB%8D%94-%EB%B0%B0%EC%9B%8C%EB%B3%B4%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chapter 15. 켄터키 수도사: 정규 표현식 더 배워보기</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028235724282.png" alt="image-20211028235724282"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028235728792.png" alt="image-20211028235728792"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028235736730.png" alt="image-20211028235736730"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028235742184.png" alt="image-20211028235742184"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211028235857880.png" alt="image-20211028235857880"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029000005376.png" alt="image-20211029000005376"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029000057073.png" alt="image-20211029000057073"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029000105580.png" alt="image-20211029000105580"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029000118664.png" alt="image-20211029000118664"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029000132586.png" alt="image-20211029000132586"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029000138399.png" alt="image-20211029000138399"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029000151272.png" alt="image-20211029000151272"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029000222752.png" alt="image-20211029000222752"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029000228575.png" alt="image-20211029000228575"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029000330568.png" alt="image-20211029000330568"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029000619591.png" alt="image-20211029000619591"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029000643386.png" alt="image-20211029000643386"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029000705435.png" alt="image-20211029000705435"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span><span class="s">"""
+Author : runner &lt;runner@c6ec56f874a6&gt;
+Date   : 2021-10-28
+Purpose: Rock the Casbah
+"""</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">get_args</span><span class="p">():</span>
+    <span class="s">"""Get command-line arguments"""</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s">'Southern fry text'</span><span class="p">,</span>
+        <span class="n">formatter_class</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentDefaultsHelpFormatter</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'text'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'text'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Input text or file'</span><span class="p">)</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">text</span><span class="p">):</span>
+        <span class="n">args</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">text</span><span class="p">).</span><span class="n">read</span><span class="p">().</span><span class="n">rstrip</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">args</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""Make a jazz noise here"""</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">()</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">text</span>
+    
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">re</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">r'(\W+)'</span><span class="p">,</span> <span class="n">text</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">fry</span><span class="p">(</span><span class="n">w</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">fry</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="n">word</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">word</span> <span class="o">==</span> <span class="s">'you'</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="s">"'all"</span>
+
+    <span class="n">match</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">r'(.+)ing$'</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">match</span><span class="p">:</span>
+        <span class="n">first</span> <span class="o">=</span> <span class="n">match</span><span class="p">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="ow">or</span> <span class="s">''</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">text</span>
+
+    <span class="k">if</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">r'[aeiouy]'</span><span class="p">,</span> <span class="n">first</span><span class="p">.</span><span class="n">lower</span><span class="p">()):</span>
+        <span class="k">return</span> <span class="n">first</span> <span class="o">+</span> <span class="s">"in'"</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">text</span>
+
+<span class="k">def</span> <span class="nf">test_fry</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">fry</span><span class="p">(</span><span class="s">'you'</span><span class="p">)</span> <span class="o">==</span> <span class="s">"y'all"</span>
+    <span class="k">assert</span> <span class="n">fry</span><span class="p">(</span><span class="s">'You'</span><span class="p">)</span> <span class="o">==</span> <span class="s">"Y'all"</span>
+    <span class="k">assert</span> <span class="n">fry</span><span class="p">(</span><span class="s">'fishing'</span><span class="p">)</span> <span class="o">==</span> <span class="s">"fishin'"</span>
+    <span class="k">assert</span> <span class="n">fry</span><span class="p">(</span><span class="s">'Aching'</span><span class="p">)</span> <span class="o">==</span> <span class="s">"Achin'"</span>
+    <span class="k">assert</span> <span class="n">fry</span><span class="p">(</span><span class="s">'swing'</span><span class="p">)</span> <span class="o">==</span> <span class="s">"swing"</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029025220915.png" alt="image-20211029025220915"></p>
+
+<h2 id="chapter-16-믹서기-무작위로-단어의-중간-부분-재정렬하기">
+<a class="anchor" href="#chapter-16-%EB%AF%B9%EC%84%9C%EA%B8%B0-%EB%AC%B4%EC%9E%91%EC%9C%84%EB%A1%9C-%EB%8B%A8%EC%96%B4%EC%9D%98-%EC%A4%91%EA%B0%84-%EB%B6%80%EB%B6%84-%EC%9E%AC%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chapter 16. 믹서기: 무작위로 단어의 중간 부분 재정렬하기</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029025341877.png" alt="image-20211029025341877"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029025351361.png" alt="image-20211029025351361"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029025359920.png" alt="image-20211029025359920"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029025736393.png" alt="image-20211029025736393"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029025745219.png" alt="image-20211029025745219"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029030039936.png" alt="image-20211029030039936"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029030052811.png" alt="image-20211029030052811"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span><span class="s">"""
+Author : runner &lt;runner@ab92a6669e44&gt;
+Date   : 2021-10-28
+Purpose: Rock the Casbah
+"""</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">get_args</span><span class="p">():</span>
+    <span class="s">"""Get command-line arguments"""</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s">'Scramble the letters of words'</span><span class="p">,</span>
+        <span class="n">formatter_class</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentDefaultsHelpFormatter</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'text'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'text'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Input text or fileoptional arguments:'</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-s'</span><span class="p">,</span>
+                        <span class="s">'--seed'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Randome seed'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'seed'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">text</span><span class="p">):</span>
+        <span class="n">args</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">text</span><span class="p">).</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">args</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""Make a jazz noise here"""</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">()</span>
+    <span class="n">random</span><span class="p">.</span><span class="n">seed</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">seed</span><span class="p">)</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">text</span>
+
+    <span class="n">splitter</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="s">"([a-zA-Z](?:[a-zA-Z']*[a-zA-Z])?)"</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">splitter</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">re</span><span class="p">.</span><span class="n">match</span><span class="p">(</span><span class="s">r"\w"</span><span class="p">,</span> <span class="n">w</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">scramble</span><span class="p">(</span><span class="n">w</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">''</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">scramble</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="n">list_word</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">random</span><span class="p">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">list_word</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="o">*</span><span class="n">list_word</span><span class="p">,</span> <span class="n">word</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">word</span>
+
+<span class="k">def</span> <span class="nf">test_scramble</span><span class="p">():</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">getstate</span><span class="p">()</span>
+    <span class="n">random</span><span class="p">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">scramble</span><span class="p">(</span><span class="s">'a'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'a'</span>
+    <span class="k">assert</span> <span class="n">scramble</span><span class="p">(</span><span class="s">'ab'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'ab'</span>
+    <span class="k">assert</span> <span class="n">scramble</span><span class="p">(</span><span class="s">'abc'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'abc'</span>
+    <span class="k">assert</span> <span class="n">scramble</span><span class="p">(</span><span class="s">'abcd'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'acbd'</span>
+    <span class="k">assert</span> <span class="n">scramble</span><span class="p">(</span><span class="s">'abcde'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'acbde'</span>
+    <span class="k">assert</span> <span class="n">scramble</span><span class="p">(</span><span class="s">'abcdef'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'aecbdf'</span>
+    <span class="k">assert</span> <span class="n">scramble</span><span class="p">(</span><span class="s">"abcde'f"</span><span class="p">)</span> <span class="o">==</span> <span class="s">"abcd'ef"</span>
+    <span class="n">random</span><span class="p">.</span><span class="n">setstate</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029031630704.png" alt="image-20211029031630704"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029031649057.png" alt="image-20211029031649057"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029031658673.png" alt="image-20211029031658673"></p>
+
+<h2 id="chapter-17-매드립-정규-표현식-사용하기">
+<a class="anchor" href="#chapter-17-%EB%A7%A4%EB%93%9C%EB%A6%BD-%EC%A0%95%EA%B7%9C-%ED%91%9C%ED%98%84%EC%8B%9D-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chapter 17. 매드립: 정규 표현식 사용하기</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029031832993.png" alt="image-20211029031832993"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029031838697.png" alt="image-20211029031838697"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029031951913.png" alt="image-20211029031951913"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029031940751.png" alt="image-20211029031940751"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029032358927.png" alt="image-20211029032358927"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029032427222.png" alt="image-20211029032427222"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029032518238.png" alt="image-20211029032518238"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029032603026.png" alt="image-20211029032603026"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029032617678.png" alt="image-20211029032617678"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029032707879.png" alt="image-20211029032707879"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029032823913.png" alt="image-20211029032823913"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span><span class="s">"""
+Author : runner &lt;runner@ab92a6669e44&gt;
+Date   : 2021-10-28
+Purpose: Rock the Casbah
+"""</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">get_args</span><span class="p">():</span>
+    <span class="s">"""Get command-line arguments"""</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s">'Mad Libs'</span><span class="p">,</span>
+        <span class="n">formatter_class</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentDefaultsHelpFormatter</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'file'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'FILE'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Input file'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">FileType</span><span class="p">(</span><span class="s">'rt'</span><span class="p">))</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-i'</span><span class="p">,</span>
+                        <span class="s">'--inputs'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Inputs (for testing)'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'input'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+                        <span class="n">nargs</span><span class="o">=</span><span class="s">'*'</span><span class="p">,)</span>
+
+    <span class="k">return</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""Make a jazz noise here"""</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">()</span>
+    <span class="n">inputs</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">inputs</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="nb">file</span><span class="p">.</span><span class="n">read</span><span class="p">().</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="n">splitter</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="nb">compile</span><span class="p">(</span><span class="s">r"(&lt;([^&lt;&gt;]+)&gt;)"</span><span class="p">)</span>
+    <span class="n">blanks</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="n">splitter</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">blanks</span><span class="p">:</span>
+        <span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">(</span><span class="s">f'"</span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="nb">file</span><span class="p">.</span><span class="n">name</span><span class="si">}</span><span class="s">" has no placeholders.'</span><span class="p">)</span>
+
+    <span class="n">tmpl</span> <span class="o">=</span> <span class="s">'Give me {} {}'</span>
+
+    <span class="k">for</span> <span class="n">placeholder</span><span class="p">,</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">blanks</span><span class="p">:</span>
+        <span class="n">article</span> <span class="o">=</span> <span class="s">'an'</span> <span class="k">if</span> <span class="n">name</span><span class="p">.</span><span class="n">lower</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">in</span> <span class="s">'aeiou'</span> <span class="k">else</span> <span class="s">'a'</span>
+        <span class="n">answer</span> <span class="o">=</span> <span class="n">inputs</span><span class="p">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="k">if</span> <span class="n">inputs</span> <span class="k">else</span> <span class="nb">input</span><span class="p">(</span><span class="n">tmpl</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">article</span><span class="p">,</span> <span class="n">name</span><span class="p">))</span>
+        <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="s">f"</span><span class="si">{</span><span class="n">placeholder</span><span class="si">}</span><span class="s">"</span><span class="p">,</span> <span class="n">answer</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        
+    <span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029043147498.png" alt="image-20211029043147498"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029043200995.png" alt="image-20211029043200995"></p>
+
+<h2 id="chapter-18-게마트리아-아스키값을-사용한-텍스트-수치화">
+<a class="anchor" href="#chapter-18-%EA%B2%8C%EB%A7%88%ED%8A%B8%EB%A6%AC%EC%95%84-%EC%95%84%EC%8A%A4%ED%82%A4%EA%B0%92%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%9C-%ED%85%8D%EC%8A%A4%ED%8A%B8-%EC%88%98%EC%B9%98%ED%99%94" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chapter 18. 게마트리아: 아스키값을 사용한 텍스트 수치화</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029044046784.png" alt="image-20211029044046784"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029044059191.png" alt="image-20211029044059191"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029044039899.png" alt="image-20211029044039899"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029044120790.png" alt="image-20211029044120790"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029044205266.png" alt="image-20211029044205266"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span><span class="s">"""
+Author : runner &lt;runner@2cf8b1eba529&gt;
+Date   : 2021-10-28
+Purpose: Rock the Casbah
+"""</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">get_args</span><span class="p">():</span>
+    <span class="s">"""Get command-line arguments"""</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s">'Gematria'</span><span class="p">,</span>
+        <span class="n">formatter_class</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentDefaultsHelpFormatter</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'text'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'text'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Input text or file'</span><span class="p">)</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">text</span><span class="p">):</span>
+        <span class="n">args</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">text</span><span class="p">).</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">args</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""Make a jazz noise here"""</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">()</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">text</span>
+    
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">text</span><span class="p">.</span><span class="n">splitlines</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">' '</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">word2num</span><span class="p">,</span> <span class="n">line</span><span class="p">.</span><span class="n">split</span><span class="p">())))</span>
+
+<span class="k">def</span> <span class="nf">word2num</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="s">r'[^A-Za-z0-9]'</span><span class="p">,</span> <span class="s">''</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">ord</span><span class="p">,</span> <span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="s">r'[A-Za-z0-9]'</span><span class="p">,</span> <span class="n">text</span><span class="p">))))</span>
+    <span class="k">return</span> <span class="n">num</span>
+
+<span class="k">def</span> <span class="nf">test_word2num</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">word2num</span><span class="p">(</span><span class="s">"a"</span><span class="p">)</span> <span class="o">==</span> <span class="s">"97"</span>
+    <span class="k">assert</span> <span class="n">word2num</span><span class="p">(</span><span class="s">"abc"</span><span class="p">)</span> <span class="o">==</span> <span class="s">"294"</span>
+    <span class="k">assert</span> <span class="n">word2num</span><span class="p">(</span><span class="s">"ab'c"</span><span class="p">)</span> <span class="o">==</span> <span class="s">"294"</span>
+    <span class="k">assert</span> <span class="n">word2num</span><span class="p">(</span><span class="s">"4a-b'c,"</span><span class="p">)</span> <span class="o">==</span> <span class="s">"346"</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029050326175.png" alt="image-20211029050326175"></p>
+
+<h2 id="chapter-19-오늘의-운동-csv-파일-사용하기와-텍스트-테이블-만들기">
+<a class="anchor" href="#chapter-19-%EC%98%A4%EB%8A%98%EC%9D%98-%EC%9A%B4%EB%8F%99-csv-%ED%8C%8C%EC%9D%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0%EC%99%80-%ED%85%8D%EC%8A%A4%ED%8A%B8-%ED%85%8C%EC%9D%B4%EB%B8%94-%EB%A7%8C%EB%93%A4%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chapter 19. 오늘의 운동: CSV 파일 사용하기와 텍스트 테이블 만들기</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029050755895.png" alt="image-20211029050755895"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029050904470.png" alt="image-20211029050904470"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span><span class="s">"""
+Author : runner &lt;runner@68d96a2911e0&gt;
+Date   : 2021-10-28
+Purpose: Rock the Casbah
+"""</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">from</span> <span class="nn">tabulate</span> <span class="kn">import</span> <span class="n">tabulate</span>
+<span class="kn">import</span> <span class="nn">io</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">get_args</span><span class="p">():</span>
+    <span class="s">"""Get command-line arguments"""</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s">'Create Workout Of (the) Day (WOD)'</span><span class="p">,</span>
+        <span class="n">formatter_class</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentDefaultsHelpFormatter</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-f'</span><span class="p">,</span>
+                        <span class="s">'--file'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'CSV input file of exercises'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'FILE'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">FileType</span><span class="p">(</span><span class="s">'rt'</span><span class="p">),</span>
+                        <span class="n">default</span><span class="o">=</span><span class="s">'inputs/exercises.csv'</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-s'</span><span class="p">,</span>
+                        <span class="s">'--seed'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Random seed'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'seed'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-n'</span><span class="p">,</span>
+                        <span class="s">'--num'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Number of exercises'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'exercises'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-e'</span><span class="p">,</span>
+                        <span class="s">'--easy'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Halve the reps'</span><span class="p">,</span>
+                        <span class="n">action</span><span class="o">=</span><span class="s">'store_true'</span><span class="p">)</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="n">args</span><span class="p">.</span><span class="n">num</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">parser</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s">f'--num "</span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">num</span><span class="si">}</span><span class="s">" must be greater than 0'</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">args</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""Make a jazz noise here"""</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">()</span>
+    <span class="n">random</span><span class="p">.</span><span class="n">seed</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">seed</span><span class="p">)</span>
+    <span class="n">wod</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">exercises</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="nb">file</span><span class="p">)</span>
+
+    <span class="k">for</span> <span class="n">ex</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span> <span class="ow">in</span> <span class="n">random</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="n">exercises</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="n">args</span><span class="p">.</span><span class="n">num</span><span class="p">):</span>
+        <span class="n">rep</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">randint</span><span class="p">(</span><span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">args</span><span class="p">.</span><span class="n">easy</span><span class="p">:</span>
+            <span class="n">rep</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">rep</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">wod</span><span class="p">.</span><span class="n">append</span><span class="p">((</span><span class="n">ex</span><span class="p">,</span> <span class="n">rep</span><span class="p">))</span>
+    
+    <span class="k">print</span><span class="p">(</span><span class="n">tabulate</span><span class="p">(</span><span class="n">wod</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">(</span><span class="s">'Exercise'</span><span class="p">,</span> <span class="s">'Reps'</span><span class="p">)))</span>
+
+<span class="k">def</span> <span class="nf">read_csv</span><span class="p">(</span><span class="n">fh</span><span class="p">):</span>
+    <span class="n">exercises</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv</span><span class="p">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">fh</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">','</span><span class="p">):</span>
+        <span class="n">low</span><span class="p">,</span> <span class="n">high</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="s">'reps'</span><span class="p">].</span><span class="n">split</span><span class="p">(</span><span class="s">'-'</span><span class="p">))</span>
+        <span class="n">exercises</span><span class="p">.</span><span class="n">append</span><span class="p">((</span><span class="n">row</span><span class="p">[</span><span class="s">'exercise'</span><span class="p">],</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">exercises</span>
+<span class="k">def</span> <span class="nf">test_read_csv</span><span class="p">():</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">io</span><span class="p">.</span><span class="n">StringIO</span><span class="p">(</span><span class="s">'exercise,reps</span><span class="se">\n</span><span class="s">Burpees,20-50</span><span class="se">\n</span><span class="s">Situps,40-100'</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">read_csv</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">==</span> <span class="p">[(</span><span class="s">'Burpees'</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="p">(</span><span class="s">'Situps'</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">100</span><span class="p">)]</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029072039151.png" alt="image-20211029072039151"></p>
+
+<h2 id="chapter-20-패스워드-강도-안전하고-기억하기-쉬운-패스워드-생성하기">
+<a class="anchor" href="#chapter-20-%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C-%EA%B0%95%EB%8F%84-%EC%95%88%EC%A0%84%ED%95%98%EA%B3%A0-%EA%B8%B0%EC%96%B5%ED%95%98%EA%B8%B0-%EC%89%AC%EC%9A%B4-%ED%8C%A8%EC%8A%A4%EC%9B%8C%EB%93%9C-%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chapter 20. 패스워드 강도: 안전하고 기억하기 쉬운 패스워드 생성하기</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029074224073.png" alt="image-20211029074224073"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029074231364.png" alt="image-20211029074231364"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span><span class="s">"""
+Author : runner &lt;runner@8e6e030411c6&gt;
+Date   : 2021-10-28
+Purpose: Rock the Casbah
+"""</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">string</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">get_args</span><span class="p">():</span>
+    <span class="s">"""Get command-line arguments"""</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s">'Rock the Casbah'</span><span class="p">,</span>
+        <span class="n">formatter_class</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentDefaultsHelpFormatter</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'file'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'FILE'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Input file(s)'</span><span class="p">,</span>
+                        <span class="n">nargs</span><span class="o">=</span><span class="s">'+'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">FileType</span><span class="p">(</span><span class="s">'rt'</span><span class="p">))</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-n'</span><span class="p">,</span>
+                        <span class="s">'--num'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Number of passwords to generate'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'num_passwords'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-w'</span><span class="p">,</span>
+                        <span class="s">'--num_words'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Number of words to use for password'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'num_words'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-m'</span><span class="p">,</span>
+                        <span class="s">'--min_word_len'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Minimum word length'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'minimum'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-x'</span><span class="p">,</span>
+                        <span class="s">'--max_word_len'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Maximum word length'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'maximum'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-s'</span><span class="p">,</span>
+                        <span class="s">'--seed'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">'Random seed'</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'seed'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-l'</span><span class="p">,</span>
+    <span class="s">'--l33t'</span><span class="p">,</span>
+    <span class="n">help</span><span class="o">=</span><span class="s">'Obfuscate letters'</span><span class="p">,</span>
+    <span class="n">action</span><span class="o">=</span><span class="s">'store_true'</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""Make a jazz noise here"""</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">()</span>
+    <span class="n">random</span><span class="p">.</span><span class="n">seed</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">seed</span><span class="p">)</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">word_len</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">args</span><span class="p">.</span><span class="n">min_word_len</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">args</span><span class="p">.</span><span class="n">max_word_len</span>
+
+    <span class="k">for</span> <span class="n">fh</span> <span class="ow">in</span> <span class="n">args</span><span class="p">.</span><span class="nb">file</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fh</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">filter</span><span class="p">(</span><span class="n">word_len</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="n">clean</span><span class="p">,</span> <span class="n">line</span><span class="p">.</span><span class="n">lower</span><span class="p">().</span><span class="n">split</span><span class="p">())):</span>
+                <span class="n">words</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">word</span><span class="p">.</span><span class="n">capitalize</span><span class="p">())</span>
+    
+    <span class="n">words</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+    <span class="n">passwords</span> <span class="o">=</span> <span class="p">[</span><span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="n">sample</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">args</span><span class="p">.</span><span class="n">num_words</span><span class="p">))</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">num</span><span class="p">)]</span>
+
+    <span class="k">if</span> <span class="n">args</span><span class="p">.</span><span class="n">l33t</span><span class="p">:</span>
+        <span class="n">passwords</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">l33t</span><span class="p">,</span> <span class="n">passwords</span><span class="p">)</span>
+
+    <span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">passwords</span><span class="p">))</span>
+
+<span class="k">def</span> <span class="nf">l33t</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="n">word</span> <span class="o">=</span> <span class="n">ransom</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+    <span class="n">l33t_dict</span> <span class="o">=</span> <span class="nb">str</span><span class="p">.</span><span class="n">maketrans</span><span class="p">({</span><span class="s">'a'</span><span class="p">:</span> <span class="s">'@'</span><span class="p">,</span> <span class="s">'A'</span><span class="p">:</span> <span class="s">'4'</span><span class="p">,</span> <span class="s">'O'</span><span class="p">:</span> <span class="s">'0'</span><span class="p">,</span> <span class="s">'t'</span><span class="p">:</span> <span class="s">'+'</span><span class="p">,</span> <span class="s">'E'</span><span class="p">:</span> <span class="s">'3'</span><span class="p">,</span> <span class="s">'I'</span><span class="p">:</span> <span class="s">'1'</span><span class="p">,</span> <span class="s">'S'</span><span class="p">:</span> <span class="s">'5'</span><span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">word</span><span class="p">.</span><span class="n">translate</span><span class="p">(</span><span class="n">l33t_dict</span><span class="p">)</span> <span class="o">+</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">string</span><span class="p">.</span><span class="n">punctuation</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">test_l33t</span><span class="p">():</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">getstate</span><span class="p">()</span>
+    <span class="n">random</span><span class="p">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">l33t</span><span class="p">(</span><span class="s">'Money'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'moNeY{'</span>
+    <span class="k">assert</span> <span class="n">l33t</span><span class="p">(</span><span class="s">'Dollars'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'D0ll4r5`'</span>
+    <span class="n">random</span><span class="p">.</span><span class="n">setstate</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">ransom</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="n">new_word</span> <span class="o">=</span> <span class="s">''</span>
+    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">word</span><span class="p">.</span><span class="n">lower</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">([</span><span class="bp">True</span><span class="p">,</span> <span class="bp">False</span><span class="p">]):</span>
+            <span class="n">new_word</span> <span class="o">+=</span> <span class="n">w</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_word</span> <span class="o">+=</span> <span class="n">w</span><span class="p">.</span><span class="n">upper</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">new_word</span>
+
+<span class="k">def</span> <span class="nf">test_ransom</span><span class="p">():</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">getstate</span><span class="p">()</span>
+    <span class="n">random</span><span class="p">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">ransom</span><span class="p">(</span><span class="s">'Money'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'moNeY'</span>
+    <span class="k">assert</span> <span class="n">ransom</span><span class="p">(</span><span class="s">'Dollars'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'DOLlaRs'</span>
+    <span class="n">random</span><span class="p">.</span><span class="n">setstate</span><span class="p">(</span><span class="n">state</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">clean</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="n">word</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="s">r'[^a-zA-Z]'</span><span class="p">,</span> <span class="s">''</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">word</span>
+
+<span class="k">def</span> <span class="nf">test_clean</span><span class="p">():</span>
+    <span class="k">assert</span> <span class="n">clean</span><span class="p">(</span><span class="s">''</span><span class="p">)</span> <span class="o">==</span> <span class="s">''</span>
+    <span class="k">assert</span> <span class="n">clean</span><span class="p">(</span><span class="s">'states,'</span><span class="p">)</span> <span class="o">==</span> <span class="s">'states'</span>
+    <span class="k">assert</span> <span class="n">clean</span><span class="p">(</span><span class="s">"Don't"</span><span class="p">)</span> <span class="o">==</span> <span class="s">'Dont'</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029082305559.png" alt="image-20211029082305559"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029082318959.png" alt="image-20211029082318959"></p>
+
+<h2 id="chapter-21-틱택토-게임-상태-확인하기">
+<a class="anchor" href="#chapter-21-%ED%8B%B1%ED%83%9D%ED%86%A0-%EA%B2%8C%EC%9E%84-%EC%83%81%ED%83%9C-%ED%99%95%EC%9D%B8%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chapter 21. 틱택토 게임: 상태 확인하기</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029084154653.png" alt="image-20211029084154653"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span><span class="s">"""
+Author : runner &lt;runner@ded74145e45a&gt;
+Date   : 2021-10-28
+Purpose: Rock the Casbah
+"""</span>
+
+<span class="kn">import</span> <span class="nn">argparse</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">get_args</span><span class="p">():</span>
+    <span class="s">"""Get command-line arguments"""</span>
+
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentParser</span><span class="p">(</span>
+        <span class="n">description</span><span class="o">=</span><span class="s">'Rock the Casbah'</span><span class="p">,</span>
+        <span class="n">formatter_class</span><span class="o">=</span><span class="n">argparse</span><span class="p">.</span><span class="n">ArgumentDefaultsHelpFormatter</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-b'</span><span class="p">,</span>
+                        <span class="s">'--board'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">''</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'board'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+                        <span class="n">default</span><span class="o">=</span><span class="s">'.'</span> <span class="o">*</span> <span class="mi">9</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-p'</span><span class="p">,</span>
+                        <span class="s">'--player'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">''</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'player'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
+                        <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="s">'X'</span><span class="p">,</span> <span class="s">'O'</span><span class="p">],</span>
+                        <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+
+    <span class="n">parser</span><span class="p">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s">'-c'</span><span class="p">,</span>
+                        <span class="s">'--cell'</span><span class="p">,</span>
+                        <span class="n">help</span><span class="o">=</span><span class="s">''</span><span class="p">,</span>
+                        <span class="n">metavar</span><span class="o">=</span><span class="s">'cell'</span><span class="p">,</span>
+                        <span class="nb">type</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
+                        <span class="n">choices</span><span class="o">=</span><span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">)],</span>
+                        <span class="n">default</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="p">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">player</span> <span class="o">==</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">args</span><span class="p">.</span><span class="n">cell</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="n">args</span><span class="p">.</span><span class="n">cell</span> <span class="o">==</span> <span class="bp">None</span> <span class="ow">and</span> <span class="n">args</span><span class="p">.</span><span class="n">player</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">):</span>
+        <span class="n">parser</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s">'Must provide both --player and --cell'</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">r'^[.XO]{9}$'</span><span class="p">,</span> <span class="n">args</span><span class="p">.</span><span class="n">board</span><span class="p">):</span>
+        <span class="n">parser</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s">f'--board "</span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">board</span><span class="si">}</span><span class="s">" must be 9 characters of ., X, O'</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">args</span><span class="p">.</span><span class="n">player</span> <span class="ow">and</span> <span class="n">args</span><span class="p">.</span><span class="n">cell</span> <span class="ow">and</span> <span class="n">args</span><span class="p">.</span><span class="n">board</span><span class="p">[</span><span class="n">args</span><span class="p">.</span><span class="n">cell</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="s">'XO'</span><span class="p">:</span>
+        <span class="n">parser</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="s">f'--cell "</span><span class="si">{</span><span class="n">args</span><span class="p">.</span><span class="n">cell</span><span class="si">}</span><span class="s">" already taken'</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">args</span>
+
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""Make a jazz noise here"""</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">get_args</span><span class="p">()</span>
+    <span class="n">board</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">board</span>
+    <span class="n">cell</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">cell</span>
+    <span class="n">player</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="n">player</span>
+
+    <span class="k">if</span> <span class="bp">None</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="n">player</span><span class="p">,</span> <span class="n">cell</span><span class="p">):</span>
+        <span class="n">board</span> <span class="o">=</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="n">player</span> <span class="k">if</span> <span class="p">(</span><span class="n">cell</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="n">i</span> <span class="k">else</span> <span class="n">c</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">board</span><span class="p">)])</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">find_winner</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">result</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="s">'No winner.'</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">+=</span> <span class="s">' has won!'</span>
+    
+    <span class="k">print</span><span class="p">(</span><span class="n">format_board</span><span class="p">(</span><span class="n">board</span><span class="p">)</span> <span class="o">+</span> <span class="s">f'</span><span class="se">\n</span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s">'</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">format_board</span><span class="p">(</span><span class="n">board</span><span class="p">):</span>
+    <span class="n">board</span> <span class="o">=</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="n">c</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="s">'XO'</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">board</span><span class="p">)])</span>
+
+    <span class="n">board</span> <span class="o">=</span> <span class="s">f"""-------------
+| </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s"> |
+-------------
+| </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="si">}</span><span class="s"> |
+-------------
+| </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="si">}</span><span class="s"> |
+-------------"""</span>
+
+    <span class="k">return</span> <span class="n">board</span>
+
+<span class="k">def</span> <span class="nf">find_winner</span><span class="p">(</span><span class="n">board</span><span class="p">):</span>
+    <span class="n">wins</span> <span class="o">=</span> <span class="p">[(</span><span class="s">'PPP......'</span><span class="p">),</span> <span class="p">(</span><span class="s">'...PPP...'</span><span class="p">),</span> <span class="p">(</span><span class="s">'......PPP'</span><span class="p">),</span> <span class="p">(</span><span class="s">'P..P..P..'</span><span class="p">),</span>
+            <span class="p">(</span><span class="s">'.P..P..P.'</span><span class="p">),</span> <span class="p">(</span><span class="s">'..P..P..P'</span><span class="p">),</span> <span class="p">(</span><span class="s">'P...P...P'</span><span class="p">),</span> <span class="p">(</span><span class="s">'..P.P.P..'</span><span class="p">)]</span>
+
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="s">'XO'</span><span class="p">:</span>
+        <span class="n">other_player</span> <span class="o">=</span> <span class="s">'O'</span> <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="s">'X'</span> <span class="k">else</span> <span class="s">'X'</span>
+        <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">wins</span><span class="p">:</span>
+            <span class="n">win_board</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'P'</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+            <span class="n">comp_board</span> <span class="o">=</span> <span class="n">board</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">other_player</span><span class="p">,</span> <span class="s">'.'</span><span class="p">)</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">win_board</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">comp_board</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="s">'.'</span> <span class="ow">and</span> <span class="n">comp_board</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="p">:</span>
+                    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">p</span>
+
+    <span class="k">return</span> <span class="bp">None</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029153031020.png" alt="image-20211029153031020"></p>
+
+<h2 id="chapter-22-돌아온-틱택토-게임-타입-힌트를-사용한-대화형-버전">
+<a class="anchor" href="#chapter-22-%EB%8F%8C%EC%95%84%EC%98%A8-%ED%8B%B1%ED%83%9D%ED%86%A0-%EA%B2%8C%EC%9E%84-%ED%83%80%EC%9E%85-%ED%9E%8C%ED%8A%B8%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C-%EB%8C%80%ED%99%94%ED%98%95-%EB%B2%84%EC%A0%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chapter 22. 돌아온 틱택토 게임: 타입 힌트를 사용한 대화형 버전</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029153120042.png" alt="image-20211029153120042"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029153244622.png" alt="image-20211029153244622"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029153544734.png" alt="image-20211029153544734"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029153552623.png" alt="image-20211029153552623"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029153616572.png" alt="image-20211029153616572"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029153633936.png" alt="image-20211029153633936"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029153648410.png" alt="image-20211029153648410"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029153658883.png" alt="image-20211029153658883"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029153733124.png" alt="image-20211029153733124"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029153744777.png" alt="image-20211029153744777"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029153757951.png" alt="image-20211029153757951"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029153810373.png" alt="image-20211029153810373"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029154117355.png" alt="image-20211029154117355"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029154139143.png" alt="image-20211029154139143"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029154212666.png" alt="image-20211029154212666"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029154223367.png" alt="image-20211029154223367"></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#!/usr/bin/env python3
+</span><span class="s">"""
+Author : runner &lt;runner@1a4e6e4cffcf&gt;
+Date   : 2021-10-29
+Purpose: Rock the Casbah
+"""</span>
+
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">NamedTuple</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="s">"""Make a jazz noise here"""</span>
+    <span class="n">state</span> <span class="o">=</span> <span class="n">State</span><span class="p">()</span>
+
+    <span class="k">while</span> <span class="ow">not</span> <span class="n">state</span><span class="p">.</span><span class="n">quit</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\033</span><span class="s">[H</span><span class="se">\033</span><span class="s">[J"</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">format_board</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="n">board</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">state</span><span class="p">.</span><span class="n">error</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="n">error</span><span class="p">)</span>
+            <span class="n">state</span> <span class="o">=</span> <span class="n">state</span><span class="p">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">f'Player </span><span class="si">{</span><span class="n">state</span><span class="p">.</span><span class="n">player</span><span class="si">}</span><span class="s">, what is your move? [q to quit] '</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">val</span> <span class="o">==</span> <span class="s">'q'</span><span class="p">:</span>
+            <span class="n">state</span> <span class="o">=</span> <span class="n">state</span><span class="p">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">quit</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">'You lose, loser!'</span><span class="p">)</span>
+            <span class="k">break</span>
+        <span class="k">elif</span> <span class="n">state</span><span class="p">.</span><span class="n">draw</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"All right, we'll call it a draw."</span><span class="p">)</span>
+            <span class="k">break</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">r'^[1-9]$'</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
+            <span class="n">state</span> <span class="o">=</span> <span class="n">state</span><span class="p">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="s">f'Invaild cell "</span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s">", please use 1-9'</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">state</span><span class="p">.</span><span class="n">board</span><span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="ow">in</span> <span class="s">'XO'</span><span class="p">:</span>
+            <span class="n">state</span> <span class="o">=</span> <span class="n">state</span><span class="p">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">error</span><span class="o">=</span><span class="s">f'Cell "</span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s">" already taken.'</span><span class="p">)</span>
+            <span class="k">continue</span>
+        
+        <span class="n">state</span> <span class="o">=</span> <span class="n">state</span><span class="p">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">board</span><span class="o">=</span><span class="p">[</span><span class="n">state</span><span class="p">.</span><span class="n">player</span> <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="p">(</span><span class="n">val</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="k">else</span> <span class="n">c</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="n">board</span><span class="p">)])</span>
+
+        <span class="n">winner</span> <span class="o">=</span> <span class="n">find_winner</span><span class="p">(</span><span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="n">board</span><span class="p">))</span>
+        <span class="n">next_player</span> <span class="o">=</span> <span class="s">'O'</span> <span class="k">if</span> <span class="n">state</span><span class="p">.</span><span class="n">player</span> <span class="o">==</span> <span class="s">'X'</span> <span class="k">else</span> <span class="s">'X'</span>
+
+        <span class="k">if</span> <span class="n">winner</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">format_board</span><span class="p">(</span><span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">state</span><span class="p">.</span><span class="n">board</span><span class="p">)))</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">f'</span><span class="si">{</span><span class="n">state</span><span class="p">.</span><span class="n">player</span><span class="si">}</span><span class="s"> has won!'</span><span class="p">)</span>
+            <span class="n">state</span> <span class="o">=</span> <span class="n">state</span><span class="p">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">quit</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+            <span class="k">continue</span>
+        <span class="k">elif</span> <span class="ow">not</span> <span class="n">winner</span> <span class="ow">and</span> <span class="s">'.'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">state</span><span class="p">.</span><span class="n">board</span><span class="p">:</span>
+            <span class="n">state</span> <span class="o">=</span> <span class="n">state</span><span class="p">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">draw</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">state</span> <span class="o">=</span> <span class="n">state</span><span class="p">.</span><span class="n">_replace</span><span class="p">(</span><span class="n">player</span><span class="o">=</span><span class="n">next_player</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">format_board</span><span class="p">(</span><span class="n">board</span><span class="p">):</span>
+    <span class="n">board</span> <span class="o">=</span> <span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">([</span><span class="n">c</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="s">'XO'</span> <span class="k">else</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">board</span><span class="p">)])</span>
+
+    <span class="n">board</span> <span class="o">=</span> <span class="s">f"""-------------
+| </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s"> |
+-------------
+| </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="si">}</span><span class="s"> |
+-------------
+| </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">7</span><span class="p">]</span><span class="si">}</span><span class="s"> | </span><span class="si">{</span><span class="n">board</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="si">}</span><span class="s"> |
+-------------"""</span>
+
+    <span class="k">return</span> <span class="n">board</span>
+
+<span class="k">def</span> <span class="nf">find_winner</span><span class="p">(</span><span class="n">board</span><span class="p">):</span>
+    <span class="n">wins</span> <span class="o">=</span> <span class="p">[(</span><span class="s">'PPP......'</span><span class="p">),</span> <span class="p">(</span><span class="s">'...PPP...'</span><span class="p">),</span> <span class="p">(</span><span class="s">'......PPP'</span><span class="p">),</span> <span class="p">(</span><span class="s">'P..P..P..'</span><span class="p">),</span>
+            <span class="p">(</span><span class="s">'.P..P..P.'</span><span class="p">),</span> <span class="p">(</span><span class="s">'..P..P..P'</span><span class="p">),</span> <span class="p">(</span><span class="s">'P...P...P'</span><span class="p">),</span> <span class="p">(</span><span class="s">'..P.P.P..'</span><span class="p">)]</span>
+
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="s">'XO'</span><span class="p">:</span>
+        <span class="n">other_player</span> <span class="o">=</span> <span class="s">'O'</span> <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="s">'X'</span> <span class="k">else</span> <span class="s">'X'</span>
+        <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">wins</span><span class="p">:</span>
+            <span class="n">win_board</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="s">'P'</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+            <span class="n">comp_board</span> <span class="o">=</span> <span class="n">board</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">other_player</span><span class="p">,</span> <span class="s">'.'</span><span class="p">)</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">win_board</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">comp_board</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="s">'.'</span> <span class="ow">and</span> <span class="n">comp_board</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="p">:</span>
+                    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">count</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="n">p</span>
+
+    <span class="k">return</span> <span class="bp">None</span>
+
+<span class="k">class</span> <span class="nc">State</span><span class="p">(</span><span class="n">NamedTuple</span><span class="p">):</span>
+    <span class="n">board</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s">'.'</span> <span class="o">*</span> <span class="mi">9</span><span class="p">)</span>
+    <span class="n">player</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s">'X'</span>
+    <span class="n">quit</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">draw</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="n">error</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">winner</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+
+<span class="c1"># --------------------------------------------------
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+
+</code></pre></div></div>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163151406.png" alt="image-20211029163151406"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163156607.png" alt="image-20211029163156607"></p>
+
+<h2 id="마치며">
+<a class="anchor" href="#%EB%A7%88%EC%B9%98%EB%A9%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>마치며</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163213333.png" alt="image-20211029163213333"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163234981.png" alt="image-20211029163234981"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163238679.png" alt="image-20211029163238679"></p>
+
+<h2 id="argparse-사용하기">
+<a class="anchor" href="#argparse-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0" aria-hidden="true"><span class="octicon octicon-link"></span></a>argparse 사용하기</h2>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163319915.png" alt="image-20211029163319915"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163445766.png" alt="image-20211029163445766"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163506441.png" alt="image-20211029163506441"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163520121.png" alt="image-20211029163520121"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163528026.png" alt="image-20211029163528026"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163536997.png" alt="image-20211029163536997"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163544972.png" alt="image-20211029163544972"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163555473.png" alt="image-20211029163555473"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163609312.png" alt="image-20211029163609312"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163625125.png" alt="image-20211029163625125"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163634566.png" alt="image-20211029163634566"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163650214.png" alt="image-20211029163650214"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163715105.png" alt="image-20211029163715105"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163722238.png" alt="image-20211029163722238"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163732310.png" alt="image-20211029163732310"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163746868.png" alt="image-20211029163746868"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163758256.png" alt="image-20211029163758256"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163803990.png" alt="image-20211029163803990"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163812708.png" alt="image-20211029163812708"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163840606.png" alt="image-20211029163840606"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163851368.png" alt="image-20211029163851368"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163855731.png" alt="image-20211029163855731"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163901835.png" alt="image-20211029163901835"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163913872.png" alt="image-20211029163913872"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163924193.png" alt="image-20211029163924193"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163933408.png" alt="image-20211029163933408"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163941919.png" alt="image-20211029163941919"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029163953506.png" alt="image-20211029163953506"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029164006276.png" alt="image-20211029164006276"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029164024751.png" alt="image-20211029164024751"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029164037222.png" alt="image-20211029164037222"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029164052871.png" alt="image-20211029164052871"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029164101271.png" alt="image-20211029164101271"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029164131483.png" alt="image-20211029164131483"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029164136555.png" alt="image-20211029164136555"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029164145798.png" alt="image-20211029164145798"></p>
+
+<p><img src="/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029164150616.png" alt="image-20211029164150616"></p>
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/10/28/tiny-python-project-chapter-11~21.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
