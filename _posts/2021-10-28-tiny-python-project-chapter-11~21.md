@@ -1355,3 +1355,4 @@ if __name__ == '__main__':
 ![image-20211029164145798](/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029164145798.png)
 
 ![image-20211029164150616](/Kevin_Min/images/2021-10-28-tiny-python-project-chapter-11~21/image-20211029164150616.png)
+
