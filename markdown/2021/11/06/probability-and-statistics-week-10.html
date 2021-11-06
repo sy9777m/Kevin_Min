@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Probability and Inferential Statistics week 10 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Probability and Inferential Statistics week 10" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 Probability and Inferential Statistics week 10." />
+<meta property="og:description" content="Soongsil University 2-2 Probability and Inferential Statistics week 10." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/11/06/probability-and-statistics-week-10.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/11/06/probability-and-statistics-week-10.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-06T00:00:00-05:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-11-06T00:00:00-05:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/11/06/probability-and-statistics-week-10.html","@type":"BlogPosting","headline":"Probability and Inferential Statistics week 10","dateModified":"2021-11-06T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/11/06/probability-and-statistics-week-10.html"},"description":"Soongsil University 2-2 Probability and Inferential Statistics week 10.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Probability and Inferential Statistics week 10</h1><p class="page-description">Soongsil University 2-2 Probability and Inferential Statistics week 10.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-11-06T00:00:00-05:00" itemprop="datePublished">
+        Nov 6, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#probability-and-statistics-week-10">Probability and Statistics week 10</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#point-estimation-점-추정">point estimation (점 추정)</a></li>
+<li class="toc-entry toc-h2"><a href="#statistic-통계량">Statistic (통계량)</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#examples-of-statistic">examples of statistic</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#estimation">Estimation</a></li>
+<li class="toc-entry toc-h2"><a href="#example-sample-mean-vs-population-mean">Example: sample mean vs. population mean</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-기계-고장">Example: 기계 고장</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#unbiased-estimators-불비편향-추정량">Unbiased estimators (불/비편향 추정량)</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-기계고장">Example: 기계고장</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#unbiased-estimator-of-variance">Unbiased estimator of variance</a></li>
+<li class="toc-entry toc-h2"><a href="#variance-estimator">Variance estimator</a></li>
+<li class="toc-entry toc-h2"><a href="#더-좋은-estimator를-찾는-방법">더 좋은 estimator를 찾는 방법</a></li>
+<li class="toc-entry toc-h2"><a href="#maximum-variance-unbiased-estimator-mvue">Maximum variance unbiased estimator (MVUE)</a></li>
+<li class="toc-entry toc-h2"><a href="#relative-efficiency">Relative efficiency</a></li>
+<li class="toc-entry toc-h2"><a href="#mean-squared-error-mse">Mean Squared Error (MSE)</a></li>
+<li class="toc-entry toc-h2"><a href="#example-두-개의-estimate의-합">Example: 두 개의 estimate의 합</a></li>
+<li class="toc-entry toc-h2"><a href="#generalization">Generalization</a></li>
+<li class="toc-entry toc-h2"><a href="#sampling-distribution">Sampling distribution</a></li>
+<li class="toc-entry toc-h2"><a href="#proof">Proof</a></li>
+<li class="toc-entry toc-h2"><a href="#parameter를-추정하는-방법">Parameter를 추정하는 방법</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-uniform-distribution">Example: Uniform distribution</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#example-gaussian-distribution">Example: Gaussian distribution</a></li>
+<li class="toc-entry toc-h2"><a href="#maximum-likelihood-estimation">Maximum likelihood estimation</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-gaussian-distribution-1">Example: Gaussian distribution</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h1 id="probability-and-statistics-week-10">
+<a class="anchor" href="#probability-and-statistics-week-10" aria-hidden="true"><span class="octicon octicon-link"></span></a>Probability and Statistics week 10</h1>
+
+<h2 id="point-estimation-점-추정">
+<a class="anchor" href="#point-estimation-%EC%A0%90-%EC%B6%94%EC%A0%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>point estimation (점 추정)</h2>
+
+<p>모르는 분포에 대해서 가장 근사(best guess / best estimate)적인 단일 값을 구하는 것</p>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106124712947.png" alt="image-20211106124712947"></p>
+
+<h2 id="statistic-통계량">
+<a class="anchor" href="#statistic-%ED%86%B5%EA%B3%84%EB%9F%89" aria-hidden="true"><span class="octicon octicon-link"></span></a>Statistic (통계량)</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106124816375.png" alt="image-20211106124816375"></p>
+
+<h3 id="examples-of-statistic">
+<a class="anchor" href="#examples-of-statistic" aria-hidden="true"><span class="octicon octicon-link"></span></a>examples of statistic</h3>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106124922303.png" alt="image-20211106124922303"></p>
+
+<h2 id="estimation">
+<a class="anchor" href="#estimation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Estimation</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106125010623.png" alt="image-20211106125010623"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106125047631.png" alt="image-20211106125047631"></p>
+
+<ol>
+  <li>데이터를 보고 가능한 분포의 후보를 정함</li>
+  <li>각 분포를 estimation</li>
+  <li>best fit distiburion을 찾음 - 보통 한 데이터를 설명할 수 있는 분포에는 여러 종류가 있음</li>
+</ol>
+
+<h2 id="example-sample-mean-vs-population-mean">
+<a class="anchor" href="#example-sample-mean-vs-population-mean" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example: sample mean vs. population mean</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106125455695.png" alt="image-20211106125455695"></p>
+
+<p>Central Limit Theorem</p>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106125538055.png" alt="image-20211106125538055"></p>
+
+<p>sample mean의 probability density function을 그려보고 비슷한 distribution을 찾아서 statistical inference</p>
+
+<h3 id="example-기계-고장">
+<a class="anchor" href="#example-%EA%B8%B0%EA%B3%84-%EA%B3%A0%EC%9E%A5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example: 기계 고장</h3>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106125613063.png" alt="image-20211106125613063"></p>
+
+<h2 id="unbiased-estimators-불비편향-추정량">
+<a class="anchor" href="#unbiased-estimators-%EB%B6%88%EB%B9%84%ED%8E%B8%ED%96%A5-%EC%B6%94%EC%A0%95%EB%9F%89" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unbiased estimators (불/비편향 추정량)</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106125650805.png" alt="image-20211106125650805"></p>
+
+<h3 id="example-기계고장">
+<a class="anchor" href="#example-%EA%B8%B0%EA%B3%84%EA%B3%A0%EC%9E%A5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example: 기계고장</h3>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106125804710.png" alt="image-20211106125804710"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106125926479.png" alt="image-20211106125926479"></p>
+
+<h2 id="unbiased-estimator-of-variance">
+<a class="anchor" href="#unbiased-estimator-of-variance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unbiased estimator of variance</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106130035063.png" alt="image-20211106130035063"></p>
+
+<h2 id="variance-estimator">
+<a class="anchor" href="#variance-estimator" aria-hidden="true"><span class="octicon octicon-link"></span></a>Variance estimator</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106130045055.png" alt="image-20211106130045055"></p>
+
+<p>만약 분포가 n -1이 아니라 n이라면</p>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106130306310.png" alt="image-20211106130306310"></p>
+
+<p>항상 작게 측정되는 문제가 발생함</p>
+
+<h2 id="더-좋은-estimator를-찾는-방법">
+<a class="anchor" href="#%EB%8D%94-%EC%A2%8B%EC%9D%80-estimator%EB%A5%BC-%EC%B0%BE%EB%8A%94-%EB%B0%A9%EB%B2%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>더 좋은 estimator를 찾는 방법</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106130342325.png" alt="image-20211106130342325"></p>
+
+<h2 id="maximum-variance-unbiased-estimator-mvue">
+<a class="anchor" href="#maximum-variance-unbiased-estimator-mvue" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maximum variance unbiased estimator (MVUE)</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106130448998.png" alt="image-20211106130448998"></p>
+
+<h2 id="relative-efficiency">
+<a class="anchor" href="#relative-efficiency" aria-hidden="true"><span class="octicon octicon-link"></span></a>Relative efficiency</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106130541142.png" alt="image-20211106130541142"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106130556872.png" alt="image-20211106130556872"></p>
+
+<p>biased estimator라서 bias가 존재할 경우 서로 bias가 다르고, variance도 다른데 이 경우에는 어떻게 비교해야 할까? 어떤 estimator가 더 좋은 estimator일까?</p>
+
+<h2 id="mean-squared-error-mse">
+<a class="anchor" href="#mean-squared-error-mse" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mean Squared Error (MSE)</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106130647262.png" alt="image-20211106130647262"></p>
+
+<h2 id="example-두-개의-estimate의-합">
+<a class="anchor" href="#example-%EB%91%90-%EA%B0%9C%EC%9D%98-estimate%EC%9D%98-%ED%95%A9" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example: 두 개의 estimate의 합</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106130827670.png" alt="image-20211106130827670"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106130904671.png" alt="image-20211106130904671"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106130958085.png" alt="image-20211106130958085"></p>
+
+<h2 id="generalization">
+<a class="anchor" href="#generalization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generalization</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106131027623.png" alt="image-20211106131027623"></p>
+
+<h2 id="sampling-distribution">
+<a class="anchor" href="#sampling-distribution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sampling distribution</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106131102623.png" alt="image-20211106131102623"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106131218366.png" alt="image-20211106131218366"></p>
+
+<h2 id="proof">
+<a class="anchor" href="#proof" aria-hidden="true"><span class="octicon octicon-link"></span></a>Proof</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106131251192.png" alt="image-20211106131251192"></p>
+
+<h2 id="parameter를-추정하는-방법">
+<a class="anchor" href="#parameter%EB%A5%BC-%EC%B6%94%EC%A0%95%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameter를 추정하는 방법</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106131419878.png" alt="image-20211106131419878"></p>
+
+<h3 id="example-uniform-distribution">
+<a class="anchor" href="#example-uniform-distribution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example: Uniform distribution</h3>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106131717037.png" alt="image-20211106131717037"></p>
+
+<h2 id="example-gaussian-distribution">
+<a class="anchor" href="#example-gaussian-distribution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example: Gaussian distribution</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106131835104.png" alt="image-20211106131835104"></p>
+
+<h2 id="maximum-likelihood-estimation">
+<a class="anchor" href="#maximum-likelihood-estimation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maximum likelihood estimation</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106131857096.png" alt="image-20211106131857096"></p>
+
+<p>Unbiased estimator임을 보장하지 않음</p>
+
+<h3 id="example-gaussian-distribution-1">
+<a class="anchor" href="#example-gaussian-distribution-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example: Gaussian distribution</h3>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106132011655.png" alt="image-20211106132011655"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-06-probability-and-statistics-week-10/image-20211106132053382.png" alt="image-20211106132053382"></p>
+
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/11/06/probability-and-statistics-week-10.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
