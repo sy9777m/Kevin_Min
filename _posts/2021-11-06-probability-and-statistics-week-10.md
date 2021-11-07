@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: Soongsil University 2-2 Probability and Inferential Statistics week 10.
+description: Soongsil University 2-2 Probability and Statistics week 10.
 categories: [markdown]
-title: Probability and Inferential Statistics week 10
+title: Probability and Statistics week 10
 ---
 # Probability and Statistics week 10
 
