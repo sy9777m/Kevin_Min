@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "Probability and Inferential Statistics week 10",
+            "title": "Probability and Statistics week 10",
             "content": "Probability and Statistics week 10 . point estimation (점 추정) . 모르는 분포에 대해서 가장 근사(best guess / best estimate)적인 단일 값을 구하는 것 . . Statistic (통계량) . . examples of statistic . . Estimation . . . 데이터를 보고 가능한 분포의 후보를 정함 | 각 분포를 estimation | best fit distiburion을 찾음 - 보통 한 데이터를 설명할 수 있는 분포에는 여러 종류가 있음 | Example: sample mean vs. population mean . . Central Limit Theorem . . sample mean의 probability density function을 그려보고 비슷한 distribution을 찾아서 statistical inference . Example: 기계 고장 . . Unbiased estimators (불/비편향 추정량) . . Example: 기계고장 . . . Unbiased estimator of variance . . Variance estimator . . 만약 분포가 n -1이 아니라 n이라면 . . 항상 작게 측정되는 문제가 발생함 . 더 좋은 estimator를 찾는 방법 . . Maximum variance unbiased estimator (MVUE) . . Relative efficiency . . . biased estimator라서 bias가 존재할 경우 서로 bias가 다르고, variance도 다른데 이 경우에는 어떻게 비교해야 할까? 어떤 estimator가 더 좋은 estimator일까? . Mean Squared Error (MSE) . . Example: 두 개의 estimate의 합 . . . . Generalization . . Sampling distribution . . . Proof . . Parameter를 추정하는 방법 . . Example: Uniform distribution . . Example: Gaussian distribution . . Maximum likelihood estimation . . Unbiased estimator임을 보장하지 않음 . Example: Gaussian distribution . . .",
             "url": "https://sy9777m.github.io/Kevin_Min/markdown/2021/11/06/probability-and-statistics-week-10.html",
             "relUrl": "/markdown/2021/11/06/probability-and-statistics-week-10.html",
