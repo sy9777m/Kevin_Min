@@ -157,30 +157,30 @@ Note that the highest and best use is not based on the highest value when the pr
 
 With the direct capitalization method, value is based on capitalizing the first year NOI of the property using a capitalization rate. With the discounted cash flow method, value is based on the present value of the property's future cash flows using an appropriate discount rate.
 $$
-\\\operatorname{Rental income if fully occupied}
-\\+ \operatorname{Other income}
-\\= \operatorname{Potential gross income}
-\\- \operatorname{Vacancy and collection loss}
-\\= \operatorname{Effective gross income}
-\\- \operatorname{Operating expense}
-\\= \operatorname{Net operating income}
+\\\text{Rental income if fully occupied}
+\\+ \text{Other income}
+\\= \text{Potential gross income}
+\\- \text{Vacancy and collection loss}
+\\= \text{Effective gross income}
+\\- \text{Operating expense}
+\\= \text{Net operating income}
 $$
 ![image-20211012150408354](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012150408354.png)
 
 ### The capitalization rate
 
 $$
-\\\operatorname{cap rate} = \operatorname{discount rate} - \operatorname{growth rate}
-\\\operatorname{cap rate} = \frac{\operatorname{NOI}_{1}}{\operatorname{value}}
-\\V_{0} = \frac{\operatorname{NOI}_{1}}{\operatorname{cap rate}}
-\\\operatorname{cap rate} = \frac{\operatorname{NOI}_{1}}{\operatorname{comparable sales price}}
+\\\text{cap rate} = \text{discount rate} - \text{growth rate}
+\\\text{cap rate} = \frac{\text{NOI}_{1}}{\text{value}}
+\\V_{0} = \frac{\text{NOI}_{1}}{\text{cap rate}}
+\\\text{cap rate} = \frac{\text{NOI}_{1}}{\text{comparable sales price}}
 $$
 
 It is important to observe several comparable transactions when deriving the cap rate. Implicit in the cap rate derived from comparable transactions are investors' expectations of income growth and risk. In this case, the cap rate is similar to the reciprocal of the price-earnings multiple for equity securities.
 
 All Risks Yield (ARY) - The ARY in the cap rate and will differ from the discount rate if an investor expects growth in rents and value.
 $$
-\\\operatorname{value} = V_{0} = \frac{\operatorname{rent}_{1}}{\operatorname{ARY}}
+\\\text{value} = V_{0} = \frac{\text{rent}_{1}}{\text{ARY}}
 $$
 If rents are expected to increase at a constant rate each year, the internal rate of return (IRR) can be approximately by summing the cap rate and growth rate.
 
@@ -194,8 +194,8 @@ If NOI is not representative of the NOI of similar properties because of a tempo
 
 ![image-20211012151131115](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012151131115.png)
 $$
-\\\operatorname{gross income multiplier} = \frac{\operatorname{sales price}}{\operatorname{gross income}}
-\\\operatorname{value} = \operatorname{gross income} * \operatorname{gross income multiplier}
+\\\text{gross income multiplier} = \frac{\text{sales price}}{\text{gross income}}
+\\\text{value} = \text{gross income} * \text{gross income multiplier}
 $$
 ball park figure (약식 계산 방법)
 
@@ -328,7 +328,8 @@ For example, an appraiser might apply a higher weight to the value obtained with
 
 A popular index in the United States in the NCREIF Property Index (NPI). Member of NCREIF, mainly investment managers and pension fund sponsors, submit appraisal data quarterly, and NCREIF calculates the return as follows:
 $$
-\\\operatorname{return} = \frac{NOI - \operatorname{capital expenditures} + (\operatorname{end market value} - \operatorname{beg market value})}{\operatorname{beginning market value}}
+\\
+\text{return} = \frac{NOI - \text{capital expenditures} + (\text{end market value} - \text{beg market value})}{\text{beginning market value}} \\
 $$
 Appraisal-based indices tend to lag actual transactions because actual transactions occur before appraisals are performed. Thus, a change in price may not be reflected in appraised values until the next quarter or longer if a property is not appraised every quarter. Also, appraisal lag tends to smooth the index; that is, reduce its volatility, much like a moving average reduces volatility. Finally, appraisal lag results in lower correlation with other asset classes. Appraisal lag can be adjusted by unsmoothing the index or by using a transaction-based index.
 
@@ -345,14 +346,16 @@ A hedonic index requires only one sale. A regression is developed to control for
 ### Debt Service Coverage Ratio (DSCR) and Loan-to-Value (LTV)
 
 $$
-\\\operatorname{DSCR} = \frac{\operatorname{first-year\, NOI}}{\operatorname{debt service}}
-\\\operatorname{LTV} = \frac{\operatorname{loan amount}}{\operatorname{appraisal value}}
+\\
+\text{DSCR} = \frac{\text{first-year\, NOI}}{\text{debt service}} \\
+\text{LTV} = \frac{\text{loan amount}}{\text{appraisal value}} \\
 $$
 
 ### Equity dividend rate
 
 $$
-\\\operatorname{equity dividend rate} = \frac{\operatorname{first year cash flow}}{\operatorname{equity}}
+\\
+\text{equity dividend rate} = \frac{\text{first year cash flow}}{\text{equity}} \\
 $$
 
 ### Leveraged IRR and unleveraged IRR
@@ -583,9 +586,10 @@ NAVPS (net asset value per share) is the (per-share) amount by which assets exce
 
 ![image-20211012182322152](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012182322152.png)
 $$
-\\\text{step 1: }\operatorname{property value} = \frac{\operatorname{1st\, year\, NOI}}{\operatorname{cap rate}}
-\\\text{step 2: }\operatorname{Total Net Asset Value} = \operatorname{property value} + \operatorname{other tangible assets} - \operatorname{Liabilities}
-\\\text{step 3: }\operatorname{NAVPS} = \frac{\operatorname{Total NAV}}{\operatorname{number of outstanding shares}}
+\\
+\text{step 1: }\text{property value} = \frac{\text{1st\, year\, NOI}}{\text{cap rate}} \\
+\text{step 2: }\text{Total Net Asset Value} = \text{property value} + \text{other tangible assets} - \operatorname{Liabilities} \\
+\text{step 3: }\text{NAVPS} = \frac{\text{Total NAV}}{\text{number of outstanding shares}} \\
 $$
 
 ## LOS 40.f: Describe the use of funds from operations (FFO) and adjusted funds from operations (AFFO) in REIT valuation.
@@ -593,11 +597,12 @@ $$
 ### Fund from operations
 
 $$
-\\\operatorname{Accounting net earnings}
-\\+ \operatorname{Depreciation and amortization expense}
-\\- \operatorname{Gains from sales of property} 
-\\+ \operatorname{Losses from sales of property} 
-\\= \operatorname{Funds from operations}
+\\
+\text{Accounting net earnings}
+\\+ \text{Depreciation and amortization expense}
+\\- \text{Gains from sales of property} 
+\\+ \text{Losses from sales of property} 
+\\= \text{Funds from operations} \\
 $$
 
 Depreciation is added back under the premise that accounting depreciation often exceeds economic depreciation for real estate. Gains from sales of property are excluded because these are not considered to be part of continuing income.
@@ -606,10 +611,10 @@ Depreciation is added back under the premise that accounting depreciation often 
 
 AFFO is also known as cash available for distribution (CAD) or funds available for distribution (FAD).
 $$
-\\\operatorname{FFO\, (funds\, from\, operations)}
-\\- \operatorname{Non-cash\, (straight-line)\, rent\, adjustment}
-\\- \operatorname{Recurring\, maintenance-type\, capital\, expenditures\, and\, leasing\, commissions}
-\\= \operatorname{AFFO\, (adjusted\, funds\, from\, operations)}
+\\\text{FFO\, (funds\, from\, operations)}
+\\- \text{Non-cash\, (straight-line)\, rent\, adjustment}
+\\- \text{Recurring\, maintenance-type\, capital\, expenditures\, and\, leasing\, commissions}
+\\= \text{AFFO\, (adjusted\, funds\, from\, operations)} \\
 $$
 Straight-line rent refers not to the cash rent paid during the lease but rather to the average contractual rent over a lease period-the two figures differ by non-cash rent, which reflects contractually-increasing rental rates. Capital expenditures related to maintenance, as well expenses related to leasing the space in properties, are subtracted from FFO because they represent costs that must be expended in order to maintain the value of the properties.
 
@@ -774,7 +779,7 @@ three main inputs:
 ### Exit value
 
 $$
-\\\operatorname{investment cost} + \operatorname{earnings growth} + \operatorname{increase in price multiple} + \operatorname{reduction in debt} = \operatorname{exit value}
+\\\text{investment cost} + \text{earnings growth} + \text{increase in price multiple} + \text{reduction in debt} = \text{exit value}
 $$
 
 ![image-20211012211657003](/Kevin_Min/images/2021-10-12-CFA-Level-2-Alternative-Investment/image-20211012211657003.png)
