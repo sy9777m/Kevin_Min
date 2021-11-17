@@ -201,7 +201,7 @@ Members and Candidates must not knowingly make any misrepresentations relating t
 
 #### Guidance
 
-Trust is a foundation in the investment profession. Do not make nay misrepresentations or give false impressions. This includes oral, electronic, and social media communications. Misrepresentations include guaranteeing investment performance and plagiarism. Plagiarism encompasses using someone else's work (reports, forecasts, models, ideas, charts, graphs, and spreadsheet models) without giving them credit. Knowingly omitting information that could affect an investment decision or performance evaluation is considered misrepresentation.
+Trust is a foundation in the investment profession. Do not make anFy misrepresentations or give false impressions. This includes oral, electronic, and social media communications. Misrepresentations include guaranteeing investment performance and plagiarism. Plagiarism encompasses using someone else's work (reports, forecasts, models, ideas, charts, graphs, and spreadsheet models) without giving them credit. Knowingly omitting information that could affect an investment decision or performance evaluation is considered misrepresentation.
 
 Models and analysis developed by others at a member's firm are the property of the firm and can be used without attribution. A report written by another analyst employed by the firm cannot be released as another analyst's work.
 
@@ -609,7 +609,7 @@ Members and Candidates must:
 
 #### Guidance
 
-In preparing recommendations for structured securities, allocation strategies, or nay other nontraditional investment, members should communicate those risk factors specific to such investments. In all cases, members should communicate the potential gains and losses on the investment clearly in terms of total return. Members are required to communicate significant changes in the risk characteristics of an investment process, including any risks and limitations that have been newly identified.
+In preparing recommendations for structured securities, allocation strategies, or any other nontraditional investment, members should communicate those risk factors specific to such investments. In all cases, members should communicate the potential gains and losses on the investment clearly in terms of total return. Members are required to communicate significant changes in the risk characteristics of an investment process, including any risks and limitations that have been newly identified.
 
 When using projections from quantitative models and analysis, members may violate the Standard by not explaining the limitations of the model and the assumptions it uses, which provides a context for judging the uncertainty regarding the estimated investment result.
 
