@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Algorithms week 11 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Algorithms week 11" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 Algorithms week 11." />
+<meta property="og:description" content="Soongsil University 2-2 Algorithms week 11." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/11/16/algorithms-week-11.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/11/16/algorithms-week-11.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-16T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-11-16T00:00:00-06:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/11/16/algorithms-week-11.html","@type":"BlogPosting","headline":"Algorithms week 11","dateModified":"2021-11-16T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/11/16/algorithms-week-11.html"},"description":"Soongsil University 2-2 Algorithms week 11.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Algorithms week 11</h1><p class="page-description">Soongsil University 2-2 Algorithms week 11.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-11-16T00:00:00-06:00" itemprop="datePublished">
+        Nov 16, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#algorithms-week-11">Algorithms week 11</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#dynamic-programming">Dynamic programming</a></li>
+<li class="toc-entry toc-h2"><a href="#bellman-ford">Bellman-Ford</a></li>
+<li class="toc-entry toc-h2"><a href="#bellman-ford-vs-dijkstra">Bellman-Ford vs. Dijkstra</a></li>
+<li class="toc-entry toc-h2"><a href="#bellman-ford-1">Bellman-Ford</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#interpretation-of-di">Interpretation of $d^{(i)}$</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#why-does-bellman-ford-work">Why does Bellman-Ford work?</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#inductive-step">Inductive step</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#proof-by-induction">Proof by induction</a></li>
+<li class="toc-entry toc-h2"><a href="#bellman-ford-algorithm">Bellman-Ford Algorithm</a></li>
+<li class="toc-entry toc-h2"><a href="#shortest-paths">Shortest paths</a></li>
+<li class="toc-entry toc-h2"><a href="#aside-link-state-vs-distance-vector">Aside: Link-state vs Distance-vector</a></li>
+<li class="toc-entry toc-h2"><a href="#important-thing-about-bellman-ford-for-the-rest-of-this-lecture">Important thing about Bellman-Ford for the rest of this lecture</a></li>
+<li class="toc-entry toc-h2"><a href="#bellman-ford-is-an-example-of-dynamic-programming">Bellman-Ford is an example of dynamic programming!</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-how-to-compute-fibonacci-numbers">Example: How to compute Fibonacci numbers</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#candidate-algorithm">Candidate algorithm</a></li>
+<li class="toc-entry toc-h2"><a href="#maybe-this-would-be-better">Maybe this would be better</a></li>
+<li class="toc-entry toc-h2"><a href="#what-is-dynamic-programming">What is dynamic programming?</a></li>
+<li class="toc-entry toc-h2"><a href="#elements-of-dynamic-programming">Elements of dynamic programming</a></li>
+<li class="toc-entry toc-h2"><a href="#two-ways-to-think-about-andor-implement-dp-algorithms">Two ways to think about and/or implement DP algorithms</a></li>
+<li class="toc-entry toc-h2"><a href="#bottom-up-approach">Bottom up approach</a></li>
+<li class="toc-entry toc-h2"><a href="#top-down-approach">Top down approach</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-of-top-down-fibonacci">Example of top-down Fibonacci</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#memo-ization-visualization">Memo-ization visualization</a></li>
+<li class="toc-entry toc-h2"><a href="#dynamic-programming-1">Dynamic programming</a></li>
+<li class="toc-entry toc-h2"><a href="#floyd-warshall">Floyd-Warshall</a></li>
+<li class="toc-entry toc-h2"><a href="#optimal-substructure">Optimal substructure</a></li>
+<li class="toc-entry toc-h2"><a href="#aside-simple-paths">Aside: simple paths</a></li>
+<li class="toc-entry toc-h2"><a href="#case-2-continued">Case 2 continued</a></li>
+<li class="toc-entry toc-h2"><a href="#floyd-warshall-algorithm">Floyd-Warshall algorithm</a></li>
+<li class="toc-entry toc-h2"><a href="#weve-basically-just-shown">We’ve basically just shown</a></li>
+<li class="toc-entry toc-h2"><a href="#what-if-there-are-negative-cycles">What if there are negative cycles?</a></li>
+<li class="toc-entry toc-h2"><a href="#what-have-we-learned">What have we learned?</a></li>
+<li class="toc-entry toc-h2"><a href="#graph-algorithms">Graph algorithms</a></li>
+</ul>
+</li>
+</ul><h1 id="algorithms-week-11">
+<a class="anchor" href="#algorithms-week-11" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithms week 11</h1>
+
+<h2 id="dynamic-programming">
+<a class="anchor" href="#dynamic-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic programming</h2>
+
+<ul>
+  <li>Bellman-Ford algorithm</li>
+  <li>Fibonacci Numbers</li>
+  <li>Floyd-Warshall algorithm</li>
+</ul>
+
+<p>Another problems</p>
+
+<ul>
+  <li>Longest common subsequence</li>
+  <li>knapsack</li>
+  <li>Independent sets</li>
+</ul>
+
+<h2 id="bellman-ford">
+<a class="anchor" href="#bellman-ford" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bellman-Ford</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116154308897.png" alt="image-20211116154308897"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116154448448.png" alt="image-20211116154448448"></p>
+
+<h2 id="bellman-ford-vs-dijkstra">
+<a class="anchor" href="#bellman-ford-vs-dijkstra" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bellman-Ford vs. Dijkstra</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116154501152.png" alt="image-20211116154501152"></p>
+
+<h2 id="bellman-ford-1">
+<a class="anchor" href="#bellman-ford-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bellman-Ford</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116154518038.png" alt="image-20211116154518038"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116154858372.png" alt="image-20211116154858372"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116154908832.png" alt="image-20211116154908832"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116155451181.png" alt="image-20211116155451181"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116155458680.png" alt="image-20211116155458680"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116155506398.png" alt="image-20211116155506398"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116155513536.png" alt="image-20211116155513536"></p>
+
+<h3 id="interpretation-of-di">
+<a class="anchor" href="#interpretation-of-di" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interpretation of $d^{(i)}$</h3>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116155534589.png" alt="image-20211116155534589"></p>
+
+<h2 id="why-does-bellman-ford-work">
+<a class="anchor" href="#why-does-bellman-ford-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why does Bellman-Ford work?</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116155547256.png" alt="image-20211116155547256"></p>
+
+<h3 id="inductive-step">
+<a class="anchor" href="#inductive-step" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inductive step</h3>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116155601590.png" alt="image-20211116155601590"></p>
+
+<h2 id="proof-by-induction">
+<a class="anchor" href="#proof-by-induction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Proof by induction</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116160310811.png" alt="image-20211116160310811"></p>
+
+<h2 id="bellman-ford-algorithm">
+<a class="anchor" href="#bellman-ford-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bellman-Ford Algorithm</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116160408418.png" alt="image-20211116160408418"></p>
+
+<h2 id="shortest-paths">
+<a class="anchor" href="#shortest-paths" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortest paths</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116160420769.png" alt="image-20211116160420769"></p>
+
+<h2 id="aside-link-state-vs-distance-vector">
+<a class="anchor" href="#aside-link-state-vs-distance-vector" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aside: Link-state vs Distance-vector</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116160435312.png" alt="image-20211116160435312"></p>
+
+<h2 id="important-thing-about-bellman-ford-for-the-rest-of-this-lecture">
+<a class="anchor" href="#important-thing-about-bellman-ford-for-the-rest-of-this-lecture" aria-hidden="true"><span class="octicon octicon-link"></span></a>Important thing about Bellman-Ford for the rest of this lecture</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116163954629.png" alt="image-20211116163954629"></p>
+
+<h2 id="bellman-ford-is-an-example-of-dynamic-programming">
+<a class="anchor" href="#bellman-ford-is-an-example-of-dynamic-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bellman-Ford is an example of dynamic programming!</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116164016489.png" alt="image-20211116164016489"></p>
+
+<h3 id="example-how-to-compute-fibonacci-numbers">
+<a class="anchor" href="#example-how-to-compute-fibonacci-numbers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example: How to compute Fibonacci numbers</h3>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116164227743.png" alt="image-20211116164227743"></p>
+
+<h2 id="candidate-algorithm">
+<a class="anchor" href="#candidate-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Candidate algorithm</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116164240307.png" alt="image-20211116164240307"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116164415290.png" alt="image-20211116164415290"></p>
+
+<h2 id="maybe-this-would-be-better">
+<a class="anchor" href="#maybe-this-would-be-better" aria-hidden="true"><span class="octicon octicon-link"></span></a>Maybe this would be better</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116164427531.png" alt="image-20211116164427531"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116164711518.png" alt="image-20211116164711518"></p>
+
+<h2 id="what-is-dynamic-programming">
+<a class="anchor" href="#what-is-dynamic-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is dynamic programming?</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116164722207.png" alt="image-20211116164722207"></p>
+
+<h2 id="elements-of-dynamic-programming">
+<a class="anchor" href="#elements-of-dynamic-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Elements of dynamic programming</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116164928672.png" alt="image-20211116164928672"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116164935415.png" alt="image-20211116164935415"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116164944044.png" alt="image-20211116164944044"></p>
+
+<h2 id="two-ways-to-think-about-andor-implement-dp-algorithms">
+<a class="anchor" href="#two-ways-to-think-about-andor-implement-dp-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Two ways to think about and/or implement DP algorithms</h2>
+
+<ul>
+  <li>Top down</li>
+  <li>Bottom up</li>
+</ul>
+
+<h2 id="bottom-up-approach">
+<a class="anchor" href="#bottom-up-approach" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bottom up approach</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116165425927.png" alt="image-20211116165425927"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116165432333.png" alt="image-20211116165432333"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116165438534.png" alt="image-20211116165438534"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116165447382.png" alt="image-20211116165447382"></p>
+
+<h2 id="top-down-approach">
+<a class="anchor" href="#top-down-approach" aria-hidden="true"><span class="octicon octicon-link"></span></a>Top down approach</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116165458926.png" alt="image-20211116165458926"></p>
+
+<h3 id="example-of-top-down-fibonacci">
+<a class="anchor" href="#example-of-top-down-fibonacci" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example of top-down Fibonacci</h3>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116165514624.png" alt="image-20211116165514624"></p>
+
+<h2 id="memo-ization-visualization">
+<a class="anchor" href="#memo-ization-visualization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Memo-ization visualization</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116165640104.png" alt="image-20211116165640104"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116165648879.png" alt="image-20211116165648879"></p>
+
+<h2 id="dynamic-programming-1">
+<a class="anchor" href="#dynamic-programming-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic programming</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116170421334.png" alt="image-20211116170421334"></p>
+
+<h2 id="floyd-warshall">
+<a class="anchor" href="#floyd-warshall" aria-hidden="true"><span class="octicon octicon-link"></span></a>Floyd-Warshall</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116170436913.png" alt="image-20211116170436913"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116172910024.png" alt="image-20211116172910024"></p>
+
+<h2 id="optimal-substructure">
+<a class="anchor" href="#optimal-substructure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimal substructure</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116173401233.png" alt="image-20211116173401233"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116173412503.png" alt="image-20211116173412503"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116173422232.png" alt="image-20211116173422232"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116173433795.png" alt="image-20211116173433795"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116173444781.png" alt="image-20211116173444781"></p>
+
+<h2 id="aside-simple-paths">
+<a class="anchor" href="#aside-simple-paths" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aside: simple paths</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116173941190.png" alt="image-20211116173941190"></p>
+
+<h2 id="case-2-continued">
+<a class="anchor" href="#case-2-continued" aria-hidden="true"><span class="octicon octicon-link"></span></a>Case 2 continued</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116173951578.png" alt="image-20211116173951578"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116174044238.png" alt="image-20211116174044238"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116174050402.png" alt="image-20211116174050402"></p>
+
+<h2 id="floyd-warshall-algorithm">
+<a class="anchor" href="#floyd-warshall-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Floyd-Warshall algorithm</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116174102136.png" alt="image-20211116174102136"></p>
+
+<h2 id="weve-basically-just-shown">
+<a class="anchor" href="#weve-basically-just-shown" aria-hidden="true"><span class="octicon octicon-link"></span></a>We’ve basically just shown</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116185859072.png" alt="image-20211116185859072"></p>
+
+<h2 id="what-if-there-are-negative-cycles">
+<a class="anchor" href="#what-if-there-are-negative-cycles" aria-hidden="true"><span class="octicon octicon-link"></span></a>What if there are negative cycles?</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116185913330.png" alt="image-20211116185913330"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116185920257.png" alt="image-20211116185920257"></p>
+
+<h2 id="what-have-we-learned">
+<a class="anchor" href="#what-have-we-learned" aria-hidden="true"><span class="octicon octicon-link"></span></a>What have we learned?</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116185933063.png" alt="image-20211116185933063"></p>
+
+<h2 id="graph-algorithms">
+<a class="anchor" href="#graph-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Graph algorithms</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-16-algorithms-week-11/image-20211116190732161.png" alt="image-20211116190732161"></p>
+
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/11/16/algorithms-week-11.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
