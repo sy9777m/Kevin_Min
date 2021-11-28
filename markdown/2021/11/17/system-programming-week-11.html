@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>System Programming week 11 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="System Programming week 11" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 System Programming week 11." />
+<meta property="og:description" content="Soongsil University 2-2 System Programming week 11." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/11/17/system-programming-week-11.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/11/17/system-programming-week-11.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-11-17T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-11-17T00:00:00-06:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/11/17/system-programming-week-11.html","@type":"BlogPosting","headline":"System Programming week 11","dateModified":"2021-11-17T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/11/17/system-programming-week-11.html"},"description":"Soongsil University 2-2 System Programming week 11.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">System Programming week 11</h1><p class="page-description">Soongsil University 2-2 System Programming week 11.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-11-17T00:00:00-06:00" itemprop="datePublished">
+        Nov 17, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#system-programming-week-11">System Programming week 11</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#example-c-program">Example C Program</a></li>
+<li class="toc-entry toc-h2"><a href="#static-linking">Static Linking</a></li>
+<li class="toc-entry toc-h2"><a href="#why-linkers">Why Linkers?</a></li>
+<li class="toc-entry toc-h2"><a href="#what-do-linkers-do">What do Linkers do?</a></li>
+<li class="toc-entry toc-h2"><a href="#three-kinds-of-object-files-modules">Three kinds of object files (modules)</a></li>
+<li class="toc-entry toc-h2"><a href="#executable-and-linkable-format-elf">Executable and linkable format (ELF)</a></li>
+<li class="toc-entry toc-h2"><a href="#elf-object-file-format">ELF object file format</a></li>
+<li class="toc-entry toc-h2"><a href="#linker-symbols">Linker symbols</a></li>
+<li class="toc-entry toc-h2"><a href="#symbol-resolution">Symbol resolution</a></li>
+<li class="toc-entry toc-h2"><a href="#local-symbol">Local symbol</a></li>
+<li class="toc-entry toc-h2"><a href="#how-linker-resolves-duplicate-symbol-definitions">How linker resolves duplicate symbol definitions</a></li>
+<li class="toc-entry toc-h2"><a href="#linkers-symbol-rules">Linker’s symbol rules</a></li>
+<li class="toc-entry toc-h2"><a href="#linker-puzzles">Linker puzzles</a></li>
+<li class="toc-entry toc-h2"><a href="#example">Example</a></li>
+<li class="toc-entry toc-h2"><a href="#global-varaibles">Global varaibles</a></li>
+<li class="toc-entry toc-h2"><a href="#relocation">Relocation</a></li>
+<li class="toc-entry toc-h2"><a href="#relocation-entries">Relocation entries</a></li>
+<li class="toc-entry toc-h2"><a href="#relocated-text-section">Relocated .text section</a></li>
+<li class="toc-entry toc-h2"><a href="#loading-executable-object-files">Loading Executable object files</a></li>
+<li class="toc-entry toc-h2"><a href="#packaging-commonly-used-functions">Packaging commonly used functions</a></li>
+<li class="toc-entry toc-h2"><a href="#old-fashioned-solution-static-libraries">Old-fashioned solution: static libraries</a></li>
+<li class="toc-entry toc-h2"><a href="#creating-static-libraries">Creating static libraries</a></li>
+<li class="toc-entry toc-h2"><a href="#commonly-used-libraries">Commonly used libraries</a></li>
+<li class="toc-entry toc-h2"><a href="#linking-with-static-libraries">Linking with static libraries</a></li>
+<li class="toc-entry toc-h2"><a href="#using-static-libraries">Using static libraries</a></li>
+<li class="toc-entry toc-h2"><a href="#modern-solution-shared-libraries">Modern solution: shared libraries</a></li>
+<li class="toc-entry toc-h2"><a href="#dynamic-linking-at-load-time">Dynamic linking at load-time</a></li>
+<li class="toc-entry toc-h2"><a href="#dynamic-linking-at-run-time">Dynamic linking at run-time</a></li>
+<li class="toc-entry toc-h2"><a href="#linking-summary">Linking summary</a></li>
+<li class="toc-entry toc-h2"><a href="#control-flow">Control flow</a></li>
+<li class="toc-entry toc-h2"><a href="#altering-the-control-flow">Altering the control flow</a></li>
+<li class="toc-entry toc-h2"><a href="#exceptional-control-flow">Exceptional control flow</a></li>
+<li class="toc-entry toc-h2"><a href="#exception">Exception</a></li>
+<li class="toc-entry toc-h2"><a href="#interrupt-vectors">Interrupt vectors</a></li>
+</ul>
+</li>
+</ul><h1 id="system-programming-week-11">
+<a class="anchor" href="#system-programming-week-11" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Programming week 11</h1>
+
+<h2 id="example-c-program">
+<a class="anchor" href="#example-c-program" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example C Program</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117132356697.png" alt="image-20211117132356697"></p>
+
+<h2 id="static-linking">
+<a class="anchor" href="#static-linking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Static Linking</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117132408746.png" alt="image-20211117132408746"></p>
+
+<p>object file은 machine level까지 complie되었지만, 아직 executable file은 아닌 상황</p>
+
+<h2 id="why-linkers">
+<a class="anchor" href="#why-linkers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why Linkers?</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117132521952.png" alt="image-20211117132521952"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117132527826.png" alt="image-20211117132527826"></p>
+
+<h2 id="what-do-linkers-do">
+<a class="anchor" href="#what-do-linkers-do" aria-hidden="true"><span class="octicon octicon-link"></span></a>What do Linkers do?</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117132540562.png" alt="image-20211117132540562"></p>
+
+<p>각종 symbol들의 위치를 결정하는 과정을 symbol resolution이라고 함</p>
+
+<p>linker가 symbol resolution을 할 때, 각 symbol은 딱 하나만 있어야 함 -&gt; 여러개가 있는 경우 error</p>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117132548432.png" alt="image-20211117132548432"></p>
+
+<p>executable file을 만들 때, 각 symbol의 위치는 virtual address</p>
+
+<p>code는 code끼리, data는 data끼리 모아서 merge</p>
+
+<h2 id="three-kinds-of-object-files-modules">
+<a class="anchor" href="#three-kinds-of-object-files-modules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Three kinds of object files (modules)</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117132604418.png" alt="image-20211117132604418"></p>
+
+<p>machine language로 바뀌면 일단 전부 object file</p>
+
+<p>Shared object file - dynamic하게 linking되고, 실행될 때 memory로 load됨</p>
+
+<h2 id="executable-and-linkable-format-elf">
+<a class="anchor" href="#executable-and-linkable-format-elf" aria-hidden="true"><span class="octicon octicon-link"></span></a>Executable and linkable format (ELF)</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117132620767.png" alt="image-20211117132620767"></p>
+
+<p>하나의 format을 가지고 여러개의 object file을 모두 지원해야 함</p>
+
+<h2 id="elf-object-file-format">
+<a class="anchor" href="#elf-object-file-format" aria-hidden="true"><span class="octicon octicon-link"></span></a>ELF object file format</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117132636156.png" alt="image-20211117132636156"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117132648282.png" alt="image-20211117132648282"></p>
+
+<h2 id="linker-symbols">
+<a class="anchor" href="#linker-symbols" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linker symbols</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117132700684.png" alt="image-20211117132700684"></p>
+
+<p>local symbol로 사용하고자 한다면 이름이 겹치는 symbol 앞에 static이라고 붙이면 된다. 그러면 exclusive하게 해당 module 내에서만 사용된다. 외부에서 사용이 불가능.</p>
+
+<p>local linker symbol은 local program variable과는 다름</p>
+
+<h2 id="symbol-resolution">
+<a class="anchor" href="#symbol-resolution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Symbol resolution</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117140234769.png" alt="image-20211117140234769"></p>
+
+<h2 id="local-symbol">
+<a class="anchor" href="#local-symbol" aria-hidden="true"><span class="octicon octicon-link"></span></a>Local symbol</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117140244731.png" alt="image-20211117140244731"></p>
+
+<h2 id="how-linker-resolves-duplicate-symbol-definitions">
+<a class="anchor" href="#how-linker-resolves-duplicate-symbol-definitions" aria-hidden="true"><span class="octicon octicon-link"></span></a>How linker resolves duplicate symbol definitions</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117140300313.png" alt="image-20211117140300313"></p>
+
+<h2 id="linkers-symbol-rules">
+<a class="anchor" href="#linkers-symbol-rules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linker’s symbol rules</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117140311113.png" alt="image-20211117140311113"></p>
+
+<h2 id="linker-puzzles">
+<a class="anchor" href="#linker-puzzles" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linker puzzles</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117140320861.png" alt="image-20211117140320861"></p>
+
+<h2 id="example">
+<a class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117140924815.png" alt="image-20211117140924815"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117140933277.png" alt="image-20211117140933277"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117140940976.png" alt="image-20211117140940976"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117140953639.png" alt="image-20211117140953639"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117141046856.png" alt="image-20211117141046856"></p>
+
+<h2 id="global-varaibles">
+<a class="anchor" href="#global-varaibles" aria-hidden="true"><span class="octicon octicon-link"></span></a>Global varaibles</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117141057132.png" alt="image-20211117141057132"></p>
+
+<h2 id="relocation">
+<a class="anchor" href="#relocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Relocation</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117141107247.png" alt="image-20211117141107247"></p>
+
+<h2 id="relocation-entries">
+<a class="anchor" href="#relocation-entries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Relocation entries</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117142256520.png" alt="image-20211117142256520"></p>
+
+<h2 id="relocated-text-section">
+<a class="anchor" href="#relocated-text-section" aria-hidden="true"><span class="octicon octicon-link"></span></a>Relocated .text section</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117142311040.png" alt="image-20211117142311040"></p>
+
+<h2 id="loading-executable-object-files">
+<a class="anchor" href="#loading-executable-object-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading Executable object files</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117142445376.png" alt="image-20211117142445376"></p>
+
+<h2 id="packaging-commonly-used-functions">
+<a class="anchor" href="#packaging-commonly-used-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Packaging commonly used functions</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117142931293.png" alt="image-20211117142931293"></p>
+
+<h2 id="old-fashioned-solution-static-libraries">
+<a class="anchor" href="#old-fashioned-solution-static-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Old-fashioned solution: static libraries</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117143311349.png" alt="image-20211117143311349"></p>
+
+<h2 id="creating-static-libraries">
+<a class="anchor" href="#creating-static-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating static libraries</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117143322683.png" alt="image-20211117143322683"></p>
+
+<h2 id="commonly-used-libraries">
+<a class="anchor" href="#commonly-used-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Commonly used libraries</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117143333799.png" alt="image-20211117143333799"></p>
+
+<h2 id="linking-with-static-libraries">
+<a class="anchor" href="#linking-with-static-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linking with static libraries</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117143349136.png" alt="image-20211117143349136"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117143750075.png" alt="image-20211117143750075"></p>
+
+<h2 id="using-static-libraries">
+<a class="anchor" href="#using-static-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using static libraries</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117143800698.png" alt="image-20211117143800698"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117143831338.png" alt="image-20211117143831338"></p>
+
+<h2 id="modern-solution-shared-libraries">
+<a class="anchor" href="#modern-solution-shared-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modern solution: shared libraries</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117144259279.png" alt="image-20211117144259279"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117144309121.png" alt="image-20211117144309121"></p>
+
+<h2 id="dynamic-linking-at-load-time">
+<a class="anchor" href="#dynamic-linking-at-load-time" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic linking at load-time</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117144323427.png" alt="image-20211117144323427"></p>
+
+<h2 id="dynamic-linking-at-run-time">
+<a class="anchor" href="#dynamic-linking-at-run-time" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic linking at run-time</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117144732217.png" alt="image-20211117144732217"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117144804414.png" alt="image-20211117144804414"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117144814265.png" alt="image-20211117144814265"></p>
+
+<h2 id="linking-summary">
+<a class="anchor" href="#linking-summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linking summary</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117144910902.png" alt="image-20211117144910902"></p>
+
+<h2 id="control-flow">
+<a class="anchor" href="#control-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Control flow</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117145052736.png" alt="image-20211117145052736"></p>
+
+<h2 id="altering-the-control-flow">
+<a class="anchor" href="#altering-the-control-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Altering the control flow</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117145104441.png" alt="image-20211117145104441"></p>
+
+<h2 id="exceptional-control-flow">
+<a class="anchor" href="#exceptional-control-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exceptional control flow</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117145432982.png" alt="image-20211117145432982"></p>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117145517364.png" alt="image-20211117145517364"></p>
+
+<h2 id="exception">
+<a class="anchor" href="#exception" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exception</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117145442495.png" alt="image-20211117145442495"></p>
+
+<h2 id="interrupt-vectors">
+<a class="anchor" href="#interrupt-vectors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interrupt vectors</h2>
+
+<p><img src="/Kevin_Min/images/2021-11-17-system-programming-week-11/image-20211117145457838.png" alt="image-20211117145457838"></p>
+
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/11/17/system-programming-week-11.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
