@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>System Programming week 12 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="System Programming week 12" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 System Programming week 12." />
+<meta property="og:description" content="Soongsil University 2-2 System Programming week 12." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/12/05/system-programming-week-12.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/12/05/system-programming-week-12.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-05T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-12-05T00:00:00-06:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/12/05/system-programming-week-12.html","@type":"BlogPosting","headline":"System Programming week 12","dateModified":"2021-12-05T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/12/05/system-programming-week-12.html"},"description":"Soongsil University 2-2 System Programming week 12.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">System Programming week 12</h1><p class="page-description">Soongsil University 2-2 System Programming week 12.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-12-05T00:00:00-06:00" itemprop="datePublished">
+        Dec 5, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#system-programming-week-12">System Programming week 12</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#control-flow">Control flow</a></li>
+<li class="toc-entry toc-h2"><a href="#altering-the-control-flow">Altering the control flow</a></li>
+<li class="toc-entry toc-h2"><a href="#exceptional-control-flow">Exceptional control flow</a></li>
+<li class="toc-entry toc-h2"><a href="#exceptions">Exceptions</a></li>
+<li class="toc-entry toc-h2"><a href="#exception-tables-interrupt-vectors">Exception tables (interrupt vectors)</a></li>
+<li class="toc-entry toc-h2"><a href="#asynchronous-exceptions-interrupts">Asynchronous exceptions (interrupts)</a></li>
+<li class="toc-entry toc-h2"><a href="#synchronous-exceptions">Synchronous exceptions</a></li>
+<li class="toc-entry toc-h2"><a href="#system-calls">System calls</a></li>
+<li class="toc-entry toc-h2"><a href="#system-call-example-opening-file">System call example: opening file</a></li>
+<li class="toc-entry toc-h2"><a href="#trap-example-opening-file">Trap example: opening file</a></li>
+<li class="toc-entry toc-h2"><a href="#fault-example-page-fault">Fault example: page fault</a></li>
+<li class="toc-entry toc-h2"><a href="#fault-example-invalid-memory-reference">Fault example: invalid memory reference</a></li>
+<li class="toc-entry toc-h2"><a href="#exception-table-ia32-excerpt">Exception table IA32 (Excerpt)</a></li>
+<li class="toc-entry toc-h2"><a href="#process">Process</a></li>
+<li class="toc-entry toc-h2"><a href="#multiprocessing-the-illusion">Multiprocessing: the illusion</a></li>
+<li class="toc-entry toc-h2"><a href="#multiprocessing-example">Multiprocessing example</a></li>
+<li class="toc-entry toc-h2"><a href="#multiprocessing-the-traditional-reality">Multiprocessing: the (traditional) reality</a></li>
+<li class="toc-entry toc-h2"><a href="#concurrent-processes">Concurrent processes</a></li>
+<li class="toc-entry toc-h2"><a href="#user-view-of-concurrent-processes">User view of concurrent processes</a></li>
+<li class="toc-entry toc-h2"><a href="#context-switching">Context switching</a></li>
+<li class="toc-entry toc-h2"><a href="#system-call-error-handling">System call error handling</a></li>
+<li class="toc-entry toc-h2"><a href="#error-reporting-functions">Error-reporting functions</a></li>
+<li class="toc-entry toc-h2"><a href="#error-handling-wrappers">Error-handling wrappers</a></li>
+<li class="toc-entry toc-h2"><a href="#obtaining-process-ids">Obtaining process IDs</a></li>
+<li class="toc-entry toc-h2"><a href="#creating-and-terminating-processes">Creating and terminating processes</a></li>
+<li class="toc-entry toc-h2"><a href="#terminating-processes">Terminating processes</a></li>
+<li class="toc-entry toc-h2"><a href="#creating-processes">Creating processes</a></li>
+<li class="toc-entry toc-h2"><a href="#fork-example">fork example</a></li>
+<li class="toc-entry toc-h2"><a href="#modeling-fork-with-process-graph">Modeling fork with process graph</a></li>
+<li class="toc-entry toc-h2"><a href="#process-graph-example">Process graph example</a></li>
+<li class="toc-entry toc-h2"><a href="#interpreting-process-graphs">Interpreting process graphs</a></li>
+<li class="toc-entry toc-h2"><a href="#fork-example-nested-forks-in-parent">fork example: nested forks in parent</a></li>
+<li class="toc-entry toc-h2"><a href="#reaping-child-processes">Reaping child processes</a></li>
+<li class="toc-entry toc-h2"><a href="#non-terminating-child-example">Non-terminating child example</a></li>
+<li class="toc-entry toc-h2"><a href="#zombie-example">Zombie example</a></li>
+<li class="toc-entry toc-h2"><a href="#wait-synchronizing-with-children">wait: synchronizing with children</a></li>
+<li class="toc-entry toc-h2"><a href="#another-wait-example">Another wait example</a></li>
+<li class="toc-entry toc-h2"><a href="#waitpid-waiting-for-a-specific-process">waitpid: waiting for a specific process</a></li>
+<li class="toc-entry toc-h2"><a href="#execve-loading-and-running-programs">execve: loading and running programs</a></li>
+<li class="toc-entry toc-h2"><a href="#structure-of-the-stack-when-a-new-program-starts">structure of the stack when a new program starts</a></li>
+<li class="toc-entry toc-h2"><a href="#execve-example">execve example</a></li>
+<li class="toc-entry toc-h2"><a href="#summary">summary</a></li>
+</ul>
+</li>
+</ul><h1 id="system-programming-week-12">
+<a class="anchor" href="#system-programming-week-12" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Programming week 12</h1>
+
+<h2 id="control-flow">
+<a class="anchor" href="#control-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Control flow</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205031612545.png" alt="image-20211205031612545"></p>
+
+<p>executable object file은 disk에 있고, CPU는 단지 sequential하게 instruction을 실행할 뿐</p>
+
+<h2 id="altering-the-control-flow">
+<a class="anchor" href="#altering-the-control-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Altering the control flow</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205031623976.png" alt="image-20211205031623976"></p>
+
+<p>program의 의지에 따라서 flow를 control하는 방법들이 있음 - jumps, branches, call, return</p>
+
+<p>그러나 이런 방법 만으로는 제어에 한계가 있음 - system의 상태가 변해도 program을 여전히 제어 할 수 있어야 함</p>
+
+<h2 id="exceptional-control-flow">
+<a class="anchor" href="#exceptional-control-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exceptional control flow</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205031636463.png" alt="image-20211205031636463"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205032019933.png" alt="image-20211205032019933"></p>
+
+<h2 id="exceptions">
+<a class="anchor" href="#exceptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exceptions</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205032204555.png" alt="image-20211205032204555"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205032213282.png" alt="image-20211205032213282"></p>
+
+<h2 id="exception-tables-interrupt-vectors">
+<a class="anchor" href="#exception-tables-interrupt-vectors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exception tables (interrupt vectors)</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205032338677.png" alt="image-20211205032338677"></p>
+
+<h2 id="asynchronous-exceptions-interrupts">
+<a class="anchor" href="#asynchronous-exceptions-interrupts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Asynchronous exceptions (interrupts)</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205032409230.png" alt="image-20211205032409230"></p>
+
+<p>Exception은 일단 문제가 생긴 것, 일이 생긴거임 - 실행하는 일이랑 별로 상관없는 문제가 asynchronous exception</p>
+
+<h2 id="synchronous-exceptions">
+<a class="anchor" href="#synchronous-exceptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Synchronous exceptions</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205032644309.png" alt="image-20211205032644309"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205032823075.png" alt="image-20211205032823075"></p>
+
+<p>traps - 의도적으로 system에 요청하는 것</p>
+
+<p>faults - 뭘 잘못했는지 모르겠는데 system state를 바꾼 이벤트, architecture dependent함</p>
+
+<p>abort - 누가봐도 심각한 오류</p>
+
+<h2 id="system-calls">
+<a class="anchor" href="#system-calls" aria-hidden="true"><span class="octicon octicon-link"></span></a>System calls</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205032837793.png" alt="image-20211205032837793"></p>
+
+<h2 id="system-call-example-opening-file">
+<a class="anchor" href="#system-call-example-opening-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>System call example: opening file</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205033030378.png" alt="image-20211205033030378"></p>
+
+<h2 id="trap-example-opening-file">
+<a class="anchor" href="#trap-example-opening-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trap example: opening file</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205032659505.png" alt="image-20211205032659505"></p>
+
+<h2 id="fault-example-page-fault">
+<a class="anchor" href="#fault-example-page-fault" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fault example: page fault</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205033220557.png" alt="image-20211205033220557"></p>
+
+<h2 id="fault-example-invalid-memory-reference">
+<a class="anchor" href="#fault-example-invalid-memory-reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fault example: invalid memory reference</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205033248878.png" alt="image-20211205033248878"></p>
+
+<h2 id="exception-table-ia32-excerpt">
+<a class="anchor" href="#exception-table-ia32-excerpt" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exception table IA32 (Excerpt)</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205033406882.png" alt="image-20211205033406882"></p>
+
+<h2 id="process">
+<a class="anchor" href="#process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Process</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205033416309.png" alt="image-20211205033416309"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205033430148.png" alt="image-20211205033430148"></p>
+
+<h2 id="multiprocessing-the-illusion">
+<a class="anchor" href="#multiprocessing-the-illusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiprocessing: the illusion</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205033632959.png" alt="image-20211205033632959"></p>
+
+<h2 id="multiprocessing-example">
+<a class="anchor" href="#multiprocessing-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiprocessing example</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205033700330.png" alt="image-20211205033700330"></p>
+
+<h2 id="multiprocessing-the-traditional-reality">
+<a class="anchor" href="#multiprocessing-the-traditional-reality" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiprocessing: the (traditional) reality</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205033729557.png" alt="image-20211205033729557"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205033940070.png" alt="image-20211205033940070"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205033945862.png" alt="image-20211205033945862"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205033953376.png" alt="image-20211205033953376"></p>
+
+<h2 id="concurrent-processes">
+<a class="anchor" href="#concurrent-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Concurrent processes</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205034038132.png" alt="image-20211205034038132"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205034044931.png" alt="image-20211205034044931"></p>
+
+<h2 id="user-view-of-concurrent-processes">
+<a class="anchor" href="#user-view-of-concurrent-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>User view of concurrent processes</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205034150488.png" alt="image-20211205034150488"></p>
+
+<h2 id="context-switching">
+<a class="anchor" href="#context-switching" aria-hidden="true"><span class="octicon octicon-link"></span></a>Context switching</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205034207252.png" alt="image-20211205034207252"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205034220350.png" alt="image-20211205034220350"></p>
+
+<h2 id="system-call-error-handling">
+<a class="anchor" href="#system-call-error-handling" aria-hidden="true"><span class="octicon octicon-link"></span></a>System call error handling</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205034316526.png" alt="image-20211205034316526"></p>
+
+<h2 id="error-reporting-functions">
+<a class="anchor" href="#error-reporting-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Error-reporting functions</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205034451144.png" alt="image-20211205034451144"></p>
+
+<h2 id="error-handling-wrappers">
+<a class="anchor" href="#error-handling-wrappers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Error-handling wrappers</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205034509632.png" alt="image-20211205034509632"></p>
+
+<h2 id="obtaining-process-ids">
+<a class="anchor" href="#obtaining-process-ids" aria-hidden="true"><span class="octicon octicon-link"></span></a>Obtaining process IDs</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205034525676.png" alt="image-20211205034525676"></p>
+
+<h2 id="creating-and-terminating-processes">
+<a class="anchor" href="#creating-and-terminating-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating and terminating processes</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205034555870.png" alt="image-20211205034555870"></p>
+
+<h2 id="terminating-processes">
+<a class="anchor" href="#terminating-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Terminating processes</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205034648743.png" alt="image-20211205034648743"></p>
+
+<h2 id="creating-processes">
+<a class="anchor" href="#creating-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating processes</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205034845599.png" alt="image-20211205034845599"></p>
+
+<p>shell도 하나의 program</p>
+
+<h2 id="fork-example">
+<a class="anchor" href="#fork-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>fork example</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205035111223.png" alt="image-20211205035111223"></p>
+
+<hr>
+
+<p>안 봐도 되지만</p>
+
+<h2 id="modeling-fork-with-process-graph">
+<a class="anchor" href="#modeling-fork-with-process-graph" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modeling fork with process graph</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205035332355.png" alt="image-20211205035332355"></p>
+
+<h2 id="process-graph-example">
+<a class="anchor" href="#process-graph-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Process graph example</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205035344789.png" alt="image-20211205035344789"></p>
+
+<h2 id="interpreting-process-graphs">
+<a class="anchor" href="#interpreting-process-graphs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interpreting process graphs</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205035405638.png" alt="image-20211205035405638"></p>
+
+<h2 id="fork-example-nested-forks-in-parent">
+<a class="anchor" href="#fork-example-nested-forks-in-parent" aria-hidden="true"><span class="octicon octicon-link"></span></a>fork example: nested forks in parent</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205035428141.png" alt="image-20211205035428141"></p>
+
+<hr>
+
+<h2 id="reaping-child-processes">
+<a class="anchor" href="#reaping-child-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reaping child processes</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205035444942.png" alt="image-20211205035444942"></p>
+
+<h2 id="non-terminating-child-example">
+<a class="anchor" href="#non-terminating-child-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Non-terminating child example</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205035702885.png" alt="image-20211205035702885"></p>
+
+<h2 id="zombie-example">
+<a class="anchor" href="#zombie-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Zombie example</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205035815615.png" alt="image-20211205035815615"></p>
+
+<h2 id="wait-synchronizing-with-children">
+<a class="anchor" href="#wait-synchronizing-with-children" aria-hidden="true"><span class="octicon octicon-link"></span></a>wait: synchronizing with children</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205035835451.png" alt="image-20211205035835451"></p>
+
+<h2 id="another-wait-example">
+<a class="anchor" href="#another-wait-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Another wait example</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205035930309.png" alt="image-20211205035930309"></p>
+
+<h2 id="waitpid-waiting-for-a-specific-process">
+<a class="anchor" href="#waitpid-waiting-for-a-specific-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>waitpid: waiting for a specific process</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205040012770.png" alt="image-20211205040012770"></p>
+
+<h2 id="execve-loading-and-running-programs">
+<a class="anchor" href="#execve-loading-and-running-programs" aria-hidden="true"><span class="octicon octicon-link"></span></a>execve: loading and running programs</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205040101087.png" alt="image-20211205040101087"></p>
+
+<h2 id="structure-of-the-stack-when-a-new-program-starts">
+<a class="anchor" href="#structure-of-the-stack-when-a-new-program-starts" aria-hidden="true"><span class="octicon octicon-link"></span></a>structure of the stack when a new program starts</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205040238974.png" alt="image-20211205040238974"></p>
+
+<h2 id="execve-example">
+<a class="anchor" href="#execve-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>execve example</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205040623546.png" alt="image-20211205040623546"></p>
+
+<h2 id="summary">
+<a class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>summary</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205040608857.png" alt="image-20211205040608857"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-05-system-programming-week-12/image-20211205040824049.png" alt="image-20211205040824049"></p>
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/12/05/system-programming-week-12.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
