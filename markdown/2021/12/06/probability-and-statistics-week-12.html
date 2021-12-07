@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Probability and Statistics week 12 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Probability and Statistics week 12" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 Probability and Statistics week 12." />
+<meta property="og:description" content="Soongsil University 2-2 Probability and Statistics week 12." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/12/06/probability-and-statistics-week-12.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/12/06/probability-and-statistics-week-12.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-06T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-12-06T00:00:00-06:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/12/06/probability-and-statistics-week-12.html","@type":"BlogPosting","headline":"Probability and Statistics week 12","dateModified":"2021-12-06T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/12/06/probability-and-statistics-week-12.html"},"description":"Soongsil University 2-2 Probability and Statistics week 12.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Probability and Statistics week 12</h1><p class="page-description">Soongsil University 2-2 Probability and Statistics week 12.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-12-06T00:00:00-06:00" itemprop="datePublished">
+        Dec 6, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#probability-and-statistics-week-12">Probability and Statistics week 12</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#이번-시간-할-일">이번 시간 할 일</a></li>
+<li class="toc-entry toc-h2"><a href="#p-value">p-value</a></li>
+<li class="toc-entry toc-h2"><a href="#ex-two-sided-p-value-calculation">Ex: two-sided p-value calculation</a></li>
+<li class="toc-entry toc-h2"><a href="#one-sided-t-test">One-sided t-test</a></li>
+<li class="toc-entry toc-h2"><a href="#ex-one-sided-problem">Ex: one sided problem</a></li>
+<li class="toc-entry toc-h2"><a href="#hypothesis-testing-process">Hypothesis testing process</a></li>
+<li class="toc-entry toc-h2"><a href="#z-test">z-test</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#two-sided-problem">two-sided problem</a></li>
+<li class="toc-entry toc-h3"><a href="#one-sided-problem">one-sided problem</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#significance-levels-통계적-유의성">Significance levels (통계적 유의성)</a></li>
+<li class="toc-entry toc-h2"><a href="#type-i-error와-type-ii-error">Type I error와 Type II error</a></li>
+<li class="toc-entry toc-h2"><a href="#two-sided-problems">Two-sided problems</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#ex-엔진오일">Ex: 엔진오일</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#two-sided-interval과-p-value">Two-sided interval과 p-value</a></li>
+<li class="toc-entry toc-h2"><a href="#one-sided-problems">One-sided problems</a></li>
+<li class="toc-entry toc-h2"><a href="#comparing-two-population-means">Comparing two population means</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#ex-코로나-치료제">Ex: 코로나 치료제</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#paired-sample-vs-independent-sample">Paired sample vs. independent sample</a></li>
+<li class="toc-entry toc-h2"><a href="#analysis-of-paired-samples">Analysis of paired samples</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#ex-신약의-실험">Ex: 신약의 실험</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#analysis-of-independent-samples">Analysis of independent samples</a></li>
+<li class="toc-entry toc-h2"><a href="#2가지의-방법">2가지의 방법</a></li>
+<li class="toc-entry toc-h2"><a href="#general-procedure-smith-sattrthwaite-test">General procedure (Smith-Sattrthwaite test)</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#two-sided-problems-1">Two-sided problems</a></li>
+<li class="toc-entry toc-h3"><a href="#one-sided-problems-1">One-sided problems</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#pooled-variance-procedure">Pooled variance procedure</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#two-sided-problems-2">Two-sided problems</a></li>
+<li class="toc-entry toc-h3"><a href="#one-sided-problems-2">One-sided problems</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#inference-on-the-population-proportions">Inference on the population proportions</a></li>
+<li class="toc-entry toc-h2"><a href="#chi-square-test">Chi-square test</a></li>
+<li class="toc-entry toc-h2"><a href="#chi-square-statistic">Chi-square statistic</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#ex-기계고장">Ex: 기계고장</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#이번-시간에-한-일">이번 시간에 한 일</a></li>
+<li class="toc-entry toc-h2"><a href="#다음-시간">다음 시간</a></li>
+<li class="toc-entry toc-h2"><a href="#practice">Practice</a></li>
+</ul>
+</li>
+</ul><h1 id="probability-and-statistics-week-12">
+<a class="anchor" href="#probability-and-statistics-week-12" aria-hidden="true"><span class="octicon octicon-link"></span></a>Probability and Statistics week 12</h1>
+
+<h2 id="이번-시간-할-일">
+<a class="anchor" href="#%EC%9D%B4%EB%B2%88-%EC%8B%9C%EA%B0%84-%ED%95%A0-%EC%9D%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>이번 시간 할 일</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207213035824.png" alt="image-20211207213035824"></p>
+
+<h2 id="p-value">
+<a class="anchor" href="#p-value" aria-hidden="true"><span class="octicon octicon-link"></span></a>p-value</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207213045022.png" alt="image-20211207213045022"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207213103547.png" alt="image-20211207213103547"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207213107964.png" alt="image-20211207213107964"></p>
+
+<h2 id="ex-two-sided-p-value-calculation">
+<a class="anchor" href="#ex-two-sided-p-value-calculation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ex: two-sided p-value calculation</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207213124016.png" alt="image-20211207213124016"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207213129120.png" alt="image-20211207213129120"></p>
+
+<h2 id="one-sided-t-test">
+<a class="anchor" href="#one-sided-t-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>One-sided t-test</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207213139906.png" alt="image-20211207213139906"></p>
+
+<h2 id="ex-one-sided-problem">
+<a class="anchor" href="#ex-one-sided-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ex: one sided problem</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207213153536.png" alt="image-20211207213153536"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207213158025.png" alt="image-20211207213158025"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207213202267.png" alt="image-20211207213202267"></p>
+
+<h2 id="hypothesis-testing-process">
+<a class="anchor" href="#hypothesis-testing-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hypothesis testing process</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207213214260.png" alt="image-20211207213214260"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207213218442.png" alt="image-20211207213218442"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207213224248.png" alt="image-20211207213224248"></p>
+
+<h2 id="z-test">
+<a class="anchor" href="#z-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>z-test</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207214304570.png" alt="image-20211207214304570"></p>
+
+<h3 id="two-sided-problem">
+<a class="anchor" href="#two-sided-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>two-sided problem</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207214315106.png" alt="image-20211207214315106"></p>
+
+<h3 id="one-sided-problem">
+<a class="anchor" href="#one-sided-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>one-sided problem</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207214337740.png" alt="image-20211207214337740"></p>
+
+<h2 id="significance-levels-통계적-유의성">
+<a class="anchor" href="#significance-levels-%ED%86%B5%EA%B3%84%EC%A0%81-%EC%9C%A0%EC%9D%98%EC%84%B1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Significance levels (통계적 유의성)</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207214350498.png" alt="image-20211207214350498"></p>
+
+<h2 id="type-i-error와-type-ii-error">
+<a class="anchor" href="#type-i-error%EC%99%80-type-ii-error" aria-hidden="true"><span class="octicon octicon-link"></span></a>Type I error와 Type II error</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207214403873.png" alt="image-20211207214403873"></p>
+
+<h2 id="two-sided-problems">
+<a class="anchor" href="#two-sided-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Two-sided problems</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207214653290.png" alt="image-20211207214653290"></p>
+
+<h3 id="ex-엔진오일">
+<a class="anchor" href="#ex-%EC%97%94%EC%A7%84%EC%98%A4%EC%9D%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ex: 엔진오일</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207214703584.png" alt="image-20211207214703584"></p>
+
+<h2 id="two-sided-interval과-p-value">
+<a class="anchor" href="#two-sided-interval%EA%B3%BC-p-value" aria-hidden="true"><span class="octicon octicon-link"></span></a>Two-sided interval과 p-value</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207214718113.png" alt="image-20211207214718113"></p>
+
+<h2 id="one-sided-problems">
+<a class="anchor" href="#one-sided-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>One-sided problems</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215016626.png" alt="image-20211207215016626"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215022287.png" alt="image-20211207215022287"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215027555.png" alt="image-20211207215027555"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215033262.png" alt="image-20211207215033262"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215039667.png" alt="image-20211207215039667"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215046492.png" alt="image-20211207215046492"></p>
+
+<h2 id="comparing-two-population-means">
+<a class="anchor" href="#comparing-two-population-means" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comparing two population means</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215100819.png" alt="image-20211207215100819"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215413162.png" alt="image-20211207215413162"></p>
+
+<h3 id="ex-코로나-치료제">
+<a class="anchor" href="#ex-%EC%BD%94%EB%A1%9C%EB%82%98-%EC%B9%98%EB%A3%8C%EC%A0%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ex: 코로나 치료제</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215426195.png" alt="image-20211207215426195"></p>
+
+<h2 id="paired-sample-vs-independent-sample">
+<a class="anchor" href="#paired-sample-vs-independent-sample" aria-hidden="true"><span class="octicon octicon-link"></span></a>Paired sample vs. independent sample</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215445480.png" alt="image-20211207215445480"></p>
+
+<h2 id="analysis-of-paired-samples">
+<a class="anchor" href="#analysis-of-paired-samples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analysis of paired samples</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215457831.png" alt="image-20211207215457831"></p>
+
+<h3 id="ex-신약의-실험">
+<a class="anchor" href="#ex-%EC%8B%A0%EC%95%BD%EC%9D%98-%EC%8B%A4%ED%97%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ex: 신약의 실험</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215508710.png" alt="image-20211207215508710"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215513528.png" alt="image-20211207215513528"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215518952.png" alt="image-20211207215518952"></p>
+
+<h2 id="analysis-of-independent-samples">
+<a class="anchor" href="#analysis-of-independent-samples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Analysis of independent samples</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215533834.png" alt="image-20211207215533834"></p>
+
+<h2 id="2가지의-방법">
+<a class="anchor" href="#2%EA%B0%80%EC%A7%80%EC%9D%98-%EB%B0%A9%EB%B2%95" aria-hidden="true"><span class="octicon octicon-link"></span></a>2가지의 방법</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207215542084.png" alt="image-20211207215542084"></p>
+
+<h2 id="general-procedure-smith-sattrthwaite-test">
+<a class="anchor" href="#general-procedure-smith-sattrthwaite-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>General procedure (Smith-Sattrthwaite test)</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220156824.png" alt="image-20211207220156824"></p>
+
+<h3 id="two-sided-problems-1">
+<a class="anchor" href="#two-sided-problems-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Two-sided problems</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220207945.png" alt="image-20211207220207945"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220213811.png" alt="image-20211207220213811"></p>
+
+<h3 id="one-sided-problems-1">
+<a class="anchor" href="#one-sided-problems-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>One-sided problems</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220225511.png" alt="image-20211207220225511"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220230448.png" alt="image-20211207220230448"></p>
+
+<h2 id="pooled-variance-procedure">
+<a class="anchor" href="#pooled-variance-procedure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pooled variance procedure</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220242046.png" alt="image-20211207220242046"></p>
+
+<h3 id="two-sided-problems-2">
+<a class="anchor" href="#two-sided-problems-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Two-sided problems</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220252551.png" alt="image-20211207220252551"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220258923.png" alt="image-20211207220258923"></p>
+
+<h3 id="one-sided-problems-2">
+<a class="anchor" href="#one-sided-problems-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>One-sided problems</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220321657.png" alt="image-20211207220321657"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220326191.png" alt="image-20211207220326191"></p>
+
+<h2 id="inference-on-the-population-proportions">
+<a class="anchor" href="#inference-on-the-population-proportions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Inference on the population proportions</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220341943.png" alt="image-20211207220341943"></p>
+
+<h2 id="chi-square-test">
+<a class="anchor" href="#chi-square-test" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chi-square test</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220536316.png" alt="image-20211207220536316"></p>
+
+<h2 id="chi-square-statistic">
+<a class="anchor" href="#chi-square-statistic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chi-square statistic</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220551634.png" alt="image-20211207220551634"></p>
+
+<h3 id="ex-기계고장">
+<a class="anchor" href="#ex-%EA%B8%B0%EA%B3%84%EA%B3%A0%EC%9E%A5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ex: 기계고장</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220609832.png" alt="image-20211207220609832"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220615398.png" alt="image-20211207220615398"></p>
+
+<h2 id="이번-시간에-한-일">
+<a class="anchor" href="#%EC%9D%B4%EB%B2%88-%EC%8B%9C%EA%B0%84%EC%97%90-%ED%95%9C-%EC%9D%BC" aria-hidden="true"><span class="octicon octicon-link"></span></a>이번 시간에 한 일</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220625663.png" alt="image-20211207220625663"></p>
+
+<h2 id="다음-시간">
+<a class="anchor" href="#%EB%8B%A4%EC%9D%8C-%EC%8B%9C%EA%B0%84" aria-hidden="true"><span class="octicon octicon-link"></span></a>다음 시간</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220636924.png" alt="image-20211207220636924"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211207220646940.png" alt="image-20211207220646940"></p>
+
+<h2 id="practice">
+<a class="anchor" href="#practice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211208031747080.png" alt="image-20211208031747080"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211208031754976.png" alt="image-20211208031754976"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211208031802400.png" alt="image-20211208031802400"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211208031810450.png" alt="image-20211208031810450"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211208031818330.png" alt="image-20211208031818330"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211208031826890.png" alt="image-20211208031826890"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211208031835825.png" alt="image-20211208031835825"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211208031846506.png" alt="image-20211208031846506"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211208031853865.png" alt="image-20211208031853865"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-06-probability-and-statistics-week-12/image-20211208031900560.png" alt="image-20211208031900560"></p>
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/12/06/probability-and-statistics-week-12.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

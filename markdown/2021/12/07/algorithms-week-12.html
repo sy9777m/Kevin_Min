@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Algorithms week 12 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Algorithms week 12" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 Algorithms week 12." />
+<meta property="og:description" content="Soongsil University 2-2 Algorithms week 12." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/12/07/algorithms-week-12.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/12/07/algorithms-week-12.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-07T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-12-07T00:00:00-06:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/12/07/algorithms-week-12.html","@type":"BlogPosting","headline":"Algorithms week 12","dateModified":"2021-12-07T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/12/07/algorithms-week-12.html"},"description":"Soongsil University 2-2 Algorithms week 12.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Algorithms week 12</h1><p class="page-description">Soongsil University 2-2 Algorithms week 12.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-12-07T00:00:00-06:00" itemprop="datePublished">
+        Dec 7, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#algorithms-week-12">Algorithms week 12</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#longest-common-subsequence">Longest Common Subsequence</a></li>
+<li class="toc-entry toc-h2"><a href="#we-sometimes-want-to-find-these">We sometimes want to find these</a></li>
+<li class="toc-entry toc-h2"><a href="#recipe-for-applying-dynamic-programming">Recipe for applying dynamic programming</a></li>
+<li class="toc-entry toc-h2"><a href="#step-1-optimal-substructure">Step 1: optimal substructure</a></li>
+<li class="toc-entry toc-h2"><a href="#step-2-find-a-recursive-formulation-for-the-length-of-the-longest-common-subsequence">Step 2: Find a recursive formulation for the length of the longest common subsequence</a></li>
+<li class="toc-entry toc-h2"><a href="#step-3-use-dynamic-programming-to-find-the-length-of-the-longest-common-subsequence">Step 3: use dynamic programming to find the length of the longest common subsequence</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#lcs-dp">LCS DP</a></li>
+<li class="toc-entry toc-h3"><a href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#step-4-if-needed-keep-track-of-some-additional-info-so-that-the-algorithm-from-step-3-can-find-the-actual-lcs">Step 4: If needed, keep track of some additional info so that the algorithm from step 3 can find the actual LCS.</a></li>
+<li class="toc-entry toc-h2"><a href="#step-5-if-needed-code-this-up-like-a-reasonable-person">Step 5: If needed, code this up like a reasonable person.</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#this-pseudocode-actually-isnt-so-bad">This pseudocode actually isn’t so bad</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#what-have-we-learned">What have we learned?</a></li>
+<li class="toc-entry toc-h2"><a href="#knapsack">Knapsack</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-knapsack-problem">Example: Knapsack problem</a></li>
+<li class="toc-entry toc-h3"><a href="#some-notation">Some notation</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#recipe-for-applying-dynamic-programming-1">Recipe for applying dynamic programming</a></li>
+<li class="toc-entry toc-h2"><a href="#optimal-structure">Optimal structure</a></li>
+<li class="toc-entry toc-h2"><a href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution">Step 2: Find a recursive formulation for the value of the optimal solution</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#recursive-relationship">Recursive relationship</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution">Step 3: Use dynamic programming to find the value of the optimal solution</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#lets-write-a-bottom-up-dp-algorithm">Let’s write a bottom-up DP algorithm</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#step-4-if-needed-keep-track-of-some-additional-info-so-that-the-algorithm-from-step-3-can-find-the-actual-solution">Step 4: If needed, keep track of some additional info so that the algorithm from Step 3 can find the actual solution.</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#lets-write-a-bottom-up-dp-algorithm-1">Let’s write a bottom-up DP algorithm</a></li>
+<li class="toc-entry toc-h3"><a href="#example-1">Example</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#what-have-we-learned-1">What have we learned?</a></li>
+<li class="toc-entry toc-h2"><a href="#01-knapsack">0/1 Knapsack</a></li>
+<li class="toc-entry toc-h2"><a href="#step-1-identify-optimal-substructure">Step 1: Identify optimal substructure.</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#optimal-substructure-try-1">Optimal substructure: try 1</a></li>
+<li class="toc-entry toc-h3"><a href="#this-wont-quite-work">This won’t quite work</a></li>
+<li class="toc-entry toc-h3"><a href="#optimal-structure-try-2">Optimal structure: try 2</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#our-sub-problems">Our sub-problems:</a></li>
+<li class="toc-entry toc-h2"><a href="#two-cases">Two cases</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#case-1-optimal-solution-for-j-items-does-not-use-item-j">Case 1: optimal solution for j items does not use item j.</a></li>
+<li class="toc-entry toc-h3"><a href="#case-2-optimal-solution-for-j-items-uses-item-j">Case 2: optimal solution for j items uses item j</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-1">Step 2: find a recursive formulation for the value of the optimal solution.</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#recursive-relationship-1">Recursive relationship</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution-1">Step 3: use dynamic programming to find the value of the optimal solution.</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#bottom-up-dp-algorithm">Bottom-up DP algorithm</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#example-2">Example</a></li>
+<li class="toc-entry toc-h2"><a href="#what-have-we-learned-2">What have we learned?</a></li>
+<li class="toc-entry toc-h2"><a href="#question">Question</a></li>
+<li class="toc-entry toc-h2"><a href="#independent-set">Independent set</a></li>
+<li class="toc-entry toc-h2"><a href="#actually-this-problem-is-np-complete-so-we-are-unlikely-to-find-an-efficient-algorithm">Actually this problem is NP-complete. So we are unlikely to find an efficient algorithm</a></li>
+<li class="toc-entry toc-h2"><a href="#step-1-identify-optimal-structure">Step 1: identify optimal structure</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#optimal-structure-1">Optimal structure</a></li>
+<li class="toc-entry toc-h3"><a href="#case-1-the-root-is-not-in-a-maximal-independent-set">Case 1: the root is not in a maximal independent set</a></li>
+<li class="toc-entry toc-h3"><a href="#case-2-the-root-is-in-a-maximal-independent-set">Case 2: the root is in a maximal independent set</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-2">Step 2: find a recursive formulation for the value of the optimal solution</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#recursive-formulation-try-1">Recursive formulation: try 1</a></li>
+<li class="toc-entry toc-h3"><a href="#recursive-formulation-try-2">Recursive formulation: try 2</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-3">Step 2: find a recursive formulation for the value of the optimal solution</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#a-top-down-dp-algorithm">A top-down DP algorithm</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#why-is-this-different-from-divide-and-conquer">Why is this different from divide-and-conquer?</a></li>
+<li class="toc-entry toc-h2"><a href="#what-have-we-learned-3">What have we learned?</a></li>
+<li class="toc-entry toc-h2"><a href="#recap">Recap</a></li>
+</ul>
+</li>
+</ul><h1 id="algorithms-week-12">
+<a class="anchor" href="#algorithms-week-12" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithms week 12</h1>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207071420794.png" alt="image-20211207071420794"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207071429748.png" alt="image-20211207071429748"></p>
+
+<h2 id="longest-common-subsequence">
+<a class="anchor" href="#longest-common-subsequence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Longest Common Subsequence</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207071611990.png" alt="image-20211207071611990"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207071623525.png" alt="image-20211207071623525"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207071632062.png" alt="image-20211207071632062"></p>
+
+<h2 id="we-sometimes-want-to-find-these">
+<a class="anchor" href="#we-sometimes-want-to-find-these" aria-hidden="true"><span class="octicon octicon-link"></span></a>We sometimes want to find these</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207071646562.png" alt="image-20211207071646562"></p>
+
+<h2 id="recipe-for-applying-dynamic-programming">
+<a class="anchor" href="#recipe-for-applying-dynamic-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recipe for applying dynamic programming</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207072048370.png" alt="image-20211207072048370"></p>
+
+<h2 id="step-1-optimal-substructure">
+<a class="anchor" href="#step-1-optimal-substructure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: optimal substructure</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207072105323.png" alt="image-20211207072105323"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207072114914.png" alt="image-20211207072114914"></p>
+
+<h2 id="step-2-find-a-recursive-formulation-for-the-length-of-the-longest-common-subsequence">
+<a class="anchor" href="#step-2-find-a-recursive-formulation-for-the-length-of-the-longest-common-subsequence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: Find a recursive formulation for the length of the longest common subsequence</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207072350584.png" alt="image-20211207072350584"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207072358870.png" alt="image-20211207072358870"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207072408646.png" alt="image-20211207072408646"></p>
+
+<h2 id="step-3-use-dynamic-programming-to-find-the-length-of-the-longest-common-subsequence">
+<a class="anchor" href="#step-3-use-dynamic-programming-to-find-the-length-of-the-longest-common-subsequence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 3: use dynamic programming to find the length of the longest common subsequence</h2>
+
+<h3 id="lcs-dp">
+<a class="anchor" href="#lcs-dp" aria-hidden="true"><span class="octicon octicon-link"></span></a>LCS DP</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207072849043.png" alt="image-20211207072849043"></p>
+
+<h3 id="example">
+<a class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207072903251.png" alt="image-20211207072903251"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207072911272.png" alt="image-20211207072911272"></p>
+
+<h2 id="step-4-if-needed-keep-track-of-some-additional-info-so-that-the-algorithm-from-step-3-can-find-the-actual-lcs">
+<a class="anchor" href="#step-4-if-needed-keep-track-of-some-additional-info-so-that-the-algorithm-from-step-3-can-find-the-actual-lcs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 4: If needed, keep track of some additional info so that the algorithm from step 3 can find the actual LCS.</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207072937862.png" alt="image-20211207072937862"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207072945233.png" alt="image-20211207072945233"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207073257898.png" alt="image-20211207073257898"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207073305806.png" alt="image-20211207073305806"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207073312807.png" alt="image-20211207073312807"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207073320545.png" alt="image-20211207073320545"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207073327420.png" alt="image-20211207073327420"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207073334458.png" alt="image-20211207073334458"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207073341451.png" alt="image-20211207073341451"></p>
+
+<h2 id="step-5-if-needed-code-this-up-like-a-reasonable-person">
+<a class="anchor" href="#step-5-if-needed-code-this-up-like-a-reasonable-person" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 5: If needed, code this up like a reasonable person.</h2>
+
+<h3 id="this-pseudocode-actually-isnt-so-bad">
+<a class="anchor" href="#this-pseudocode-actually-isnt-so-bad" aria-hidden="true"><span class="octicon octicon-link"></span></a>This pseudocode actually isn’t so bad</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207073647275.png" alt="image-20211207073647275"></p>
+
+<h2 id="what-have-we-learned">
+<a class="anchor" href="#what-have-we-learned" aria-hidden="true"><span class="octicon octicon-link"></span></a>What have we learned?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207073658672.png" alt="image-20211207073658672"></p>
+
+<h2 id="knapsack">
+<a class="anchor" href="#knapsack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Knapsack</h2>
+
+<h3 id="example-knapsack-problem">
+<a class="anchor" href="#example-knapsack-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example: Knapsack problem</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207073711683.png" alt="image-20211207073711683"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207073733220.png" alt="image-20211207073733220"></p>
+
+<h3 id="some-notation">
+<a class="anchor" href="#some-notation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Some notation</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207073745440.png" alt="image-20211207073745440"></p>
+
+<h2 id="recipe-for-applying-dynamic-programming-1">
+<a class="anchor" href="#recipe-for-applying-dynamic-programming-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recipe for applying dynamic programming</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207115907866.png" alt="image-20211207115907866"></p>
+
+<h2 id="optimal-structure">
+<a class="anchor" href="#optimal-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimal structure</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207115919252.png" alt="image-20211207115919252"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207115937549.png" alt="image-20211207115937549"></p>
+
+<h2 id="step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution">
+<a class="anchor" href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: Find a recursive formulation for the value of the optimal solution</h2>
+
+<h3 id="recursive-relationship">
+<a class="anchor" href="#recursive-relationship" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursive relationship</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207120048389.png" alt="image-20211207120048389"></p>
+
+<h2 id="step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution">
+<a class="anchor" href="#step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 3: Use dynamic programming to find the value of the optimal solution</h2>
+
+<h3 id="lets-write-a-bottom-up-dp-algorithm">
+<a class="anchor" href="#lets-write-a-bottom-up-dp-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Let’s write a bottom-up DP algorithm</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207120119754.png" alt="image-20211207120119754"></p>
+
+<h2 id="step-4-if-needed-keep-track-of-some-additional-info-so-that-the-algorithm-from-step-3-can-find-the-actual-solution">
+<a class="anchor" href="#step-4-if-needed-keep-track-of-some-additional-info-so-that-the-algorithm-from-step-3-can-find-the-actual-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 4: If needed, keep track of some additional info so that the algorithm from Step 3 can find the actual solution.</h2>
+
+<h3 id="lets-write-a-bottom-up-dp-algorithm-1">
+<a class="anchor" href="#lets-write-a-bottom-up-dp-algorithm-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Let’s write a bottom-up DP algorithm</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207120204853.png" alt="image-20211207120204853"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207120542232.png" alt="image-20211207120542232"></p>
+
+<h3 id="example-1">
+<a class="anchor" href="#example-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207120555733.png" alt="image-20211207120555733"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207120607323.png" alt="image-20211207120607323"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207120617834.png" alt="image-20211207120617834"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207120628535.png" alt="image-20211207120628535"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207120640009.png" alt="image-20211207120640009"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207120704371.png" alt="image-20211207120704371"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207120713980.png" alt="image-20211207120713980"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207120728180.png" alt="image-20211207120728180"></p>
+
+<h2 id="what-have-we-learned-1">
+<a class="anchor" href="#what-have-we-learned-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>What have we learned?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207121150220.png" alt="image-20211207121150220"></p>
+
+<h2 id="01-knapsack">
+<a class="anchor" href="#01-knapsack" aria-hidden="true"><span class="octicon octicon-link"></span></a>0/1 Knapsack</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207121228743.png" alt="image-20211207121228743"></p>
+
+<h2 id="step-1-identify-optimal-substructure">
+<a class="anchor" href="#step-1-identify-optimal-substructure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: Identify optimal substructure.</h2>
+
+<h3 id="optimal-substructure-try-1">
+<a class="anchor" href="#optimal-substructure-try-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimal substructure: try 1</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207121243559.png" alt="image-20211207121243559"></p>
+
+<h3 id="this-wont-quite-work">
+<a class="anchor" href="#this-wont-quite-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>This won’t quite work</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207121309228.png" alt="image-20211207121309228"></p>
+
+<h3 id="optimal-structure-try-2">
+<a class="anchor" href="#optimal-structure-try-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimal structure: try 2</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207121329522.png" alt="image-20211207121329522"></p>
+
+<h2 id="our-sub-problems">
+<a class="anchor" href="#our-sub-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Our sub-problems:</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207121345277.png" alt="image-20211207121345277"></p>
+
+<h2 id="two-cases">
+<a class="anchor" href="#two-cases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Two cases</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207121453001.png" alt="image-20211207121453001"></p>
+
+<h3 id="case-1-optimal-solution-for-j-items-does-not-use-item-j">
+<a class="anchor" href="#case-1-optimal-solution-for-j-items-does-not-use-item-j" aria-hidden="true"><span class="octicon octicon-link"></span></a>Case 1: optimal solution for j items does not use item j.</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207121621772.png" alt="image-20211207121621772"></p>
+
+<h3 id="case-2-optimal-solution-for-j-items-uses-item-j">
+<a class="anchor" href="#case-2-optimal-solution-for-j-items-uses-item-j" aria-hidden="true"><span class="octicon octicon-link"></span></a>Case 2: optimal solution for j items uses item j</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207121700737.png" alt="image-20211207121700737"></p>
+
+<h2 id="step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-1">
+<a class="anchor" href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: find a recursive formulation for the value of the optimal solution.</h2>
+
+<h3 id="recursive-relationship-1">
+<a class="anchor" href="#recursive-relationship-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursive relationship</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207121739588.png" alt="image-20211207121739588"></p>
+
+<h2 id="step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution-1">
+<a class="anchor" href="#step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 3: use dynamic programming to find the value of the optimal solution.</h2>
+
+<h3 id="bottom-up-dp-algorithm">
+<a class="anchor" href="#bottom-up-dp-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bottom-up DP algorithm</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207121841801.png" alt="image-20211207121841801"></p>
+
+<h2 id="example-2">
+<a class="anchor" href="#example-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207121905657.png" alt="image-20211207121905657"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207121914313.png" alt="image-20211207121914313"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122020213.png" alt="image-20211207122020213"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122029165.png" alt="image-20211207122029165"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122037977.png" alt="image-20211207122037977"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122046546.png" alt="image-20211207122046546"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122056884.png" alt="image-20211207122056884"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122107288.png" alt="image-20211207122107288"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122117785.png" alt="image-20211207122117785"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122129053.png" alt="image-20211207122129053"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122218721.png" alt="image-20211207122218721"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122229043.png" alt="image-20211207122229043"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122249982.png" alt="image-20211207122249982"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122259152.png" alt="image-20211207122259152"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122309367.png" alt="image-20211207122309367"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122319578.png" alt="image-20211207122319578"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122328257.png" alt="image-20211207122328257"></p>
+
+<h2 id="what-have-we-learned-2">
+<a class="anchor" href="#what-have-we-learned-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>What have we learned?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122621320.png" alt="image-20211207122621320"></p>
+
+<h2 id="question">
+<a class="anchor" href="#question" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122636131.png" alt="image-20211207122636131"></p>
+
+<h2 id="independent-set">
+<a class="anchor" href="#independent-set" aria-hidden="true"><span class="octicon octicon-link"></span></a>Independent set</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122912123.png" alt="image-20211207122912123"></p>
+
+<h2 id="actually-this-problem-is-np-complete-so-we-are-unlikely-to-find-an-efficient-algorithm">
+<a class="anchor" href="#actually-this-problem-is-np-complete-so-we-are-unlikely-to-find-an-efficient-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Actually this problem is NP-complete. So we are unlikely to find an efficient algorithm</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207122939165.png" alt="image-20211207122939165"></p>
+
+<h2 id="step-1-identify-optimal-structure">
+<a class="anchor" href="#step-1-identify-optimal-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: identify optimal structure</h2>
+
+<h3 id="optimal-structure-1">
+<a class="anchor" href="#optimal-structure-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimal structure</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207123332584.png" alt="image-20211207123332584"></p>
+
+<h3 id="case-1-the-root-is-not-in-a-maximal-independent-set">
+<a class="anchor" href="#case-1-the-root-is-not-in-a-maximal-independent-set" aria-hidden="true"><span class="octicon octicon-link"></span></a>Case 1: the root is not in a maximal independent set</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207123402431.png" alt="image-20211207123402431"></p>
+
+<h3 id="case-2-the-root-is-in-a-maximal-independent-set">
+<a class="anchor" href="#case-2-the-root-is-in-a-maximal-independent-set" aria-hidden="true"><span class="octicon octicon-link"></span></a>Case 2: the root is in a maximal independent set</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207123422340.png" alt="image-20211207123422340"></p>
+
+<h2 id="step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-2">
+<a class="anchor" href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: find a recursive formulation for the value of the optimal solution</h2>
+
+<h3 id="recursive-formulation-try-1">
+<a class="anchor" href="#recursive-formulation-try-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursive formulation: try 1</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207123630180.png" alt="image-20211207123630180"></p>
+
+<h3 id="recursive-formulation-try-2">
+<a class="anchor" href="#recursive-formulation-try-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursive formulation: try 2</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207123822559.png" alt="image-20211207123822559"></p>
+
+<h2 id="step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-3">
+<a class="anchor" href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: find a recursive formulation for the value of the optimal solution</h2>
+
+<h3 id="a-top-down-dp-algorithm">
+<a class="anchor" href="#a-top-down-dp-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>A top-down DP algorithm</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207123901494.png" alt="image-20211207123901494"></p>
+
+<h2 id="why-is-this-different-from-divide-and-conquer">
+<a class="anchor" href="#why-is-this-different-from-divide-and-conquer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why is this different from divide-and-conquer?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207123920179.png" alt="image-20211207123920179"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207124315270.png" alt="image-20211207124315270"></p>
+
+<h2 id="what-have-we-learned-3">
+<a class="anchor" href="#what-have-we-learned-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>What have we learned?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207124327964.png" alt="image-20211207124327964"></p>
+
+<h2 id="recap">
+<a class="anchor" href="#recap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recap</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-12/image-20211207124337430.png" alt="image-20211207124337430"></p>
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/12/07/algorithms-week-12.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

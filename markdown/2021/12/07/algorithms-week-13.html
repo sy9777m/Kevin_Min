@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Algorithms week 13 | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Algorithms week 13" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 Algorithms week 13." />
+<meta property="og:description" content="Soongsil University 2-2 Algorithms week 13." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/12/07/algorithms-week-13.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/12/07/algorithms-week-13.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-07T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-12-07T00:00:00-06:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/12/07/algorithms-week-13.html","@type":"BlogPosting","headline":"Algorithms week 13","dateModified":"2021-12-07T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/12/07/algorithms-week-13.html"},"description":"Soongsil University 2-2 Algorithms week 13.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Algorithms week 13</h1><p class="page-description">Soongsil University 2-2 Algorithms week 13.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-12-07T00:00:00-06:00" itemprop="datePublished">
+        Dec 7, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#algorithms-week-13">Algorithms week 13</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#outline">Outline</a></li>
+<li class="toc-entry toc-h2"><a href="#greedy-algorithms">Greedy algorithms</a></li>
+<li class="toc-entry toc-h2"><a href="#non-example">Non-example</a></li>
+<li class="toc-entry toc-h2"><a href="#activity-selection">Activity selection</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#example-where-greedy-works">Example where greedy works</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#activity-selection-1">Activity selection</a></li>
+<li class="toc-entry toc-h2"><a href="#greedy-algorithm">Greedy algorithm</a></li>
+<li class="toc-entry toc-h2"><a href="#at-least-its-fast">At least it’s fast</a></li>
+<li class="toc-entry toc-h2"><a href="#what-makes-it-greedy">What makes it greedy?</a></li>
+<li class="toc-entry toc-h2"><a href="#three-questions">Three questions</a></li>
+<li class="toc-entry toc-h2"><a href="#answers">Answers</a></li>
+<li class="toc-entry toc-h2"><a href="#back-to-activity-selection">Back to activity selection</a></li>
+<li class="toc-entry toc-h2"><a href="#why-does-it-work">Why does it work?</a></li>
+<li class="toc-entry toc-h2"><a href="#assuming-we-can-prove-that">Assuming we can prove that</a></li>
+<li class="toc-entry toc-h2"><a href="#we-never-rule-out-an-optimal-solution">We never rule out an optimal solution</a></li>
+<li class="toc-entry toc-h2"><a href="#so-the-algorithm-is-correct">So the algorithm is correct</a></li>
+<li class="toc-entry toc-h2"><a href="#sub-problem-graph-view">Sub-problem graph view</a></li>
+<li class="toc-entry toc-h2"><a href="#answers-1">Answers</a></li>
+<li class="toc-entry toc-h2"><a href="#another-example-huffman-coding">Another example: Huffman coding</a></li>
+<li class="toc-entry toc-h2"><a href="#suppose-we-have-some-distribution-on-characters">Suppose we have some distribution on characters</a></li>
+<li class="toc-entry toc-h2"><a href="#try-0">Try 0</a></li>
+<li class="toc-entry toc-h2"><a href="#try-1">Try 1</a></li>
+<li class="toc-entry toc-h2"><a href="#try-2-prefix-free-coding">Try 2: prefix-free coding</a></li>
+<li class="toc-entry toc-h2"><a href="#a-prefix-free-code-is-a-tree">A prefix-free code is a tree</a></li>
+<li class="toc-entry toc-h2"><a href="#some-trees-are-better-than-others">Some trees are better than others</a></li>
+<li class="toc-entry toc-h2"><a href="#question">Question</a></li>
+<li class="toc-entry toc-h2"><a href="#optimal-sub-structure">Optimal sub-structure</a></li>
+<li class="toc-entry toc-h2"><a href="#in-order-to-design-a-greedy-algorithm">In order to design a greedy algorithm</a></li>
+<li class="toc-entry toc-h2"><a href="#solution">Solution</a></li>
+<li class="toc-entry toc-h2"><a href="#what-exactly-was-the-algorithm">What exactly was the algorithm?</a></li>
+<li class="toc-entry toc-h2"><a href="#does-it-work">Does it work?</a></li>
+<li class="toc-entry toc-h2"><a href="#what-have-we-learned">What have we learned?</a></li>
+<li class="toc-entry toc-h2"><a href="#recap-i">Recap I</a></li>
+<li class="toc-entry toc-h2"><a href="#minimum-spanning-tree">Minimum spanning tree</a></li>
+<li class="toc-entry toc-h2"><a href="#minimum-spanning-tree-1">Minimum spanning tree</a></li>
+<li class="toc-entry toc-h2"><a href="#why-msts">Why MSTs?</a></li>
+<li class="toc-entry toc-h2"><a href="#idea-1">Idea 1</a></li>
+<li class="toc-entry toc-h2"><a href="#weve-discovered-prims-algorithm">We’ve discovered Prim’s algorithm!</a></li>
+<li class="toc-entry toc-h2"><a href="#question-1">Question</a></li>
+<li class="toc-entry toc-h2"><a href="#how-do-we-actually-implement-this">How do we actually implement this?</a></li>
+<li class="toc-entry toc-h2"><a href="#efficient-implementation">Efficient implementation</a></li>
+<li class="toc-entry toc-h2"><a href="#this-should-look-pretty-familiar">This should look pretty familiar</a></li>
+<li class="toc-entry toc-h2"><a href="#one-thing-that-is-similar-running-time">One thing that is similar: running time</a></li>
+<li class="toc-entry toc-h2"><a href="#code">Code</a></li>
+<li class="toc-entry toc-h2"><a href="#thats-not-the-only-greedy-algorithm">That’s not the only greedy algorithm</a></li>
+<li class="toc-entry toc-h2"><a href="#weve-discovered-kruskals-algorithm">We’ve discovered Kruskal’s algorithm!</a></li>
+<li class="toc-entry toc-h2"><a href="#question-2">Question</a></li>
+<li class="toc-entry toc-h2"><a href="#at-each-step-of-kruskals-we-are-maintaining-a-forest">At each step of Kruskal’s, we are maintaining a forest</a></li>
+<li class="toc-entry toc-h2"><a href="#union-find-data-structure-also-called-disjoint-set-data-structure">Union-find data structure also called disjoint-set data structure</a></li>
+<li class="toc-entry toc-h2"><a href="#kruskal-pseudo-code">Kruskal pseudo-code</a></li>
+<li class="toc-entry toc-h2"><a href="#once-more">Once more…</a></li>
+<li class="toc-entry toc-h2"><a href="#running-time">Running time</a></li>
+<li class="toc-entry toc-h2"><a href="#compare-and-contrast">Compare and contrast</a></li>
+<li class="toc-entry toc-h2"><a href="#both-prim-and-kruskal">Both Prim and Kruskal</a></li>
+<li class="toc-entry toc-h2"><a href="#recap">Recap</a></li>
+</ul>
+</li>
+</ul><h1 id="algorithms-week-13">
+<a class="anchor" href="#algorithms-week-13" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithms week 13</h1>
+
+<h2 id="outline">
+<a class="anchor" href="#outline" aria-hidden="true"><span class="octicon octicon-link"></span></a>Outline</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207124410764.png" alt="image-20211207124410764"></p>
+
+<h2 id="greedy-algorithms">
+<a class="anchor" href="#greedy-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Greedy algorithms</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125150921.png" alt="image-20211207125150921"></p>
+
+<h2 id="non-example">
+<a class="anchor" href="#non-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Non-example</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125159135.png" alt="image-20211207125159135"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125207413.png" alt="image-20211207125207413"></p>
+
+<h2 id="activity-selection">
+<a class="anchor" href="#activity-selection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Activity selection</h2>
+
+<h3 id="example-where-greedy-works">
+<a class="anchor" href="#example-where-greedy-works" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example where greedy works</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125230959.png" alt="image-20211207125230959"></p>
+
+<h2 id="activity-selection-1">
+<a class="anchor" href="#activity-selection-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Activity selection</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125243425.png" alt="image-20211207125243425"></p>
+
+<h2 id="greedy-algorithm">
+<a class="anchor" href="#greedy-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Greedy algorithm</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125255106.png" alt="image-20211207125255106"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125643256.png" alt="image-20211207125643256"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125650404.png" alt="image-20211207125650404"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125659201.png" alt="image-20211207125659201"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125707809.png" alt="image-20211207125707809"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125714728.png" alt="image-20211207125714728"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125723888.png" alt="image-20211207125723888"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125731144.png" alt="image-20211207125731144"></p>
+
+<h2 id="at-least-its-fast">
+<a class="anchor" href="#at-least-its-fast" aria-hidden="true"><span class="octicon octicon-link"></span></a>At least it’s fast</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125743376.png" alt="image-20211207125743376"></p>
+
+<h2 id="what-makes-it-greedy">
+<a class="anchor" href="#what-makes-it-greedy" aria-hidden="true"><span class="octicon octicon-link"></span></a>What makes it greedy?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207125758193.png" alt="image-20211207125758193"></p>
+
+<h2 id="three-questions">
+<a class="anchor" href="#three-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Three questions</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207130139784.png" alt="image-20211207130139784"></p>
+
+<h2 id="answers">
+<a class="anchor" href="#answers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answers</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207130150462.png" alt="image-20211207130150462"></p>
+
+<h2 id="back-to-activity-selection">
+<a class="anchor" href="#back-to-activity-selection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Back to activity selection</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207130204867.png" alt="image-20211207130204867"></p>
+
+<h2 id="why-does-it-work">
+<a class="anchor" href="#why-does-it-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why does it work?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207130216147.png" alt="image-20211207130216147"></p>
+
+<h2 id="assuming-we-can-prove-that">
+<a class="anchor" href="#assuming-we-can-prove-that" aria-hidden="true"><span class="octicon octicon-link"></span></a>Assuming we can prove that</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207130228086.png" alt="image-20211207130228086"></p>
+
+<h2 id="we-never-rule-out-an-optimal-solution">
+<a class="anchor" href="#we-never-rule-out-an-optimal-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>We never rule out an optimal solution</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207130521888.png" alt="image-20211207130521888"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207130532927.png" alt="image-20211207130532927"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207130541551.png" alt="image-20211207130541551"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207130550915.png" alt="image-20211207130550915"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207130601278.png" alt="image-20211207130601278"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207130610059.png" alt="image-20211207130610059"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207130631355.png" alt="image-20211207130631355"></p>
+
+<h2 id="so-the-algorithm-is-correct">
+<a class="anchor" href="#so-the-algorithm-is-correct" aria-hidden="true"><span class="octicon octicon-link"></span></a>So the algorithm is correct</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207130650827.png" alt="image-20211207130650827"></p>
+
+<h2 id="sub-problem-graph-view">
+<a class="anchor" href="#sub-problem-graph-view" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sub-problem graph view</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131200965.png" alt="image-20211207131200965"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131207103.png" alt="image-20211207131207103"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131214932.png" alt="image-20211207131214932"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131223065.png" alt="image-20211207131223065"></p>
+
+<h2 id="answers-1">
+<a class="anchor" href="#answers-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answers</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131233461.png" alt="image-20211207131233461"></p>
+
+<h2 id="another-example-huffman-coding">
+<a class="anchor" href="#another-example-huffman-coding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Another example: Huffman coding</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131250435.png" alt="image-20211207131250435"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131258723.png" alt="image-20211207131258723"></p>
+
+<h2 id="suppose-we-have-some-distribution-on-characters">
+<a class="anchor" href="#suppose-we-have-some-distribution-on-characters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Suppose we have some distribution on characters</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131316733.png" alt="image-20211207131316733"></p>
+
+<h2 id="try-0">
+<a class="anchor" href="#try-0" aria-hidden="true"><span class="octicon octicon-link"></span></a>Try 0</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131323243.png" alt="image-20211207131323243"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131328719.png" alt="image-20211207131328719"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131805446.png" alt="image-20211207131805446"></p>
+
+<h2 id="try-1">
+<a class="anchor" href="#try-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Try 1</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131828773.png" alt="image-20211207131828773"></p>
+
+<h2 id="try-2-prefix-free-coding">
+<a class="anchor" href="#try-2-prefix-free-coding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Try 2: prefix-free coding</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131851032.png" alt="image-20211207131851032"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131907776.png" alt="image-20211207131907776"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131916155.png" alt="image-20211207131916155"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131924584.png" alt="image-20211207131924584"></p>
+
+<h2 id="a-prefix-free-code-is-a-tree">
+<a class="anchor" href="#a-prefix-free-code-is-a-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>A prefix-free code is a tree</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131940349.png" alt="image-20211207131940349"></p>
+
+<h2 id="some-trees-are-better-than-others">
+<a class="anchor" href="#some-trees-are-better-than-others" aria-hidden="true"><span class="octicon octicon-link"></span></a>Some trees are better than others</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207131953121.png" alt="image-20211207131953121"></p>
+
+<h2 id="question">
+<a class="anchor" href="#question" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132002609.png" alt="image-20211207132002609"></p>
+
+<h2 id="optimal-sub-structure">
+<a class="anchor" href="#optimal-sub-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimal sub-structure</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132012989.png" alt="image-20211207132012989"></p>
+
+<h2 id="in-order-to-design-a-greedy-algorithm">
+<a class="anchor" href="#in-order-to-design-a-greedy-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>In order to design a greedy algorithm</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132026488.png" alt="image-20211207132026488"></p>
+
+<h2 id="solution">
+<a class="anchor" href="#solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Solution</h2>
+
+<p>greedily build subtrees, starting with the infrequent letters</p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132045635.png" alt="image-20211207132045635"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132054696.png" alt="image-20211207132054696"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132100843.png" alt="image-20211207132100843"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132107452.png" alt="image-20211207132107452"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132116352.png" alt="image-20211207132116352"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132125129.png" alt="image-20211207132125129"></p>
+
+<h2 id="what-exactly-was-the-algorithm">
+<a class="anchor" href="#what-exactly-was-the-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>What exactly was the algorithm?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132138686.png" alt="image-20211207132138686"></p>
+
+<h2 id="does-it-work">
+<a class="anchor" href="#does-it-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Does it work?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132717578.png" alt="image-20211207132717578"></p>
+
+<h2 id="what-have-we-learned">
+<a class="anchor" href="#what-have-we-learned" aria-hidden="true"><span class="octicon octicon-link"></span></a>What have we learned?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132729107.png" alt="image-20211207132729107"></p>
+
+<h2 id="recap-i">
+<a class="anchor" href="#recap-i" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recap I</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132738317.png" alt="image-20211207132738317"></p>
+
+<h2 id="minimum-spanning-tree">
+<a class="anchor" href="#minimum-spanning-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Minimum spanning tree</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132748707.png" alt="image-20211207132748707"></p>
+
+<h2 id="minimum-spanning-tree-1">
+<a class="anchor" href="#minimum-spanning-tree-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Minimum spanning tree</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207132800492.png" alt="image-20211207132800492"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133312410.png" alt="image-20211207133312410"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133320125.png" alt="image-20211207133320125"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133327857.png" alt="image-20211207133327857"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133335355.png" alt="image-20211207133335355"></p>
+
+<h2 id="why-msts">
+<a class="anchor" href="#why-msts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why MSTs?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133352369.png" alt="image-20211207133352369"></p>
+
+<h2 id="idea-1">
+<a class="anchor" href="#idea-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Idea 1</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133405724.png" alt="image-20211207133405724"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133413229.png" alt="image-20211207133413229"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133420158.png" alt="image-20211207133420158"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133427278.png" alt="image-20211207133427278"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133434180.png" alt="image-20211207133434180"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133441720.png" alt="image-20211207133441720"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133449792.png" alt="image-20211207133449792"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133455751.png" alt="image-20211207133455751"></p>
+
+<h2 id="weve-discovered-prims-algorithm">
+<a class="anchor" href="#weve-discovered-prims-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>We’ve discovered Prim’s algorithm!</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207133518905.png" alt="image-20211207133518905"></p>
+
+<h2 id="question-1">
+<a class="anchor" href="#question-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134032338.png" alt="image-20211207134032338"></p>
+
+<h2 id="how-do-we-actually-implement-this">
+<a class="anchor" href="#how-do-we-actually-implement-this" aria-hidden="true"><span class="octicon octicon-link"></span></a>How do we actually implement this?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134047136.png" alt="image-20211207134047136"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134148373.png" alt="image-20211207134148373"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134136742.png" alt="image-20211207134136742"></p>
+
+<h2 id="efficient-implementation">
+<a class="anchor" href="#efficient-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Efficient implementation</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134430747.png" alt="image-20211207134430747"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134445691.png" alt="image-20211207134445691"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134453471.png" alt="image-20211207134453471"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134502336.png" alt="image-20211207134502336"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134511684.png" alt="image-20211207134511684"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134519342.png" alt="image-20211207134519342"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134527768.png" alt="image-20211207134527768"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134535359.png" alt="image-20211207134535359"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134543507.png" alt="image-20211207134543507"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134552336.png" alt="image-20211207134552336"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134601368.png" alt="image-20211207134601368"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134609199.png" alt="image-20211207134609199"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134618035.png" alt="image-20211207134618035"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134625973.png" alt="image-20211207134625973"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134632861.png" alt="image-20211207134632861"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134640126.png" alt="image-20211207134640126"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134646017.png" alt="image-20211207134646017"></p>
+
+<h2 id="this-should-look-pretty-familiar">
+<a class="anchor" href="#this-should-look-pretty-familiar" aria-hidden="true"><span class="octicon octicon-link"></span></a>This should look pretty familiar</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207134700872.png" alt="image-20211207134700872"></p>
+
+<h2 id="one-thing-that-is-similar-running-time">
+<a class="anchor" href="#one-thing-that-is-similar-running-time" aria-hidden="true"><span class="octicon octicon-link"></span></a>One thing that is similar: running time</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207135209167.png" alt="image-20211207135209167"></p>
+
+<h2 id="code">
+<a class="anchor" href="#code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Code</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207135217731.png" alt="image-20211207135217731"></p>
+
+<h2 id="thats-not-the-only-greedy-algorithm">
+<a class="anchor" href="#thats-not-the-only-greedy-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>That’s not the only greedy algorithm</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207135232436.png" alt="image-20211207135232436"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207135240236.png" alt="image-20211207135240236"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207135257433.png" alt="image-20211207135257433"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207135303049.png" alt="image-20211207135303049"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207135308324.png" alt="image-20211207135308324"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207135312825.png" alt="image-20211207135312825"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207135321039.png" alt="image-20211207135321039"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207135329210.png" alt="image-20211207135329210"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207135334453.png" alt="image-20211207135334453"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207135339882.png" alt="image-20211207135339882"></p>
+
+<h2 id="weve-discovered-kruskals-algorithm">
+<a class="anchor" href="#weve-discovered-kruskals-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>We’ve discovered Kruskal’s algorithm!</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207135355389.png" alt="image-20211207135355389"></p>
+
+<h2 id="question-2">
+<a class="anchor" href="#question-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207140949415.png" alt="image-20211207140949415"></p>
+
+<h2 id="at-each-step-of-kruskals-we-are-maintaining-a-forest">
+<a class="anchor" href="#at-each-step-of-kruskals-we-are-maintaining-a-forest" aria-hidden="true"><span class="octicon octicon-link"></span></a>At each step of Kruskal’s, we are maintaining a forest</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141009574.png" alt="image-20211207141009574"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141015822.png" alt="image-20211207141015822"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141022055.png" alt="image-20211207141022055"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141028740.png" alt="image-20211207141028740"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141034734.png" alt="image-20211207141034734"></p>
+
+<h2 id="union-find-data-structure-also-called-disjoint-set-data-structure">
+<a class="anchor" href="#union-find-data-structure-also-called-disjoint-set-data-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Union-find data structure also called disjoint-set data structure</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141052286.png" alt="image-20211207141052286"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141058341.png" alt="image-20211207141058341"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141104364.png" alt="image-20211207141104364"></p>
+
+<h2 id="kruskal-pseudo-code">
+<a class="anchor" href="#kruskal-pseudo-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kruskal pseudo-code</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141117012.png" alt="image-20211207141117012"></p>
+
+<h2 id="once-more">
+<a class="anchor" href="#once-more" aria-hidden="true"><span class="octicon octicon-link"></span></a>Once more…</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141448215.png" alt="image-20211207141448215"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141454494.png" alt="image-20211207141454494"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141501260.png" alt="image-20211207141501260"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141506607.png" alt="image-20211207141506607"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141512251.png" alt="image-20211207141512251"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141517618.png" alt="image-20211207141517618"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141524970.png" alt="image-20211207141524970"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141531540.png" alt="image-20211207141531540"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141538068.png" alt="image-20211207141538068"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141541742.png" alt="image-20211207141541742"></p>
+
+<h2 id="running-time">
+<a class="anchor" href="#running-time" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running time</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141551496.png" alt="image-20211207141551496"></p>
+
+<h2 id="compare-and-contrast">
+<a class="anchor" href="#compare-and-contrast" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compare and contrast</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141601905.png" alt="image-20211207141601905"></p>
+
+<h2 id="both-prim-and-kruskal">
+<a class="anchor" href="#both-prim-and-kruskal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Both Prim and Kruskal</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141612359.png" alt="image-20211207141612359"></p>
+
+<h2 id="recap">
+<a class="anchor" href="#recap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recap</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-07-algorithms-week-13/image-20211207141621642.png" alt="image-20211207141621642"></p>
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/12/07/algorithms-week-13.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
