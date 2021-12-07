@@ -100,6 +100,3 @@ title: System Programming week 13
 ![image-20211205045650531](/Kevin_Min/images/2021-12-05-system-programming-week-13/image-20211205045650531.png)
 
 ![image-20211205045657298](/Kevin_Min/images/2021-12-05-system-programming-week-13/image-20211205045657298.png)
-
-## Homework
-
