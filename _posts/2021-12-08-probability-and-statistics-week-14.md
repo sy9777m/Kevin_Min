@@ -9,23 +9,23 @@ title: Probability and Statistics week 14
 
 ## 이번 시간 할 일
 
-![image-20211208032045619](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-12-07-probability-and-statistics-week-13\image-20211208032045619.png)
+![image-20211208032045619](/Kevin_Min/images/2021-12-07-probability-and-statistics-week-13/image-20211208032045619.png)
 
 ## 선형 함수와 비선형 함수
 
-![image-20211208032055401](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-12-07-probability-and-statistics-week-13\image-20211208032055401.png)
+![image-20211208032055401](/Kevin_Min/images/2021-12-07-probability-and-statistics-week-13/image-20211208032055401.png)
 
 ## Variable transformations
 
-![image-20211208032106120](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-12-07-probability-and-statistics-week-13\image-20211208032106120.png)
+![image-20211208032106120](/Kevin_Min/images/2021-12-07-probability-and-statistics-week-13/image-20211208032106120.png)
 
-![image-20211208032702211](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-12-07-probability-and-statistics-week-13\image-20211208032702211.png)
+![image-20211208032702211](/Kevin_Min/images/2021-12-07-probability-and-statistics-week-13/image-20211208032702211.png)
 
 ## Intrinsically linear model의 예
 
-![image-20211208032715999](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-12-07-probability-and-statistics-week-13\image-20211208032715999.png)
+![image-20211208032715999](/Kevin_Min/images/2021-12-07-probability-and-statistics-week-13/image-20211208032715999.png)
 
-![image-20211208032721921](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-12-07-probability-and-statistics-week-13\image-20211208032721921.png)
+![image-20211208032721921](/Kevin_Min/images/2021-12-07-probability-and-statistics-week-13/image-20211208032721921.png)
 
 ## Transformation
 
