@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Algorithms final summary | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Algorithms final summary" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 Algorithms final summary." />
+<meta property="og:description" content="Soongsil University 2-2 Algorithms final summary." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/12/09/algorithms-final-summary.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/12/09/algorithms-final-summary.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-09T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-12-09T00:00:00-06:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/12/09/algorithms-final-summary.html","@type":"BlogPosting","headline":"Algorithms final summary","dateModified":"2021-12-09T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/12/09/algorithms-final-summary.html"},"description":"Soongsil University 2-2 Algorithms final summary.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Algorithms final summary</h1><p class="page-description">Soongsil University 2-2 Algorithms final summary.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-12-09T00:00:00-06:00" itemprop="datePublished">
+        Dec 9, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#algorithms-final-summary">Algorithms final summary</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#how-do-we-represent-graphs">How do we represent graphs?</a></li>
+<li class="toc-entry toc-h2"><a href="#trade-offs">Trade-offs</a></li>
+<li class="toc-entry toc-h2"><a href="#dfs">DFS</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#running-time-to-explore-just-the-connected-component-we-started-in">Running time to explore just the connected component we started in</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#topological-ordering">Topological ordering</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#dag-directed-acyclic-graph">DAG (Directed Acyclic Graph)</a></li>
+<li class="toc-entry toc-h3"><a href="#finish-times-seems-useful">Finish times seems useful</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#bfs">BFS</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#running-time-to-explore-the-whole-thing">Running time to explore the whole thing</a></li>
+<li class="toc-entry toc-h3"><a href="#shortest-path">Shortest path</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#shortest-path-problem">Shortest path problem</a></li>
+<li class="toc-entry toc-h2"><a href="#dijkstra-algorithm">Dijkstra algorithm</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#why-does-this-work">Why does this work?</a></li>
+<li class="toc-entry toc-h3"><a href="#running-time">Running time</a></li>
+<li class="toc-entry toc-h3"><a href="#if-we-use-a-red-black-tree">If we use a red-black tree</a></li>
+<li class="toc-entry toc-h3"><a href="#dijkstra-drawbacks">Dijkstra drawbacks</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#bellman-ford">Bellman-Ford</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#running-time-1">Running time</a></li>
+<li class="toc-entry toc-h3"><a href="#bellman-ford-and-negative-edge-weights">Bellman-Ford and negative edge weights</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#recap-shortest-paths">Recap: shortest paths</a></li>
+<li class="toc-entry toc-h2"><a href="#dynamic-programming">Dynamic programming</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#elements-of-dynamic-programming">Elements of dynamic programming</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#bottom-up-approach">Bottom up approach</a></li>
+<li class="toc-entry toc-h2"><a href="#top-down-approach">Top down approach</a></li>
+<li class="toc-entry toc-h2"><a href="#floyd-warshall">Floyd-Warshall</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#optimal-substructure">Optimal substructure</a></li>
+<li class="toc-entry toc-h3"><a href="#how-can-we-find-dku-v-using-dk-1">How can we find $D^{k}[u, v]$ using $D^{k-1}$</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#floyd-warshall-algorithm">Floyd-Warshall algorithm</a></li>
+<li class="toc-entry toc-h2"><a href="#graph-algorithms">Graph algorithms</a></li>
+<li class="toc-entry toc-h2"><a href="#recap">Recap</a></li>
+<li class="toc-entry toc-h2"><a href="#longest-common-subsequence">Longest common subsequence</a></li>
+<li class="toc-entry toc-h2"><a href="#recipe-for-applying-dynamic-programming">Recipe for applying dynamic programming</a></li>
+<li class="toc-entry toc-h2"><a href="#step-1-optimal-substructure">Step 1: optimal substructure</a></li>
+<li class="toc-entry toc-h2"><a href="#step-2-find-a-recursive-formulation-for-the-length-of-the-longest-common-subsequence">Step 2: find a recursive formulation for the length of the longest common subsequence</a></li>
+<li class="toc-entry toc-h2"><a href="#step-3-use-dynamic-programming-to-find-the-length-of-the-longest-common-subsequence">Step 3: use dynamic programming to find the length of the longest common subsequence</a></li>
+<li class="toc-entry toc-h2"><a href="#step-4-if-needed-keep-track-of-some-additional-info-so-that-the-algorithm-from-step-3-can-find-the-actual-lcs">Step 4: If needed, keep track of some additional info so that the algorithm from step 3 can find the actual LCS.</a></li>
+<li class="toc-entry toc-h2"><a href="#step-5-if-needed-code-this-up-like-a-reasonable-person">Step 5: if needed, code this up like a reasonable person</a></li>
+<li class="toc-entry toc-h2"><a href="#knapsack">Knapsack</a></li>
+<li class="toc-entry toc-h2"><a href="#step-1-identify-optimal-substructure">Step 1: Identify optimal substructure</a></li>
+<li class="toc-entry toc-h2"><a href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution">Step 2: Find a recursive formulation for the value of the optimal solution</a></li>
+<li class="toc-entry toc-h2"><a href="#step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution">Step 3: Use dynamic programming to find the value of the optimal solution</a></li>
+<li class="toc-entry toc-h2"><a href="#step-4-if-needed-keep-track-of-some-additional-info-so-that-the-algorithm-from-step-3-can-find-the-actual-solution">Step 4: If needed, keep track of some additional info so that the algorithm from step 3 can find the actual solution.</a></li>
+<li class="toc-entry toc-h2"><a href="#01-knapsack">0/1 knapsack</a></li>
+<li class="toc-entry toc-h2"><a href="#step-1-identify-optimal-substructure-1">Step 1: identify optimal substructure</a></li>
+<li class="toc-entry toc-h2"><a href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-1">Step 2: find a recursive formulation for the value of the optimal solution</a></li>
+<li class="toc-entry toc-h2"><a href="#step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution-1">Step 3: use dynamic programming to find the value of the optimal solution</a></li>
+<li class="toc-entry toc-h2"><a href="#question-how-did-we-know-which-substructure-to-use-in-which-variant-of-knapsack">Question: how did we know which substructure to use in which variant of knapsack?</a></li>
+<li class="toc-entry toc-h2"><a href="#independent-set">Independent set</a></li>
+<li class="toc-entry toc-h2"><a href="#np-complete">NP-complete</a></li>
+<li class="toc-entry toc-h2"><a href="#step-1-identify-optimal-substructure-2">Step 1: Identify optimal substructure</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#case-1-the-root-is-not-in-a-maximal-independent-set">Case 1: the root is not in a maximal independent set</a></li>
+<li class="toc-entry toc-h3"><a href="#case-2-the-root-is-in-a-maximal-independent-set">Case 2: the root is in a maximal independent set</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-2">Step 2: find a recursive formulation for the value of the optimal solution</a></li>
+<li class="toc-entry toc-h2"><a href="#step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution-2">Step 3: use dynamic programming to find the value of the optimal solution</a></li>
+<li class="toc-entry toc-h2"><a href="#greedy-algorithms">Greedy algorithms</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#unbounded-knapsack">Unbounded knapsack</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#activity-selection">Activity selection</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#at-least-its-fast">At least it’s fast</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#what-makes-it-greedy">What makes it greedy?</a></li>
+<li class="toc-entry toc-h2"><a href="#three-questions">Three questions</a></li>
+<li class="toc-entry toc-h2"><a href="#sub-problem-graph-view">Sub-problem graph view</a></li>
+<li class="toc-entry toc-h2"><a href="#huffman-coding">Huffman coding</a></li>
+<li class="toc-entry toc-h2"><a href="#minimum-spanning-tree">Minimum spanning tree</a></li>
+<li class="toc-entry toc-h2"><a href="#prims-algorithm">Prim’s algorithm</a></li>
+<li class="toc-entry toc-h2"><a href="#kruskals-algorithm">Kruskal’s algorithm</a></li>
+<li class="toc-entry toc-h2"><a href="#both-prim-and-kruskal">Both Prim and Kruskal</a></li>
+<li class="toc-entry toc-h2"><a href="#class-of-p-problems">Class of “P” problems</a></li>
+<li class="toc-entry toc-h2"><a href="#tractable--intractable-problems">Tractable / Intractable problems</a></li>
+<li class="toc-entry toc-h2"><a href="#hamiltonian-cycle">Hamiltonian cycle</a></li>
+<li class="toc-entry toc-h2"><a href="#traveling-salesman-problem">Traveling salesman problem</a></li>
+<li class="toc-entry toc-h2"><a href="#intractable-problems">Intractable problems</a></li>
+<li class="toc-entry toc-h2"><a href="#p-vs-np">P vs. NP</a></li>
+<li class="toc-entry toc-h2"><a href="#nondeterministic-algorithms">Nondeterministic algorithms</a></li>
+<li class="toc-entry toc-h2"><a href="#nondeterministic-and-np-algorithms">Nondeterministic and NP algorithms</a></li>
+<li class="toc-entry toc-h2"><a href="#class-of-np-problems">Class of “NP” problems</a></li>
+<li class="toc-entry toc-h2"><a href="#is-p--np">Is P = NP?</a></li>
+<li class="toc-entry toc-h2"><a href="#reductions">Reductions</a></li>
+<li class="toc-entry toc-h2"><a href="#polynomial-reductions">Polynomial reductions</a></li>
+<li class="toc-entry toc-h2"><a href="#np-completeness">NP-completeness</a></li>
+<li class="toc-entry toc-h2"><a href="#providing-np-completeness-in-practice">Providing NP-completeness in practice</a></li>
+<li class="toc-entry toc-h2"><a href="#p--np-complete-problems">P &amp; NP-complete problems</a></li>
+<li class="toc-entry toc-h2"><a href="#satisfiability-problem-sat">Satisfiability problem (SAT)</a></li>
+<li class="toc-entry toc-h2"><a href="#cnf-satisfiability">CNF satisfiability</a></li>
+<li class="toc-entry toc-h2"><a href="#3-cnf-satisfiability-3-sat">3-CNF satisfiability (3-SAT)</a></li>
+<li class="toc-entry toc-h2"><a href="#clique">Clique</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#clique-verifier">Clique verifier</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#classes-of-problems">Classes of problems</a></li>
+</ul>
+</li>
+</ul><h1 id="algorithms-final-summary">
+<a class="anchor" href="#algorithms-final-summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithms final summary</h1>
+
+<h2 id="how-do-we-represent-graphs">
+<a class="anchor" href="#how-do-we-represent-graphs" aria-hidden="true"><span class="octicon octicon-link"></span></a>How do we represent graphs?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209000613505.png" alt="image-20211209000613505"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209000621212.png" alt="image-20211209000621212"></p>
+
+<h2 id="trade-offs">
+<a class="anchor" href="#trade-offs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trade-offs</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209000632595.png" alt="image-20211209000632595"></p>
+
+<h2 id="dfs">
+<a class="anchor" href="#dfs" aria-hidden="true"><span class="octicon octicon-link"></span></a>DFS</h2>
+
+<h3 id="running-time-to-explore-just-the-connected-component-we-started-in">
+<a class="anchor" href="#running-time-to-explore-just-the-connected-component-we-started-in" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running time to explore just the connected component we started in</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209000717087.png" alt="image-20211209000717087"></p>
+
+<h2 id="topological-ordering">
+<a class="anchor" href="#topological-ordering" aria-hidden="true"><span class="octicon octicon-link"></span></a>Topological ordering</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209000831977.png" alt="image-20211209000831977"></p>
+
+<h3 id="dag-directed-acyclic-graph">
+<a class="anchor" href="#dag-directed-acyclic-graph" aria-hidden="true"><span class="octicon octicon-link"></span></a>DAG (Directed Acyclic Graph)</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209000759261.png" alt="image-20211209000759261"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209000811117.png" alt="image-20211209000811117"></p>
+
+<p>directed graph with no directed cycles</p>
+
+<h3 id="finish-times-seems-useful">
+<a class="anchor" href="#finish-times-seems-useful" aria-hidden="true"><span class="octicon octicon-link"></span></a>Finish times seems useful</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209000845819.png" alt="image-20211209000845819"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209000857699.png" alt="image-20211209000857699"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209000925934.png" alt="image-20211209000925934"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209000931435.png" alt="image-20211209000931435"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209000948588.png" alt="image-20211209000948588"></p>
+
+<h2 id="bfs">
+<a class="anchor" href="#bfs" aria-hidden="true"><span class="octicon octicon-link"></span></a>BFS</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209001004783.png" alt="image-20211209001004783"></p>
+
+<h3 id="running-time-to-explore-the-whole-thing">
+<a class="anchor" href="#running-time-to-explore-the-whole-thing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running time to explore the whole thing</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209001215828.png" alt="image-20211209001215828"></p>
+
+<h3 id="shortest-path">
+<a class="anchor" href="#shortest-path" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortest path</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209001229430.png" alt="image-20211209001229430"></p>
+
+<h2 id="shortest-path-problem">
+<a class="anchor" href="#shortest-path-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shortest path problem</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209001309197.png" alt="image-20211209001309197"></p>
+
+<h2 id="dijkstra-algorithm">
+<a class="anchor" href="#dijkstra-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dijkstra algorithm</h2>
+
+<p><img src="C:%5CUsers%5CSiyun%5COneDrive%5Cproject%5CKevin_Min%5Cimages%5C2021-12-09-algorithms-final%5Cimage-20211209000434398.png" alt="image-20211209000434398"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209001335284.png" alt="image-20211209001335284"></p>
+
+<h3 id="why-does-this-work">
+<a class="anchor" href="#why-does-this-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why does this work?</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209002512642.png" alt="image-20211209002512642"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209002004336.png" alt="image-20211209002004336"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209002130087.png" alt="image-20211209002130087"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209002249578.png" alt="image-20211209002249578"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209002331356.png" alt="image-20211209002331356"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209002352183.png" alt="image-20211209002352183"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209002447072.png" alt="image-20211209002447072"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209002536085.png" alt="image-20211209002536085"></p>
+
+<h3 id="running-time">
+<a class="anchor" href="#running-time" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running time</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209002549675.png" alt="image-20211209002549675"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209002803483.png" alt="image-20211209002803483"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209002809127.png" alt="image-20211209002809127"></p>
+
+<h3 id="if-we-use-a-red-black-tree">
+<a class="anchor" href="#if-we-use-a-red-black-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>If we use a red-black tree</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209002821345.png" alt="image-20211209002821345"></p>
+
+<h3 id="dijkstra-drawbacks">
+<a class="anchor" href="#dijkstra-drawbacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dijkstra drawbacks</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209005014090.png" alt="image-20211209005014090"></p>
+
+<h2 id="bellman-ford">
+<a class="anchor" href="#bellman-ford" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bellman-Ford</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209005335064.png" alt="image-20211209005335064"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209005359661.png" alt="image-20211209005359661"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209005413194.png" alt="image-20211209005413194"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209005549151.png" alt="image-20211209005549151"></p>
+
+<h3 id="running-time-1">
+<a class="anchor" href="#running-time-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running time</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209005614527.png" alt="image-20211209005614527"></p>
+
+<h3 id="bellman-ford-and-negative-edge-weights">
+<a class="anchor" href="#bellman-ford-and-negative-edge-weights" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bellman-Ford and negative edge weights</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209005635278.png" alt="image-20211209005635278"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209005849648.png" alt="image-20211209005849648"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209005857800.png" alt="image-20211209005857800"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209013121078.png" alt="image-20211209013121078"></p>
+
+<h2 id="recap-shortest-paths">
+<a class="anchor" href="#recap-shortest-paths" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recap: shortest paths</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209013207753.png" alt="image-20211209013207753"></p>
+
+<h2 id="dynamic-programming">
+<a class="anchor" href="#dynamic-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic programming</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209013510782.png" alt="image-20211209013510782"></p>
+
+<h3 id="elements-of-dynamic-programming">
+<a class="anchor" href="#elements-of-dynamic-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Elements of dynamic programming</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209013541321.png" alt="image-20211209013541321"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209013616339.png" alt="image-20211209013616339"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209013628300.png" alt="image-20211209013628300"></p>
+
+<h2 id="bottom-up-approach">
+<a class="anchor" href="#bottom-up-approach" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bottom up approach</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209013652718.png" alt="image-20211209013652718"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209013707973.png" alt="image-20211209013707973"></p>
+
+<h2 id="top-down-approach">
+<a class="anchor" href="#top-down-approach" aria-hidden="true"><span class="octicon octicon-link"></span></a>Top down approach</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209013719208.png" alt="image-20211209013719208"></p>
+
+<h2 id="floyd-warshall">
+<a class="anchor" href="#floyd-warshall" aria-hidden="true"><span class="octicon octicon-link"></span></a>Floyd-Warshall</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209013837247.png" alt="image-20211209013837247"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209013845254.png" alt="image-20211209013845254"></p>
+
+<h3 id="optimal-substructure">
+<a class="anchor" href="#optimal-substructure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimal substructure</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209013902576.png" alt="image-20211209013902576"></p>
+
+<h3 id="how-can-we-find-dku-v-using-dk-1">
+<a class="anchor" href="#how-can-we-find-dku-v-using-dk-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>How can we find $D^{k}[u, v]$ using $D^{k-1}$</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014219712.png" alt="image-20211209014219712"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014227969.png" alt="image-20211209014227969"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014233898.png" alt="image-20211209014233898"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014322974.png" alt="image-20211209014322974"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014330876.png" alt="image-20211209014330876"></p>
+
+<h2 id="floyd-warshall-algorithm">
+<a class="anchor" href="#floyd-warshall-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Floyd-Warshall algorithm</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014349302.png" alt="image-20211209014349302"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014401446.png" alt="image-20211209014401446"></p>
+
+<h2 id="graph-algorithms">
+<a class="anchor" href="#graph-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Graph algorithms</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014439149.png" alt="image-20211209014439149"></p>
+
+<h2 id="recap">
+<a class="anchor" href="#recap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recap</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014543078.png" alt="image-20211209014543078"></p>
+
+<h2 id="longest-common-subsequence">
+<a class="anchor" href="#longest-common-subsequence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Longest common subsequence</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014616466.png" alt="image-20211209014616466"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014623288.png" alt="image-20211209014623288"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014633642.png" alt="image-20211209014633642"></p>
+
+<h2 id="recipe-for-applying-dynamic-programming">
+<a class="anchor" href="#recipe-for-applying-dynamic-programming" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recipe for applying dynamic programming</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014654548.png" alt="image-20211209014654548"></p>
+
+<h2 id="step-1-optimal-substructure">
+<a class="anchor" href="#step-1-optimal-substructure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: optimal substructure</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014724644.png" alt="image-20211209014724644"></p>
+
+<h2 id="step-2-find-a-recursive-formulation-for-the-length-of-the-longest-common-subsequence">
+<a class="anchor" href="#step-2-find-a-recursive-formulation-for-the-length-of-the-longest-common-subsequence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: find a recursive formulation for the length of the longest common subsequence</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014817181.png" alt="image-20211209014817181"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014843751.png" alt="image-20211209014843751"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209014900506.png" alt="image-20211209014900506"></p>
+
+<h2 id="step-3-use-dynamic-programming-to-find-the-length-of-the-longest-common-subsequence">
+<a class="anchor" href="#step-3-use-dynamic-programming-to-find-the-length-of-the-longest-common-subsequence" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 3: use dynamic programming to find the length of the longest common subsequence</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209015015942.png" alt="image-20211209015015942"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209015039116.png" alt="image-20211209015039116"></p>
+
+<h2 id="step-4-if-needed-keep-track-of-some-additional-info-so-that-the-algorithm-from-step-3-can-find-the-actual-lcs">
+<a class="anchor" href="#step-4-if-needed-keep-track-of-some-additional-info-so-that-the-algorithm-from-step-3-can-find-the-actual-lcs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 4: If needed, keep track of some additional info so that the algorithm from step 3 can find the actual LCS.</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209015112353.png" alt="image-20211209015112353"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209015120089.png" alt="image-20211209015120089"></p>
+
+<h2 id="step-5-if-needed-code-this-up-like-a-reasonable-person">
+<a class="anchor" href="#step-5-if-needed-code-this-up-like-a-reasonable-person" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 5: if needed, code this up like a reasonable person</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209015202864.png" alt="image-20211209015202864"></p>
+
+<h2 id="knapsack">
+<a class="anchor" href="#knapsack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Knapsack</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209015228375.png" alt="image-20211209015228375"></p>
+
+<h2 id="step-1-identify-optimal-substructure">
+<a class="anchor" href="#step-1-identify-optimal-substructure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: Identify optimal substructure</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209015846410.png" alt="image-20211209015846410"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209015856760.png" alt="image-20211209015856760"></p>
+
+<h2 id="step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution">
+<a class="anchor" href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: Find a recursive formulation for the value of the optimal solution</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209015937256.png" alt="image-20211209015937256"></p>
+
+<h2 id="step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution">
+<a class="anchor" href="#step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 3: Use dynamic programming to find the value of the optimal solution</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020001333.png" alt="image-20211209020001333"></p>
+
+<h2 id="step-4-if-needed-keep-track-of-some-additional-info-so-that-the-algorithm-from-step-3-can-find-the-actual-solution">
+<a class="anchor" href="#step-4-if-needed-keep-track-of-some-additional-info-so-that-the-algorithm-from-step-3-can-find-the-actual-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 4: If needed, keep track of some additional info so that the algorithm from step 3 can find the actual solution.</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020034357.png" alt="image-20211209020034357"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020044601.png" alt="image-20211209020044601"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020056804.png" alt="image-20211209020056804"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020124989.png" alt="image-20211209020124989"></p>
+
+<h2 id="01-knapsack">
+<a class="anchor" href="#01-knapsack" aria-hidden="true"><span class="octicon octicon-link"></span></a>0/1 knapsack</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020149430.png" alt="image-20211209020149430"></p>
+
+<h2 id="step-1-identify-optimal-substructure-1">
+<a class="anchor" href="#step-1-identify-optimal-substructure-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: identify optimal substructure</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020204533.png" alt="image-20211209020204533"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020213417.png" alt="image-20211209020213417"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020228603.png" alt="image-20211209020228603"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020241679.png" alt="image-20211209020241679"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020249164.png" alt="image-20211209020249164"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020259097.png" alt="image-20211209020259097"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020655701.png" alt="image-20211209020655701"></p>
+
+<h2 id="step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-1">
+<a class="anchor" href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: find a recursive formulation for the value of the optimal solution</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020722384.png" alt="image-20211209020722384"></p>
+
+<h2 id="step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution-1">
+<a class="anchor" href="#step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 3: use dynamic programming to find the value of the optimal solution</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020752779.png" alt="image-20211209020752779"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020817580.png" alt="image-20211209020817580"></p>
+
+<h2 id="question-how-did-we-know-which-substructure-to-use-in-which-variant-of-knapsack">
+<a class="anchor" href="#question-how-did-we-know-which-substructure-to-use-in-which-variant-of-knapsack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Question: how did we know which substructure to use in which variant of knapsack?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020849652.png" alt="image-20211209020849652"></p>
+
+<h2 id="independent-set">
+<a class="anchor" href="#independent-set" aria-hidden="true"><span class="octicon octicon-link"></span></a>Independent set</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209020920665.png" alt="image-20211209020920665"></p>
+
+<h2 id="np-complete">
+<a class="anchor" href="#np-complete" aria-hidden="true"><span class="octicon octicon-link"></span></a>NP-complete</h2>
+
+<p>so we are unlikely to find an efficient algorithm.</p>
+
+<h2 id="step-1-identify-optimal-substructure-2">
+<a class="anchor" href="#step-1-identify-optimal-substructure-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1: Identify optimal substructure</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021025874.png" alt="image-20211209021025874"></p>
+
+<h3 id="case-1-the-root-is-not-in-a-maximal-independent-set">
+<a class="anchor" href="#case-1-the-root-is-not-in-a-maximal-independent-set" aria-hidden="true"><span class="octicon octicon-link"></span></a>Case 1: the root is not in a maximal independent set</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021047954.png" alt="image-20211209021047954"></p>
+
+<h3 id="case-2-the-root-is-in-a-maximal-independent-set">
+<a class="anchor" href="#case-2-the-root-is-in-a-maximal-independent-set" aria-hidden="true"><span class="octicon octicon-link"></span></a>Case 2: the root is in a maximal independent set</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021103251.png" alt="image-20211209021103251"></p>
+
+<h2 id="step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-2">
+<a class="anchor" href="#step-2-find-a-recursive-formulation-for-the-value-of-the-optimal-solution-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2: find a recursive formulation for the value of the optimal solution</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021123134.png" alt="image-20211209021123134"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021139075.png" alt="image-20211209021139075"></p>
+
+<h2 id="step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution-2">
+<a class="anchor" href="#step-3-use-dynamic-programming-to-find-the-value-of-the-optimal-solution-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 3: use dynamic programming to find the value of the optimal solution</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021201306.png" alt="image-20211209021201306"></p>
+
+<h2 id="greedy-algorithms">
+<a class="anchor" href="#greedy-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Greedy algorithms</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021324373.png" alt="image-20211209021324373"></p>
+
+<h3 id="unbounded-knapsack">
+<a class="anchor" href="#unbounded-knapsack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unbounded knapsack</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021345116.png" alt="image-20211209021345116"></p>
+
+<h2 id="activity-selection">
+<a class="anchor" href="#activity-selection" aria-hidden="true"><span class="octicon octicon-link"></span></a>Activity selection</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021408630.png" alt="image-20211209021408630"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021414684.png" alt="image-20211209021414684"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021421917.png" alt="image-20211209021421917"></p>
+
+<h3 id="at-least-its-fast">
+<a class="anchor" href="#at-least-its-fast" aria-hidden="true"><span class="octicon octicon-link"></span></a>At least it’s fast</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021433300.png" alt="image-20211209021433300"></p>
+
+<h2 id="what-makes-it-greedy">
+<a class="anchor" href="#what-makes-it-greedy" aria-hidden="true"><span class="octicon octicon-link"></span></a>What makes it greedy?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021444945.png" alt="image-20211209021444945"></p>
+
+<h2 id="three-questions">
+<a class="anchor" href="#three-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Three questions</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021457797.png" alt="image-20211209021457797"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021521186.png" alt="image-20211209021521186"></p>
+
+<h2 id="sub-problem-graph-view">
+<a class="anchor" href="#sub-problem-graph-view" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sub-problem graph view</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021656538.png" alt="image-20211209021656538"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021702523.png" alt="image-20211209021702523"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021707642.png" alt="image-20211209021707642"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021715120.png" alt="image-20211209021715120"></p>
+
+<h2 id="huffman-coding">
+<a class="anchor" href="#huffman-coding" aria-hidden="true"><span class="octicon octicon-link"></span></a>Huffman coding</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209021950587.png" alt="image-20211209021950587"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022023177.png" alt="image-20211209022023177"></p>
+
+<h2 id="minimum-spanning-tree">
+<a class="anchor" href="#minimum-spanning-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Minimum spanning tree</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022115678.png" alt="image-20211209022115678"></p>
+
+<h2 id="prims-algorithm">
+<a class="anchor" href="#prims-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prim’s algorithm</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022141925.png" alt="image-20211209022141925"></p>
+
+<h2 id="kruskals-algorithm">
+<a class="anchor" href="#kruskals-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kruskal’s algorithm</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022219290.png" alt="image-20211209022219290"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022230484.png" alt="image-20211209022230484"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022237293.png" alt="image-20211209022237293"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022256998.png" alt="image-20211209022256998"></p>
+
+<h2 id="both-prim-and-kruskal">
+<a class="anchor" href="#both-prim-and-kruskal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Both Prim and Kruskal</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022318333.png" alt="image-20211209022318333"></p>
+
+<h2 id="class-of-p-problems">
+<a class="anchor" href="#class-of-p-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class of “P” problems</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022503811.png" alt="image-20211209022503811"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022514576.png" alt="image-20211209022514576"></p>
+
+<h2 id="tractable--intractable-problems">
+<a class="anchor" href="#tractable--intractable-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tractable / Intractable problems</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022530970.png" alt="image-20211209022530970"></p>
+
+<h2 id="hamiltonian-cycle">
+<a class="anchor" href="#hamiltonian-cycle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hamiltonian cycle</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022658129.png" alt="image-20211209022658129"></p>
+
+<h2 id="traveling-salesman-problem">
+<a class="anchor" href="#traveling-salesman-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>Traveling salesman problem</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022712564.png" alt="image-20211209022712564"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022725181.png" alt="image-20211209022725181"></p>
+
+<h2 id="intractable-problems">
+<a class="anchor" href="#intractable-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Intractable problems</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022736552.png" alt="image-20211209022736552"></p>
+
+<h2 id="p-vs-np">
+<a class="anchor" href="#p-vs-np" aria-hidden="true"><span class="octicon octicon-link"></span></a>P vs. NP</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022753608.png" alt="image-20211209022753608"></p>
+
+<h2 id="nondeterministic-algorithms">
+<a class="anchor" href="#nondeterministic-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nondeterministic algorithms</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022808803.png" alt="image-20211209022808803"></p>
+
+<h2 id="nondeterministic-and-np-algorithms">
+<a class="anchor" href="#nondeterministic-and-np-algorithms" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nondeterministic and NP algorithms</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022821913.png" alt="image-20211209022821913"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022836427.png" alt="image-20211209022836427"></p>
+
+<h2 id="class-of-np-problems">
+<a class="anchor" href="#class-of-np-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class of “NP” problems</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022913587.png" alt="image-20211209022913587"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022932710.png" alt="image-20211209022932710"></p>
+
+<h2 id="is-p--np">
+<a class="anchor" href="#is-p--np" aria-hidden="true"><span class="octicon octicon-link"></span></a>Is P = NP?</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209022959233.png" alt="image-20211209022959233"></p>
+
+<h2 id="reductions">
+<a class="anchor" href="#reductions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reductions</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023036923.png" alt="image-20211209023036923"></p>
+
+<h2 id="polynomial-reductions">
+<a class="anchor" href="#polynomial-reductions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Polynomial reductions</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023052857.png" alt="image-20211209023052857"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023101335.png" alt="image-20211209023101335"></p>
+
+<h2 id="np-completeness">
+<a class="anchor" href="#np-completeness" aria-hidden="true"><span class="octicon octicon-link"></span></a>NP-completeness</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023119201.png" alt="image-20211209023119201"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023131816.png" alt="image-20211209023131816"></p>
+
+<h2 id="providing-np-completeness-in-practice">
+<a class="anchor" href="#providing-np-completeness-in-practice" aria-hidden="true"><span class="octicon octicon-link"></span></a>Providing NP-completeness in practice</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023211015.png" alt="image-20211209023211015"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023219814.png" alt="image-20211209023219814"></p>
+
+<h2 id="p--np-complete-problems">
+<a class="anchor" href="#p--np-complete-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>P &amp; NP-complete problems</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023254097.png" alt="image-20211209023254097"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023301368.png" alt="image-20211209023301368"></p>
+
+<h2 id="satisfiability-problem-sat">
+<a class="anchor" href="#satisfiability-problem-sat" aria-hidden="true"><span class="octicon octicon-link"></span></a>Satisfiability problem (SAT)</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023325167.png" alt="image-20211209023325167"></p>
+
+<h2 id="cnf-satisfiability">
+<a class="anchor" href="#cnf-satisfiability" aria-hidden="true"><span class="octicon octicon-link"></span></a>CNF satisfiability</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023337145.png" alt="image-20211209023337145"></p>
+
+<h2 id="3-cnf-satisfiability-3-sat">
+<a class="anchor" href="#3-cnf-satisfiability-3-sat" aria-hidden="true"><span class="octicon octicon-link"></span></a>3-CNF satisfiability (3-SAT)</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023353343.png" alt="image-20211209023353343"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023400463.png" alt="image-20211209023400463"></p>
+
+<h2 id="clique">
+<a class="anchor" href="#clique" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clique<img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023409704.png" alt="image-20211209023409704">
+</h2>
+
+<h3 id="clique-verifier">
+<a class="anchor" href="#clique-verifier" aria-hidden="true"><span class="octicon octicon-link"></span></a>Clique verifier</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023425272.png" alt="image-20211209023425272"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023432422.png" alt="image-20211209023432422"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023440986.png" alt="image-20211209023440986"></p>
+
+<h2 id="classes-of-problems">
+<a class="anchor" href="#classes-of-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classes of problems</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209023501263.png" alt="image-20211209023501263"></p>
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/12/09/algorithms-final-summary.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
