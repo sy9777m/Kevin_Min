@@ -65,7 +65,7 @@ directed graph with no directed cycles
 
 ## Dijkstra algorithm
 
-![image-20211209000434398](C:\Users\Siyun\OneDrive\project\Kevin_Min\images\2021-12-09-algorithms-final\image-20211209000434398.png)
+![image-20211209000434398](/Kevin_Min/images/2021-12-09-algorithms-final/image-20211209000434398.png)
 
 ![image-20211209001335284](/Kevin_Min/images/2021-12-09-algorithms-final-summary/image-20211209001335284.png)
 
