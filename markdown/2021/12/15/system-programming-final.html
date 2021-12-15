@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>System Programming final | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="System Programming final" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Soongsil University 2-2 System Programming final summary." />
+<meta property="og:description" content="Soongsil University 2-2 System Programming final summary." />
+<link rel="canonical" href="https://sy9777m.github.io/Kevin_Min/markdown/2021/12/15/system-programming-final.html" />
+<meta property="og:url" content="https://sy9777m.github.io/Kevin_Min/markdown/2021/12/15/system-programming-final.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-12-15T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2021-12-15T00:00:00-06:00","url":"https://sy9777m.github.io/Kevin_Min/markdown/2021/12/15/system-programming-final.html","@type":"BlogPosting","headline":"System Programming final","dateModified":"2021-12-15T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://sy9777m.github.io/Kevin_Min/markdown/2021/12/15/system-programming-final.html"},"description":"Soongsil University 2-2 System Programming final summary.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/Kevin_Min/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://sy9777m.github.io/Kevin_Min/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Kevin_Min/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.css" integrity="sha512-h7nl+xz8wgDlNM4NqKEM4F1NkIRS17M9+uJwIGwuo8vGqIl4BhuCKdxjWEINm+xyrUjNCnK5dCrhM0sj+wTIXw==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/katex.min.js" integrity="sha512-/CMIhXiDA3m2c9kzRyd97MTb3MC6OVnx4TElQ7fkkoRghwDf6gi41gaT1PwF270W6+J60uTmwgeRpNpJdRV6sg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.12.0/contrib/auto-render.min.js" integrity="sha512-Do7uJAaHZm5OLrIv/yN4w0iG1dbu01kzdMNnFfu/mAqgUk6Nniv2JYHcwH+cNwjqgLcqcuBBk+JRvprLVI8azg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha512-0doc9hKxR3PYwso42RD1p5ySZpzzuDiOwMrdCEh2WdJZCjcmFKc/wEnL+z8fBQrnHoiNWbo+3fiGkOYXBdQp4A==" crossorigin="anonymous"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+        ]}
+        );
+    });
+    </script>
+
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/Kevin_Min/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/Kevin_Min/about/">About Me</a><a class="page-link" href="/Kevin_Min/search/">Search</a><a class="page-link" href="/Kevin_Min/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">System Programming final</h1><p class="page-description">Soongsil University 2-2 System Programming final summary.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-12-15T00:00:00-06:00" itemprop="datePublished">
+        Dec 15, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/Kevin_Min/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#system-programming-final">System Programming final</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#optimization">Optimization</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#performance-realities">Performance realities</a></li>
+<li class="toc-entry toc-h3"><a href="#optimizing-compilers">Optimizing compilers</a></li>
+<li class="toc-entry toc-h3"><a href="#limitations-of-optimizing-compilers">Limitations of optimizing compilers</a></li>
+<li class="toc-entry toc-h3"><a href="#optimization-blocker-1-memory-aliasing">Optimization blocker #1: Memory Aliasing</a></li>
+<li class="toc-entry toc-h3"><a href="#optimization-blocker-2-procedure-calls">Optimization blocker #2: Procedure calls</a></li>
+<li class="toc-entry toc-h3"><a href="#modern-cpu-design">Modern CPU design</a></li>
+<li class="toc-entry toc-h3"><a href="#superscalar-processor">Superscalar processor</a></li>
+<li class="toc-entry toc-h3"><a href="#getting-high-performance">Getting high performance</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#memory-hierarchy">Memory hierarchy</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#random-access-memory-ram">Random-access memory (RAM)</a></li>
+<li class="toc-entry toc-h3"><a href="#nonvolatile-memories">Nonvolatile memories</a></li>
+<li class="toc-entry toc-h3"><a href="#traditional-bus-structure-connecting-cpu-and-memory">Traditional bus structure connecting CPU and memory</a></li>
+<li class="toc-entry toc-h3"><a href="#memory-readwrite-transaction">Memory read/write transaction</a></li>
+<li class="toc-entry toc-h3"><a href="#whats-inside-a-disk-drive">What’s inside a disk drive?</a></li>
+<li class="toc-entry toc-h3"><a href="#disk-geometry">Disk geometry</a></li>
+<li class="toc-entry toc-h3"><a href="#disk-capacity">Disk capacity</a></li>
+<li class="toc-entry toc-h3"><a href="#recording-zones">Recording zones</a></li>
+<li class="toc-entry toc-h3"><a href="#computing-disk-capacity">Computing disk capacity</a></li>
+<li class="toc-entry toc-h3"><a href="#disk-operation">Disk operation</a></li>
+<li class="toc-entry toc-h3"><a href="#disk-structure">Disk structure</a></li>
+<li class="toc-entry toc-h3"><a href="#disk-access">Disk access</a></li>
+<li class="toc-entry toc-h3"><a href="#disk-access-time">Disk access time</a></li>
+<li class="toc-entry toc-h3"><a href="#logical-disk-blocks">Logical disk blocks</a></li>
+<li class="toc-entry toc-h3"><a href="#io-bus">I/O bus</a></li>
+<li class="toc-entry toc-h3"><a href="#reading-a-disk-sector">Reading a disk sector</a></li>
+<li class="toc-entry toc-h3"><a href="#solid-state-disks-ssd">Solid state disks (SSD)</a></li>
+<li class="toc-entry toc-h3"><a href="#ssd-performance-characteristics">SSD performance characteristics</a></li>
+<li class="toc-entry toc-h3"><a href="#ssd-tradeoffs-vs-rotating-disks">SSD tradeoffs vs rotating disks</a></li>
+<li class="toc-entry toc-h3"><a href="#the-cpu-memory-gap">The CPU-Memory gap</a></li>
+<li class="toc-entry toc-h3"><a href="#locality">Locality</a></li>
+<li class="toc-entry toc-h3"><a href="#qualitative-estimates-of-locality">Qualitative estimates of locality</a></li>
+<li class="toc-entry toc-h3"><a href="#memory-hierarchies">Memory hierarchies</a></li>
+<li class="toc-entry toc-h3"><a href="#caches">Caches</a></li>
+<li class="toc-entry toc-h3"><a href="#general-cache-concepts">General cache concepts</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#general-cache-concepts-hit">General cache concepts: hit</a></li>
+<li class="toc-entry toc-h4"><a href="#general-cache-concepts-miss">General cache concepts: miss</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#general-caching-concepts-types-of-cache-misses">General caching concepts: types of cache misses</a></li>
+<li class="toc-entry toc-h3"><a href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#linking">Linking</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#static-linking">Static linking</a></li>
+<li class="toc-entry toc-h3"><a href="#why-linkers">Why linkers?</a></li>
+<li class="toc-entry toc-h3"><a href="#what-do-linkers-do">What do linkers do?</a></li>
+<li class="toc-entry toc-h3"><a href="#three-kinds-of-object-files-modules">Three kinds of object files (modules)</a></li>
+<li class="toc-entry toc-h3"><a href="#executable-and-linkable-format-elf">Executable and linkable format (ELF)</a></li>
+<li class="toc-entry toc-h3"><a href="#elf-object-file-format">ELF object file format</a></li>
+<li class="toc-entry toc-h3"><a href="#linker-symbols">Linker symbols</a></li>
+<li class="toc-entry toc-h3"><a href="#steps-symbol-resolution">Steps: symbol resolution</a></li>
+<li class="toc-entry toc-h3"><a href="#local-symbols">Local symbols</a></li>
+<li class="toc-entry toc-h3"><a href="#how-linker-resolves-duplicate-symbol-definitions">How linker resolves duplicate symbol definitions</a></li>
+<li class="toc-entry toc-h3"><a href="#linkers-symbol-rules">Linker’s symbol rules</a></li>
+<li class="toc-entry toc-h3"><a href="#linker-puzzles">Linker puzzles</a></li>
+<li class="toc-entry toc-h3"><a href="#example">Example</a></li>
+<li class="toc-entry toc-h3"><a href="#global-variables">Global variables</a></li>
+<li class="toc-entry toc-h3"><a href="#steps-relocation">Steps: relocation</a></li>
+<li class="toc-entry toc-h3"><a href="#loading-executable-object-files">Loading executable object files</a></li>
+<li class="toc-entry toc-h3"><a href="#packing-commonly-used-functions">Packing commonly used functions</a></li>
+<li class="toc-entry toc-h3"><a href="#old-fashioned-solution-static-libraries">Old-fashioned solution: static libraries</a></li>
+<li class="toc-entry toc-h3"><a href="#creating-static-libraries">Creating static libraries</a></li>
+<li class="toc-entry toc-h3"><a href="#commonly-used-libraries">Commonly used libraries</a></li>
+<li class="toc-entry toc-h3"><a href="#linking-with-static-libraries">Linking with static libraries</a></li>
+<li class="toc-entry toc-h3"><a href="#using-static-libraries">Using static libraries</a></li>
+<li class="toc-entry toc-h3"><a href="#modern-solution-shared-libraries">Modern solution: shared libraries</a></li>
+<li class="toc-entry toc-h3"><a href="#dynamic-linking-at-load-time">Dynamic linking at load-time</a></li>
+<li class="toc-entry toc-h3"><a href="#dynamic-linking-at-run-time">Dynamic linking at run-time</a></li>
+<li class="toc-entry toc-h3"><a href="#linking-summary">Linking summary</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#library-interpositioning">Library interpositioning</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#some-interpositioning-applications">Some interpositioning applications</a></li>
+<li class="toc-entry toc-h3"><a href="#example-program">Example program</a></li>
+<li class="toc-entry toc-h3"><a href="#compile-time-interpositioning">Compile-time interpositioning</a></li>
+<li class="toc-entry toc-h3"><a href="#link-time-interpositioning">Link-time interpositioning</a></li>
+<li class="toc-entry toc-h3"><a href="#loadrun-time-interpositioning">Load/run-time interpositioning</a></li>
+<li class="toc-entry toc-h3"><a href="#interpositioning-recap">Interpositioning recap</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#exceptional-control-flow">Exceptional control flow</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#control-flow">Control flow</a></li>
+<li class="toc-entry toc-h3"><a href="#altering-the-control-flow">Altering the control flow</a></li>
+<li class="toc-entry toc-h3"><a href="#exceptional-control-flow-1">Exceptional control flow</a></li>
+<li class="toc-entry toc-h3"><a href="#exceptions">Exceptions</a></li>
+<li class="toc-entry toc-h3"><a href="#interrupt-vectors">Interrupt vectors</a></li>
+<li class="toc-entry toc-h3"><a href="#asynchronous-exceptions-interrupts">Asynchronous exceptions (interrupts)</a></li>
+<li class="toc-entry toc-h3"><a href="#synchronous-exceptions">Synchronous exceptions</a></li>
+<li class="toc-entry toc-h3"><a href="#trap-example-opening-file">Trap example: opening file</a></li>
+<li class="toc-entry toc-h3"><a href="#fault-example-page-fault">Fault example: page fault</a></li>
+<li class="toc-entry toc-h3"><a href="#faults-example-invalid-memory-reference">Faults example: invalid memory reference</a></li>
+<li class="toc-entry toc-h3"><a href="#exception-table-ia32-excerpt">Exception table IA32 (Excerpt)</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#processes">Processes</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#concurrent-processes">concurrent processes</a></li>
+<li class="toc-entry toc-h3"><a href="#user-view-of-concurrent-processes">User view of concurrent processes</a></li>
+<li class="toc-entry toc-h3"><a href="#context-switching">Context switching</a></li>
+<li class="toc-entry toc-h3"><a href="#fork-creating-new-processes">fork: creating new processes</a></li>
+<li class="toc-entry toc-h3"><a href="#exit-ending-a-process">exit: ending a process</a></li>
+<li class="toc-entry toc-h3"><a href="#zombies">Zombies</a></li>
+<li class="toc-entry toc-h3"><a href="#wait-synchronizing-with-children">wait: synchronizing with children</a></li>
+<li class="toc-entry toc-h3"><a href="#waitpid-waiting-for-a-specific-process">waitpid(): waiting for a specific process</a></li>
+<li class="toc-entry toc-h3"><a href="#execve-loading-and-running-programs">execve: loading and running programs</a></li>
+<li class="toc-entry toc-h3"><a href="#summary-1">Summary</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#exceptional-control-flow-signals">Exceptional control flow: signals</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#the-world-of-multitasking">The world of multitasking</a></li>
+<li class="toc-entry toc-h3"><a href="#programmers-model-of-multitasking">Programmer’s model of multitasking</a></li>
+<li class="toc-entry toc-h3"><a href="#unix-process-hierarchy">Unix process hierarchy</a></li>
+<li class="toc-entry toc-h3"><a href="#shell-programs">Shell programs</a></li>
+<li class="toc-entry toc-h3"><a href="#simple-shell-eval-function">Simple shell eval function</a></li>
+<li class="toc-entry toc-h3"><a href="#what-is-a-background-job">What is a background job?</a></li>
+<li class="toc-entry toc-h3"><a href="#problem-with-simple-shell-example">Problem with simple shell example</a></li>
+<li class="toc-entry toc-h3"><a href="#ecf-to-the-rescue">ECF to the rescue!</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#signals">Signals</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#sending-a-signal">Sending a signal</a></li>
+<li class="toc-entry toc-h3"><a href="#receiving-a-signal">Receiving a signal</a></li>
+<li class="toc-entry toc-h3"><a href="#pending-and-blocked-signals">Pending and blocked signals</a></li>
+<li class="toc-entry toc-h3"><a href="#signal-concepts">Signal concepts</a></li>
+<li class="toc-entry toc-h3"><a href="#process-groups">Process groups</a></li>
+<li class="toc-entry toc-h3"><a href="#sending-signals-with-binkill-program">Sending signals with /bin/kill program</a></li>
+<li class="toc-entry toc-h3"><a href="#sending-signals-from-the-keyboard">Sending signals from the keyboard</a></li>
+<li class="toc-entry toc-h3"><a href="#receiving-signals">Receiving signals</a></li>
+<li class="toc-entry toc-h3"><a href="#default-actions">Default actions</a></li>
+<li class="toc-entry toc-h3"><a href="#installing-signal-handlers">Installing signal handlers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h1 id="system-programming-final">
+<a class="anchor" href="#system-programming-final" aria-hidden="true"><span class="octicon octicon-link"></span></a>System Programming final</h1>
+
+<h2 id="optimization">
+<a class="anchor" href="#optimization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimization</h2>
+
+<h3 id="performance-realities">
+<a class="anchor" href="#performance-realities" aria-hidden="true"><span class="octicon octicon-link"></span></a>Performance realities</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215144546753.png" alt="image-20211215144546753"></p>
+
+<h3 id="optimizing-compilers">
+<a class="anchor" href="#optimizing-compilers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimizing compilers</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215144725841.png" alt="image-20211215144725841"></p>
+
+<h3 id="limitations-of-optimizing-compilers">
+<a class="anchor" href="#limitations-of-optimizing-compilers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Limitations of optimizing compilers</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215144905925.png" alt="image-20211215144905925"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215144849316.png" alt="image-20211215144849316"></p>
+
+<h3 id="optimization-blocker-1-memory-aliasing">
+<a class="anchor" href="#optimization-blocker-1-memory-aliasing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimization blocker #1: Memory Aliasing</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215145343566.png" alt="image-20211215145343566"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215145419970.png" alt="image-20211215145419970"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215145428740.png" alt="image-20211215145428740"></p>
+
+<h3 id="optimization-blocker-2-procedure-calls">
+<a class="anchor" href="#optimization-blocker-2-procedure-calls" aria-hidden="true"><span class="octicon octicon-link"></span></a>Optimization blocker #2: Procedure calls</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215145508439.png" alt="image-20211215145508439"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215145725188.png" alt="image-20211215145725188"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215145752636.png" alt="image-20211215145752636"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215145800308.png" alt="image-20211215145800308"></p>
+
+<h3 id="modern-cpu-design">
+<a class="anchor" href="#modern-cpu-design" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modern CPU design</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215145928096.png" alt="image-20211215145928096"></p>
+
+<h3 id="superscalar-processor">
+<a class="anchor" href="#superscalar-processor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Superscalar processor</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150002279.png" alt="image-20211215150002279"></p>
+
+<h3 id="getting-high-performance">
+<a class="anchor" href="#getting-high-performance" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting high performance</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150346399.png" alt="image-20211215150346399"></p>
+
+<h2 id="memory-hierarchy">
+<a class="anchor" href="#memory-hierarchy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Memory hierarchy</h2>
+
+<h3 id="random-access-memory-ram">
+<a class="anchor" href="#random-access-memory-ram" aria-hidden="true"><span class="octicon octicon-link"></span></a>Random-access memory (RAM)</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150432950.png" alt="image-20211215150432950"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150509856.png" alt="image-20211215150509856"></p>
+
+<h3 id="nonvolatile-memories">
+<a class="anchor" href="#nonvolatile-memories" aria-hidden="true"><span class="octicon octicon-link"></span></a>Nonvolatile memories</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150522743.png" alt="image-20211215150522743"></p>
+
+<h3 id="traditional-bus-structure-connecting-cpu-and-memory">
+<a class="anchor" href="#traditional-bus-structure-connecting-cpu-and-memory" aria-hidden="true"><span class="octicon octicon-link"></span></a>Traditional bus structure connecting CPU and memory</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150642886.png" alt="image-20211215150642886"></p>
+
+<h3 id="memory-readwrite-transaction">
+<a class="anchor" href="#memory-readwrite-transaction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Memory read/write transaction</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150703490.png" alt="image-20211215150703490"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150711785.png" alt="image-20211215150711785"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150722569.png" alt="image-20211215150722569"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150728435.png" alt="image-20211215150728435"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150744275.png" alt="image-20211215150744275"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150800301.png" alt="image-20211215150800301"></p>
+
+<h3 id="whats-inside-a-disk-drive">
+<a class="anchor" href="#whats-inside-a-disk-drive" aria-hidden="true"><span class="octicon octicon-link"></span></a>What’s inside a disk drive?</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150824606.png" alt="image-20211215150824606"></p>
+
+<h3 id="disk-geometry">
+<a class="anchor" href="#disk-geometry" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disk geometry</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150844651.png" alt="image-20211215150844651"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150906394.png" alt="image-20211215150906394"></p>
+
+<h3 id="disk-capacity">
+<a class="anchor" href="#disk-capacity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disk capacity</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215150917218.png" alt="image-20211215150917218"></p>
+
+<h3 id="recording-zones">
+<a class="anchor" href="#recording-zones" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recording zones</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151054065.png" alt="image-20211215151054065"></p>
+
+<h3 id="computing-disk-capacity">
+<a class="anchor" href="#computing-disk-capacity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Computing disk capacity</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151122100.png" alt="image-20211215151122100"></p>
+
+<h3 id="disk-operation">
+<a class="anchor" href="#disk-operation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disk operation</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151150203.png" alt="image-20211215151150203"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151200424.png" alt="image-20211215151200424"></p>
+
+<h3 id="disk-structure">
+<a class="anchor" href="#disk-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disk structure</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151225591.png" alt="image-20211215151225591"></p>
+
+<h3 id="disk-access">
+<a class="anchor" href="#disk-access" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disk access</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151236801.png" alt="image-20211215151236801"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151244304.png" alt="image-20211215151244304"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151251903.png" alt="image-20211215151251903"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151259432.png" alt="image-20211215151259432"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151306641.png" alt="image-20211215151306641"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151311831.png" alt="image-20211215151311831"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151318227.png" alt="image-20211215151318227"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151326242.png" alt="image-20211215151326242"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151332263.png" alt="image-20211215151332263"></p>
+
+<h3 id="disk-access-time">
+<a class="anchor" href="#disk-access-time" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disk access time</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151349882.png" alt="image-20211215151349882"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151400304.png" alt="image-20211215151400304"></p>
+
+<h3 id="logical-disk-blocks">
+<a class="anchor" href="#logical-disk-blocks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Logical disk blocks</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151431642.png" alt="image-20211215151431642"></p>
+
+<h3 id="io-bus">
+<a class="anchor" href="#io-bus" aria-hidden="true"><span class="octicon octicon-link"></span></a>I/O bus</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151530662.png" alt="image-20211215151530662"></p>
+
+<h3 id="reading-a-disk-sector">
+<a class="anchor" href="#reading-a-disk-sector" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading a disk sector</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151613808.png" alt="image-20211215151613808"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151624855.png" alt="image-20211215151624855"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151638756.png" alt="image-20211215151638756"></p>
+
+<h3 id="solid-state-disks-ssd">
+<a class="anchor" href="#solid-state-disks-ssd" aria-hidden="true"><span class="octicon octicon-link"></span></a>Solid state disks (SSD)</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151655459.png" alt="image-20211215151655459"></p>
+
+<h3 id="ssd-performance-characteristics">
+<a class="anchor" href="#ssd-performance-characteristics" aria-hidden="true"><span class="octicon octicon-link"></span></a>SSD performance characteristics</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151749406.png" alt="image-20211215151749406"></p>
+
+<h3 id="ssd-tradeoffs-vs-rotating-disks">
+<a class="anchor" href="#ssd-tradeoffs-vs-rotating-disks" aria-hidden="true"><span class="octicon octicon-link"></span></a>SSD tradeoffs vs rotating disks</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151818028.png" alt="image-20211215151818028"></p>
+
+<h3 id="the-cpu-memory-gap">
+<a class="anchor" href="#the-cpu-memory-gap" aria-hidden="true"><span class="octicon octicon-link"></span></a>The CPU-Memory gap</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151840596.png" alt="image-20211215151840596"></p>
+
+<h3 id="locality">
+<a class="anchor" href="#locality" aria-hidden="true"><span class="octicon octicon-link"></span></a>Locality</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151901313.png" alt="image-20211215151901313"></p>
+
+<p>Temporal locality - 썼던 거 또 쓸 가능성이 높다.</p>
+
+<p>Spatial locality - 썼던거에서 가까운 것을 쓸 가능성이 높다.</p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215151944282.png" alt="image-20211215151944282"></p>
+
+<h3 id="qualitative-estimates-of-locality">
+<a class="anchor" href="#qualitative-estimates-of-locality" aria-hidden="true"><span class="octicon octicon-link"></span></a>Qualitative estimates of locality</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152006223.png" alt="image-20211215152006223"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152033194.png" alt="image-20211215152033194"></p>
+
+<h3 id="memory-hierarchies">
+<a class="anchor" href="#memory-hierarchies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Memory hierarchies</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152130353.png" alt="image-20211215152130353"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152226080.png" alt="image-20211215152226080"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152628327.png" alt="image-20211215152628327"></p>
+
+<h3 id="caches">
+<a class="anchor" href="#caches" aria-hidden="true"><span class="octicon octicon-link"></span></a>Caches</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152309457.png" alt="image-20211215152309457"></p>
+
+<h3 id="general-cache-concepts">
+<a class="anchor" href="#general-cache-concepts" aria-hidden="true"><span class="octicon octicon-link"></span></a>General cache concepts</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152416373.png" alt="image-20211215152416373"></p>
+
+<h4 id="general-cache-concepts-hit">
+<a class="anchor" href="#general-cache-concepts-hit" aria-hidden="true"><span class="octicon octicon-link"></span></a>General cache concepts: hit</h4>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152431250.png" alt="image-20211215152431250"></p>
+
+<h4 id="general-cache-concepts-miss">
+<a class="anchor" href="#general-cache-concepts-miss" aria-hidden="true"><span class="octicon octicon-link"></span></a>General cache concepts: miss</h4>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152458178.png" alt="image-20211215152458178"></p>
+
+<h3 id="general-caching-concepts-types-of-cache-misses">
+<a class="anchor" href="#general-caching-concepts-types-of-cache-misses" aria-hidden="true"><span class="octicon octicon-link"></span></a>General caching concepts: types of cache misses</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152535039.png" alt="image-20211215152535039"></p>
+
+<h3 id="summary">
+<a class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152656484.png" alt="image-20211215152656484"></p>
+
+<h2 id="linking">
+<a class="anchor" href="#linking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linking</h2>
+
+<h3 id="static-linking">
+<a class="anchor" href="#static-linking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Static linking</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152720272.png" alt="image-20211215152720272"></p>
+
+<h3 id="why-linkers">
+<a class="anchor" href="#why-linkers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why linkers?</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152745875.png" alt="image-20211215152745875"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152756740.png" alt="image-20211215152756740"></p>
+
+<h3 id="what-do-linkers-do">
+<a class="anchor" href="#what-do-linkers-do" aria-hidden="true"><span class="octicon octicon-link"></span></a>What do linkers do?</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152835897.png" alt="image-20211215152835897"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215152924412.png" alt="image-20211215152924412"></p>
+
+<h3 id="three-kinds-of-object-files-modules">
+<a class="anchor" href="#three-kinds-of-object-files-modules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Three kinds of object files (modules)</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215153018895.png" alt="image-20211215153018895"></p>
+
+<h3 id="executable-and-linkable-format-elf">
+<a class="anchor" href="#executable-and-linkable-format-elf" aria-hidden="true"><span class="octicon octicon-link"></span></a>Executable and linkable format (ELF)</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215153104282.png" alt="image-20211215153104282"></p>
+
+<h3 id="elf-object-file-format">
+<a class="anchor" href="#elf-object-file-format" aria-hidden="true"><span class="octicon octicon-link"></span></a>ELF object file format</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215153122082.png" alt="image-20211215153122082"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215153200856.png" alt="image-20211215153200856"></p>
+
+<h3 id="linker-symbols">
+<a class="anchor" href="#linker-symbols" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linker symbols</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215153255564.png" alt="image-20211215153255564"></p>
+
+<h3 id="steps-symbol-resolution">
+<a class="anchor" href="#steps-symbol-resolution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steps: symbol resolution</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215153348934.png" alt="image-20211215153348934"></p>
+
+<h3 id="local-symbols">
+<a class="anchor" href="#local-symbols" aria-hidden="true"><span class="octicon octicon-link"></span></a>Local symbols</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215153417302.png" alt="image-20211215153417302"></p>
+
+<h3 id="how-linker-resolves-duplicate-symbol-definitions">
+<a class="anchor" href="#how-linker-resolves-duplicate-symbol-definitions" aria-hidden="true"><span class="octicon octicon-link"></span></a>How linker resolves duplicate symbol definitions</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215153738202.png" alt="image-20211215153738202"></p>
+
+<h3 id="linkers-symbol-rules">
+<a class="anchor" href="#linkers-symbol-rules" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linker’s symbol rules</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215153800893.png" alt="image-20211215153800893"></p>
+
+<h3 id="linker-puzzles">
+<a class="anchor" href="#linker-puzzles" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linker puzzles</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215153830231.png" alt="image-20211215153830231"></p>
+
+<h3 id="example">
+<a class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215153922052.png" alt="image-20211215153922052"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215153931683.png" alt="image-20211215153931683"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215153950579.png" alt="image-20211215153950579"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154031403.png" alt="image-20211215154031403"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154110354.png" alt="image-20211215154110354"></p>
+
+<h3 id="global-variables">
+<a class="anchor" href="#global-variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Global variables</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154120087.png" alt="image-20211215154120087"></p>
+
+<h3 id="steps-relocation">
+<a class="anchor" href="#steps-relocation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Steps: relocation</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154136732.png" alt="image-20211215154136732"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154146292.png" alt="image-20211215154146292"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154155429.png" alt="image-20211215154155429"></p>
+
+<h3 id="loading-executable-object-files">
+<a class="anchor" href="#loading-executable-object-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading executable object files</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154243945.png" alt="image-20211215154243945"></p>
+
+<h3 id="packing-commonly-used-functions">
+<a class="anchor" href="#packing-commonly-used-functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Packing commonly used functions</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154339943.png" alt="image-20211215154339943"></p>
+
+<h3 id="old-fashioned-solution-static-libraries">
+<a class="anchor" href="#old-fashioned-solution-static-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Old-fashioned solution: static libraries</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154418757.png" alt="image-20211215154418757"></p>
+
+<h3 id="creating-static-libraries">
+<a class="anchor" href="#creating-static-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating static libraries</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154434218.png" alt="image-20211215154434218"></p>
+
+<h3 id="commonly-used-libraries">
+<a class="anchor" href="#commonly-used-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Commonly used libraries</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154514939.png" alt="image-20211215154514939"></p>
+
+<h3 id="linking-with-static-libraries">
+<a class="anchor" href="#linking-with-static-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linking with static libraries</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154529866.png" alt="image-20211215154529866"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154538381.png" alt="image-20211215154538381"></p>
+
+<h3 id="using-static-libraries">
+<a class="anchor" href="#using-static-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using static libraries</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154557361.png" alt="image-20211215154557361"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154604985.png" alt="image-20211215154604985"></p>
+
+<h3 id="modern-solution-shared-libraries">
+<a class="anchor" href="#modern-solution-shared-libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modern solution: shared libraries</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154719147.png" alt="image-20211215154719147"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154808325.png" alt="image-20211215154808325"></p>
+
+<h3 id="dynamic-linking-at-load-time">
+<a class="anchor" href="#dynamic-linking-at-load-time" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic linking at load-time</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154833477.png" alt="image-20211215154833477"></p>
+
+<h3 id="dynamic-linking-at-run-time">
+<a class="anchor" href="#dynamic-linking-at-run-time" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dynamic linking at run-time</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154858202.png" alt="image-20211215154858202"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154907835.png" alt="image-20211215154907835"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154915330.png" alt="image-20211215154915330"></p>
+
+<h3 id="linking-summary">
+<a class="anchor" href="#linking-summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Linking summary</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215154940892.png" alt="image-20211215154940892"></p>
+
+<h2 id="library-interpositioning">
+<a class="anchor" href="#library-interpositioning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Library interpositioning</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215155013329.png" alt="image-20211215155013329"></p>
+
+<h3 id="some-interpositioning-applications">
+<a class="anchor" href="#some-interpositioning-applications" aria-hidden="true"><span class="octicon octicon-link"></span></a>Some interpositioning applications</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215155034473.png" alt="image-20211215155034473"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215155125396.png" alt="image-20211215155125396"></p>
+
+<h3 id="example-program">
+<a class="anchor" href="#example-program" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example program</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215155138897.png" alt="image-20211215155138897"></p>
+
+<h3 id="compile-time-interpositioning">
+<a class="anchor" href="#compile-time-interpositioning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Compile-time interpositioning</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215155209787.png" alt="image-20211215155209787"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215155229263.png" alt="image-20211215155229263"></p>
+
+<h3 id="link-time-interpositioning">
+<a class="anchor" href="#link-time-interpositioning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Link-time interpositioning</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215155305908.png" alt="image-20211215155305908"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215155318738.png" alt="image-20211215155318738"></p>
+
+<h3 id="loadrun-time-interpositioning">
+<a class="anchor" href="#loadrun-time-interpositioning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Load/run-time interpositioning</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215155358628.png" alt="image-20211215155358628"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215155422889.png" alt="image-20211215155422889"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215155431503.png" alt="image-20211215155431503"></p>
+
+<h3 id="interpositioning-recap">
+<a class="anchor" href="#interpositioning-recap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interpositioning recap</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215155445470.png" alt="image-20211215155445470"></p>
+
+<h2 id="exceptional-control-flow">
+<a class="anchor" href="#exceptional-control-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exceptional control flow</h2>
+
+<h3 id="control-flow">
+<a class="anchor" href="#control-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Control flow</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215155543089.png" alt="image-20211215155543089"></p>
+
+<h3 id="altering-the-control-flow">
+<a class="anchor" href="#altering-the-control-flow" aria-hidden="true"><span class="octicon octicon-link"></span></a>Altering the control flow</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161111328.png" alt="image-20211215161111328"></p>
+
+<h3 id="exceptional-control-flow-1">
+<a class="anchor" href="#exceptional-control-flow-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exceptional control flow</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161142036.png" alt="image-20211215161142036"></p>
+
+<h3 id="exceptions">
+<a class="anchor" href="#exceptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exceptions</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161250379.png" alt="image-20211215161250379"></p>
+
+<h3 id="interrupt-vectors">
+<a class="anchor" href="#interrupt-vectors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interrupt vectors</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161310796.png" alt="image-20211215161310796"></p>
+
+<h3 id="asynchronous-exceptions-interrupts">
+<a class="anchor" href="#asynchronous-exceptions-interrupts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Asynchronous exceptions (interrupts)</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161355576.png" alt="image-20211215161355576"></p>
+
+<h3 id="synchronous-exceptions">
+<a class="anchor" href="#synchronous-exceptions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Synchronous exceptions</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161416413.png" alt="image-20211215161416413"></p>
+
+<p>Trap - 의도적</p>
+
+<p>faults - 의도하지 않았으나 복구 가능</p>
+
+<p>aborts - 의도하지 않았고 복구 불능</p>
+
+<h3 id="trap-example-opening-file">
+<a class="anchor" href="#trap-example-opening-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>Trap example: opening file</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161442267.png" alt="image-20211215161442267"></p>
+
+<h3 id="fault-example-page-fault">
+<a class="anchor" href="#fault-example-page-fault" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fault example: page fault</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161523360.png" alt="image-20211215161523360"></p>
+
+<h3 id="faults-example-invalid-memory-reference">
+<a class="anchor" href="#faults-example-invalid-memory-reference" aria-hidden="true"><span class="octicon octicon-link"></span></a>Faults example: invalid memory reference</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161625510.png" alt="image-20211215161625510"></p>
+
+<h3 id="exception-table-ia32-excerpt">
+<a class="anchor" href="#exception-table-ia32-excerpt" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exception table IA32 (Excerpt)</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161649703.png" alt="image-20211215161649703"></p>
+
+<h2 id="processes">
+<a class="anchor" href="#processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Processes</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161709579.png" alt="image-20211215161709579"></p>
+
+<h3 id="concurrent-processes">
+<a class="anchor" href="#concurrent-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>concurrent processes</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161745378.png" alt="image-20211215161745378"></p>
+
+<h3 id="user-view-of-concurrent-processes">
+<a class="anchor" href="#user-view-of-concurrent-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>User view of concurrent processes</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161831969.png" alt="image-20211215161831969"></p>
+
+<h3 id="context-switching">
+<a class="anchor" href="#context-switching" aria-hidden="true"><span class="octicon octicon-link"></span></a>Context switching</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161848037.png" alt="image-20211215161848037"></p>
+
+<h3 id="fork-creating-new-processes">
+<a class="anchor" href="#fork-creating-new-processes" aria-hidden="true"><span class="octicon octicon-link"></span></a>fork: creating new processes</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161912373.png" alt="image-20211215161912373"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161926846.png" alt="image-20211215161926846"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215161946170.png" alt="image-20211215161946170"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162011407.png" alt="image-20211215162011407"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162028567.png" alt="image-20211215162028567"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162054274.png" alt="image-20211215162054274"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162103703.png" alt="image-20211215162103703"></p>
+
+<h3 id="exit-ending-a-process">
+<a class="anchor" href="#exit-ending-a-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>exit: ending a process</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162124672.png" alt="image-20211215162124672"></p>
+
+<h3 id="zombies">
+<a class="anchor" href="#zombies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Zombies</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162138337.png" alt="image-20211215162138337"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162226222.png" alt="image-20211215162226222"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162235277.png" alt="image-20211215162235277"></p>
+
+<h3 id="wait-synchronizing-with-children">
+<a class="anchor" href="#wait-synchronizing-with-children" aria-hidden="true"><span class="octicon octicon-link"></span></a>wait: synchronizing with children</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162306110.png" alt="image-20211215162306110"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162514724.png" alt="image-20211215162514724"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162525382.png" alt="image-20211215162525382"></p>
+
+<h3 id="waitpid-waiting-for-a-specific-process">
+<a class="anchor" href="#waitpid-waiting-for-a-specific-process" aria-hidden="true"><span class="octicon octicon-link"></span></a>waitpid(): waiting for a specific process</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162607207.png" alt="image-20211215162607207"></p>
+
+<h3 id="execve-loading-and-running-programs">
+<a class="anchor" href="#execve-loading-and-running-programs" aria-hidden="true"><span class="octicon octicon-link"></span></a>execve: loading and running programs</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162638420.png" alt="image-20211215162638420"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162717200.png" alt="image-20211215162717200"></p>
+
+<h3 id="summary-1">
+<a class="anchor" href="#summary-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162757271.png" alt="image-20211215162757271"></p>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162806878.png" alt="image-20211215162806878"></p>
+
+<h2 id="exceptional-control-flow-signals">
+<a class="anchor" href="#exceptional-control-flow-signals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exceptional control flow: signals</h2>
+
+<h3 id="the-world-of-multitasking">
+<a class="anchor" href="#the-world-of-multitasking" aria-hidden="true"><span class="octicon octicon-link"></span></a>The world of multitasking</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215162915346.png" alt="image-20211215162915346"></p>
+
+<h3 id="programmers-model-of-multitasking">
+<a class="anchor" href="#programmers-model-of-multitasking" aria-hidden="true"><span class="octicon octicon-link"></span></a>Programmer’s model of multitasking</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215163033847.png" alt="image-20211215163033847"></p>
+
+<h3 id="unix-process-hierarchy">
+<a class="anchor" href="#unix-process-hierarchy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unix process hierarchy</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215163108444.png" alt="image-20211215163108444"></p>
+
+<h3 id="shell-programs">
+<a class="anchor" href="#shell-programs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shell programs</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215163119120.png" alt="image-20211215163119120"></p>
+
+<h3 id="simple-shell-eval-function">
+<a class="anchor" href="#simple-shell-eval-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simple shell eval function</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215163145993.png" alt="image-20211215163145993"></p>
+
+<h3 id="what-is-a-background-job">
+<a class="anchor" href="#what-is-a-background-job" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is a background job?</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215163159317.png" alt="image-20211215163159317"></p>
+
+<h3 id="problem-with-simple-shell-example">
+<a class="anchor" href="#problem-with-simple-shell-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Problem with simple shell example</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215163213761.png" alt="image-20211215163213761"></p>
+
+<h3 id="ecf-to-the-rescue">
+<a class="anchor" href="#ecf-to-the-rescue" aria-hidden="true"><span class="octicon octicon-link"></span></a>ECF to the rescue!</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215163500474.png" alt="image-20211215163500474"></p>
+
+<h2 id="signals">
+<a class="anchor" href="#signals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Signals</h2>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215163537428.png" alt="image-20211215163537428"></p>
+
+<h3 id="sending-a-signal">
+<a class="anchor" href="#sending-a-signal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sending a signal</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215163615154.png" alt="image-20211215163615154"></p>
+
+<h3 id="receiving-a-signal">
+<a class="anchor" href="#receiving-a-signal" aria-hidden="true"><span class="octicon octicon-link"></span></a>Receiving a signal</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215163701451.png" alt="image-20211215163701451"></p>
+
+<h3 id="pending-and-blocked-signals">
+<a class="anchor" href="#pending-and-blocked-signals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pending and blocked signals</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215163738766.png" alt="image-20211215163738766"></p>
+
+<h3 id="signal-concepts">
+<a class="anchor" href="#signal-concepts" aria-hidden="true"><span class="octicon octicon-link"></span></a>Signal concepts</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215164230478.png" alt="image-20211215164230478"></p>
+
+<h3 id="process-groups">
+<a class="anchor" href="#process-groups" aria-hidden="true"><span class="octicon octicon-link"></span></a>Process groups</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215164258124.png" alt="image-20211215164258124"></p>
+
+<h3 id="sending-signals-with-binkill-program">
+<a class="anchor" href="#sending-signals-with-binkill-program" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sending signals with /bin/kill program</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215164328235.png" alt="image-20211215164328235"></p>
+
+<h3 id="sending-signals-from-the-keyboard">
+<a class="anchor" href="#sending-signals-from-the-keyboard" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sending signals from the keyboard</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215164354351.png" alt="image-20211215164354351"></p>
+
+<h3 id="receiving-signals">
+<a class="anchor" href="#receiving-signals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Receiving signals</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215164433765.png" alt="image-20211215164433765"></p>
+
+<h3 id="default-actions">
+<a class="anchor" href="#default-actions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Default actions</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215164511607.png" alt="image-20211215164511607"></p>
+
+<h3 id="installing-signal-handlers">
+<a class="anchor" href="#installing-signal-handlers" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing signal handlers</h3>
+
+<p><img src="/Kevin_Min/images/2021-12-15-system-programming-final/image-20211215164524338.png" alt="image-20211215164524338"></p>
+
+  </div><a class="u-url" href="/Kevin_Min/markdown/2021/12/15/system-programming-final.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/Kevin_Min/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/Kevin_Min/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" title="fastai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/Kevin_Min/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
